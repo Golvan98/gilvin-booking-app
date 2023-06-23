@@ -2,7 +2,7 @@
 
 
 
-    <div> Homepage here </div>
+    <div class="bg-red-300 font-bold"> Homepage here </div>
 
     <div> data here {{ data }}</div>
 
