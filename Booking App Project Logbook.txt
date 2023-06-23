@@ -1,0 +1,19 @@
+June 21
+
+- Set up project. Name in folder is gilvin-booking-app
+- Added Vue and Vite to project stack (added import vue from '@vitejs/plugin-vue') in vite.config.js
+- set up inertia, follow documentation next time. The guide skipped a step (server side).
+u run composer require inertiajs/inertia-laravel first and then npm install @inertiajs/vue3
+- uploaded project to github. using main section for some reason. idk how all this github shit works but it's there so... ok.
+
+June 22
+-  I fucked up, slept too much. zz
+
+June 23
+
+- Setup layout pages
+- setup tailwindcss
+
+Assignments to do on the other PC
+- Drafting 1st Layout Page/Home and overall look of the page. what color should it be? perhaps green/bue
+- Drafting 1st DB Table
