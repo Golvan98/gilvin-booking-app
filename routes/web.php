@@ -19,6 +19,6 @@ use App\Http\Controllers\IndexController;
 });
 */
 
-Route::get('/index', [IndexController::class, 'index']);
+Route::get('/home', [IndexController::class, 'index']);
 
 Route::get('/show', [IndexController::class, 'yawa']);
