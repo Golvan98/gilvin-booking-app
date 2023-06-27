@@ -25,9 +25,11 @@
 
 </main>
 
-<footer class="bg-white w-full h-screen">
+
+<footer class="bg-white w-full h-96">
     footer here
 </footer>
+
 
 
 </template>
