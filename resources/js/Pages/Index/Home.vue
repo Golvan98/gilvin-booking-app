@@ -2,9 +2,9 @@
 
 
 
-    <div class="bg-red-300 font-bold"> Homepage here wtf </div>
-
-    <div> data here {{ data }}</div>
+    <div class="mx-auto w-full h-full bg-red-300">
+        fuck
+    </div>
 
 
 </template>
