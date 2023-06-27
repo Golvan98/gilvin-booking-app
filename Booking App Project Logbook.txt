@@ -22,3 +22,6 @@ hehe
 June 26
 - drafted first DB iteration
 - drafted first frontend iteration(low fidelity)
+
+June 27
+- added header template
