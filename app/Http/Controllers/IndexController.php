@@ -4,6 +4,8 @@ namespace App\Http\Controllers;
 
 use App\Http\Controllers\Controller;
 use Illuminate\Http\Request;
+use Illuminate\Http\File;
+use Illuminate\Support\Facades\Storage;
 
 class IndexController extends Controller
 {
@@ -24,4 +26,8 @@ class IndexController extends Controller
     {
         return inertia('Index/yawa');
     }
+
+
+
+
 }

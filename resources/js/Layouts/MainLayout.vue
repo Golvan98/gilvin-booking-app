@@ -21,14 +21,39 @@
 </header>
 
 <main class="h-screen w-full">  
+
+  <body class="w-full h-full bg-red-300">
+    
+    <img src="{{ asset('app/public/rayz.png') }}" alt="description of myimage">  
+    
+    <img src="{{ asset('\app\public\rayz.png') }}" alt="description of myimage">  
+
+    
+    <img src="{{ asset('app/public/rayz.png') }}" alt="description of myimage">  
+
+    <img src="{{ asset('public/rayz.png') }}" />
+
+    <img src="url('storage/app/public/rayz.png')">
+    <img src="url('storage\app\public\rayz.png')">
+    <img src="url('storage\rayz.png')">
+    <img src="url('storage/rayz.png')">
+
+    
+   
+                    
+
+  </body>
     <slot> Default </slot> 
+
+    <footer class="bg-white w-full h-1/4 bg-green-700">
+    footer here
+    </footer>
+
 
 </main>
 
 
-<footer class="bg-white w-full h-96">
-    footer here
-</footer>
+
 
 
 

@@ -2,7 +2,7 @@
 
 
 
-    <div class="mx-auto w-full h-full bg-red-300">
+    <div class="mx-auto w-full h-full bg-white">
         fuck
     </div>
 
