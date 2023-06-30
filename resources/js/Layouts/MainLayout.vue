@@ -22,31 +22,50 @@
 
 <main class="h-screen w-full">  
 
-  <body class="w-full h-full bg-red-300">
+  <body class="w-full h-full bg-white">
     
-    <img src="{{ asset('app/public/rayz.png') }}" alt="description of myimage">  
-    
-    <img src="{{ asset('\app\public\rayz.png') }}" alt="description of myimage">  
+  <div class="w-full h-full flex justify-center">
+
+    <div class="object-fill w-full h-4/5 border border-red-300 flex items-center justify-center" 
+    style="background-image: url('https://scontent.fdvo2-2.fna.fbcdn.net/v/t1.15752-9/357632976_251609360935752_3103613818120488316_n.jpg?stp=dst-jpg_s2048x2048&_nc_cat=100&ccb=1-7&_nc_sid=ae9488&_nc_ohc=XptaT54CnPgAX8a-3_5&_nc_ht=scontent.fdvo2-2.fna&oh=03_AdTvmX_FB1wSWqZc2QGFlHre0q3zYNrvJDI5y05MWbb_1A&oe=64C5F124'); 
+    background-repeat: no-repeat; 
+    background-size: cover;">
 
     
-    <img src="{{ asset('app/public/rayz.png') }}" alt="description of myimage">  
+    <div class="w-3/5 h-full border border-red-700">
+      test here
+    </div>
 
-    <img src="{{ asset('public/rayz.png') }}" />
 
-    <img src="url('storage/app/public/rayz.png')">
-    <img src="url('storage\app\public\rayz.png')">
-    <img src="url('storage\rayz.png')">
-    <img src="url('storage/rayz.png')">
+    <div class="w-2/5 h-full flex-nowrap">
+      
+      <div class="bg-red-300 w-full h-1/4">
+          test
+      </div>
 
+      <div class>
+          test
+      </div>
+
+      
+    </div>
+
+
+
+    </div>
+
+  </div>  
+
+  
+     
     
-   
-                    
 
   </body>
     <slot> Default </slot> 
 
     <footer class="bg-white w-full h-1/4 bg-green-700">
     footer here
+
     </footer>
 
 

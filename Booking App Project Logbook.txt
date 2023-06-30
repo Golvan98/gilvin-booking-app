@@ -27,3 +27,11 @@ June 27
 - added header template
 - added body and footer blank template. Website will be 2pages. used h-screen to fill out two pages worth of screen
 - GF borrowed my laptop for work emergency. will draft a body concept in my other pc.
+
+June 28
+- tried to load pics from localfile using the old way, didnt work
+
+June 29
+- resorted to sourcing images online, for now. 
+- figured out sourcing images, it's just <img class="object-fill w-3/4 h-3/4 " src="/storage/rayz.png">. Forget those asset and (url) stuff I guess
+- background image loaded for homepage content. Used online sourcing for now since above method is kinda unstable

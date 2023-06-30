@@ -7,7 +7,13 @@ export default {
     './resources/js/**/*.vue',
   ],
   theme: {
-    extend: {},
+    extend: {
+      backgroundImage: {
+        'laptop-guy': "url('/storage/home-background.png')",
+        'raize': "url('rayz.png')",
+      }
+
+    },
   },
   plugins: [require('@tailwindcss/forms'),],
 }
