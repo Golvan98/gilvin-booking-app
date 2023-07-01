@@ -35,3 +35,4 @@ June 29
 - resorted to sourcing images online, for now. 
 - figured out sourcing images, it's just <img class="object-fill w-3/4 h-3/4 " src="/storage/rayz.png">. Forget those asset and (url) stuff I guess
 - background image loaded for homepage content. Used online sourcing for now since above method is kinda unstable
+- body content with bg image and shadows added
