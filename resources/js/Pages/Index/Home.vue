@@ -48,8 +48,8 @@
 
                 <div class="w-full h-3/5 bg-white flex items-center justify-between">
 
-                     <div class="bg-red-300 w-full h-full flex items-center justify-center"> 
-                        1 
+                     <div class=" w-full h-full flex items-center justify-center"> 
+                        <img class="object-fill w-2/4 h-full " src="/storage/law.png"> 
                      </div>
 
                      <div class="bg-red-500 w-full h-full flex items-center justify-center"> 
