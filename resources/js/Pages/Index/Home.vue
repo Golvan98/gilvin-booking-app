@@ -40,7 +40,7 @@
 
         </div>
 
-        <div class="bg-white w-full h-1/5 border border-red-900">
+        <div class="bg-white w-full h-1/5 ">
 
                 <div class="w-full h-2/5 bg-white flex items-center justify-center font-bold text-4xl "> 
                     Consultation for Every Need
