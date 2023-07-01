@@ -10,7 +10,7 @@
         background-size: cover;">
 
       
-          <div class="w-3/5 h-full border border-black">
+          <div class="w-3/5 h-full">
                   
           </div>
 
@@ -42,7 +42,7 @@
 
         <div class="bg-white w-full h-1/5 border border-red-900">
 
-                <div class="w-full h-2/5 bg-white flex items-center justify-center font-bold text-3xl "> 
+                <div class="w-full h-2/5 bg-white flex items-center justify-center font-bold text-4xl "> 
                     Consultation for Every Need
                 </div>
 
@@ -52,12 +52,12 @@
                         <img class="object-fill w-2/4 h-full " src="/storage/law.png"> 
                      </div>
 
-                     <div class="bg-red-500 w-full h-full flex items-center justify-center"> 
-                        1 
+                     <div class=" w-full h-full flex items-center justify-center"> 
+                        <img class="object-fill w-2/4 h-full " src="/storage/engineering.png"> 
                      </div>
                      
-                     <div class="bg-red-700 w-full h-full flex items-center justify-center">
-                         1 
+                     <div class=" w-full h-full flex items-center justify-center"> 
+                        <img class="object-fill w-2/4 h-full " src="/storage/medicine.png"> 
                      </div>
 
                 </div>
