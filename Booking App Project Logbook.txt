@@ -40,3 +40,7 @@ June 29
 June 30
 - lower body UI update
 - found the default storage directory for ur images, it's app/public/storage, NOT app/storage, or app/public.
+- 2/3 of Footer done
+
+July 04:
+- added raw content for the rightside of the footer
