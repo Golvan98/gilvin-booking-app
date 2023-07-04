@@ -46,3 +46,5 @@ July 04:
 - added raw content for the rightside of the footer
 - finalized footer content, now working on the header, home/front page is almost done
 - completed landing page. now to work on database while I figure out what pages to add next.
+- added new attribute to appointment which is appointment_status, values in mind are pending, on going, rßejected, and done.
+- executed "docker compose up" for the project. Tried to mess with its settings since it's using too much ram, will mess with it further tomorrow

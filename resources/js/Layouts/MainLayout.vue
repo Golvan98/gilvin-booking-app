@@ -4,10 +4,10 @@
  <header class="dark:border-gray-700 bg-green-400 dark:bg-gray-800 w-full h-24">
     
     <div class="container mx-auto">
-      <nav class="flex items-center justify-between">
+      <nav class="flex items-center justify-between mb-4">
 
-        <div class="w-1/3 text-3xl font-bold text-white mt-4">
-          <div>𝔾𝔹𝕂 </div>
+        <div class="w-1/3 text-3xl font-bold flex justify-center text-white mt-4">
+          <div>𝔾𝔹𝕂</div>
         </div>
         
         <div class="text-xl mt-6 text-white dark:text-indigo-300 font-bold text-center flex justify-between">
@@ -16,9 +16,9 @@
           <div class="ml-4"> Pricing </div>
         </div>
 
-        <div class="w-1/3 flex justify-end gap-4 mt-6">
+        <div class="w-1/3 flex justify-center gap-4 mt-6">
             
-          <div class="flex justify-end">
+          <div class="flex justify-end ml-20">
               <button class="py-1 px-4 bg-white text-black rounded-xl"> Sign in</button>
               <button class="ml-2 py-1 px-4 bg-white text-black rounded-xl"> Register </button>
           </div>
