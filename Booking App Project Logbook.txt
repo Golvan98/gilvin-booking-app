@@ -44,3 +44,5 @@ June 30
 
 July 04:
 - added raw content for the rightside of the footer
+- finalized footer content, now working on the header, home/front page is almost done
+- completed landing page. now to work on database while I figure out what pages to add next.
