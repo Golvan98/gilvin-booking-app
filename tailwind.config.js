@@ -9,7 +9,7 @@ export default {
   theme: {
     extend: {
       backgroundImage: {
-        'laptop-guy': "url('/storage/home-background.png')",
+        'laptop-guy': "url('/storage/home.png')",
         'raize': "url('rayz.png')",
       }
 

@@ -48,3 +48,7 @@ July 04:
 - completed landing page. now to work on database while I figure out what pages to add next.
 - added new attribute to appointment which is appointment_status, values in mind are pending, on going, rßejected, and done.
 - executed "docker compose up" for the project. Tried to mess with its settings since it's using too much ram, will mess with it further tomorrow
+
+July 05
+- docker compose setting now primed for less ram usage.
+- properly placed a db connection to docker. DB is connection is set
