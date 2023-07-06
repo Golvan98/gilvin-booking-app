@@ -17,8 +17,8 @@ class ProfessionalFactory extends Factory
     public function definition(): array
     {
         return [
-            'firstName' => fake()->firstName(),
-            'lastName' => fake()->lastName(),
+            'first_name' => fake()->firstName(),
+            'last_name' => fake()->lastName(),
             'profession' => fake()->randomElement(['Lawyer', 'Doctor', 'Engineer', 'Software Engineer', 'Accountant', 'English Tutor', 'Professor']),
             'bio' => fake()->sentence(),
         ];

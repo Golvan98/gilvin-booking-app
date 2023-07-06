@@ -59,3 +59,5 @@ July 05
 
 July 06
 - added first draft for Professional Table DB Seeder
+- added working seeder for Professional DB 
+- reverted naming scheme for table attirbutes to snake case

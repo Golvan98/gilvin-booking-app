@@ -12,8 +12,8 @@ return new class extends Migration
     public function up(): void
     {
         Schema::table('professionals', function (Blueprint $table) {
-            $table->tinytext('firstName')->nullable();
-            $table->tinytext('lastName')->nullable();
+            $table->tinytext('first_name')->nullable();
+            $table->tinytext('last_name')->nullable();
             $table->tinytext('profession')->nullable();
             $table->mediumText('bio');
         });
