@@ -53,5 +53,9 @@ July 05
 - docker compose setting now primed for less ram usage.
 - properly placed a db connection to docker. DB is connection is set
 - created model and performed first db migration
+- added professional table and messed around with them rollbacks and migrations for a bit
 
-- IMPORTANT NOTE!!! showing ext in Windows 10 Settings for the name files is important, it wasted 2days worth of debugging
+- IMPORTANT NOTE!!! showing ext in Windows 10 Settings for the name files is important for dev purposes, it wasted 2days worth of debugging
+
+July 06
+- added first draft for Professional Table DB Seeder
