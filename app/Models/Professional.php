@@ -3,6 +3,7 @@
 namespace App\Models;
 use App\Models\Appointment;
 use App\Models\User;
+use App\Models\ProfessionalServices;
 
 use Illuminate\Database\Eloquent\Factories\HasFactory;
 use Illuminate\Database\Eloquent\Model;
@@ -16,5 +17,10 @@ class Professional extends Model
     public function appointments(): HasMany
     {
         return $this->hasMany(\App\Models\Appointment::class, 'by_professional_id');
+    }
+
+    public function services(): HasMany
+    {
+        return $this->hasMany(\App\Models\ProfessionalServices::class, 'by_professional_id');
     }
 }
