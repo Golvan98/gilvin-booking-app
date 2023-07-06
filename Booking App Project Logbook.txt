@@ -55,9 +55,11 @@ July 05
 - created model and performed first db migration
 - added professional table and messed around with them rollbacks and migrations for a bit
 
-- IMPORTANT NOTE!!! showing ext in Windows 10 Settings for the name files is important for dev purposes, it wasted 2days worth of debugging
+- IMPORTANT NOTE!!! ---------------------------------- showing ext in Windows 10 Settings for the name files is important for dev purposes, it wasted 2days worth of debugging ----------------------------------
 
 July 06
 - added first draft for Professional Table DB Seeder
 - added working seeder for Professional DB 
 - reverted naming scheme for table attirbutes to snake case
+- added working seeder and hasmany relationship for professionals and appointments.
+- IMPORTANT NOTE!! ----------------------------------------------- for migrations, no need to set primary keys manually, laravel conventionally assumes it is 'NameOfTable_id' ----------------------------------

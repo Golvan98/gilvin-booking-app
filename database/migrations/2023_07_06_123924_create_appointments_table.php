@@ -3,6 +3,7 @@
 use Illuminate\Database\Migrations\Migration;
 use Illuminate\Database\Schema\Blueprint;
 use Illuminate\Support\Facades\Schema;
+use App\Models\Professional;
 
 return new class extends Migration
 {
@@ -16,6 +17,9 @@ return new class extends Migration
             $table->date('appointment_schedule');
             $table->tinytext('appointment_status');
             $table->timestamps();
+
+
+            $table->foreignIdFor(\App\Models\Professional::class, 'by_professional_id')->constrained('professionals')->nullable(); /* first attempt to foreign id prof relship */
         });
     }
 
