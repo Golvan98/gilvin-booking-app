@@ -20,9 +20,11 @@ class DatabaseSeeder extends Seeder
         //     'email' => 'test@example.com',
         // ]);
         \App\Models\Professional::factory(4)->create();
+        \App\Models\User::factory(2)->create();
 
         \App\Models\Appointment::factory(2)->create([
-            'by_professional_id' => 1
+            'by_professional_id' => 1,
+            'by_user_id' => 1
         ]);
     }
 }

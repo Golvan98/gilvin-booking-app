@@ -62,4 +62,10 @@ July 06
 - added working seeder for Professional DB 
 - reverted naming scheme for table attirbutes to snake case
 - added working seeder and hasmany relationship for professionals and appointments.
+- added working seeder and relationship for appointments and users
 - IMPORTANT NOTE!! ----------------------------------------------- for migrations, no need to set primary keys manually, laravel conventionally assumes it is 'NameOfTable_id' ----------------------------------
+- IMPORTANT NOTE!! ----------------------------------------------- using php artisan tinker, $variable->users(); calls for the relationship between the variable. $variable->users; calls for the objects that are related to the variable ----------------------------------
+
+
+July 07
+- to test add_fields (password) feature to professionals and users table

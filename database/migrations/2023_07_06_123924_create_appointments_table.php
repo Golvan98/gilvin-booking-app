@@ -4,6 +4,7 @@ use Illuminate\Database\Migrations\Migration;
 use Illuminate\Database\Schema\Blueprint;
 use Illuminate\Support\Facades\Schema;
 use App\Models\Professional;
+use App\Models\User;
 
 return new class extends Migration
 {
@@ -20,6 +21,8 @@ return new class extends Migration
 
 
             $table->foreignIdFor(\App\Models\Professional::class, 'by_professional_id')->constrained('professionals')->nullable(); /* first attempt to foreign id prof relship */
+            $table->foreignIdFor(\App\Models\User::class, 'by_user_id')->constrained('users')->nullable(); /* first attempt to foreign id prof relship */
+       
         });
     }
 
