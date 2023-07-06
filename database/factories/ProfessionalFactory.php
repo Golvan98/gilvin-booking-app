@@ -19,7 +19,7 @@ class ProfessionalFactory extends Factory
         return [
             'firstName' => fake()->firstName(),
             'lastName' => fake()->lastName(),
-            'profession' =>fake()->randomElement(['Lawyer', 'Doctor', 'Engineer', 'Software Engineer', 'Accountant', 'English Tutor', 'Professor']),
+            'profession' => fake()->randomElement(['Lawyer', 'Doctor', 'Engineer', 'Software Engineer', 'Accountant', 'English Tutor', 'Professor']),
             'bio' => fake()->sentence(),
         ];
     }
