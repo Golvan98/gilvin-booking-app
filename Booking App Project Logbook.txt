@@ -73,3 +73,6 @@ July 07
 
 July 10
 - added controller factory and migration file for AppointmentRequest
+- added migrated dummy DB for AppointmentRequest factory and seeder
+- next step... fixed DB services factory depending on profession?
+- creating user login page

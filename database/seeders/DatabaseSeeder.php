@@ -35,5 +35,10 @@ class DatabaseSeeder extends Seeder
             'by_professional_id' => 1,
             'by_user_id' => 1,
         ]);
+
+        $CivilEngineers = \App\Models\Professional::where('profession', 'Civil Engineer');
+        $Professionals = \App\models\Professional::all();
+        // idea here is to query each civil engineers into associate() Civil Engineer for civil services as db.
+        // Speaking of, you might want to add a feature in which a professional gets to add his list of services too.
     }
 }

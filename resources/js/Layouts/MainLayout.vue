@@ -28,7 +28,7 @@
 
   </header>
 
-<main class="h-screen w-full">  
+<main class="">  
 
     <slot> Default </slot> 
 

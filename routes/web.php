@@ -2,6 +2,7 @@
 
 use Illuminate\Support\Facades\Route;
 use App\Http\Controllers\IndexController;
+use App\Http\Controllers\Controller;
 use Illuminate\Support\Facades\Storage;
 
 
@@ -24,3 +25,5 @@ use Illuminate\Support\Facades\Storage;
 Route::get('/home', [IndexController::class, 'index']);
 
 Route::get('/show', [IndexController::class, 'yawa']);
+
+Route::get('/login', [Controller::class, 'login']);

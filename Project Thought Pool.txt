@@ -1,0 +1,6 @@
+Deliverables
+
+- user login manager for Users, and to connect it to the professionals table?
+- profile for Professionals
+- profile for Users (maybe smaller details on this one)
+- you might want to add a feature in which a professional gets to add his list of services too.

@@ -10,4 +10,12 @@ use Illuminate\Routing\Controller as BaseController;
 class Controller extends BaseController
 {
     use AuthorizesRequests, ValidatesRequests;
+
+    public function login()
+    {
+        return inertia('Index/Login' ,
+        [
+            'data' => 'this is the content of the data'
+        ]);
+    }
 }
