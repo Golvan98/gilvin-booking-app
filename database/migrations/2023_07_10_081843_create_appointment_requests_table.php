@@ -13,7 +13,13 @@ return new class extends Migration
     {
         Schema::create('appointment_requests', function (Blueprint $table) {
             $table->id();
+            $table->longText('request');
+            $table->date('request_schedule');
+            $table->tinyText('request_status');
             $table->timestamps();
+           
+            $table->foreignIdFor(\App\Models\Professional::class, 'by_professional_id')->constrained('professionals')->nullable();
+            $table->foreignIdFor(\App\Models\User::class, 'by_user_id')->constrained('users')->nullable();
         });
     }
 

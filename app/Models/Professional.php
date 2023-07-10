@@ -23,4 +23,8 @@ class Professional extends Model
     {
         return $this->hasMany(\App\Models\ProfessionalServices::class, 'by_professional_id');
     }
+    public function requests(): HasMany
+    {
+        return $this->hasMany(\App\Models\AppointmentRequest::class, 'by_professional_id');
+    }
 }

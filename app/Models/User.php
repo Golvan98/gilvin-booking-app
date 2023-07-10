@@ -51,4 +51,10 @@ class User extends Authenticatable
     {
         return $this->hasMany(\App\Models\Appointment::class, 'by_user_id');
     }
+
+    public function requests(): HasMany
+    {
+        return $this->hasMany(\App\Models\AppointmentRequest::class, 'by_user_id');
+    }
+
 }

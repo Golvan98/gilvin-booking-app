@@ -15,12 +15,12 @@ class Appointment extends Model
 
     
   
-    public function lecturer(): BelongsTo
+    public function consultant(): BelongsTo
     {
         return $this->belongsTo(\App\Models\Professional::class, 'by_professional_id');
     }
 
-    public function consultant(): BelongsTo
+    public function consultee(): BelongsTo
     {
         return $this->belongsTo(\App\Models\User::class, 'by_user_id');
     }
