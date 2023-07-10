@@ -70,3 +70,6 @@ July 06
 July 07
 - finalize db structure by tomorrow
 - to test add_fields (password) feature to professionals and users table
+
+July 10
+- added controller factory and migration file for AppointmentRequest
