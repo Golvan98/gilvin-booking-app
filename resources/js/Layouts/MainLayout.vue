@@ -7,7 +7,7 @@
       <nav class="flex items-center justify-between mb-4">
 
         <div class="w-1/3 text-3xl font-bold flex justify-center text-white mt-4">
-          <div>𝔾𝔹𝕂</div>
+          <div> <a href="/home"> 𝔾𝔹𝕂 </a></div> 
         </div>
         
         <div class="text-xl mt-6 text-white dark:text-indigo-300 font-bold text-center flex justify-between">
@@ -19,8 +19,8 @@
         <div class="w-1/3 flex justify-center gap-4 mt-6">
             
           <div class="flex justify-end ml-20">
-              <button class="py-1 px-4 bg-white text-black rounded-xl"> Sign in</button>
-              <button class="ml-2 py-1 px-4 bg-white text-black rounded-xl"> Register </button>
+              <a href="/login"> <button class="py-1 px-4 bg-white text-black rounded-xl"> Sign in</button> </a>
+              <a href="/register"> <button class="ml-2 py-1 px-4 bg-white text-black rounded-xl"> Register </button> </a>
           </div>
         </div>
       </nav>

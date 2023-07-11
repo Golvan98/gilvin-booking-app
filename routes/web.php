@@ -27,3 +27,5 @@ Route::get('/home', [IndexController::class, 'index']);
 Route::get('/show', [IndexController::class, 'yawa']);
 
 Route::get('/login', [Controller::class, 'login']);
+
+Route::get('/register', [Controller::class, 'register']);

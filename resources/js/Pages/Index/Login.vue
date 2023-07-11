@@ -43,7 +43,7 @@
             </div>
     </div>
 
-    <div id="third batch" class="bg-white h-12 flex items-center justify-between">
+    <div id="third batch" class="bg-white h-12 flex items-center justify-between mt-2">
             <div class="ml-2 text-indigo-600 font-bold">  Create Account</div>
             <div class="mr-2 text-indigo-600 font-bold">  Reset password</div>
     </div>

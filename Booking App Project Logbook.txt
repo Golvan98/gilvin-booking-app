@@ -76,5 +76,9 @@ July 10
 - added migrated dummy DB for AppointmentRequest factory and seeder
 - next step... fixed DB services factory depending on profession?
 - creating user login page
-- a quick UI fix, doubled h-screen in main and home tailwind class
+- a quick UI fix, accidentally doubled "h-screen" in main and home tailwind class
 - added a centered div template for login page
+
+July 11
+- login form halfway through
+- completed login form (frontend part)

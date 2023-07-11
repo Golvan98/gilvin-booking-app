@@ -18,4 +18,9 @@ class Controller extends BaseController
             'data' => 'this is the content of the data'
         ]);
     }
+
+    public function register()
+    {
+        return inertia('Index/Register');
+    }
 }
