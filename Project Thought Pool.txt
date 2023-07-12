@@ -1,4 +1,4 @@
-Deliverables
+To Dos
 
 - user login manager for Users, and to connect it to the professionals table?
 - profile for Professionals
