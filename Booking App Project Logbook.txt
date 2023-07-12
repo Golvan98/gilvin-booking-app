@@ -87,3 +87,5 @@ July 12
 - IMPORTANT NOTE!! w-1/2 mx-auto is another way of centering a div horizontally on page
 - authentication (user login) for backend done
 - IMPORTANT NOTE!! documentation is ur best friend in the midst of all these bugs due to syntax issues. Inertia documentation saved the day
+- odd. useform and const form reactive works for authentication
+- will try old syntax for validation errors, to do tomorrow
