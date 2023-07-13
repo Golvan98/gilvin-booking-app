@@ -21,8 +21,8 @@
                 </div>
 
                 <div class="w-full flex items-center justify-center mt-0.5 flex-nowrap"> 
-                        <input id="email" v-model="form.email" type="text" name="email"  class="input ml-4 mr-4 w-full rounded-sm" placeholder="name@company.com" required="">
-                        
+                        <input id="email" v-model="form.email" type="email" name="email"  class="input ml-4 mr-4 w-full rounded-sm" placeholder="name@company.com" required="">
+                        <div v-if="errors.email">{{ errors.email }}</div>
                 </div>
 
                 <div id="2nd batch" class="flex justify-start mt-6">
@@ -63,18 +63,20 @@ import { reactive } from 'vue'
 import { router } from '@inertiajs/vue3'
 import { useForm } from '@inertiajs/vue3'
 import { Link } from '@inertiajs/vue3'
+
 defineProps({ errors: Object })
 
-
-function submit()
-{
-        router.post('login.store', form)
-}
 
 const form = reactive({
     email:null,
     password: null
 })
 
+function submit()
+{
+        router.post('login.store', form)
+}
+
+const login = () => form.post(route('login.store'))
 
 </script>
