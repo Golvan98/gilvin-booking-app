@@ -1,6 +1,7 @@
 To Dos
 
 - connect professionals to user 
+- Log out feature
 - Working Register with Auth
 - profile for Professionals
 - profile for Users (maybe smaller details on this one)

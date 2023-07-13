@@ -89,3 +89,8 @@ July 12
 - IMPORTANT NOTE!! documentation is ur best friend in the midst of all these bugs due to syntax issues. Inertia documentation saved the day
 - odd. useform and const form reactive works for authentication
 - will try old syntax for validation errors, to do tomorrow
+
+July 13
+- IMPORTANT NOTE!! fixed form issue, no syntax error involved, just needed to add "\App\Http\Middleware\HandleInertiaRequests::class" in Kernel.php
+- added error messages 
+- added password and email to professionals table. I'm to add professionals into the login feature
