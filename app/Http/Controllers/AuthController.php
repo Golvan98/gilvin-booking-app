@@ -25,7 +25,9 @@ class AuthController extends Controller
 
         {
             throw ValidationException::withMessages([
-                'email' => 'Authentication failed'
+                'email' => 'Authentication failed',
+                'password' => 'incorrect password',
+                
             ]);
         }
 

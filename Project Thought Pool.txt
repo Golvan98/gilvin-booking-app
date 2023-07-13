@@ -1,8 +1,11 @@
 To Dos
 
-- user login manager for Users, and to connect it to the professionals table?
+- connect professionals to user 
+- Working Register with Auth
 - profile for Professionals
 - profile for Users (maybe smaller details on this one)
 - you might want to add a feature in which a professional gets to add his list of services too
 - add a feature in register where you can select to register as a user or a professional
-- error message for wrong inputs in forms
+
+Done
+- Validation error message for wrong input in login forms

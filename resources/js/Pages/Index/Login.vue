@@ -22,18 +22,21 @@
 
                 <div class="w-full flex items-center justify-center mt-0.5 flex-nowrap"> 
                         <input id="email" v-model="form.email" type="email" name="email"  class="input ml-4 mr-4 w-full rounded-sm" placeholder="name@company.com" required="">
-                        <div v-if="errors.email">{{ errors.email }}</div>
+                      
                 </div>
+
+                <div class="ml-4 text-red-500" v-if="errors.email">{{ errors.email }}</div>
 
                 <div id="2nd batch" class="flex justify-start mt-6">
                         <label for="password" class="my-2 ml-4 font-bold" > Password </label>
+                        
                 </div>
 
                 <div class="w-full flex items-center justify-center mt-0.5"> 
                         <input id="password" v-model="form.password" type="password" name="password"  class="input ml-4 mr-4 w-full rounded-sm" placeholder="password" required="">
                         
                 </div>
-                       
+                <div class="ml-4 text-red-500"  v-if="errors.password">{{ errors.password }}</div>
                 <div id="third batch" class="bg-white h-12 mt-10 flex items-center justify-center">
                         <div class> 
                                 <button class="btn-primary w-full bg-green-300 px-12 py-2 rounded-sm" type="submit"> Login </button>
