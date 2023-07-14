@@ -35,10 +35,10 @@ class AuthController extends Controller
         ]);
 
     
-
-        if (!Auth::guard('professional')->attempt($data,true )) 
+        
+        if (!Auth::attempt($data,true )) 
         {
-           if (!Auth::attempt($data, true));
+           if (!Auth::guard('professional')->attempt($data, true));
            {
             throw ValidationException::withMessages([
                 'email' => 'Authentication failed',

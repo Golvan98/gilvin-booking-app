@@ -1,3 +1,7 @@
+Must Dos
+- logout method, try if existing sessions are fucking up ur multi-guard usage
+
+
 To Dos
 
 - connect professionals to user 
@@ -10,3 +14,5 @@ To Dos
 
 Done
 - Validation error message for wrong input in login forms
+
+
