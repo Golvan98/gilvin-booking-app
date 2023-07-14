@@ -3,17 +3,43 @@
 namespace App\Models;
 use App\Models\Appointment;
 use App\Models\User;
-use App\Models\ProfessionalServices;
 
+use App\Models\ProfessionalServices;
 use Illuminate\Database\Eloquent\Factories\HasFactory;
 use Illuminate\Database\Eloquent\Model;
 use Illuminate\Database\Eloquent\Relations\BelongsTo;
 use Illuminate\Database\Eloquent\Relations\HasMany;
+use Illuminate\Foundation\Auth\User as Authenticatable;
+use Illuminate\Foundation\Auth\AuthenticatesUsers;
+class Professional extends Authenticatable
 
-class Professional extends Model
 {
     use HasFactory;
 
+    
+    protected $guard = 'professional';
+
+    protected $fillable = ['email', 'password', ];
+
+    /**
+     * The attributes that should be hidden for serialization.
+     *
+     * @var array<int, string>
+     */
+    protected $hidden = [
+        'password',
+        'remember_token',
+    ];
+
+    /**
+     * The attributes that should be cast.
+     *
+     * @var array<string, string>
+     */
+    protected $casts = [
+        'email_verified_at' => 'datetime',
+        'password' => 'hashed',
+    ];
     public function appointments(): HasMany
     {
         return $this->hasMany(\App\Models\Appointment::class, 'by_professional_id');

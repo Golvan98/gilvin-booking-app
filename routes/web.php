@@ -35,11 +35,21 @@ Route::get('/show', [IndexController::class, 'yawa']);
 
 Route::get('/register', [Controller::class, 'register']);
 
-Route::get('/login', [AuthController::class, 'create'])
-->name('login');
+//Route::get('/login', [AuthController::class, 'create'])
+//->name('login');
 
-Route::post('/login.store', [AuthController::class, 'store'])
-->name('login.store');
+//Route::post('/login.store', [AuthController::class, 'store'])
+//->name('login.store');
 
 Route::delete('logout', [AuthController::class, 'destroy'])
 ->name('logout');
+
+  Route::group(['middleware' => ['auth:professional,user']], function () {
+    Route::get('/login', [AuthController::class, 'create'])
+    ->name('login');
+    Route::post('/login.store', [AuthController::class, 'store'])
+    ->name('login.store');
+});
+
+
+

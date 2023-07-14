@@ -4,6 +4,7 @@ namespace App\Models;
 
 // use Illuminate\Contracts\Auth\MustVerifyEmail;
 use App\Models\Appointment;
+
 use App\Models\Professional;
 use Illuminate\Database\Eloquent\Factories\HasFactory;
 use Illuminate\Foundation\Auth\User as Authenticatable;
@@ -14,6 +15,9 @@ use Illuminate\Support\Facades\Hash;
 use Illuminate\Support\Facades\Auth;
 use Illuminate\Database\Eloquent\Relations\BelongsTo;
 use Illuminate\Database\Eloquent\Relations\HasMany;
+use App\Models\ProfessionalServices;
+use Illuminate\Foundation\Auth\AuthenticatesUsers;
+use Illuminate\Database\Eloquent\Model;
 
 class User extends Authenticatable
 {
@@ -24,14 +28,14 @@ class User extends Authenticatable
      *
      * @var array<int, string>
      */
+
+    protected $guard = 'user';
+
     protected $fillable = [
-        'first_name',
-        'last_name',
+       
         'email',
         'password',
     ];
-
-    
 
     /**
      * The attributes that should be hidden for serialization.

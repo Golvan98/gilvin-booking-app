@@ -94,3 +94,6 @@ July 13
 - IMPORTANT NOTE!! fixed form issue, no syntax error involved, just needed to add "\App\Http\Middleware\HandleInertiaRequests::class" in Kernel.php
 - added error messages 
 - added password and email to professionals table. I'm to add professionals into the login feature
+
+July 14 
+- configured auth to authenticate Professionals, it disables the authentication for Users though, will debug next session
