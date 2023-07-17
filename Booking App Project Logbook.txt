@@ -101,3 +101,4 @@ July 14
 July 17
 - reestablished db connection, account was hacked and docker was bugged, what a shitshow
 - IMPORTANT NOTE! - if wsl --shutdown doesnt do anything, u have to disable Control Flow Guard(CFG) in windows 10 settings under Exploit Protection
+- stuck in import computed bug making the screen go blank, calling it a day, tired from the hack, sadge.

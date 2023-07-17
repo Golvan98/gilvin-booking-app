@@ -67,6 +67,7 @@ import { router } from '@inertiajs/vue3'
 import { useForm } from '@inertiajs/vue3'
 import { Link } from '@inertiajs/vue3'
 
+
 defineProps({ errors: Object })
 
 
@@ -81,5 +82,6 @@ function submit()
 }
 
 const login = () => form.post(route('login.store'))
+
 
 </script>
