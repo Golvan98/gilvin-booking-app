@@ -1,0 +1,3 @@
+Bug 1: Blank Page when adding v-else with const varable = page.props.user
+
+Fix : const page = usePage() AND import { usePage} from '@inertiajs/vue3' lacking

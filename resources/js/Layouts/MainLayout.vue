@@ -19,8 +19,8 @@
         <div class="w-1/3 flex justify-center gap-4 mt-6">
             
           <div v-if="user" class="flex justify-end ml-20">
-              <a href="/login"> <button class="py-1 px-4 bg-white text-black rounded-xl"> Got a user here </button> </a>
-              <a href="/register"> <button class="ml-2 py-1 px-4 bg-white text-black rounded-xl"> Logout </button> </a>
+             <div> <a href="/login"> <button class="py-1 px-4 bg-white text-black rounded-xl"> {{ user.first_name}}</button> </a> </div>
+             <div> <a href="/register"> <button class="ml-2 py-1 px-4 bg-white text-black rounded-xl"> Logout </button> </a> </div>
           </div>
 
           <div v-else class="flex justify-end ml-20">
@@ -101,12 +101,14 @@
 </template>
 
 <script setup>
-import { Link } from '@inertiajs/vue3'
+import { Link, usePage } from '@inertiajs/vue3'
 import { computed } from 'vue'
 import { useForm } from '@inertiajs/vue3'
-const user = computed (
-  () => page.props.user
-)
+
+
+
+const page = usePage()
+const user = computed(() => page.props.user )
 
 </script>
 
