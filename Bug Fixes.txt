@@ -1,16 +1,19 @@
 Bug 1: Blank Page when adding v-else with const varable = page.props.user
 
-- Fix : const page = usePage() AND import { usePage} from '@inertiajs/vue3' lacking
+Fix : const page = usePage() AND import { usePage} from '@inertiajs/vue3' lacking
 ====================================================================================
 Bug 2: Blank page when adding <Link> section 
 
-removed ":" from <Link :href="route('notification.index')"
+Fix: 
+- removed ":" from <Link :href="route('notification.index')"
 - apparently its current versions need it to be just <Link href
 ====================================================================================
 Bug 3: Error messages even when logged in credentials are correct
 
-
+Fix: 
+- rewrote if statement to else and else if instead of !, true
 ====================================================================================
 PERSISTENT BUGS: Unable to use mutli Guards
 
 - FIX IN PROGRESS
+- adding a role for user might be the better option to fix this issue, ur way seems impossible or the way has not been discovered yet

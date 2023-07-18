@@ -34,9 +34,31 @@ class AuthController extends Controller
             'password' => 'required|string'
         ]);
 
-    
+            if(Auth::attempt($data))
+            {
+                $request->session()->regenerate();
+                return redirect('/home');
+            }
+
+            else if(Auth::guard('professional')->attempt($data))
+            {
+                $request->session()->regenerate();
+                
+                return redirect('/home');
+
+               
+            }
+
+            
+            else 
+            {
+                throw ValidationException::withMessages([
+                    'email' => 'Authentication failed',
+                    'password' => 'incorrect password, I tried guard prof btw',
+                ]);
+            }
         
-        if (!Auth::guard('professional')->attempt($data, true))
+      /*   if (!Auth::guard('professional')->attempt($data, true))
         {
            if (!Auth::attempt($data,true )) ;
            {
@@ -45,7 +67,7 @@ class AuthController extends Controller
                 'password' => 'incorrect password, I tried guard prof btw',
             ]);
            } 
-        }
+        } */
        
 
       /*  if (!Auth::attempt($request->validate([
@@ -61,9 +83,7 @@ class AuthController extends Controller
             ]);
         } */
 
-        $request->session()->regenerate();
-
-        return redirect()->route('/home');
+       
     }
 
     public function destroy(Request $request)
