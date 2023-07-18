@@ -27,7 +27,7 @@ use Illuminate\Http\Request;
 });
 */
 
-Route::get('/home', [IndexController::class, 'index']);
+Route::get('/home', [IndexController::class, 'index'])->name('home');
 
 Route::get('/show', [IndexController::class, 'yawa']);
 

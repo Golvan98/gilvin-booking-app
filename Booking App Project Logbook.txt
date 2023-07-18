@@ -108,3 +108,4 @@ July 18
 - added "Bug Fixes" text document in project repository, will report bug fixes there and how I fixed each bugs
 - added flash success config in HandleInertiaRequests
 - fixed blank page bug on conditional rendering
+- added Link href section and fixed blank page bug when adding Link href section
