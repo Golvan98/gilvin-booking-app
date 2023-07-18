@@ -6,6 +6,8 @@ use Illuminate\Auth\Middleware\Authenticate;
 use Illuminate\Http\Request;
 use Inertia\Middleware;
 
+use Illuminate\Support\Facades\Auth;
+
 class HandleInertiaRequests extends Middleware
 {
     /**
@@ -41,16 +43,22 @@ class HandleInertiaRequests extends Middleware
             'flash' => [
                 'success' => $request->session()->get('success')
             ],
-            'user' => $request->user() ? [
+         /*   'user' => $request->user() ? [
                 'id' => $request->user()->id,
                 'email' => $request->user()->email,
             ] : null ,
             
-          /*  'professional' => $request->professional() ? [
-                'id' => $request->professional()->id,
-                'email' => $request->professional()->email,
+            'professional' => $request->user() ? [
+                'id' => $request->user()->id,
+                'email' => $request->user()->email,
             ] : null , */
+            'auth.user' => fn () => $request->user()
+            ? $request->user()->only('id', 'email')
+            : null,
 
+            'prof' => [
+              'email' =>  Auth::guard('professional')->user()->email,
+            ]
         ]);
     }
 }

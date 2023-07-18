@@ -23,8 +23,8 @@
              <div> <Link href='logout' method="delete" as="button" class="ml-2 py-1 px-4 bg-white text-black rounded-xl"> Logout </Link> </div>
           </div>
 
-          <div v-else-if="professional" class="flex justify-end ml-20">
-             <div> <a href="#"> <button class="py-1 px-4 bg-white text-black rounded-xl"> {{ user.email}}</button> </a> </div>
+          <div v-else-if="prof" class="flex justify-end ml-20">
+             <div> <a href="#"> <button class="py-1 px-4 bg-white text-black rounded-xl"> {{ prof.email}}</button> </a> </div>
              <div> <Link href='logout' method="delete" as="button" class="ml-2 py-1 px-4 bg-white text-black rounded-xl"> Logout </Link> </div>
           </div>
 
@@ -115,8 +115,12 @@ import { useForm } from '@inertiajs/vue3'
 import { router } from '@inertiajs/vue3'
 const page = usePage()
 
-const user = computed(() => page.props.user )
+//const user = computed(() => page.props.user )
+const user = computed(() => page.props.auth.user)
 
+const prof = computed (() => page.props.prof)
+
+//const professional = computed(() => page.props.professional )
 
 
 
