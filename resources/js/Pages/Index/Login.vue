@@ -66,6 +66,7 @@ import { reactive } from 'vue'
 import { router } from '@inertiajs/vue3'
 import { useForm } from '@inertiajs/vue3'
 import { Link } from '@inertiajs/vue3'
+import { computed } from 'vue'
 
 
 defineProps({ errors: Object })

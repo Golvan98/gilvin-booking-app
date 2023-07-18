@@ -6,7 +6,7 @@
     <div class="container mx-auto">
       <nav class="flex items-center justify-between mb-4">
 
-        <div class="w-1/3 text-3xl font-bold flex justify-center text-white mt-4">
+        <div class="w-1/3 text-3xl font-bold flex justify-between text-white mt-4"> 
           <div> <a href="/home"> 𝔾𝔹𝕂 </a></div> 
         </div>
         
@@ -18,10 +18,16 @@
 
         <div class="w-1/3 flex justify-center gap-4 mt-6">
             
-          <div class="flex justify-end ml-20">
+          <div v-if="user" class="flex justify-end ml-20">
+              <a href="/login"> <button class="py-1 px-4 bg-white text-black rounded-xl"> Got a user here </button> </a>
+              <a href="/register"> <button class="ml-2 py-1 px-4 bg-white text-black rounded-xl"> Logout </button> </a>
+          </div>
+
+          <div v-else class="flex justify-end ml-20">
               <a href="/login"> <button class="py-1 px-4 bg-white text-black rounded-xl"> Sign in</button> </a>
               <a href="/register"> <button class="ml-2 py-1 px-4 bg-white text-black rounded-xl"> Register </button> </a>
           </div>
+
         </div>
       </nav>
     </div>
@@ -62,7 +68,7 @@
 
         <div class="w-1/2 h-full text-white text-1xl "> 
 
-          <div class="mt-8 border-t"> 𝔾𝔹𝕂 is a booking app created by Gilvin Zalsos as his magnum opus in his endeavor of mastering web development using laravel, inertia, & vuejs. </div>
+          <div class="mt-8 border-t"> 𝔾𝔹𝕂 is a booking app created by Gilvin Zalsos as his current magnum opus in his endeavor of mastering web development using laravel, inertia, & vuejs. </div>
           <div class="mt-5"> This project will likely stay on going as I intend to test numerous features. Features can be random but relevant to the purpose of this project which is to function as a 1v1 consulting booking app for all kinds of professionals </div>
          
           <div class="mt-6 flex justify-between items-start"> 
@@ -96,6 +102,11 @@
 
 <script setup>
 import { Link } from '@inertiajs/vue3'
+import { computed } from 'vue'
+import { useForm } from '@inertiajs/vue3'
+const user = computed (
+  () => page.props.user
+)
 
 </script>
 
