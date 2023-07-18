@@ -37,16 +37,15 @@ class AuthController extends Controller
             if(Auth::attempt($data))
             {
                 $request->session()->regenerate();
+                
                 return redirect('/home');
             }
 
             else if(Auth::guard('professional')->attempt($data))
             {
                 $request->session()->regenerate();
-                
+               // dd(Auth::guard('professional')->user()->email); THIS WORKS!
                 return redirect('/home');
-
-               
             }
 
             

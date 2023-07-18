@@ -19,12 +19,12 @@
         <div class="w-1/3 flex justify-center gap-4 mt-6">
             
           <div v-if="user" class="flex justify-end ml-20">
-             <div> <a href="#"> <button class="py-1 px-4 bg-white text-black rounded-xl"> {{ user.first_name}}</button> </a> </div>
+             <div> <a href="#"> <button class="py-1 px-4 bg-white text-black rounded-xl"> {{ user.email}}</button> </a> </div>
              <div> <Link href='logout' method="delete" as="button" class="ml-2 py-1 px-4 bg-white text-black rounded-xl"> Logout </Link> </div>
           </div>
 
-          <div v-else-if="email" class="flex justify-end ml-20">
-             <div> <a href="#"> <button class="py-1 px-4 bg-white text-black rounded-xl"> {{ email}}</button> </a> </div>
+          <div v-else-if="professional" class="flex justify-end ml-20">
+             <div> <a href="#"> <button class="py-1 px-4 bg-white text-black rounded-xl"> {{ user.email}}</button> </a> </div>
              <div> <Link href='logout' method="delete" as="button" class="ml-2 py-1 px-4 bg-white text-black rounded-xl"> Logout </Link> </div>
           </div>
 
@@ -116,6 +116,7 @@ import { router } from '@inertiajs/vue3'
 const page = usePage()
 
 const user = computed(() => page.props.user )
+
 
 
 
