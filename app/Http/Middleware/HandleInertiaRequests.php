@@ -43,22 +43,24 @@ class HandleInertiaRequests extends Middleware
             'flash' => [
                 'success' => $request->session()->get('success')
             ],
-         /*   'user' => $request->user() ? [
+           'user' => $request->user() ? [
                 'id' => $request->user()->id,
                 'email' => $request->user()->email,
-            ] : null ,
+            ] : null , 
             
-            'professional' => $request->user() ? [
+           /* 'professional' => $request->user() ? [
                 'id' => $request->user()->id,
                 'email' => $request->user()->email,
             ] : null , */
-            'auth.user' => fn () => $request->user()
+         /*   'auth.user' => fn () => $request->user()
             ? $request->user()->only('id', 'email')
-            : null,
+            : null, */
 
             'prof' => [
-              'email' =>  Auth::guard('professional')->user()->email,
+              'email' =>  Auth::guard('professional')->user()?->email
             ]
+
+            
         ]);
     }
 }

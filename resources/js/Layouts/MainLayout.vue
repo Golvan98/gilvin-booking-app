@@ -115,8 +115,8 @@ import { useForm } from '@inertiajs/vue3'
 import { router } from '@inertiajs/vue3'
 const page = usePage()
 
-//const user = computed(() => page.props.user )
-const user = computed(() => page.props.auth.user)
+const user = computed(() => page.props.user )
+// const user = computed(() => page.props.auth.user)
 
 const prof = computed (() => page.props.prof)
 

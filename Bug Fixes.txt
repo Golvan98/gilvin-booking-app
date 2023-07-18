@@ -13,6 +13,13 @@ Bug 3: Error messages even when logged in credentials are correct
 Fix: 
 - rewrote if statement to else and else if instead of !, true
 ====================================================================================
+Bug 4: Attempt to read property on null even when I designated it to be nullable, and Auth returns null even when I authenticated users already
+
+POSSIBLE FIX: trying to get the right syntax to reflect a nullable value, and also fixing that auth return null when authenticated users already exist
+MORE POSSIBLE FIX: your destroy if statements are wrong, u tried to pass auth:logout as an action, it's a condition. so u must condition if a guard logged is
+professional or web first before an action should be taken
+
+
 PERSISTENT BUGS: Unable to use mutli Guards
 
 - FIX IN PROGRESS

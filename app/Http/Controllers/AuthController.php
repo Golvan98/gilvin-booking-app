@@ -87,13 +87,39 @@ class AuthController extends Controller
 
     public function destroy(Request $request)
     {
-        Auth::logout();
+        
+        if (Auth::guard('web')->check)
+        {
+            dd('default guard is present');
+        }
 
+        else if (Auth::guard('professional')->check)
+        {
+            dd('professional guard is present');
+        }
+
+        else {
+            dd('well shit');
+        }
+
+      /* if  (Auth::logout())
+       {
+        $request->session()->invalidate();
+        $request->session()->regenerateToken();
+        return redirect()->route('home');
+       }
+
+       else if  (Auth::guard('professional')->logout())
+       {
         $request->session()->invalidate();
         $request->session()->regenerateToken();
 
-        return redirect()->route('home');
+        return redirect()->route('login');
+       }
 
-
+       else {
+        dd('all failed');
+       }
+       */
     }
 }
