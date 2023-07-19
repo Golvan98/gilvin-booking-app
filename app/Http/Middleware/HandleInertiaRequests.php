@@ -56,9 +56,9 @@ class HandleInertiaRequests extends Middleware
             ? $request->user()->only('id', 'email')
             : null, */
 
-            'prof' => [
-              'email' =>  Auth::guard('professional')->user()?->email
-            ]
+            'prof' => Auth::guard('professional')->user() ? [
+              'email' =>  Auth::guard('professional')->user()->email
+            ] : null ,
 
             
         ]);

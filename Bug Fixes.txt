@@ -19,6 +19,12 @@ POSSIBLE FIX: trying to get the right syntax to reflect a nullable value, and al
 MORE POSSIBLE FIX: your destroy if statements are wrong, u tried to pass auth:logout as an action, it's a condition. so u must condition if a guard logged is
 professional or web first before an action should be taken
 
+BUG UPDATE: Found the problem, v-if="prof"always returns something even with a null value and it 
+doesnt behave the sameway handleinertiarequest does for an empty value for user, working on a fix...
+
+BUG FIX: Missing ? null operators for handleinertia requests, with the ? null operator in assigning the
+array, it can now return null values as completely NULL instead of empty value which is important for v-if (exists).
+====================================================================================
 
 PERSISTENT BUGS: Unable to use mutli Guards
 

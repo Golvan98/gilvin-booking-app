@@ -109,3 +109,7 @@ July 18
 - added flash success config in HandleInertiaRequests
 - fixed blank page bug on conditional rendering
 - added Link href section and fixed blank page bug when adding Link href section
+- fixed login bug where validation errors appear even when credentials enetered are correct
+- added working authenticator for professional guard in auth controller, will test further
+- managed to get the authenticated professional guard to reflect on vue, but logout button doesn't work, will test further
+- conditioner for guard added, will test further tomorrow, and will add user registration as well
