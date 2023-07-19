@@ -91,15 +91,29 @@ class AuthController extends Controller
      //  dd(Auth::guard('professional')->user()?->email); Works!
 
 
+        $prof = Auth::guard('professional')->user();
+
+    
+        if($prof==null)
+        {
+            Auth::logout();
+            $request->session()->invalidate();
+            $request->session()->regenerateToken();
+            return redirect()->route('home');
+        }
 
 
+        if($prof!=null)
+
+        {
+            Auth::guard('professional')->logout();
      
-         Auth::guard('professional')->logout();
-     
-      $request->session()->invalidate();
-      $request->session()->regenerateToken();
-      return redirect()->route('home');
-     
+              $request->session()->invalidate();
+              $request->session()->regenerateToken();
+              return redirect()->route('home');
+        }
+
+        
 
 
       /*  if (Auth::guard('web')->check)

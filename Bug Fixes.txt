@@ -25,6 +25,12 @@ doesnt behave the sameway handleinertiarequest does for an empty value for user,
 BUG FIX: Missing ? null operators for handleinertia requests, with the ? null operator in assigning the
 array, it can now return null values as completely NULL instead of empty value which is important for v-if (exists).
 ====================================================================================
+Bug 5: Signed in v-if user in vue conditional rendering adds another button of Signin and Register even when logged in
+
+
+====================================================================================
+
+
 
 PERSISTENT BUGS: Unable to use mutli Guards
 
