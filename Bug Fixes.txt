@@ -27,12 +27,17 @@ array, it can now return null values as completely NULL instead of empty value w
 ====================================================================================
 Bug 5: Signed in v-if user in vue conditional rendering adds another button of Signin and Register even when logged in
 
-
+BUG FIX: two consecutive v-ifs found, following conditional statement after v-if must be v-else-if
 ====================================================================================
-
 
 
 PERSISTENT BUGS: Unable to use mutli Guards
 
 - FIX IN PROGRESS
 - adding a role for user might be the better option to fix this issue, ur way seems impossible or the way has not been discovered yet
+
+BUG FIX: 
+- if (Auth::attempt), else if for logging in, and
+- $prof = if Auth::guard('professional')->user() 
+- $prof = NOT NULL OPERATOR
+-  Auth::guard('professional')->logout(); SYNTAX

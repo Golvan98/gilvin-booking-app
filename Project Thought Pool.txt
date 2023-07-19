@@ -1,11 +1,8 @@
-Must Dos
-- logout method, try if existing sessions are fucking up ur multi-guard usage
-
+Currently Doing
+- Register with login (Just use separate features for User and Professional, makes sense after all)
 
 To Dos
 
-- connect professionals to user 
-- Log out feature
 - Working Register with Auth
 - profile for Professionals
 - profile for Users (maybe smaller details on this one)
@@ -14,5 +11,7 @@ To Dos
 
 Done
 - Validation error message for wrong input in login forms
+- Use Separate multiple guard for User and Professionals (This was very fucking time consuming and hard for me)
+- Log out feature for User and Professionals 
 
 

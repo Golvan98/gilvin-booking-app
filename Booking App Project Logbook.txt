@@ -113,3 +113,8 @@ July 18
 - added working authenticator for professional guard in auth controller, will test further
 - managed to get the authenticated professional guard to reflect on vue, but logout button doesn't work, will test further
 - conditioner for guard added, will test further tomorrow, and will add user registration as well
+
+July 19
+- Fixed the v-if="prof" bug returning an empty value instead of null which led to Homepage having a blank "Sign-In"button
+- added working conditional rendering for which Guard to logout in AuthController
+- Login and Logout feature for Professionals and Users done!

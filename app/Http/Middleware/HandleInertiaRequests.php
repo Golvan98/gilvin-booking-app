@@ -47,14 +47,6 @@ class HandleInertiaRequests extends Middleware
                 'id' => $request->user()->id,
                 'email' => $request->user()->email,
             ] : null , 
-            
-           /* 'professional' => $request->user() ? [
-                'id' => $request->user()->id,
-                'email' => $request->user()->email,
-            ] : null , */
-         /*   'auth.user' => fn () => $request->user()
-            ? $request->user()->only('id', 'email')
-            : null, */
 
             'prof' => Auth::guard('professional')->user() ? [
               'email' =>  Auth::guard('professional')->user()->email
@@ -64,3 +56,10 @@ class HandleInertiaRequests extends Middleware
         ]);
     }
 }
+ /* 'professional' => $request->user() ? [
+                'id' => $request->user()->id,
+                'email' => $request->user()->email,
+            ] : null , */
+         /*   'auth.user' => fn () => $request->user()
+            ? $request->user()->only('id', 'email')
+            : null, */

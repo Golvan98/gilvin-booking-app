@@ -23,7 +23,7 @@
              <div> <Link href='logout' method="delete" as="button" class="ml-2 py-1 px-4 bg-white text-black rounded-xl"> Logout </Link> </div>
           </div>
 
-          <div v-if="prof" class="flex justify-end ml-20">
+          <div v-else-if="prof" class="flex justify-end ml-20">
              <div> <a href="#"> <button class="py-1 px-4 bg-white text-black rounded-xl"> {{ prof.email}}</button> </a> </div>
              <div> <Link href='logout' method="delete" as="button" class="ml-2 py-1 px-4 bg-white text-black rounded-xl"> Logout </Link> </div>
           </div>
