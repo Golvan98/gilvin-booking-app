@@ -2,7 +2,9 @@ import { createApp, h } from 'vue'
 import { createInertiaApp } from '@inertiajs/vue3'
 import MainLayout from '@/Layouts/MainLayout.vue'
 import '../css/app.css'
-
+import Alpine from 'alpinejs'
+window.Alpine = Alpine
+Alpine.start()
 
 createInertiaApp({
   resolve: async name => {

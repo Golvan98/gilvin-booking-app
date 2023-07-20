@@ -1,6 +1,7 @@
 <template>
 <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
 
+
  <header class="dark:border-gray-700 bg-green-400 dark:bg-gray-800 w-full h-24">
   
     <div class="container mx-auto">
@@ -41,7 +42,11 @@
   </header>
 
 <main class="">  
-  <div v-if="flashSuccess" class="fixed bg-green-500 text-white py-2 px-4 rounded-xl bottom-3 right-3 text-sm">
+  <div v-if="flashSuccess" 
+  x-data="{show: true}"
+     x-show="show"
+     x-init="setTimeout(() => show = false, 3000)"
+  class="alert fixed bg-green-500 text-white py-2 px-4 rounded-xl bottom-3 right-3 text-sm">
              {{ flashSuccess }}
   </div>
  
@@ -119,9 +124,11 @@ import { useForm } from '@inertiajs/vue3'
 import { router } from '@inertiajs/vue3'
 const page = usePage()
 
-const flashSuccess = computed(() => page.props.flash.success,)
+const flashSuccess = computed(() => page.props.flash.success, )
+
 const user = computed(() => page.props.user )
 // const user = computed(() => page.props.auth.user)
+
 
 const prof = computed (() => page.props.prof)
 

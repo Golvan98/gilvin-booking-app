@@ -118,3 +118,7 @@ July 19
 - Fixed the v-if="prof" bug returning an empty value instead of null which led to Homepage having a blank "Sign-In"button
 - added working conditional rendering for which Guard to logout in AuthController
 - Login and Logout feature for Professionals and fixed !
+
+July 20
+- added successful flash message and fixed to bottom right
+- installed alpine to setTimeout on flash messages to disappear after 3 seconds

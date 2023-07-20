@@ -14,4 +14,5 @@ Done
 - Validation error message for wrong input in login forms
 - Use Separate multiple guard for User and Professionals (This was very fucking time consuming and hard for me)
 - Log out feature for User and Professionals 
+- Successful Flash Messages
 
