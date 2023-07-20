@@ -21,9 +21,19 @@ use Laravel\Sanctum\Guard;
 class AuthController extends Controller
 {
 
-    public function create()
+    public function createUser()
     {
-        return inertia('Index/Login');
+        return inertia('Index/Create');
+    }
+
+    public function registerUser(Request $request)
+    {
+        $request->validate([
+            'first_name' => 'required|min:2|max:20|unique:users',
+            'last_name' => 'required|min:2|max:20',
+            'email' => 'required|string|email',
+            'password'=> 'required|min:8|max:20|confirmed'
+        ]);
     }
 
     public function store(Request $request)

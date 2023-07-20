@@ -9,7 +9,7 @@ use Illuminate\Support\Facades\Auth;
 use App\Http\Middleware\Authenticate;
 use App\Models\User;
 use Illuminate\Http\Request;
-
+use Random\Randomizer;
 
 /*
 |--------------------------------------------------------------------------
@@ -31,12 +31,15 @@ Route::get('/home', [IndexController::class, 'index'])->name('home');
 
 Route::get('/show', [IndexController::class, 'yawa']);
 
-//Route::get('/login', [Controller::class, 'login']);
+Route::get('/login', [Controller::class, 'login']);
 
-Route::get('/register', [Controller::class, 'register']);
+Route::get('/create', [AuthController::class, 'createUser'])
+->name('create-user');
 
-Route::get('/login', [AuthController::class, 'create'])
-->name('login');
+
+Route::post('/register', [AuthController::class, 'registerUser']);
+
+
 
 Route::post('/login.store', [AuthController::class, 'store'])
 ->name('login.store');

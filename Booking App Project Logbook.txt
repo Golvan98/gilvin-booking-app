@@ -122,3 +122,4 @@ July 19
 July 20
 - added successful flash message and fixed to bottom right
 - installed alpine to setTimeout on flash messages to disappear after 3 seconds
+- added frontend part of register page 

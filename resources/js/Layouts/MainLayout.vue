@@ -32,7 +32,7 @@
 
           <div v-else class="flex justify-end ml-20">
               <a href="/login"> <button class="py-1 px-4 bg-white text-black rounded-xl"> Sign in</button> </a>
-              <a href="/register"> <button class="ml-2 py-1 px-4 bg-white text-black rounded-xl"> Register </button> </a>
+              <Link href="/create"> <button class="ml-2 py-1 px-4 bg-white text-black rounded-xl"> Register </button> </Link>
           </div>
 
         </div>
