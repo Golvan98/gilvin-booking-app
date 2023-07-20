@@ -2,12 +2,13 @@
 <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
 
  <header class="dark:border-gray-700 bg-green-400 dark:bg-gray-800 w-full h-24">
-    
+  
     <div class="container mx-auto">
       <nav class="flex items-center justify-between mb-4">
 
         <div class="w-1/3 text-3xl font-bold flex justify-between text-white mt-4"> 
           <div> <a href="/home"> 𝔾𝔹𝕂 </a></div> 
+          
         </div>
         
         <div class="text-xl mt-6 text-white dark:text-indigo-300 font-bold text-center flex justify-between">
@@ -40,7 +41,10 @@
   </header>
 
 <main class="">  
-
+  <div v-if="flashSuccess" class="fixed bg-green-500 text-white py-2 px-4 rounded-xl bottom-3 right-3 text-sm">
+             {{ flashSuccess }}
+  </div>
+ 
     <slot> Default </slot> 
 
     <footer class="w-full h-1/2 bg-green-400">
@@ -115,6 +119,7 @@ import { useForm } from '@inertiajs/vue3'
 import { router } from '@inertiajs/vue3'
 const page = usePage()
 
+const flashSuccess = computed(() => page.props.flash.success,)
 const user = computed(() => page.props.user )
 // const user = computed(() => page.props.auth.user)
 

@@ -38,14 +38,14 @@ class AuthController extends Controller
             {
                 $request->session()->regenerate();
                 
-                return redirect('/home');
+                return redirect('/home')->with('success', 'User Logged in Successfully');
             }
 
             else if(Auth::guard('professional')->attempt($data))
             {
                 $request->session()->regenerate();
                // dd(Auth::guard('professional')->user()->email); THIS WORKS!
-                return redirect('/home');
+                return redirect('/home')->with('success', 'Professional Logged in Successfully');
             }
 
             
@@ -99,7 +99,7 @@ class AuthController extends Controller
             Auth::logout();
             $request->session()->invalidate();
             $request->session()->regenerateToken();
-            return redirect()->route('home');
+            return redirect()->route('home')->with('success', 'User logged out!');
         }
 
 
@@ -110,7 +110,7 @@ class AuthController extends Controller
      
               $request->session()->invalidate();
               $request->session()->regenerateToken();
-              return redirect()->route('home');
+              return redirect()->route('home')->with('success', 'Professional logged out!');
         }
 
         
