@@ -99,12 +99,19 @@
     defineProps({ errors: Object })
     
     
-    const form = reactive({
-        email:null,
-        password: null
+    const form = useForm({
+        first_name : null,
+        last_name : null,
+        email: null,
+        password: null,
+        password_confirmation : null
     })
  
-    
+    function submit()
+{
+        router.post('register.user', form)
+}
+    const register = () => form.post(route('register.user'))
     
     
     </script>

@@ -37,7 +37,7 @@ Route::get('/create', [AuthController::class, 'createUser'])
 ->name('create-user');
 
 
-Route::post('/register', [AuthController::class, 'registerUser']);
+Route::post('/register.user', [AuthController::class, 'registerUser'])->name('register.user');
 
 
 

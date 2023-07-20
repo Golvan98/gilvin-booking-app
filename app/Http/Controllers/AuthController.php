@@ -28,12 +28,16 @@ class AuthController extends Controller
 
     public function registerUser(Request $request)
     {
-        $request->validate([
-            'first_name' => 'required|min:2|max:20|unique:users',
+       $user = User::create($request->validate([
+            'first_name' => 'required|min:2|max:20',
             'last_name' => 'required|min:2|max:20',
-            'email' => 'required|string|email',
+            'email' => 'required|string|email|unique:users',
             'password'=> 'required|min:8|max:20|confirmed'
-        ]);
+        ]));
+        $user->password = Hash::make($user->password);
+        $user->save();
+        Auth::login($user);
+        return redirect('/home')->with('success', 'User account created');
     }
 
     public function store(Request $request)
