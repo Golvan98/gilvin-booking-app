@@ -1,6 +1,5 @@
 Currently Doing
-- Register Professional Side ((Just use separate features for User and Professional, or a dropdown select,
- makes sense to separate them after all)
+- 
 
 To Dos
 
@@ -15,4 +14,6 @@ Done
 - Log out feature for User and Professionals 
 - Successful Flash Messages
 - Working Register with Auth
+- Register Professional Side ((Just use separate Register page for User and Professional to avoid confusion, or a dropdown select,
+ makes sense to separate them after all)
 

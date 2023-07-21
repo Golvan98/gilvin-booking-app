@@ -37,15 +37,17 @@ class AuthController extends Controller
             [
                 'first_name' => 'required|min:2|max:20',
                 'last_name' => 'required|min:2|max:20',
-                'email' => 'required|min:2|max:20' ,
+                'email' => 'required|min:2|max:40' ,
                 'profession' => 'required|min:2|max:20',
-                'password' => 'required|min:2|max:20'
+                'password' => 'required|min:8|max:20|confirmed'
             ]));
-
-            $professional->password = Hash::make($professional->password);
-            $professional->save();
-            Auth::guard('professional')->attempt($professional);
+        
+           Auth::guard('professional')->login($professional);
+           // if(Auth::guard('professional')->attempt($professional))
+           // {
             return redirect()->intended('/home')->with('success', 'Professional Account Created');
+           // }
+
             
     }
 

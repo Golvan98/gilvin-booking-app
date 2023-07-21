@@ -19,7 +19,7 @@ class Professional extends Authenticatable
     
     protected $guard = 'professional';
 
-    protected $fillable = ['email', 'password', ];
+    protected $fillable = ['first_name', 'last_name', 'email', 'profession', 'password',  ];
 
     /**
      * The attributes that should be hidden for serialization.

@@ -41,33 +41,33 @@
                                 <input id="email" v-model="form.email" type="email" name="email"  class="input ml-4 mr-4 w-full rounded-sm" placeholder="name@company.com" required="">
                               
                         </div>
+                        <div class="ml-4 text-red-500" v-if="errors.email">{{ errors.email }}</div>
 
                         <div id="4th batch" class="ml-4 mr-4 flex justify-start border-t border-gray-300">
-                                <label for="profession" class="my-2 font-bold" > Professional </label>
+                                <label for="profession" class="my-2 font-bold" > Profession </label>
                         </div>
                         <div class="w-full flex items-center justify-center mt-0.5 flex-nowrap"> 
                                 <input id="profession" v-model="form.profession" type="text" name="profession"  class="input ml-4 mr-4 w-full rounded-sm" placeholder="Software Developer" required="">                        
                         </div>
                         <div class="ml-4 text-red-500" v-if="errors.profession">{{ errors.profession }}</div>
-
-
-                        <div class="ml-4 text-red-500" v-if="errors.email">{{ errors.email }}</div>
+                        
         
-                        <div id="5th batch" class="flex justify-start mt-0.5">
-                                <label for="password" class="my-2 ml-4 font-bold" > Password </label>
-                        </div>
-                        <div class="w-full flex items-center justify-center mt-0.5"> 
-                                <input id="password" v-model="form.password" type="password" name="password"  class="input ml-4 mr-4 w-full rounded-sm" placeholder="password" required="">    
-                        </div>
-                       
-    
-                        <div id="6th batch" class="flex justify-start mt-0.5">
-                                <label for="password_confirmation" class="my-2 ml-4 font-bold" > Confirm Password </label>
-                        </div>
-                        <div class="w-full flex items-center justify-center mt-0.5"> 
-                                <input id="password_confirmation" v-model="form.password_confirmation" type="password" name="password"  class="input ml-4 mr-4 w-full rounded-sm" placeholder="password" required="">    
-                        </div>
-                        <div class="ml-4 text-red-500"  v-if="errors.password">{{ errors.password }}</div>
+                        <div id="45th batch" class="flex justify-start mt-0.5">
+                            <label for="password" class="my-2 ml-4 font-bold" > Password </label>
+                          </div>
+                          <div class="w-full flex items-center justify-center mt-0.5"> 
+                            <input id="password" v-model="form.password" type="password" name="password"  class="input ml-4 mr-4 w-full rounded-sm" placeholder="password" required="">    
+                          </div>
+                   
+
+
+                         <div id="6th batch" class="flex justify-start mt-0.5">
+                            <label for="password_confirmation" class="my-2 ml-4 font-bold" > Confirm Password </label>
+                         </div>
+                          <div class="w-full flex items-center justify-center mt-0.5"> 
+                            <input id="password_confirmation" v-model="form.password_confirmation" type="password" name="password"  class="input ml-4 mr-4 w-full rounded-sm" placeholder="password" required="">    
+                          </div>
+                          <div class="ml-4 text-red-500"  v-if="errors.password">{{ errors.password }}</div>
     
     
                         <div id="7th batch" class="bg-white h-12 mt-10 flex items-center justify-center">
@@ -114,8 +114,8 @@
             first_name : null,
             last_name : null,
             email: null,
-            password: null,
             profession: null,
+            password: null,
             password_confirmation : null
         })
      
