@@ -43,12 +43,12 @@
                         </div>
 
                         <div id="4th batch" class="ml-4 mr-4 flex justify-start border-t border-gray-300">
-                                <label for="professional" class="my-2 font-bold" > Professional </label>
+                                <label for="profession" class="my-2 font-bold" > Professional </label>
                         </div>
                         <div class="w-full flex items-center justify-center mt-0.5 flex-nowrap"> 
-                                <input id="professional" v-model="form.professional" type="text" name="professional"  class="input ml-4 mr-4 w-full rounded-sm" placeholder="Software Developer" required="">                        
+                                <input id="profession" v-model="form.profession" type="text" name="profession"  class="input ml-4 mr-4 w-full rounded-sm" placeholder="Software Developer" required="">                        
                         </div>
-                        <div class="ml-4 text-red-500" v-if="errors.professional">{{ errors.professional }}</div>
+                        <div class="ml-4 text-red-500" v-if="errors.profession">{{ errors.profession }}</div>
 
 
                         <div class="ml-4 text-red-500" v-if="errors.email">{{ errors.email }}</div>
@@ -115,14 +115,15 @@
             last_name : null,
             email: null,
             password: null,
+            profession: null,
             password_confirmation : null
         })
      
         function submit()
     {
-            router.post('register.user', form)
+            router.post('register.professional', form)
     }
-        const register = () => form.post(route('register.user'))
+        const register = () => form.post(route('register.professional'))
         
         
         </script>

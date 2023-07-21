@@ -38,6 +38,7 @@ Route::get('/createUser', [AuthController::class, 'createUser'])
 
 Route::get('/createProfessional', [AuthController::class, 'createProfessional'])->name('create-professional');
 
+Route::post('/register.professional', [AuthController::class, 'registerProfessional'])->name('register-professional');
 
 Route::post('/register.user', [AuthController::class, 'registerUser'])->name('register.user');
 

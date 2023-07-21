@@ -15,7 +15,7 @@ return new class extends Migration
             $table->tinytext('first_name')->nullable();
             $table->tinytext('last_name')->nullable();
             $table->tinytext('profession')->nullable();
-            $table->mediumText('bio');
+            $table->mediumText('bio')->nullable();
         });
     }
 
