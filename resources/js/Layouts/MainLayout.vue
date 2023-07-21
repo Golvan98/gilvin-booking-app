@@ -32,7 +32,7 @@
 
           <div v-else class="flex justify-end ml-20">
               <a href="/login"> <button class="py-1 px-4 bg-white text-black rounded-xl"> Sign in</button> </a>
-              <Link href="/create"> <button class="ml-2 py-1 px-4 bg-white text-black rounded-xl"> Register </button> </Link>
+              <Link href="/createUser"> <button class="ml-2 py-1 px-4 bg-white text-black rounded-xl"> Register </button> </Link>
           </div>
 
         </div>
@@ -45,7 +45,7 @@
   <div v-if="flashSuccess" 
   x-data="{show: true}"
      x-show="show"
-     x-init="setTimeout(() => show = false, 3000)"
+     x-init="setTimeout(() => show = false, 1000)"
   class="alert fixed bg-green-500 text-white py-2 px-4 rounded-xl bottom-3 right-3 text-sm">
              {{ flashSuccess }}
   </div>

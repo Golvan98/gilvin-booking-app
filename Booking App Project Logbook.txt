@@ -123,4 +123,7 @@ July 20
 - added successful flash message and fixed to bottom right
 - installed alpine to setTimeout on flash messages to disappear after 3 seconds
 - added frontend part of register page 
-- added backend part of register page
+- added backend part of register page, flash message not appearing before page is refresh found
+
+July 21
+- added frontend and backend(incomplete) part of professional register page

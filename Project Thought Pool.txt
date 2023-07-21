@@ -1,10 +1,9 @@
 Currently Doing
-- Register with login (Just use separate features for User and Professional, or a dropdown select,
+- Register Professional Side ((Just use separate features for User and Professional, or a dropdown select,
  makes sense to separate them after all)
 
 To Dos
 
-- Working Register with Auth
 - profile for Professionals
 - profile for Users (maybe smaller details on this one)
 - you might want to add a feature in which a professional gets to add his list of services too
@@ -15,4 +14,5 @@ Done
 - Use Separate multiple guard for User and Professionals (This was very fucking time consuming and hard for me)
 - Log out feature for User and Professionals 
 - Successful Flash Messages
+- Working Register with Auth
 

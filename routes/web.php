@@ -29,12 +29,14 @@ use Random\Randomizer;
 
 Route::get('/home', [IndexController::class, 'index'])->name('home');
 
-Route::get('/show', [IndexController::class, 'yawa']);
+//Route::get('/show', [IndexController::class, 'yawa']);
 
 Route::get('/login', [Controller::class, 'login']);
 
-Route::get('/create', [AuthController::class, 'createUser'])
+Route::get('/createUser', [AuthController::class, 'createUser'])
 ->name('create-user');
+
+Route::get('/createProfessional', [AuthController::class, 'createProfessional'])->name('create-professional');
 
 
 Route::post('/register.user', [AuthController::class, 'registerUser'])->name('register.user');

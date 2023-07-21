@@ -74,6 +74,10 @@
                             <div class="ml-2 text-indigo-600 font-bold"> I already have an account</div>
                             <div class="mr-2 text-indigo-600 font-bold">Reset password</div>
                     </div>
+
+                    <div id="8th batch" class="bg-white h-12 flex items-center justify-center mt-2">
+                            <div class="ml-2 text-indigo-600 font-bold"><Link href="/createProfessional"> Register as a Professional </link> </div> 
+                    </div>
     
                 </form>
         </div>   

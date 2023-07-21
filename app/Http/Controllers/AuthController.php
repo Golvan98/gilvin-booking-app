@@ -23,8 +23,28 @@ class AuthController extends Controller
 
     public function createUser()
     {
-        return inertia('Index/Create');
+        return inertia('Index/CreateUser');
     }
+
+    public function createProfessional()
+    {
+        return inertia('Index/CreateProfessional');
+    }
+
+    public function registerProfessional(Request $request)
+    {
+        $professional = Professional::create($request->validate(
+            [
+                'profession' => 'required|min:2|max:20',
+                'first_name' => 'required|min:2|max:20',
+                'last_name' => 'required|min:2|max:20',
+                'email' => 'required|min:2|max:20' ,
+                'password' => 'required|min:2|max:20'
+            ]
+            ));
+    }
+
+
 
     public function registerUser(Request $request)
     {
@@ -37,7 +57,7 @@ class AuthController extends Controller
         $user->password = Hash::make($user->password);
         $user->save();
         Auth::login($user);
-        return redirect('/home')->with('success', 'User account created');
+        return redirect()->intended('/home')->with('success', 'User account created');
     }
 
     public function store(Request $request)
@@ -52,14 +72,14 @@ class AuthController extends Controller
             {
                 $request->session()->regenerate();
                 
-                return redirect('/home')->with('success', 'User Logged in Successfully');
+                return redirect()->intended('/home')->with('success', 'User Logged in Successfully');
             }
 
             else if(Auth::guard('professional')->attempt($data))
             {
                 $request->session()->regenerate();
                // dd(Auth::guard('professional')->user()->email); THIS WORKS!
-                return redirect('/home')->with('success', 'Professional Logged in Successfully');
+               return redirect()->intended('/home')->with('success', 'Professional Logged in Successfully');
             }
 
             
@@ -113,7 +133,7 @@ class AuthController extends Controller
             Auth::logout();
             $request->session()->invalidate();
             $request->session()->regenerateToken();
-            return redirect()->route('home')->with('success', 'User logged out!');
+            return redirect()->intended('/home')->with('success', 'User logged out!');
         }
 
 
@@ -124,7 +144,7 @@ class AuthController extends Controller
      
               $request->session()->invalidate();
               $request->session()->regenerateToken();
-              return redirect()->route('home')->with('success', 'Professional logged out!');
+              return redirect()->intended('/home')->with('success', 'Professional logged out!');
         }
 
         
