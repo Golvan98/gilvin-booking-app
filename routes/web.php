@@ -3,6 +3,7 @@
 use App\Http\Controllers\AuthController;
 use Illuminate\Support\Facades\Route;
 use App\Http\Controllers\IndexController;
+use App\Http\Controllers\UserController;
 use App\Http\Controllers\Controller;
 use Illuminate\Support\Facades\Storage;
 use Illuminate\Support\Facades\Auth;
@@ -50,7 +51,9 @@ Route::post('/login.store', [AuthController::class, 'store'])
 Route::delete('logout', [AuthController::class, 'destroy'])
 ->name('logout');
 
- 
+Route::get('/userProfile', [UserController::class, 'userProfile'])->name('user.profile');
+
+
 
 
 

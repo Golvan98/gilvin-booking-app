@@ -23,4 +23,6 @@ class Controller extends BaseController
     {
         return inertia('Index/Register');
     }
+
+  
 }
