@@ -7,6 +7,7 @@ To Dos
 - profile for Users (maybe smaller details on this one)
 - you might want to add a feature in which a professional gets to add his list of services too
 - add a feature in register where you can select to register as a user or a professional
+- auto adjust when browser is shortened
 
 Done
 - Validation error message for wrong input in login forms
