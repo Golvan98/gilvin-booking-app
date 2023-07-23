@@ -127,3 +127,7 @@ July 20
 
 July 21
 - added frontend and backend(incomplete) part of professional register page
+- added full working feature for registering professionals
+
+July 22
+- added first_names to handleinertia request  and changed main layout to reflect a logged in user's firstname and refers to its profile link 
