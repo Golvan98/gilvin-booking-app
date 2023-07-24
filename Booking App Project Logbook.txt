@@ -133,3 +133,7 @@ July 22
 - added first_names to handleinertia request  and changed main layout to reflect a logged in user's firstname and refers to its profile link 
 - established route + template for userprofile and controller for Users Model
 - downloaded template for user profile format
+- added incomplete template for user profile, kind of a hard one, will tweak more tomorrow
+
+July 24
+- added label with input type for template below

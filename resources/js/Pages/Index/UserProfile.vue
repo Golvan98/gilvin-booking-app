@@ -20,25 +20,31 @@
     <div class="h-full w-2/5 mr-12 bg-white flex justify-between"> 
         <div class="ml-4 mt-2 h-1/6 text-white"> <button class="bg-blue-400 px-2 py-1 rounded-sm">  Appointments</button> </div>
         <div class="mr-4 mt-2 h-1/6 text-white"> <button class="bg-indigo-700 px-2 py-1 bg-indigo-700 rounded-sm">  Settings</button> </div>
-  
     </div>
         
   </div>
 
   <div class=" bg-gray-300  w-full h-2/6 flex">
 
-    <div class="h-full w-3/5 ml-24 mr-12 bg-white flex no-wrap">
-        <div class="w-1/2 h-1/4 bg-gray-400 flex items-center justify-center"> 
-            hadasds
+    <div id="first box" class="h-full w-3/5 ml-24 mr-12 bg-white border border-red-300 flex">
+
+        <div class="w-1/2 h-1/4 flex-nowrap items-center justify-center bg-gray-200"> 
+            <div class="w-full h-1/3 ml-2"> <label> User Name </label> </div>
+            <div class="h-1/2 mx-2"><input type="text" class="w-full h-full" placeholder="John Doe"> </div>
         </div>
         
-        <div class="w-1/2 h-1/4 bg-gray-400 flex items-center justify-center"> 
-            dadsd
+        <div class="w-1/2 h-1/4 flex-nowrap items-center justify-center bg-gray-200"> 
+            <div class="w-full h-1/3 ml-2"> <label> Email Address </label> </div>
+            <div class="h-1/2 mx-2"><input type="text" class="w-full h-full" placeholder="John Doe"> </div>
         </div>
-        
+
     </div>
 
-    <div class="h-full w-2/5 mr-12 bg-white">2
+    
+
+    
+
+    <div class="h-full w-2/5 mr-12 bg-white border border-red-300">2
 
     </div>
         

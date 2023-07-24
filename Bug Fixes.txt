@@ -29,7 +29,7 @@ Bug 5: Signed in v-if user in vue conditional rendering adds another button of S
 
 BUG FIX: two consecutive v-ifs found, following conditional statement after v-if must be v-else-if
 ====================================================================================
-Bug 6: login not working properly, and flash message not appearing unless page is refreshed
+Bug 6: login auth not working properly, and flash message not appearing unless page is refreshed
 
 - FIX IN PROGRESS
 - adding a role for user might be the better option to fix this issue, ur way seems impossible or the way has not been discovered yet
@@ -41,3 +41,6 @@ BUG FIX:
 -  Auth::guard('professional')->logout(); SYNTAX
 ====================================================================================
 Bug 7: Flash message only appearing once unless page is refreshed (THIS BUG IS NOT THAT BREAKING, WILL LOOK INTO IT ONCE ALL IMPORTANT SHIT IS DONE)
+
+====================================================================================
+Bug 8: newly made users and professionals cannot login even with correct passwords entered
