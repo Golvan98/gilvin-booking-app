@@ -139,3 +139,4 @@ July 24
 - added label with input type for template below
 - added Appointment, messages and requests circle button for user profile page
 - added photo section for user profile and replaced buttons with Upload new image and reset password
+- completed front end part of user Profile, backend parts of it To do next shifts

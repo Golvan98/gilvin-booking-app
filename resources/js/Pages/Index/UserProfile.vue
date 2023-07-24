@@ -12,10 +12,18 @@
     
   <div class=" bg-gray-700 w-full h-1/6 flex">
     
-    <div class="h-full w-3/5 ml-24 mr-12 bg-white flex justify-between">
-        <div class="ml-4 mt-2 h-1/6 text-lg font-bold"> Your Account </div>
-        <div class="mr-4 mt-2 h-1/6 text-white"> <button class="bg-indigo-700 px-2 py-1 bg-indigo-700 rounded-sm">  Settings</button> </div>
+    <div class="h-full w-3/5 ml-24 mr-12 bg-white flex-nowrap">
+
+      <div class="w-full h-4/5 flex justify-between bg-white">
+        <div class="ml-4 mt-4  h-1/6 text-lg font-bold"> Your Account </div>
+        <div class="mr-4 mt-4  h-1/6 text-white"> <button class="bg-indigo-700 px-2 py-1 bg-indigo-700 rounded-sm">  Settings</button> </div>
+      </div>
+
+      <div class="w-ful">
+        <div class="ml-4 text-gray-300 text-lg font-bold"> Non-Professional Account </div>
+      </div>
     </div>
+    
 
     <div class="h-full w-2/5 mr-12 bg-white flex justify-center"> 
         <div class="ml-4 mt-2 h-1/6 text-white"> <button class="bg-red-700 px-2 py-1 rounded-sm">  Reset Password </button> </div>
@@ -36,7 +44,7 @@
 
   <div class=" bg-gray-300  w-full h-2/6 flex">
 
-    <div id="first box" class="h-4/5 w-3/5 ml-24 mr-12 bg-white border border-red-300 flex">
+    <div id="first box" class="h-4/5 w-3/5 ml-24 mr-12 bg-white border border-gray-300 flex">
 
       <div class=" w-1/2">
 
@@ -72,7 +80,7 @@
 
     
 
-    <div class="h-4/5 w-2/5 mr-12 bg-white border border-red-300 flex items-center justify-center">
+    <div class="h-4/5 w-2/5 mr-12 bg-white border flex items-center justify-center">
     
   
       <div class="flex-nowrap">
