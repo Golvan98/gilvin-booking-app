@@ -26,17 +26,35 @@
 
   <div class=" bg-gray-300  w-full h-2/6 flex">
 
-    <div id="first box" class="h-full w-3/5 ml-24 mr-12 bg-white border border-red-300 flex">
+    <div id="first box" class="h-4/5 w-3/5 ml-24 mr-12 bg-white border border-red-300 flex">
 
-        <div class="w-1/2 h-1/4 flex-nowrap items-center justify-center bg-gray-200"> 
+      <div class=" w-1/2">
+
+        <div class="mt-8 w-full h-1/3 flex-nowrap items-center justify-center "> 
             <div class="w-full h-1/3 ml-2"> <label> User Name </label> </div>
             <div class="h-1/2 mx-2"><input type="text" class="w-full h-full" placeholder="John Doe"> </div>
         </div>
         
-        <div class="w-1/2 h-1/4 flex-nowrap items-center justify-center bg-gray-200"> 
+        <div class="mt-4 w-full h-1/3 flex-nowrap items-center justify-center "> 
             <div class="w-full h-1/3 ml-2"> <label> Email Address </label> </div>
             <div class="h-1/2 mx-2"><input type="text" class="w-full h-full" placeholder="John Doe"> </div>
         </div>
+
+      </div>
+
+      <div class="w-1/2">
+        
+        <div class="mt-8 w-full h-1/3 flex-nowrap items-center justify-center "> 
+            <div class="w-full h-1/3 ml-2"> <label> User Name </label> </div>
+            <div class="h-1/2 mx-2"><input type="text" class="w-full h-full" placeholder="John Doe"> </div>
+        </div>
+        
+        <div class="mt-4 w-full h-1/3 flex-nowrap items-center justify-center "> 
+            <div class="w-full h-1/3 ml-2"> <label> Email Address </label> </div>
+            <div class="h-1/2 mx-2"><input type="text" class="w-full h-full" placeholder="John Doe"> </div>
+        </div>
+
+      </div>
 
     </div>
 
@@ -44,7 +62,35 @@
 
     
 
-    <div class="h-full w-2/5 mr-12 bg-white border border-red-300">2
+    <div class="h-4/5 w-2/5 mr-12 bg-white border border-red-300 flex items-center justify-center">
+    
+  
+      <div class="flex-nowrap">
+        <div class="mr-4 flex items-center justify-center h-16 w-16 rounded-full bg-gray-400">
+        <span class="text-white text-2xl font-bold">
+            12
+        </span> <br>
+        </div>
+        <div class="mr-4 bg-inherit text-start text-xs"> Appointments</div>
+      </div>
+
+      <div class="flex-nowrap">
+        <div class="mr-4 flex items-center justify-center h-16 w-16 rounded-full bg-gray-400">
+        <span class="text-white text-2xl font-bold">
+            12
+        </span> <br>
+        </div>
+        <div class="bg-inherit text-start text-xs">&nbsp &nbspRequests</div>
+      </div>
+
+      <div class="ml-4 flex-nowrap">
+        <div class="flex items-center justify-center h-16 w-16 rounded-full bg-gray-400">
+        <span class="text-white text-2xl font-bold">
+            12
+        </span> <br>
+        </div>
+        <div class="bg-inherit text-start text-xs">&nbsp Messages</div>
+      </div>
 
     </div>
         

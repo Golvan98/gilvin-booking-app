@@ -137,3 +137,4 @@ July 22
 
 July 24
 - added label with input type for template below
+- added Appointment, messages and requests circle button for user profile page
