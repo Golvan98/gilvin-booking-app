@@ -1,28 +1,33 @@
 <template>
 
-<div class="h-screen w-full bg-gray-300 flex-nowrap">
+<div class="h-screen w-full bg-gray-300 flex-nowrap"
+style="background-image: url('storage/greybg.png'); 
+        background-repeat: no-repeat; 
+        background-size: cover;">
 
-  <div class="bg-gray-700 w-full h-3/6">
-    <div class="bg-inherit h-1/4">1 </div>
-    <div class="bg-inherit h-1/ ml-4 text-white font-bold text-lg"> Hello Gilvin! <br> <br> You can edit information about yourself here as you please</div>
+  <div class="w-full h-3/6">
+
+    <div class="bg-inherit h-1/4 "> </div>
+    <div class="bg-inherit h-1/ ml-4 font-bold text-lg text-gray-300"> Hello Gilvin! <br> <br> You can edit information about yourself here as you please</div>
     <div class="bg-inherit h-1/4 flex items-end"> <button class="ml-4 bg-blue-400 text-white font-bold text-lg rounded-lg px-2 py-0.5"> Edit Profile</button> </div>
-    <div class="bg-inherit h-1/4">1 </div>
+    <div class="bg-inherit h-1/4"> </div>
 
   </div> 
     
-  <div class=" bg-gray-700 w-full h-1/6 flex">
+  <div class=" w-full h-1/6 flex">
     
     <div class="h-full w-3/5 ml-24 mr-12 bg-white flex-nowrap">
 
       <div class="w-full h-4/5 flex justify-between bg-white">
         <div class="ml-4 mt-4  h-1/6 text-lg font-bold"> Your Account </div>
-        <div class="mr-4 mt-4  h-1/6 text-white"> <button class="bg-indigo-700 px-2 py-1 bg-indigo-700 rounded-sm">  Settings</button> </div>
+        <div class="mr-4 mt-4  h-1/6 text-white"> <button class="bg-indigo-700 px-2 py-1 rounded-sm">  Settings</button> </div>
       </div>
 
       <div class="w-ful">
         <div class="ml-4 text-gray-300 text-lg font-bold"> Non-Professional Account </div>
       </div>
-    </div>
+      
+  </div>
     
 
     <div class="h-full w-2/5 mr-12 bg-white flex justify-center"> 
