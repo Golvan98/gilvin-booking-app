@@ -146,3 +146,6 @@ July 25
 
 July 26
 - felt tired, sorry, no important commits for today
+
+July 27
+- added bg image with inherited properties for user profile

@@ -23,10 +23,10 @@ style="background-image: url('storage/greybg.png');
         <div class="mr-4 mt-4  h-1/6 text-white"> <button class="bg-indigo-700 px-2 py-1 rounded-sm">  Settings</button> </div>
       </div>
 
-      <div class="w-ful">
-        <div class="ml-4 text-gray-300 text-lg font-bold"> Non-Professional Account </div>
+      <div class="w-full">
+        <div class="ml-4 text-gray-300 text-lg font-bold mb-"> Non-Professional Account </div>
       </div>
-      
+
   </div>
     
 
@@ -42,7 +42,7 @@ style="background-image: url('storage/greybg.png');
         </div>
 
 
-        <div class="mr-4 mt-2 h-1/6 text-white"> <button class="bg-indigo-700 px-2 py-1 bg-indigo-700 rounded-sm">  Upload New Image</button> </div>
+        <div class="mr-4 mt-2 h-1/6 text-white"> <button class="px-2 py-1 bg-indigo-700 rounded-sm">  Upload New Image</button> </div>
     </div>
         
   </div>
@@ -54,13 +54,13 @@ style="background-image: url('storage/greybg.png');
       <div class=" w-1/2">
 
         <div class="mt-8 w-full h-1/3 flex-nowrap items-center justify-center "> 
-            <div class="w-full h-1/3 ml-2"> <label> User Name </label> </div>
-            <div class="h-1/2 mx-2"><input type="text" class="w-full h-full" placeholder="John Doe"> </div>
+            <div class="w-full h-1/3 ml-2"> <label> Username </label> </div>
+            <div class="h-1/2 mx-2 mt-2"><input type="text" class="w-full h-full" placeholder="John Doe"> </div>
         </div>
         
         <div class="mt-4 w-full h-1/3 flex-nowrap items-center justify-center "> 
             <div class="w-full h-1/3 ml-2"> <label> Email Address </label> </div>
-            <div class="h-1/2 mx-2"><input type="text" class="w-full h-full" placeholder="John Doe"> </div>
+            <div class="h-1/2 mx-2 mt-2"><input type="text" class="w-full h-full" placeholder="John Doe"> </div>
         </div>
 
       </div>
@@ -68,13 +68,13 @@ style="background-image: url('storage/greybg.png');
       <div class="w-1/2">
         
         <div class="mt-8 w-full h-1/3 flex-nowrap items-center justify-center "> 
-            <div class="w-full h-1/3 ml-2"> <label> User Name </label> </div>
-            <div class="h-1/2 mx-2"><input type="text" class="w-full h-full" placeholder="John Doe"> </div>
+            <div class="w-full h-1/3 ml-2"> <label> Name </label> </div>
+            <div class="h-1/2 mx-2 mt-2"><input type="text" class="w-full h-full" placeholder="John Doe"> </div>
         </div>
         
         <div class="mt-4 w-full h-1/3 flex-nowrap items-center justify-center "> 
-            <div class="w-full h-1/3 ml-2"> <label> Email Address </label> </div>
-            <div class="h-1/2 mx-2"><input type="text" class="w-full h-full" placeholder="John Doe"> </div>
+            <div class="w-full h-1/3 ml-2"> <label> password </label> </div>
+            <div class="h-1/2 mx-2 mt-2"><input type="password" class="w-full h-full" placeholder="John Doe"> </div>
         </div>
 
       </div>
