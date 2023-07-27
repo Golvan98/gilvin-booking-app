@@ -21,8 +21,14 @@ class UserController extends Controller
 {
     //
 
-    public function userProfile()
+    public function userProfile(Request $request, User $user)
     {
-        return inertia('Index/UserProfile');
+        $user =auth()->user();
+    
+        return inertia('Index/UserProfile',
+    [
+        'user' => $user->first_name,
+        'email' => $user->email
+    ]);
     }
 }

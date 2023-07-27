@@ -40,7 +40,11 @@ BUG FIX:
 - $prof = NOT NULL OPERATOR
 -  Auth::guard('professional')->logout(); SYNTAX
 ====================================================================================
-Bug 7: Flash message only appearing once unless page is refreshed (THIS BUG IS NOT THAT BREAKING, WILL LOOK INTO IT ONCE ALL IMPORTANT SHIT IS DONE)
+Bug 7: User Profile button no longer appearing after clicking it, perhaps auth middleware will fix since I skipped a step thee
+
+- auth value not persisting in vuejs when visiting other page, this might be it, middleware problem indeed
+====================================================================================
+Bug 8: Flash message only appearing once unless page is refreshed (THIS BUG IS NOT THAT BREAKING, WILL LOOK INTO IT ONCE ALL IMPORTANT SHIT IS DONE)
 
 ====================================================================================
-Bug 8: newly made users and professionals cannot login even with correct passwords entered
+Bug 9: newly made users and professionals cannot login even with correct passwords entered

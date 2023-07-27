@@ -149,3 +149,5 @@ July 26
 
 July 27
 - added bg image with inherited properties for user profile
+- indentions for user profile page
+- bug found, no longer reflects Test User email when visiting UserProfile Page. Maybe adding auth middleware will fix
