@@ -17,17 +17,18 @@ use Illuminate\Support\Facades\Hash;
 use Illuminate\Support\Facades\Validator;
 use Laravel\Sanctum\Guard;
 
+
 class UserController extends Controller
 {
     //
 
     public function userProfile(Request $request, User $user)
     {
-        $user =auth()->user();
+        $user = auth()->user();
     
         return inertia('Index/UserProfile',
     [
-        'user' => $user->first_name,
+        'userName' => $user->first_name,
         'email' => $user->email
     ]);
     }

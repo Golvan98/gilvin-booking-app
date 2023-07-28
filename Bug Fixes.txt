@@ -43,6 +43,8 @@ BUG FIX:
 Bug 7: User Profile button no longer appearing after clicking it, perhaps auth middleware will fix since I skipped a step thee
 
 - auth value not persisting in vuejs when visiting other page, this might be it, middleware problem indeed
+
+BUG FIX: data from controller was same as user = const user in vuejs, variable name duplicate/clased
 ====================================================================================
 Bug 8: Flash message only appearing once unless page is refreshed (THIS BUG IS NOT THAT BREAKING, WILL LOOK INTO IT ONCE ALL IMPORTANT SHIT IS DONE)
 

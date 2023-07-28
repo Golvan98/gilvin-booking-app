@@ -54,7 +54,7 @@
         <div class=" w-1/2">
   
           <div class="mt-8 w-full h-1/3 flex-nowrap items-center justify-center "> 
-              <div class="w-full h-1/3 ml-2"> <label> Username {{ user.first_name }}</label> </div>
+              <div v-if="user" class="w-full h-1/3 ml-2"> <label> Username {{ user.first_name }}</label> </div>
               <div class="h-1/2 mx-2 mt-2"><input type="text" class="w-full h-full" placeholder="John Doe"> </div>
           </div>
           
