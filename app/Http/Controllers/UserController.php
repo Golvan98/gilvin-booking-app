@@ -28,8 +28,8 @@ class UserController extends Controller
     
         return inertia('Index/UserProfile',
     [
-        'userName' => $user->first_name,
-        'email' => $user->email
+        'testdata' => $user->first_name,
+        'testdata' => $user->email
     ]);
     }
 }

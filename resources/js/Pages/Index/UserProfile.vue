@@ -54,13 +54,13 @@
         <div class=" w-1/2">
   
           <div class="mt-8 w-full h-1/3 flex-nowrap items-center justify-center "> 
-              <div v-if="user" class="w-full h-1/3 ml-2"> <label> Username {{ user.first_name }}</label> </div>
-              <div class="h-1/2 mx-2 mt-2"><input type="text" class="w-full h-full" placeholder="John Doe"> </div>
+              <div v-if="user" class="w-full h-1/3 ml-2"> <label>  First Name </label> </div>
+              <div class="h-1/2 mx-2 mt-2"><input type="text" class="w-full h-full" :placeholder="userName"> </div>
           </div>
           
           <div class="mt-4 w-full h-1/3 flex-nowrap items-center justify-center "> 
               <div class="w-full h-1/3 ml-2"> <label> Email Address </label> </div>
-              <div class="h-1/2 mx-2 mt-2"><input type="text" class="w-full h-full" placeholder="John Doe"> </div>
+              <div class="h-1/2 mx-2 mt-2"><input type="text" class="w-full h-full" :placeholder="userEmail"> </div>
           </div>
   
         </div>
@@ -68,13 +68,13 @@
         <div class="w-1/2">
           
           <div class="mt-8 w-full h-1/3 flex-nowrap items-center justify-center "> 
-              <div class="w-full h-1/3 ml-2"> <label> Name </label> </div>
-              <div class="h-1/2 mx-2 mt-2"><input type="text" class="w-full h-full" placeholder="John Doe"> </div>
+              <div class="w-full h-1/3 ml-2"> <label> Last Name </label> </div>
+              <div class="h-1/2 mx-2 mt-2"><input type="text" class="w-full h-full" :placeholder="userLastName"> </div>
           </div>
           
           <div class="mt-4 w-full h-1/3 flex-nowrap items-center justify-center "> 
               <div class="w-full h-1/3 ml-2"> <label> password </label> </div>
-              <div class="h-1/2 mx-2 mt-2"><input type="password" class="w-full h-full" placeholder="John Doe"> </div>
+              <div class="h-1/2 mx-2 mt-2"><input type="password" class="w-full h-full" placeholder="**********"> </div>
           </div>
   
         </div>
@@ -136,9 +136,15 @@ const page = usePage()
 
 const flashSuccess = computed(() => page.props.flash.success, )
 
+
 const user = computed(() => page.props.user )
 // const user = computed(() => page.props.auth.user)
 
+const userName = computed(() => page.props.user.first_name)
+
+const userEmail = computed(() => page.props.user.email)
+
+const userLastName = computed(() => page.props.user.last_name)
 
 const prof = computed (() => page.props.prof)
 
