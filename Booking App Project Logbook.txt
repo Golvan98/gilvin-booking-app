@@ -152,3 +152,8 @@ July 27
 - indentions for user profile page
 - added variable to userprofile controller to reflect current authenticated user
 - bug found, no longer reflects Test User email when visiting UserProfile Page. Maybe adding auth middleware will fix
+
+July 28
+- added feature which user profile has reflected names and email on input box
+- completed feater which user profile has reflect names and email on input box
+- added auth to userProfile

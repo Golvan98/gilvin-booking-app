@@ -32,7 +32,7 @@ Route::get('/home', [IndexController::class, 'index'])->name('home');
 
 //Route::get('/show', [IndexController::class, 'yawa']);
 
-Route::get('/login', [Controller::class, 'login']);
+Route::get('/login', [Controller::class, 'login'])->name('login');
 
 Route::get('/createUser', [AuthController::class, 'createUser'])
 ->name('create-user');
@@ -51,7 +51,7 @@ Route::post('/login.store', [AuthController::class, 'store'])
 Route::delete('logout', [AuthController::class, 'destroy'])
 ->name('logout');
 
-Route::get('/userProfile', [UserController::class, 'userProfile'])->name('user.profile');
+Route::get('/userProfile', [UserController::class, 'userProfile'])->name('user.profile')->middleware('auth');
 
 
 
