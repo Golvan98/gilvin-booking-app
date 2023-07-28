@@ -157,4 +157,5 @@ July 28
 - added feature which user profile has reflected names and email on input box
 - completed feater which user profile has reflect names and email on input box
 - added auth to userProfile and named a route to redirect to when not logged in
-- established route for edit form
+- established route to UserController for edit form
+- added USER profile edit feature, delete is not necessary for now, will add Professional Profile Edit feature next

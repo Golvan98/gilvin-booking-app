@@ -23,8 +23,8 @@
           <div class="mr-4 mt-4  h-1/6 text-white"> <button class="bg-indigo-700 px-2 py-1 rounded-sm">  Settings</button> </div>
         </div>
   
-        <div class="w-full">
-          <div class="ml-4 text-gray-300 text-lg font-bold mb-"> Non-Professional Account </div>
+        <div class="w-full ">
+          <div class="ml-4 text-gray-300 text-lg font-bold "> Non-Professional Account </div>
         </div>
   
     </div>
@@ -49,7 +49,7 @@
   
     <div class=" bg-gray-300  w-full h-2/6 flex">
   
-      <form @submit.prevent="submit" class="h-4/5 w-3/5 ml-24 mr-12 bg-white flex">
+      <form @submit.prevent="submit" class="h-4/5 w-3/5 ml-24 mr-12 bg-white flex border-t">
   
         <div class=" w-1/2">
   

@@ -1,11 +1,10 @@
 Currently Doing
-- Backend part of User Profile
+- profile for Professionals
 
 
 To Dos
 
 - profile for Professionals
-- profile for Users (maybe smaller details on this one)
 - you might want to add a feature in which a professional gets to add his list of services too
 - add a feature in register where you can select to register as a user or a professional
 - auto adjust when browser is shortened
@@ -19,4 +18,5 @@ Done
 - Register Professional Side ((Just use separate Register page for User and Professional to avoid confusion, or a dropdown select,
  makes sense to separate them after all)
 - Frontend part of User Profile
+- Backend part of User Profile (Editing)
 
