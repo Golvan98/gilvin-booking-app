@@ -32,4 +32,9 @@ class UserController extends Controller
         'testdata' => $user->email
     ]);
     }
+
+    public function editProfile(Request $request, User $user)
+    {
+       dd($request->first_name);
+    }
 }

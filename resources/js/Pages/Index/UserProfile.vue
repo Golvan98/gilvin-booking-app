@@ -49,37 +49,69 @@
   
     <div class=" bg-gray-300  w-full h-2/6 flex">
   
-      <div id="first box" class="h-4/5 w-3/5 ml-24 mr-12 bg-white border border-gray-300 flex">
+      <form @submit.prevent="submit" class="h-4/5 w-3/5 ml-24 mr-12 bg-white flex">
   
         <div class=" w-1/2">
   
           <div class="mt-8 w-full h-1/3 flex-nowrap items-center justify-center "> 
-              <div v-if="user" class="w-full h-1/3 ml-2"> <label>  First Name </label> </div>
-              <div class="h-1/2 mx-2 mt-2"><input type="text" class="w-full h-full" :placeholder="userName"> </div>
+
+              <div class="w-full h-1/3 ml-2"> 
+                <label>  First Name </label> 
+              </div>
+              <div class="h-1/2 mx-2 mt-2">
+                <input id="first_name" v-model="form.first_name" type="text" class="w-full h-full" :placeholder="userName"> 
+              </div>
+
           </div>
-          
-          <div class="mt-4 w-full h-1/3 flex-nowrap items-center justify-center "> 
-              <div class="w-full h-1/3 ml-2"> <label> Email Address </label> </div>
-              <div class="h-1/2 mx-2 mt-2"><input type="text" class="w-full h-full" :placeholder="userEmail"> </div>
+                 
+          <div class="mt-4 w-full h-1/3 flex-nowrap items-center justify-center"> 
+
+              <div class="w-full h-1/3 ml-2"> 
+                <label> Email Address </label> 
+              </div>
+
+              <div class="h-1/2 mx-2 mt-2">
+                <input id="email" v-model="form.email" type="text" class="w-full h-full" :placeholder="userEmail"> 
+              </div>
+
           </div>
   
         </div>
   
         <div class="w-1/2">
           
-          <div class="mt-8 w-full h-1/3 flex-nowrap items-center justify-center "> 
-              <div class="w-full h-1/3 ml-2"> <label> Last Name </label> </div>
-              <div class="h-1/2 mx-2 mt-2"><input type="text" class="w-full h-full" :placeholder="userLastName"> </div>
+          <div class="mt-8 w-full h-1/3 flex-nowrap items-center justify-center"> 
+
+              <div class="w-full h-1/3 ml-2"> 
+                <label> Last Name </label> 
+              </div>
+
+              <div class="h-1/2 mx-2 mt-2">
+                <input id="last_name" v-model="form.last_name" type="text" class="w-full h-full" :placeholder="userLastName"> 
+              </div>
+
           </div>
           
-          <div class="mt-4 w-full h-1/3 flex-nowrap items-center justify-center "> 
-              <div class="w-full h-1/3 ml-2"> <label> password </label> </div>
-              <div class="h-1/2 mx-2 mt-2"><input type="password" class="w-full h-full" placeholder="**********"> </div>
+          <div class="mt-4 w-full h-1/3 flex-nowrap items-center justify-center"> 
+
+              <div class="w-full h-1/3 ml-2"> 
+                <label> password </label> 
+              </div>
+
+              <div class="h-1/2 mx-2 mt-2">
+                <input id="password" type="password" class="w-full h-full" placeholder="**********"> 
+              </div>
+
+              <div class="h-1/3 mx-2 mt-2 flex justify-end">
+                  <button class="bg-indigo-700 px-2 text-white" type="submit"> Save Changes</button>
+              </div>
+              
+              
           </div>
   
         </div>
   
-      </div>
+      </form>
   
       
   
@@ -146,8 +178,23 @@ const userEmail = computed(() => page.props.user.email)
 
 const userLastName = computed(() => page.props.user.last_name)
 
+
 const prof = computed (() => page.props.prof)
 
+    const form = useForm({
+        first_name : null,
+        last_name : null,
+        email : null,
+        password: null,
+    })
+ 
+    function submit()
+{
+        router.post('editProfile', form)
+}
+    
+    
+    
 
 
   </script>
