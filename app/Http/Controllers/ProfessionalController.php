@@ -16,6 +16,8 @@ use Illuminate\Foundation\Auth\RegistersUsers;
 use Illuminate\Support\Facades\Hash;
 use Illuminate\Support\Facades\Validator;
 use Laravel\Sanctum\Guard;
+use Illuminate\Support\Facades\DB;
+
 
 class ProfessionalController extends Controller
 {
@@ -25,9 +27,21 @@ class ProfessionalController extends Controller
         return inertia('Index/ProfessionalProfile');
     }
 
-    public function test()
+    public function test(Request $request)
     {
-        $test = Auth::guard('professional')->user()->first_name;
-        dd($test);
+        $test = Auth::guard('professional')->user()->id;
+        
+        $data = $request->validate([
+            
+            'first_name' => 'required|min:2|max:20',
+            'email' => 'required|string|email|unique:users',
+            'last_name' => 'required|min:2|max:20',
+            'profession' => 'required|string|max:20',
+            
+        ]);
+
+        $update = DB::table('professionals')->where('id', $test)->update($data);
+
+        return redirect()->back()->with('success', 'Profile Updated');
     }
 }

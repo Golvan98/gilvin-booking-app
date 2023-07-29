@@ -8,7 +8,7 @@
       <div class="w-full h-3/6">
     
         <div class="bg-inherit h-1/4 "> </div>
-        <div class="bg-inherit h-1/ ml-4 font-bold text-lg text-gray-300"> Hello Gilvin! <br> <br> You can edit information about yourself here as you please</div>
+        <div class="bg-inherit h-1/ ml-4 font-bold text-lg text-gray-300"> Hello {{profFirstName}}! <br> <br> You can edit information about yourself here as you please</div>
         <div class="bg-inherit h-1/4 flex items-end"> <button class="ml-4 bg-blue-400 text-white font-bold text-lg rounded-lg px-2 py-0.5"> Edit Profile</button> </div>
         <div class="bg-inherit h-1/4"> </div>
     
@@ -59,7 +59,7 @@
                   <label>  First Name </label> 
                 </div>
                 <div class="h-1/2 mx-2 mt-2">
-                  <input id="first_name" v-model="form.first_name" type="text" class="w-full h-full" :placeholder="profFirstName "> 
+                  <input id="first_name" v-model="form.first_name" type="text" class="w-full h-full" :placeholder="profFirstName"> 
                 </div>
   
             </div>

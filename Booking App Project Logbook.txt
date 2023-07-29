@@ -162,3 +162,5 @@ July 28
 
 July 29
 - added controller for Professional db model/table
+- added working routes for professional edit
+- added working backend part for editing professional user
