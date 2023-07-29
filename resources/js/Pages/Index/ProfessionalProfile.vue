@@ -24,7 +24,7 @@
           </div>
     
           <div class="w-full ">
-            <div class="ml-4 text-gray-300 text-lg font-bold "> Non-Professional Account </div>
+            <div class="ml-4 text-gray-300 text-lg font-bold "> Professional Account </div>
           </div>
     
       </div>
@@ -59,7 +59,7 @@
                   <label>  First Name </label> 
                 </div>
                 <div class="h-1/2 mx-2 mt-2">
-                  <input id="first_name" v-model="form.first_name" type="text" class="w-full h-full" :placeholder="userName"> 
+                  <input id="first_name" v-model="form.first_name" type="text" class="w-full h-full" :placeholder="profFirstName "> 
                 </div>
   
             </div>
@@ -71,7 +71,7 @@
                 </div>
   
                 <div class="h-1/2 mx-2 mt-2">
-                  <input id="email" v-model="form.email" type="text" class="w-full h-full" :placeholder="userEmail"> 
+                  <input id="email" v-model="form.email" type="text" class="w-full h-full" :placeholder="profEmail "> 
                 </div>
   
             </div>
@@ -87,7 +87,7 @@
                 </div>
   
                 <div class="h-1/2 mx-2 mt-2">
-                  <input id="last_name" v-model="form.last_name" type="text" class="w-full h-full" :placeholder="userLastName"> 
+                  <input id="last_name" v-model="form.last_name" type="text" class="w-full h-full" placeholder="profLastName"> 
                 </div>
   
             </div>
@@ -95,11 +95,11 @@
             <div class="mt-4 w-full h-1/3 flex-nowrap items-center justify-center"> 
   
                 <div class="w-full h-1/3 ml-2"> 
-                  <label> password </label> 
+                  <label> Profession </label> 
                 </div>
-  
+                
                 <div class="h-1/2 mx-2 mt-2">
-                  <input id="password" type="password" class="w-full h-full" placeholder="**********"> 
+                  <input id="profession" v-model="form.profession" type="text" class="w-full h-full" :placeholder="profProfession"> 
                 </div>
   
                 <div class="h-1/3 mx-2 mt-2 flex justify-end">
@@ -168,31 +168,29 @@
   
   const flashSuccess = computed(() => page.props.flash.success, )
   
-  
-  const user = computed(() => page.props.user )
-  // const user = computed(() => page.props.auth.user)
-  
-  const userName = computed(() => page.props.user.first_name)
-  
-  const userEmail = computed(() => page.props.user.email)
-  
-  const userLastName = computed(() => page.props.user.last_name)
-  
-  
+ 
   const prof = computed (() => page.props.prof)
 
   const profFirstName = computed(() => page.props.prof.first_name)
+
+  const profEmail = computed ( () => page.props.prof.email)
+
+  
+  const profLastName = computed(() => page.props.prof.last_name)
+
+  
+  const profProfession = computed(() => page.props.prof.profession)
   
       const form = useForm({
           first_name : null,
           last_name : null,
           email : null,
-          password: null,
+          profession: null,
       })
    
       function submit()
   {
-          router.post('editProfile', form)
+          router.post('test', form)
   }
       
       

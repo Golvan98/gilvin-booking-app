@@ -2,6 +2,7 @@
 
 use App\Http\Controllers\AuthController;
 use Illuminate\Support\Facades\Route;
+use App\Http\Controllers\ProfessionalController;
 use App\Http\Controllers\IndexController;
 use App\Http\Controllers\UserController;
 use App\Http\Controllers\Controller;
@@ -54,7 +55,10 @@ Route::delete('logout', [AuthController::class, 'destroy'])
 
 Route::get('/userProfile', [UserController::class, 'userProfile'])->name('user.profile')->middleware('auth');
 Route::post('/editProfile', [UserController::class, 'editProfile'])->name('edit.user');
-Route::post('/professionalProfile', );
+
+
+Route::get('/professionalProfile', [ProfessionalController::class, 'professionalProfile'])->name('professional.profile');
+Route::post('/test', [ProfessionalController::class, 'test'])->name('edit.professional');
 
 
 
