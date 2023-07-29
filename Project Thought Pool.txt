@@ -6,8 +6,11 @@ To Dos
 
 - profile for Professionals
 - you might want to add a feature in which a professional gets to add his list of services too
-- add a feature in register where you can select to register as a user or a professional
 - auto adjust when browser is shortened
+- professional Delete
+- User Delete
+- appointment request CRUD
+- appointments CRUD
 
 Done
 - Validation error message for wrong input in login forms
@@ -19,4 +22,6 @@ Done
  makes sense to separate them after all)
 - Frontend part of User Profile
 - Backend part of User Profile (Editing)
+- add a feature in register where you can select to register as a user or a professional
+
 

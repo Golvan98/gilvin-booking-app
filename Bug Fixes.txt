@@ -46,7 +46,13 @@ Bug 7: User Profile button no longer appearing after clicking it, perhaps auth m
 
 BUG FIX: data from controller was same as user = const user in vuejs, variable name duplicate/clased
 ====================================================================================
-Bug 8: Flash message only appearing once unless page is refreshed (THIS BUG IS NOT THAT BREAKING, WILL LOOK INTO IT ONCE ALL IMPORTANT SHIT IS DONE)
+Bug 8: newly made users and professionals cannot login even with correct passwords entered
+
+BUG FIX: specified passwords to be 'password' by default in seeder, factory not working for Users somehow
 
 ====================================================================================
-Bug 9: newly made users and professionals cannot login even with correct passwords entered
+
+
+Bug 9: Flash message only appearing once unless page is refreshed (THIS BUG IS NOT THAT BREAKING, WILL LOOK INTO IT ONCE ALL IMPORTANT SHIT IS DONE)
+
+====================================================================================
