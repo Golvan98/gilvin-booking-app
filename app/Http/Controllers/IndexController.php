@@ -14,7 +14,7 @@ class IndexController extends Controller
     {
         
 
-        return inertia('Index/Home',
+        return inertia('Index/Home' ,
         [
             'data' => 'this is the content of the data'
         ]);

@@ -8,6 +8,7 @@ use App\Http\Controllers\Controller;
 use Illuminate\Support\Facades\Storage;
 use Illuminate\Support\Facades\Auth;
 use App\Http\Middleware\Authenticate;
+use App\Models\Professional;
 use App\Models\User;
 use Illuminate\Http\Request;
 use Random\Randomizer;
@@ -53,6 +54,7 @@ Route::delete('logout', [AuthController::class, 'destroy'])
 
 Route::get('/userProfile', [UserController::class, 'userProfile'])->name('user.profile')->middleware('auth');
 Route::post('/editProfile', [UserController::class, 'editProfile'])->name('edit.user');
+Route::post('/professionalProfile', );
 
 
 

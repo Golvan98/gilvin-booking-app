@@ -159,3 +159,6 @@ July 28
 - added auth to userProfile and named a route to redirect to when not logged in
 - established route to UserController for edit form
 - added USER profile edit feature, delete is not necessary for now, will add Professional Profile Edit feature next
+
+July 29
+- added controller for Professional db model/table
