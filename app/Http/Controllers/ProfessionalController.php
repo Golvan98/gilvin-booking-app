@@ -44,4 +44,14 @@ class ProfessionalController extends Controller
 
         return redirect()->back()->with('success', 'Profile Updated');
     }
+
+    public function deleteProfessional(Request $request)
+    {
+        $user = Auth::guard('professional')->user()->id;
+
+      $yawa =  DB::table('professionals')->where('id', $user)->delete();
+
+        return redirect('/home')->with('success', 'Profile Deleted');
+
+    }
 }

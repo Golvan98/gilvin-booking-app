@@ -59,6 +59,7 @@ Route::post('/editProfile', [UserController::class, 'editProfile'])->name('edit.
 
 Route::get('/professionalProfile', [ProfessionalController::class, 'professionalProfile'])->name('professional.profile');
 Route::post('/test', [ProfessionalController::class, 'test'])->name('edit.professional');
+Route::delete('/deleteProfessional', [ProfessionalController::class, 'deleteProfessional'])->name('deleteProfessional');
 
 
 
