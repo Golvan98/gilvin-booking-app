@@ -51,4 +51,16 @@ class UserController extends Controller
         return redirect()->back()->with('success', 'profile updated successfully');
    
     }
+
+
+    public function deleteUser(Request $request)
+    { 
+        $user = auth()->user();
+      
+        $userdelete =  DB::table('users')->where('id', $user->id)->delete();
+
+
+        return redirect('/home')->with('success', 'User Profile Deleted');
+
+    }
 }
