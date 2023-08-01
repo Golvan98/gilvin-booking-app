@@ -17,7 +17,6 @@ use Illuminate\Support\Facades\Hash;
 use Illuminate\Support\Facades\Validator;
 use Illuminate\Database\Eloquent\Model;
 use Laravel\Sanctum\Guard;
-
 use Illuminate\Support\Facades\DB;
 
 class UserController extends Controller

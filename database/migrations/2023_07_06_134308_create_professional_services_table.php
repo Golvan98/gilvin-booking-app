@@ -16,7 +16,10 @@ return new class extends Migration
             $table->string('service');
             $table->timestamps();
 
-            $table->foreignIdFor(\App\Models\Professional::class, 'by_professional_id')->constrained('professionals')->nullable(); /* first attempt to foreign id prof relship */
+            $table->foreignIdFor(\App\Models\Professional::class, 'by_professional_id')->nullable()
+             ->references('id')
+             ->on('professionals')
+             ->onDelete('cascade');; /* first attempt to foreign id prof relship */
         
         });
     }

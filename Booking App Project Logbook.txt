@@ -166,3 +166,7 @@ July 29
 - added working backend part for editing professional user
 - fixed bug where new users and professionals cannot login despite entering password correctly
 - added delete feature for professionals
+
+August 1
+- fixed test example not having "password" faker
+- fixed bug where it is not possible to delete data that are parents to foreign tables

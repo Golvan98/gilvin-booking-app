@@ -47,9 +47,12 @@ class ProfessionalController extends Controller
 
     public function deleteProfessional(Request $request)
     {
-        $user = Auth::guard('professional')->user()->id;
+        $user = Auth::guard('professional')->user();
 
-      $yawa =  DB::table('professionals')->where('id', $user)->delete();
+        
+      $yawa =  DB::table('professionals')->where('id', $user->id)->delete();
+
+        
 
         return redirect('/home')->with('success', 'Profile Deleted');
 

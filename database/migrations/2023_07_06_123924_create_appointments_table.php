@@ -20,8 +20,17 @@ return new class extends Migration
             $table->timestamps();
 
 
-            $table->foreignIdFor(\App\Models\Professional::class, 'by_professional_id')->constrained('professionals')->nullable(); /* first attempt to foreign id prof relship */
-            $table->foreignIdFor(\App\Models\User::class, 'by_user_id')->constrained('users')->nullable(); /* first attempt to foreign id prof relship */
+            $table->foreignIdFor(\App\Models\Professional::class, 'by_professional_id')->constrained('professionals')->nullable()
+            ->references('id')
+            ->on('professionals')
+            ->onDelete('cascade');
+            
+            
+            /* first attempt to foreign id prof relship */
+            $table->foreignIdFor(\App\Models\User::class, 'by_user_id')->constrained('users')->nullable()
+            ->references('id')
+            ->on('users')
+            ->onDelete('cascade'); /* first attempt to foreign id prof relship */
        
         });
     }

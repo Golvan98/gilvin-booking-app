@@ -1,5 +1,5 @@
 Currently Doing
-- profile for Professionals
+- User Delete
 
 
 To Dos
@@ -7,11 +7,12 @@ To Dos
 - profile for Professionals
 - you might want to add a feature in which a professional gets to add his list of services too
 - auto adjust when browser is shortened
-- professional Delete
 - User Delete
 - appointment request CRUD
 - appointments CRUD
 
+
+ UI Improvements
 Done
 - Validation error message for wrong input in login forms
 - Use Separate multiple guard for User and Professionals (This was very fucking time consuming and hard for me)
@@ -23,5 +24,6 @@ Done
 - Frontend part of User Profile
 - Backend part of User Profile (Editing)
 - add a feature in register where you can select to register as a user or a professional
+- professional CRUD
 
 
