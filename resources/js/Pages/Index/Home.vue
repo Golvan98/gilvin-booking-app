@@ -5,8 +5,8 @@
     <div class="w-full h-screen flex-nowrap justify-center">
 
         <div class="object-fill w-full h-4/5 flex items-center justify-center" 
-        style="background-image: url('https://scontent.fdvo2-2.fna.fbcdn.net/v/t1.15752-9/357632976_251609360935752_3103613818120488316_n.jpg?stp=dst-jpg_s2048x2048&_nc_cat=100&ccb=1-7&_nc_sid=ae9488&_nc_ohc=XptaT54CnPgAX8a-3_5&_nc_ht=scontent.fdvo2-2.fna&oh=03_AdTvmX_FB1wSWqZc2QGFlHre0q3zYNrvJDI5y05MWbb_1A&oe=64C5F124'); 
-        background-repeat: no-repeat; 
+          style="background-image: url('storage/bg.png'); 
+          background-repeat: no-repeat; 
         background-size: cover;">
 
       

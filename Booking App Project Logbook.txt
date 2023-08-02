@@ -170,3 +170,7 @@ July 29
 August 1
 - fixed test example not having "password" faker
 - fixed bug where it is not possible to delete data that are parents to foreign tables
+- added user delete feature
+
+August 2
+- fixed home page bg image missing, used image link online died
