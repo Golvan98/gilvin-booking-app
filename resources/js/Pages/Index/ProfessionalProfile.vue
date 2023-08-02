@@ -8,9 +8,13 @@
       <div class="w-full h-3/6">
     
         <div class="bg-inherit h-1/4 "> </div>
-        <div class="bg-inherit h-1/ ml-4 font-bold text-lg text-gray-300"> Hello {{profFirstName}}! <br> <br> You can edit information about yourself here as you please</div>
-        <div class="bg-inherit h-1/4 flex items-end"> <button class="ml-4 bg-blue-400 text-white font-bold text-lg rounded-lg px-2 py-0.5"> Edit Profile</button> </div>
-        <div class="bg-inherit h-1/4"> </div>
+        <div class="bg-inherit h-1/4 ml-4 font-bold text-lg text-gray-300 ">  {{profFirstName}} <br> <br> {{bio}}</div>
+        <div class="bg-inherit h-1/4 flex items-start text-white ml-4"> Services:
+        <span v-for="(services) in services">
+          &nbsp {{ services.service }}, 
+        </span>
+        </div>
+        <div class="bg-inherit h-1/4"><button class="ml-4 bg-blue-400 text-white font-bold text-lg rounded-lg px-2 py-0.5"> Edit Profile</button> </div>
     
       </div> 
         
@@ -47,7 +51,7 @@
             
       </div>
     
-      <div class=" bg-gray-300  w-full h-2/6 flex">
+      <div id="form" class=" bg-gray-300  w-full h-2/6 flex">
     
         <form @submit.prevent="submit" class="h-4/5 w-3/5 ml-24 mr-12 bg-white flex border-t">
     
@@ -87,7 +91,7 @@
                 </div>
   
                 <div class="h-1/2 mx-2 mt-2">
-                  <input id="last_name" v-model="form.last_name" type="text" class="w-full h-full" placeholder="profLastName"> 
+                  <input id="last_name" v-model="form.last_name" type="text" class="w-full h-full" :placeholder="profLastName"> 
                 </div>
   
             </div>
@@ -166,6 +170,9 @@
   import { router } from '@inertiajs/vue3'
   const page = usePage()
   
+
+  const props = defineProps({ services:Object, errors:Object})
+
   const flashSuccess = computed(() => page.props.flash.success, )
   
  
@@ -177,6 +184,8 @@
 
   
   const profLastName = computed(() => page.props.prof.last_name)
+
+  const bio = computed(() => page.props.prof.bio)
 
   
   const profProfession = computed(() => page.props.prof.profession)

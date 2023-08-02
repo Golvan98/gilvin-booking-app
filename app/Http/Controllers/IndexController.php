@@ -3,11 +3,13 @@
 namespace App\Http\Controllers;
 
 use App\Http\Controllers\Controller;
+use App\Models\Professional;
 use Illuminate\Http\Request;
 use Illuminate\Http\File;
 use Illuminate\Support\Facades\Storage;
 use Illuminate\Support\Facades\Auth;
 use Illuminate\Validation\ValidationException;
+use App\Models\ProfessionalServices;
 class IndexController extends Controller
 {
     public function index()
@@ -25,9 +27,23 @@ class IndexController extends Controller
         return inertia('Index/Show');
     }
 
-    public function yawa()
+    public function test(Professional $professional)
     {
-        return inertia('Index/yawa');
+       
+        
+
+       $services =  ProfessionalServices::all()->whereIn('by_professional_id', $professional->id);
+
+   
+
+
+     //  $MotivationAnswers = App\Models\ProfessionalServices::whereIn('by_professional_id', $professional->id);
+
+
+          return inertia('Index/Test',
+          [
+            'services' => $services
+        ]);
     }
 
 

@@ -1,14 +1,13 @@
 Currently Doing
-- feature in which a professional gets to add his list of services too
+- feature in which a professional gets to add his list of services too (professional->services CRUD)
 
 
 To Dos
 - auto adjust when browser is shortened
 - appointment request CRUD
 - appointments CRUD
-
-
- UI Improvements
+- Route Model Binding in which a user can view other profiles not through HandleInertiaRequests (very important)
+- UI Improvements
 Done
 - Validation error message for wrong input in login forms
 - Use Separate multiple guard for User and Professionals (This was very fucking time consuming and hard for me)

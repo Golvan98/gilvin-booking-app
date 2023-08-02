@@ -173,4 +173,6 @@ August 1
 - added user delete feature
 
 August 2
-- fixed home page bg image missing, used image link online died
+- fixed home page bg image missing, (used image link online died)
+- added more services to proftestexample dbseeder for testing
+- update professional profile in which he is able to see (R in CRUD) his list of services

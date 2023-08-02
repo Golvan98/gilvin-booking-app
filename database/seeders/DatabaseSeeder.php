@@ -38,7 +38,7 @@ class DatabaseSeeder extends Seeder
             'by_user_id' => 1
         ]);
 
-        \App\Models\ProfessionalServices::factory(2)->create([
+        \App\Models\ProfessionalServices::factory(9)->create([
             'by_professional_id' => 1
         ]);
 

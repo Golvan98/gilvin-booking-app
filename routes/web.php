@@ -62,6 +62,8 @@ Route::get('/professionalProfile', [ProfessionalController::class, 'professional
 Route::post('/test', [ProfessionalController::class, 'test'])->name('edit.professional');
 Route::delete('/deleteProfessional', [ProfessionalController::class, 'deleteProfessional'])->name('deleteProfessional');
 
+Route::get('/test/{professional}', [IndexController::class, 'test'])->name('test');
+
 
 
 

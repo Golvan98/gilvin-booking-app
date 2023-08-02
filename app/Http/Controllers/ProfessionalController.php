@@ -17,6 +17,7 @@ use Illuminate\Support\Facades\Hash;
 use Illuminate\Support\Facades\Validator;
 use Laravel\Sanctum\Guard;
 use Illuminate\Support\Facades\DB;
+use App\Models\ProfessionalServices;
 
 
 class ProfessionalController extends Controller
@@ -24,7 +25,16 @@ class ProfessionalController extends Controller
     public function professionalProfile()
     {
 
-        return inertia('Index/ProfessionalProfile');
+    $user = Auth::guard('professional')->user()->id;
+
+
+    $services =  ProfessionalServices::all()->whereIn('by_professional_id', $user);
+        
+   
+        return inertia('Index/ProfessionalProfile',
+        [
+            'services' => $services
+        ]);
     }
 
     public function test(Request $request)
