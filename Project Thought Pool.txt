@@ -1,5 +1,9 @@
 Currently Doing
 - feature in which a professional gets to add his list of services too (professional->services CRUD)
+^ probably in modal form
+
+and for editing bio, same in northspyre wherein u just click its texts and u can edit em, can also add a pen button on the 
+right side of bio
 
 
 To Dos

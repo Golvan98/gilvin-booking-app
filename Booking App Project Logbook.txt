@@ -176,3 +176,4 @@ August 2
 - fixed home page bg image missing, (used image link online died)
 - added more services to proftestexample dbseeder for testing
 - update professional profile in which he is able to see (R in CRUD) his list of services
+- created a test page for route model binding and prop testing. works so far, will do more tests next shift
