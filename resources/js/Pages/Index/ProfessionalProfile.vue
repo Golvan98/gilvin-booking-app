@@ -14,7 +14,7 @@
           &nbsp {{ services.service }}, 
         </span>
         </div>
-        <div class="bg-inherit h-1/4"><button class="ml-4 bg-blue-400 text-white font-bold text-lg rounded-lg px-2 py-0.5"> Edit Profile</button> </div>
+        <div class="bg-inherit h-1/4"><button class="ml-4 bg-blue-400 text-white font-bold text-lg rounded-lg px-2 py-0.5"> Toggle Modal Profile</button> </div>
     
       </div> 
         
