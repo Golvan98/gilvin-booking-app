@@ -1,8 +1,10 @@
 Currently Doing
 - feature in which a professional gets to add his list of services too (professional->services CRUD)
-^ probably in modal form. refer here https://v2.vuejs.org/v2/examples/modal.html
+- feature in which a professional gets to edit his bio
 
-and for editing bio, same in northspyre wherein u just click its texts and u can edit em, can also add a pen button on the 
+
+= Service add will be in modal form 
+= bio edit will be presented the same way in Northspyre wherein u just click its texts and u can edit em, can also add a pen button on the 
 right side of bio
 
 

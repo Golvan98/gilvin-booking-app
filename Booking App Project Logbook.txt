@@ -182,4 +182,5 @@ August 3
 - attempt to modal prepped, needs flowbite installed to do next shift
 
 August 8
-- installed flowbite, and modal is working
+- installed flowbite, tested modal and it's working
+- added front-end part modal of adding services
