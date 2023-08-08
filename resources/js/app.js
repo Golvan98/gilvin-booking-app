@@ -3,6 +3,7 @@ import { createInertiaApp } from '@inertiajs/vue3'
 import MainLayout from '@/Layouts/MainLayout.vue'
 import '../css/app.css'
 import Alpine from 'alpinejs'
+import 'flowbite';
 window.Alpine = Alpine
 Alpine.start()
 

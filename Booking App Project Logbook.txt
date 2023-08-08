@@ -180,3 +180,6 @@ August 2
 
 August 3
 - attempt to modal prepped, needs flowbite installed to do next shift
+
+August 8
+- installed flowbite, and modal is working
