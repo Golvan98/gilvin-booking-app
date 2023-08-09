@@ -67,4 +67,15 @@ class ProfessionalController extends Controller
         return redirect('/home')->with('success', 'Profile Deleted');
 
     }
+
+    public function addService(Request $request)
+    {
+        $user = Auth::guard('professional')->user();
+
+        $service = $request->validate([
+            'service' => 'required|min:2|max:35'
+        ]);
+
+        dd($service);
+    }
 }

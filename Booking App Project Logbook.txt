@@ -184,3 +184,6 @@ August 3
 August 8
 - installed flowbite, tested modal and it's working
 - added front-end part modal of adding services
+
+August 9
+- edited modal
