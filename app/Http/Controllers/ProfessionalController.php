@@ -70,12 +70,17 @@ class ProfessionalController extends Controller
 
     public function addService(Request $request)
     {
+
         $user = Auth::guard('professional')->user();
 
         $service = $request->validate([
             'service' => 'required|min:2|max:35'
         ]);
 
-        dd($service);
+        
+
+        $well = ProfessionalServices::create(['service' => $request->service, 'by_professional_id' => $user->id]);
+        
+        return redirect()->back()->with('success', 'Service Created');
     }
 }

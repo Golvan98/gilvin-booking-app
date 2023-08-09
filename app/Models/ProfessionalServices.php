@@ -10,6 +10,8 @@ class ProfessionalServices extends Model
 {
     use HasFactory;
 
+    protected $fillable = ['service', 'by_professional_id',  ];
+
     public function professioner() :BelongsTo
     {
         return $this->belongsTo(\App\Models\Professional::class, 'by_professional_id');
