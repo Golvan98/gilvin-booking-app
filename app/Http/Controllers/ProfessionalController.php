@@ -37,7 +37,7 @@ class ProfessionalController extends Controller
         ]);
     }
 
-    public function test(Request $request)
+    public function editProfessional(Request $request)
     {
         $test = Auth::guard('professional')->user()->id;
         
@@ -52,7 +52,7 @@ class ProfessionalController extends Controller
 
         $update = DB::table('professionals')->where('id', $test)->update($data);
 
-        return redirect()->back()->with('success', 'Profile Updated');
+        return redirect()->back()->with('success', 'Profile Updatedz');
     }
 
     public function deleteProfessional(Request $request)

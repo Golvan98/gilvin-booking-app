@@ -206,7 +206,7 @@
       
       function submit()
   {
-          router.post('test', form)
+          router.post('editProfessional', form)
   }
       
       
