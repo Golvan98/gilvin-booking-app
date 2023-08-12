@@ -1,16 +1,42 @@
 <template>
-<link href="https://cdnjs.cloudflare.com/ajax/libs/flowbite/1.8.0/flowbite.min.css" rel="stylesheet" />
-test page here
 
-<div contenteditable="true" placeholder="yawa">Anything inside this div will be editable!</div>
+<button @click="awesome=!awesome" class="bg-indigo-700 text-white">Toggle</button>
 
+<h1 v-if="awesome">{{ bio }}</h1>
+<div v-else>
+  <form @submit.prevent="submit">
+    <input v-model="form.bio" name="bio" id="bio" type="text" :placeholder="bio">
+    
+    <button type="submit" class="bg-indigo-700 text-white font-bold"> Save Changes </button>
+  </form>
 
-
+</div>
 </template>
 
 
 <script setup>
+import { ref } from 'vue'
+import { useForm } from '@inertiajs/vue3'
+import { router } from '@inertiajs/vue3'
+import { Link } from '@inertiajs/vue3'
+  import { reactive } from 'vue'
+  import { usePage } from '@inertiajs/vue3'
+  import { computed } from 'vue'
+  
 
 
-const props = defineProps({ services:Object, errors:Object})
+const awesome = ref(true)
+const props = defineProps({  bio:Object, })
+
+const form = useForm({
+          bio: null
+      })
+   
+      
+
+function submit()
+  {
+          router.post('/testEdit', form)
+  }
+
 </script>

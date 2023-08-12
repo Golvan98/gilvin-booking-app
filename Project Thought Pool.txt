@@ -2,8 +2,15 @@ Currently Doing
 - bio edit will be presented the same way in Northspyre wherein u just click its texts and u can edit em, can also add a pen button on the 
 right side of bio
 
+^turns out this is a tough one. gl
+IDEA: <button @click="awesome = !awesome">Toggle</button>
 
-To Dos
+<h1 v-if="awesome">Vue is awesome!</h1>
+<h1 v-else>Oh no 😢</h1>
+
+editable bio form will be wrapped under v-if, v-else is the standard uneditable bio
+
+TO DOs
 - auto adjust when browser is shortened
 - appointment request CRUD
 - appointments CRUD

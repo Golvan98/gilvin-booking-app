@@ -56,7 +56,9 @@ Bug 9: constrained on unable to delete parent data constrained with foreign ids
 BUG FIX: delete cascade migration
 
 ====================================================================================
+Bug 10: Modals not working unless u refresh page
 
-Bug 10: Flash message only appearing once unless page is refreshed (THIS BUG IS NOT THAT BREAKING, WILL LOOK INTO IT ONCE ALL IMPORTANT SHIT IS DONE)
+====================================================================================
+Bug 11: Flash message only appearing once unless page is refreshed (THIS BUG IS NOT THAT BREAKING, WILL LOOK INTO IT ONCE ALL IMPORTANT SHIT IS DONE)
 
 ====================================================================================

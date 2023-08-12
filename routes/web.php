@@ -65,6 +65,8 @@ Route::post('/addservice', [ProfessionalController::class, 'addService'])->name(
 
 Route::get('/test/{professional}', [IndexController::class, 'test'])->name('test');
 
+Route::post('/testEdit', [IndexController::class, 'testEdit'])->name('testEdit');
+
 
 
 
