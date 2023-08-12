@@ -46,8 +46,8 @@
         
     
         <div class="h-full w-2/5 mr-12 bg-white flex justify-center"> 
-            <div class="ml-4 mt-2 h-1/6 text-white"> <Link href="/deleteProfessional" method="delete" as="button"> <div  class="bg-red-700 px-2 py-1 rounded-sm">  Delete Account </div> </Link> </div>
-          
+            <div class="ml-4 mt-2 h-1/6 text-white">  <button data-modal-target="popup-modal" data-modal-toggle="popup-modal"  class="bg-red-700 px-2 py-1 rounded-sm">  Delete Account </button>  </div>
+            <DeleteModal> </DeleteModal>
             <div
                 class="w-40 h-40 rounded-full 
                     inline-flex items-center justify-center 
@@ -180,6 +180,7 @@
   import { useForm } from '@inertiajs/vue3'
   import { router } from '@inertiajs/vue3'
   import ServiceModal from '@/Pages/Index/ServiceModal.vue'
+  import DeleteModal from '@/Pages/Index/DeleteModal.vue'
   const page = usePage()
   
 

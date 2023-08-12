@@ -186,4 +186,9 @@ August 8
 - added front-end part modal of adding services
 
 August 9
-- edited modal
+- updated add service modal
+- added layout for service modal
+- added backend and working professional service create feature
+
+August 12
+- added modal on delete feature for professional profile, to be added next to users

@@ -1,10 +1,5 @@
 Currently Doing
-- feature in which a professional gets to add his list of services too (professional->services CRUD)
-- feature in which a professional gets to edit his bio
-
-
-= Service add will be in modal form 
-= bio edit will be presented the same way in Northspyre wherein u just click its texts and u can edit em, can also add a pen button on the 
+- bio edit will be presented the same way in Northspyre wherein u just click its texts and u can edit em, can also add a pen button on the 
 right side of bio
 
 
@@ -28,4 +23,5 @@ Done
 - professional CRUD
 - User Delete
 - profile for Professionals
-
+- modal on delete
+- feature in which a professional gets to add his list of services too (professional->services CRUD)
