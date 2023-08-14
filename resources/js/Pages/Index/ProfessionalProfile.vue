@@ -8,7 +8,20 @@
       <div class="w-full h-3/6">
     
         <div class="bg-inherit h-1/4 "> </div>
-        <div class="bg-inherit h-1/4 ml-4 font-bold text-lg text-gray-300 ">  {{profFirstName}} <br> <br> {{bio}}</div>
+        <div class="bg-inherit h-1/4 ml-4 font-bold text-lg text-gray-300 ">  {{profFirstName}} <br> <br></div>
+        
+        <button @click="awesome=!awesome" v-if="awesome" class="bg-red-300">{{ bio }}</button>
+        <div v-else>
+          <form action="/testEdit" @submit.prevent="">
+            <input v-model=form.bio name="bio" id="bio" type="text"  :placeholder="bio">
+            
+            <button @click="submit('testEdit')" class="bg-indigo-700 text-white font-bold"> Save Changes </button>
+            <button @click="awesome=!awesome" class="ml-2 bg-indigo-700 text-white font-bold"> Cancel </button>
+          </form>
+    
+        </div>
+
+
         <div class="bg-inherit h-1/4 flex items-start text-white ml-4"> Services:
         <span v-for="(services) in services">
           &nbsp {{ services.service }}, 
@@ -173,6 +186,12 @@
     </template>
     
     <script setup>
+    
+  const props = defineProps({ 
+    bio:String,
+    services:Object, 
+    errors:Object})
+
     import { Link } from '@inertiajs/vue3'
   import { reactive } from 'vue'
   import { usePage } from '@inertiajs/vue3'
@@ -181,10 +200,15 @@
   import { router } from '@inertiajs/vue3'
   import ServiceModal from '@/Pages/Index/ServiceModal.vue'
   import DeleteModal from '@/Pages/Index/DeleteModal.vue'
+  import Bio from '@/Pages/Index/Bio.vue'
+  
+  import { ref } from 'vue'
   const page = usePage()
   
+   
 
-  const props = defineProps({ services:Object, errors:Object})
+
+  const awesome = ref(true)
   const flashSuccess = computed(() => page.props.flash.success, )
   const prof = computed (() => page.props.prof)
   const profFirstName = computed(() => page.props.prof.first_name)
@@ -201,6 +225,7 @@
           email : null,
           profession: null,
           service: null,
+         
       })
    
       
@@ -208,7 +233,9 @@
   {
           router.post('editProfessional', form)
   }
+
       
+  
       
       
   

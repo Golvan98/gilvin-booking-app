@@ -19,7 +19,7 @@
                     <!-- Modal body -->
                     <div class="p-6 space-y-6 text-center text-black font-bold">
                         <p class="text-base leading-relaxed text-gray-500 dark:text-gray-400">
-                           Type of service
+                           Type of service 
                         </p>
                         <p class="text-base leading-relaxed text-gray-500 dark:text-gray-400">
                          <input type="text" name="service" v-model="form.service" placeholder="Service"> 

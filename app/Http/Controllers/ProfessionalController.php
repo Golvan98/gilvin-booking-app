@@ -25,21 +25,24 @@ class ProfessionalController extends Controller
     public function professionalProfile()
     {
 
-    $user = Auth::guard('professional')->user()->id;
+    $user = Auth::guard('professional')->user();
+   
 
+    $services =  ProfessionalServices::all()->whereIn('by_professional_id', $user->id);
+    $bio = $user->bio;
 
-    $services =  ProfessionalServices::all()->whereIn('by_professional_id', $user);
-        
    
         return inertia('Index/ProfessionalProfile',
         [
-            'services' => $services
+            'services' => $services,
+            'bio' => $bio
         ]);
     }
 
     public function editProfessional(Request $request)
     {
-        $test = Auth::guard('professional')->user()->id;
+        $user = Auth::guard('professional')->user()->id;
+        
         
         $data = $request->validate([
             
@@ -50,7 +53,7 @@ class ProfessionalController extends Controller
             
         ]);
 
-        $update = DB::table('professionals')->where('id', $test)->update($data);
+        $update = DB::table('professionals')->where('id', $user)->update($data);
 
         return redirect()->back()->with('success', 'Profile Updatedz');
     }

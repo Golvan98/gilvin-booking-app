@@ -39,8 +39,6 @@ import { Link } from '@inertiajs/vue3'
   import ServiceModal from '@/Pages/Index/ServiceModal.vue'
   const page = usePage()
   
-
-  const props = defineProps({ services:Object, errors:Object})
  // const flashSuccess = computed(() => page.props.flash.success, )
  // const prof = computed (() => page.props.prof)
  // const profFirstName = computed(() => page.props.prof.first_name)
