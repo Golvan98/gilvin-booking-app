@@ -193,3 +193,7 @@ August 9
 August 12
 - added modal on delete feature for professional profile, to be added next to users
 - fixed a misroute where test editProfile
+- added backend and frontend (incomplete) solution for click to edit bio, figuring out how to place the current bio as the value in the form next
+
+August 14
+- backend for bio editing done

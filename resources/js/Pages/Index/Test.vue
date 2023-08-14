@@ -5,7 +5,7 @@
 <h1 v-if="awesome">{{ bio }}</h1>
 <div v-else>
   <form @submit.prevent="submit">
-    <input v-model="form.bio" name="bio" id="bio" type="text" :placeholder="bio">
+    <input name="bio" id="bio" type="text" v-model=form.bio :placeholder="bio" >
     
     <button type="submit" class="bg-indigo-700 text-white font-bold"> Save Changes </button>
   </form>
@@ -26,7 +26,7 @@ import { Link } from '@inertiajs/vue3'
 
 
 const awesome = ref(true)
-const props = defineProps({  bio:Object, })
+const props = defineProps({  bio:String })
 
 const form = useForm({
           bio: null
@@ -38,5 +38,6 @@ function submit()
   {
           router.post('/testEdit', form)
   }
+  
 
 </script>

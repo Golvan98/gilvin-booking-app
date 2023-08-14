@@ -10,6 +10,7 @@ use Illuminate\Support\Facades\Storage;
 use Illuminate\Support\Facades\Auth;
 use Illuminate\Validation\ValidationException;
 use App\Models\ProfessionalServices;
+use Illuminate\Support\Facades\DB;
 class IndexController extends Controller
 {
     public function index()
@@ -33,7 +34,7 @@ class IndexController extends Controller
         $user = Auth::guard('professional')->user();
 
         $userbio = $user->bio;
-
+        $userbio2 = $user->bio;
        $services =  ProfessionalServices::all()->whereIn('by_professional_id', $professional->id);
 
    
@@ -45,14 +46,15 @@ class IndexController extends Controller
           return inertia('Index/Test',
           [
             'services' => $services,
-            'bio' => $userbio
+            'bio' => $userbio,
+            'bio2' => $userbio2
         ]);
     }
 
     public function testEdit(Request $request)
     {
         $prof = Auth::guard('professional')->user()->id;
-       
+        
         $data = $request->validate([
             'bio' => 'required|min:2|max:35'
         ]);
@@ -60,11 +62,7 @@ class IndexController extends Controller
         $test = Auth::guard('professional')->user()->id;
         
         $update = DB::table('professionals')->where('id', $prof)->update($data);
-
-//UNFINISHED BUSINESS HERE!
-
-
-        dd($test);
+        return redirect()->back()->with('success', 'Bio Updated successfully');
     }
 
 
