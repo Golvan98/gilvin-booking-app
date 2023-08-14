@@ -1,13 +1,13 @@
 <template>
 
-<button @click="awesome=!awesome" class="bg-indigo-700 text-white">Toggle</button>
 
-<h1 v-if="awesome">{{ bio }}</h1>
+<button @click="awesome=!awesome" v-if="awesome">{{ bio }}</button>
 <div v-else>
   <form @submit.prevent="submit">
     <input name="bio" id="bio" type="text" v-model=form.bio :placeholder="bio" >
     
     <button type="submit" class="bg-indigo-700 text-white font-bold"> Save Changes </button>
+    <button @click="awesome=!awesome" class="ml-2 bg-indigo-700 text-white font-bold"> Cancel </button>
   </form>
 
 </div>
