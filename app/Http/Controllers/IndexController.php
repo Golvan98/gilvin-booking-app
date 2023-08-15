@@ -56,7 +56,7 @@ class IndexController extends Controller
         $prof = Auth::guard('professional')->user()->id;
         
         $data = $request->validate([
-            'bio' => 'required|min:2|max:99'
+            'bio' => 'required|min:2|max:300'
         ]);
 
         $test = Auth::guard('professional')->user()->id;

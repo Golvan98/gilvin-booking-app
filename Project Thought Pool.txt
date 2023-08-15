@@ -1,6 +1,5 @@
 Currently Doing
-- bio edit will be presented the same way in Northspyre wherein u just click its texts and u can edit em, can also add a pen button on the 
-right side of bio
+- appointment request CRUD
 
 ^turns out this is a tough one. gl
 IDEA: <button @click="awesome = !awesome">Toggle</button>
@@ -15,7 +14,7 @@ TO DOs
 - appointment request CRUD
 - appointments CRUD
 - Route Model Binding in which a user can view other profiles not through HandleInertiaRequests (very important)
-- UI Improvements
+- UI Improvements (FINAL)
 Done
 - Validation error message for wrong input in login forms
 - Use Separate multiple guard for User and Professionals (This was very fucking time consuming and hard for me)
@@ -32,3 +31,4 @@ Done
 - profile for Professionals
 - modal on delete
 - feature in which a professional gets to add his list of services too (professional->services CRUD)
+- bio edit presented the same way in Northspyre wherein u just click its texts and u can edit em, can also add a close button on the right side of bio

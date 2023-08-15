@@ -8,9 +8,9 @@
       <div class="w-full h-3/6">
     
         <div class="bg-inherit h-1/4 "> </div>
-        <div class="bg-inherit h-1/4 ml-4 font-bold text-lg text-gray-300 ">  {{profFirstName}} <br> <br></div>
+        <div class="bg-inherit h-16 ml-4 font-bold text-lg text-gray-300">  {{profFirstName}} <br> </div>
         
-        <button @click="awesome=!awesome" v-if="awesome" class="bg-red-300">{{ bio }}</button>
+        <button @click="awesome=!awesome" v-if="awesome" class="ml-4  text-white"> Bio: {{ bio }}</button>
         <div v-else>
           <form @submit.prevent="submitForm2">
             <input v-model=form2.bio name="bio" id="bio" type="text"  :placeholder="bio">
@@ -241,7 +241,7 @@
       function submitForm2()
     {
       console.log('Form 2 submitted:', form2.value);
-    router.post('/testEdit', form2)
+    router.post('/bioEdit', form2)
     }     
    
     
