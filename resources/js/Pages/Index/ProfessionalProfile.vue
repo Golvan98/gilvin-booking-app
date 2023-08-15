@@ -12,10 +12,10 @@
         
         <button @click="awesome=!awesome" v-if="awesome" class="bg-red-300">{{ bio }}</button>
         <div v-else>
-          <form action="/testEdit" @submit.prevent="">
-            <input v-model=form.bio name="bio" id="bio" type="text"  :placeholder="bio">
+          <form @submit.prevent="submitForm2">
+            <input v-model=form2.bio name="bio" id="bio" type="text"  :placeholder="bio">
             
-            <button @click="submit('testEdit')" class="bg-indigo-700 text-white font-bold"> Save Changes </button>
+            <button type="submit" class="bg-indigo-700 text-white font-bold"> Save Changes </button>
             <button @click="awesome=!awesome" class="ml-2 bg-indigo-700 text-white font-bold"> Cancel </button>
           </form>
     
@@ -77,7 +77,7 @@
     
       <div id="form" class=" bg-gray-300  w-full h-2/6 flex">
     
-        <form @submit.prevent="submit" class="h-4/5 w-3/5 ml-24 mr-12 bg-white flex border-t">
+        <form @submit.prevent="submitForm1" class="h-4/5 w-3/5 ml-24 mr-12 bg-white flex border-t">
     
           <div class=" w-1/2">
     
@@ -87,7 +87,7 @@
                   <label>  First Name </label> 
                 </div>
                 <div class="h-1/2 mx-2 mt-2">
-                  <input id="first_name" v-model="form.first_name" type="text" class="w-full h-full" :placeholder="profFirstName"> 
+                  <input id="first_name" v-model="form1.first_name" type="text" class="w-full h-full" :placeholder="profFirstName"> 
                 </div>
   
             </div>
@@ -99,7 +99,7 @@
                 </div>
   
                 <div class="h-1/2 mx-2 mt-2">
-                  <input id="email" v-model="form.email" type="text" class="w-full h-full" :placeholder="profEmail "> 
+                  <input id="email" v-model="form1.email" type="text" class="w-full h-full" :placeholder="profEmail "> 
                 </div>
   
             </div>
@@ -115,7 +115,7 @@
                 </div>
   
                 <div class="h-1/2 mx-2 mt-2">
-                  <input id="last_name" v-model="form.last_name" type="text" class="w-full h-full" :placeholder="profLastName"> 
+                  <input id="last_name" v-model="form1.last_name" type="text" class="w-full h-full" :placeholder="profLastName"> 
                 </div>
   
             </div>
@@ -127,7 +127,7 @@
                 </div>
                 
                 <div class="h-1/2 mx-2 mt-2">
-                  <input id="profession" v-model="form.profession" type="text" class="w-full h-full" :placeholder="profProfession"> 
+                  <input id="profession" v-model="form1.profession" type="text" class="w-full h-full" :placeholder="profProfession"> 
                 </div>
   
                 <div class="h-1/3 mx-2 mt-2 flex justify-end">
@@ -219,7 +219,7 @@
   
   const profProfession = computed(() => page.props.prof.profession)
   
-      const form = useForm({
+      const form1 = useForm({
           first_name : null,
           last_name : null,
           email : null,
@@ -227,14 +227,26 @@
           service: null,
          
       })
-   
-      
-      function submit()
+
+      function submitForm1()
   {
-          router.post('editProfessional', form)
+          router.post('editProfessional', form1)
   }
 
+      const form2 = useForm({
+          bio: null
+        })
+        
       
+      function submitForm2()
+    {
+      console.log('Form 2 submitted:', form2.value);
+    router.post('/testEdit', form2)
+    }     
+   
+    
+
+   
   
       
       

@@ -199,3 +199,6 @@ August 14
 - backend for bio editing done
 - figured out code snippet to imitate northspyre's click to edit feature
 - added click to edit on to professional profile's bio, but it has an issue where components do not inherit props from parent and I am still unable to put two forms in one vue component
+
+August 15
+- debugged bio form and professional info form in 1 vue component
