@@ -26,11 +26,14 @@ class UserController extends Controller
     public function userProfile(Request $request, User $user)
     {
         $user = auth()->user();
+        $bio = $user->bio;
+        $firstName = $user->first_name;
+        
     
         return inertia('Index/UserProfile',
     [
-        'testdata' => $user->first_name,
-        'testdata' => $user->email
+        'bio' => $user->bio,
+        'firstName' => $user->first_name
     ]);
     }
 

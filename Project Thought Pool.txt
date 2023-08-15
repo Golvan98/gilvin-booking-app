@@ -1,5 +1,8 @@
 Currently Doing
+- user profile CRUD (just an imitation of professional profile)
 - appointment request CRUD
+- add field bio to User 
+
 
 ^turns out this is a tough one. gl
 IDEA: <button @click="awesome = !awesome">Toggle</button>

@@ -8,7 +8,7 @@
     <div class="w-full h-3/6">
   
       <div class="bg-inherit h-1/4 "> </div>
-      <div class="bg-inherit h-1/ ml-4 font-bold text-lg text-gray-300"> Hello Gilvin! <br> <br> You can edit information about yourself here as you please</div>
+      <div class="bg-inherit h-1/ ml-4 font-bold text-lg text-gray-300"> Hello {{ firstName}}<br> <br> {{bio}} </div>
       <div class="bg-inherit h-1/4 flex items-end"> <button class="ml-4 bg-blue-400 text-white font-bold text-lg rounded-lg px-2 py-0.5"> Edit Profile</button> </div>
       <div class="bg-inherit h-1/4"> </div>
   
@@ -167,6 +167,7 @@ const page = usePage()
 
 const flashSuccess = computed(() => page.props.flash.success, )
 
+const pops = defineProps ({ bio:String, firstName: String })
 
 const user = computed(() => page.props.user )
 // const user = computed(() => page.props.auth.user)
