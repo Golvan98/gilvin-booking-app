@@ -202,3 +202,8 @@ August 14
 
 August 15
 - debugged bio form and professional info form in 1 vue component
+- did some ui improvements on the bio form and professional profile
+- UI improvements for userprofile, to create its CRUD tomorrow
+
+August 17
+- added bio field to users table

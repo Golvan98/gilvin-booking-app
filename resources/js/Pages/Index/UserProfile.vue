@@ -9,7 +9,10 @@
   
       <div class="bg-inherit h-1/4 "> </div>
       <div class="bg-inherit h-1/ ml-4 font-bold text-lg text-gray-300"> Hello {{ firstName}}<br> <br> {{bio}} </div>
-      <div class="bg-inherit h-1/4 flex items-end"> <button class="ml-4 bg-blue-400 text-white font-bold text-lg rounded-lg px-2 py-0.5"> Edit Profile</button> </div>
+      
+     
+      
+      
       <div class="bg-inherit h-1/4"> </div>
   
     </div> 
@@ -165,9 +168,10 @@ import { useForm } from '@inertiajs/vue3'
 import { router } from '@inertiajs/vue3'
 const page = usePage()
 
+
 const flashSuccess = computed(() => page.props.flash.success, )
 
-const pops = defineProps ({ bio:String, firstName: String })
+const pops = defineProps ({ bio:String})
 
 const user = computed(() => page.props.user )
 // const user = computed(() => page.props.auth.user)
