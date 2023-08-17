@@ -55,6 +55,16 @@ class UserController extends Controller
    
     }
 
+    public function editUserBio(Request $request)
+    {
+       
+        $data = $request->validate([
+            'bio' => 'required|min:2|max:99'
+        ]);
+
+        dd($request->bio);
+    }
+
 
     public function deleteUser(Request $request)
     { 

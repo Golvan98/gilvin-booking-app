@@ -206,8 +206,6 @@
   const page = usePage()
   
    
-
-
   const awesome = ref(true)
   const flashSuccess = computed(() => page.props.flash.success, )
   const prof = computed (() => page.props.prof)

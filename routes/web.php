@@ -56,6 +56,7 @@ Route::delete('logout', [AuthController::class, 'destroy'])
 Route::get('/userProfile', [UserController::class, 'userProfile'])->name('user.profile')->middleware('auth');
 Route::post('/editProfile', [UserController::class, 'editProfile'])->name('edit.user');
 Route::delete('/deleteUser', [UserController::class, 'deleteUser'])->name('delete.user');
+Route::post('/editUserBio', [UserController::class, 'editUserBio'])->name('edit.user.bio');
 
 
 Route::get('/professionalProfile', [ProfessionalController::class, 'professionalProfile'])->name('professional.profile');

@@ -94,6 +94,7 @@ class ProfessionalController extends Controller
         $data = $request->validate([
             'bio' => 'required|min:2|max:300'
         ]);
+        
 
         $test = Auth::guard('professional')->user()->id;
         

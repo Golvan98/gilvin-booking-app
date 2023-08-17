@@ -8,9 +8,18 @@
     <div class="w-full h-3/6">
   
       <div class="bg-inherit h-1/4 "> </div>
-      <div class="bg-inherit h-1/ ml-4 font-bold text-lg text-gray-300"> Hello {{ firstName}}<br> <br> {{bio}} </div>
+      <div class="bg-inherit h-1/ ml-4 font-bold text-lg text-gray-300"> Hello {{ firstName}}<br> <br>  </div>
       
-     
+      <button @click="awesome=!awesome" v-if="awesome" class="ml-4  text-white"> Bio: {{ bio }}</button>
+        <div v-else>
+          <form @submit.prevent="submitForm2">
+            <input v-model=form2.bio name="bio" id="bio" type="text"  :placeholder="bio">
+            
+            <button type="submit" class="bg-indigo-700 text-white font-bold"> Save Changes </button>
+            <button @click="awesome=!awesome" class="ml-2 bg-indigo-700 text-white font-bold"> Cancel </button>
+          </form>
+    
+        </div>
       
       
       <div class="bg-inherit h-1/4"> </div>
@@ -166,12 +175,17 @@ import { usePage } from '@inertiajs/vue3'
 import { computed } from 'vue'
 import { useForm } from '@inertiajs/vue3'
 import { router } from '@inertiajs/vue3'
+import { ref } from 'vue'
+
+
+const awesome = ref(true)
+
 const page = usePage()
 
 
 const flashSuccess = computed(() => page.props.flash.success, )
 
-const pops = defineProps ({ bio:String})
+const pops = defineProps ({ bio:String, })
 
 const user = computed(() => page.props.user )
 // const user = computed(() => page.props.auth.user)
@@ -196,6 +210,23 @@ const prof = computed (() => page.props.prof)
 {
         router.post('editProfile', form)
 }
+
+const form2 = useForm({
+  bio : null
+})
+
+  /* for some fuckin reason this doesnt work but the function below DOES?! function submitForm2()
+  {
+    router.post('/editUserBio', form)
+  } */
+
+    
+  
+  function submitForm2()
+    {
+     
+    router.post('/editUserBio', form2)
+    }     
     
     
     
