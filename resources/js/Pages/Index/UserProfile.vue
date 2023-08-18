@@ -8,15 +8,15 @@
     <div class="w-full h-3/6">
   
       <div class="bg-inherit h-1/4 "> </div>
-      <div class="bg-inherit h-1/ ml-4 font-bold text-lg text-gray-300"> Hello {{ firstName}}<br> <br>  </div>
+      <div class="bg-inherit h-1/ ml-4 font-bold text-lg text-gray-300"> Hello {{ userName}}<br> <br>  </div>
       
       <button @click="awesome=!awesome" v-if="awesome" class="ml-4  text-white"> Bio: {{ bio }}</button>
         <div v-else>
           <form @submit.prevent="submitForm2">
             <input v-model=form2.bio name="bio" id="bio" type="text" class="bg-green-300 w-1/6"  :placeholder="bio">
             
-            <button type="submit" class="bg-indigo-700 text-white font-bold"> Save Changes </button>
-            <button @click="awesome=!awesome" class="ml-2 bg-indigo-700 text-white font-bold"> Cancel </button>
+            <button type="submit" class="bg-indigo-700 text-white font-bold ml-2 p-2"> Save Changes </button>
+            <button @click="awesome=!awesome" class="ml-2 bg-indigo-700 text-white font-bold p-2"> Cancel </button>
           </form>
     
         </div>

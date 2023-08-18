@@ -19,7 +19,8 @@ class AppointmentRequestFactory extends Factory
         return [
             'request' => fake()->sentence(),
             'request_schedule' => fake()->dateTimeThisMonth(),
-            'request_status' => fake()->randomElement(['approved' , 'rejected'])
+            'request_status' => fake()->randomElement(['approved' , 'rejected']),
+            
         ];
     }
 }

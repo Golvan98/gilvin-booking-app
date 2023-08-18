@@ -210,4 +210,6 @@ August 17
 - added bio form to UserProfile, to test more tomorrow, got a weird syntax bug
 
 August 18
-- added functioning feature to edit bio form in userProfile
+- added backend and functioning feature to edit bio form in userProfile
+- added deleted modal for userProfile
+- adde requests column to appointments table

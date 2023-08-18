@@ -18,8 +18,8 @@ class AppointmentFactory extends Factory
     {
         return [
             'appointment_schedule' => fake()->dateTimeThisMonth(),
-            'appointment_Status' => fake()->randomElement(['upcoming', 'done'],
-            )
+            'appointment_Status' => fake()->randomElement(['upcoming', 'done']),
+            'request' => fake()->sentence()
         ];
     }
 }
