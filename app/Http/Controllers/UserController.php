@@ -76,7 +76,7 @@ class UserController extends Controller
         $userdelete =  DB::table('users')->where('id', $user->id)->delete();
 
 
-        return redirect('/home')->with('success', 'User Profile Deleted');
+        return redirect('/home')->with('success', 'Deleted UserProfile ');
 
     }
 }

@@ -48,7 +48,7 @@
         <button data-modal-target="popup-modal" data-modal-toggle="popup-modal"  class="bg-red-700 px-2 py-1 rounded-sm">  Delete Account </button>  
         </div>
 
-            <DeleteModal> </DeleteModal>
+            <DeleteUserModal> </DeleteUserModal>
 
 
           <div class="w-40 h-40 rounded-full inline-flex items-center justify-center  bg-gray-400 text-gray-700 text-xl font-bold">
@@ -179,7 +179,7 @@ import { computed } from 'vue'
 import { useForm } from '@inertiajs/vue3'
 import { router } from '@inertiajs/vue3'
 import { ref } from 'vue'
-import DeleteModal from '@/Pages/Index/DeleteModal.vue'
+import DeleteUserModal from '@/Pages/Index/DeleteUserModal.vue'
 
 const awesome = ref(true)
 
