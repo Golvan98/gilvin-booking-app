@@ -51,18 +51,21 @@ class UserController extends Controller
         ->where('id', $user->id)
         ->update($data);
 
-        return redirect()->back()->with('success', 'profile updated successfully');
+        return redirect('userProfile')->with('success', 'profile updated successfully');
    
     }
 
     public function editUserBio(Request $request)
     {
-       
+        $user = auth()->user();
         $data = $request->validate([
             'bio' => 'required|min:2|max:99'
         ]);
 
-        dd($request->bio);
+        $bioedit = DB::table('users')->where('id', $user->id)->update($data);
+
+        return redirect()->back()->with('success', 'user bio updated successfully');
+
     }
 
 

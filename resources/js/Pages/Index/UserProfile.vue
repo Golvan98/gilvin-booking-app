@@ -13,7 +13,7 @@
       <button @click="awesome=!awesome" v-if="awesome" class="ml-4  text-white"> Bio: {{ bio }}</button>
         <div v-else>
           <form @submit.prevent="submitForm2">
-            <input v-model=form2.bio name="bio" id="bio" type="text"  :placeholder="bio">
+            <input v-model=form2.bio name="bio" id="bio" type="text" class="bg-green-300 w-1/6"  :placeholder="bio">
             
             <button type="submit" class="bg-indigo-700 text-white font-bold"> Save Changes </button>
             <button @click="awesome=!awesome" class="ml-2 bg-indigo-700 text-white font-bold"> Cancel </button>
@@ -43,13 +43,16 @@
       
   
       <div class="h-full w-2/5 mr-12 bg-white flex justify-center"> 
-        <div class="ml-4 mt-2 h-1/6 text-white"> <Link href="/deleteUser" method="delete" as="button"> <div  class="bg-red-700 px-2 py-1 rounded-sm">  Delete Account </div> </Link> </div>
-          <div
-              class="w-40 h-40 rounded-full 
-                  inline-flex items-center justify-center 
-                  bg-gray-400 text-gray-700 text-xl font-bold">
+
+        <div class="ml-4 mt-2 h-1/6 text-white">  
+        <button data-modal-target="popup-modal" data-modal-toggle="popup-modal"  class="bg-red-700 px-2 py-1 rounded-sm">  Delete Account </button>  
+        </div>
+
+            <DeleteModal> </DeleteModal>
+
+
+          <div class="w-40 h-40 rounded-full inline-flex items-center justify-center  bg-gray-400 text-gray-700 text-xl font-bold">
               Photo Here
-              
           </div>
   
   
@@ -176,7 +179,7 @@ import { computed } from 'vue'
 import { useForm } from '@inertiajs/vue3'
 import { router } from '@inertiajs/vue3'
 import { ref } from 'vue'
-
+import DeleteModal from '@/Pages/Index/DeleteModal.vue'
 
 const awesome = ref(true)
 

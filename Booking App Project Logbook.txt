@@ -206,4 +206,8 @@ August 15
 - UI improvements for userprofile, to create its CRUD tomorrow
 
 August 17
-- added bio field to users table
+- added bio field to users table, also reflectson userProfile
+- added bio form to UserProfile, to test more tomorrow, got a weird syntax bug
+
+August 18
+- added functioning feature to edit bio form in userProfile
