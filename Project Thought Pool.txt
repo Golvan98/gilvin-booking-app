@@ -1,6 +1,6 @@
 Currently Doing
+- appointment request CRUD (appointments requests and appointments are to be in modal format)
 - upload photo user profile
-- appointment request CRUD
 
 TO DOs
 - auto adjust when browser is shortened
@@ -26,3 +26,23 @@ Done
 - feature in which a professional gets to add his list of services too (professional->services CRUD)
 - bio edit presented the same way in Northspyre wherein u just click its texts and u can edit em, can also add a close button on the right side of bio
 - user profile CRUD (just an imitation of professional profile)
+
+
+
+CHAT GPT RESPONSE FOR SCROLLABLE MODAL HERE 
+
+
+To make the modal scrollable, you need to set a maximum height for the modal container and allow it to overflow-y when the content exceeds that height. You're already using the max-h-full class to set the maximum height to the full viewport height. To make it scrollable, you can add the overflow-y-auto class to the modal container. Here's how you can modify your existing code:
+
+html
+Copy code
+<div id="popup-modal" tabindex="-1" class="fixed top-0 left-0 right-0 z-50 hidden p-4 overflow-x-hidden overflow-y-auto md:inset-0 h-[calc(100%-1rem)] max-h-full">
+    <div class="relative w-full max-w-md max-h-full overflow-y-auto"> <!-- Add overflow-y-auto here -->
+        <div class="relative bg-white rounded-lg shadow dark:bg-gray-700">
+            <!-- Rest of your modal content -->
+        </div>
+    </div>
+</div>
+By adding the overflow-y-auto class to the inner container of your modal, the content will become scrollable when it exceeds the maximum height of the container.
+
+Additionally, make sure that the content inside the modal doesn't have any fixed heights that could prevent scrolling, as this could interfere with the scroll behavior. The content within your modal should adapt to the available space and allow scrolling when necessary.

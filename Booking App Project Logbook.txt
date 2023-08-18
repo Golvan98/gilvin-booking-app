@@ -212,4 +212,5 @@ August 17
 August 18
 - added backend and functioning feature to edit bio form in userProfile
 - added deleted modal for userProfile
-- adde requests column to appointments table
+- added requests column to appointments table, on the long term this should be inherited from appointment_requests
+- added a scrollable modal on test page, to experiment on it further
