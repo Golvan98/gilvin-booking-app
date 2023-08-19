@@ -214,3 +214,7 @@ August 18
 - added deleted modal for userProfile
 - added requests column to appointments table, on the long term this should be inherited from appointment_requests
 - added a scrollable modal on test page, to experiment on it further
+
+August 19
+- moved modal scroll bar to center instead of whole page
+- added appoint box component and placed it in test modal. Will loop this next shift
