@@ -8,6 +8,7 @@ TO DOs
 - appointments CRUD
 - Route Model Binding in which a user can view other profiles not through HandleInertiaRequests (very important)
 - UI Improvements (FINAL) - :value instead of :place holder on bio form (might need a non SFC vue import on this)
+- soft delete profiles/users
 Done
 - Validation error message for wrong input in login forms
 - Use Separate multiple guard for User and Professionals (This was very fucking time consuming and hard for me)
