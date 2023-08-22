@@ -37,10 +37,17 @@ class IndexController extends Controller
 
         $userbio = $user->bio;
         $userbio2 = $user->bio;
-       $services =  ProfessionalServices::all()->whereIn('by_professional_id', $professional->id);
+        $services =  ProfessionalServices::all()->whereIn('by_professional_id', $professional->id);
 
         $requests = AppointmentRequest::all()->whereIn('by_professional_id', $user->id);
-        foreach ($requests as $request)
+
+        // for each user here, connect this thread by thread
+
+
+
+
+
+     /*   foreach ($requests as $request)
         {
             $userRequests = User::all()->whereIn('id', $request->by_user_id);
 
@@ -48,7 +55,8 @@ class IndexController extends Controller
             {
                 $consultee = $userRequest->first_name;
             }
-        }
+            dd($consultee);
+        } */
 
      
        
@@ -59,7 +67,7 @@ class IndexController extends Controller
           return inertia('Index/Test',
           [
             'requests'=> $requests, 
-            'consultee' => $consultee
+            
         ]);
     }
 
