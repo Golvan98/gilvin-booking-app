@@ -13,11 +13,10 @@
     </div>
 
     <div class="flex justify-between">
-            <div class="ml-1 text-red-500"> Cancel Request </div>
-            <div class="text-blue-500"> Reschedule Request </div>
-            <div class="mr-1 text-green-500"> Confirm Request </div>        
+            <div class="ml-1 text-sm text-red-500"> Cancel Request </div>
+            <div class="text-sm text-blue-500"> Reschedule Request </div>
+            <div class="text-sm mr-1 text-green-500"> Confirm Request </div>        
     </div>
-
 
 
 </div>

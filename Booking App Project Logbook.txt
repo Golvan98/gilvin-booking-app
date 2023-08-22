@@ -217,4 +217,7 @@ August 18
 
 August 19
 - moved modal scroll bar to center instead of whole page
-- added appoint box component and placed it in test modal. Will loop this next shift
+- added appoint box component and placed it in test modal. Will loop this on existing data next shift
+
+August 22
+- reflected requests in test page, will try to loop it in a modal

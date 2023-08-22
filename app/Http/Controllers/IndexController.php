@@ -3,6 +3,7 @@
 namespace App\Http\Controllers;
 
 use App\Http\Controllers\Controller;
+use App\Models\AppointmentRequest;
 use App\Models\Professional;
 use Illuminate\Http\Request;
 use Illuminate\Http\File;
@@ -37,7 +38,9 @@ class IndexController extends Controller
         $userbio2 = $user->bio;
        $services =  ProfessionalServices::all()->whereIn('by_professional_id', $professional->id);
 
-   
+        $requests = AppointmentRequest::all()->whereIn('by_professional_id', $user->id);
+
+       
 
 
      //  $MotivationAnswers = App\Models\ProfessionalServices::whereIn('by_professional_id', $professional->id);
@@ -45,9 +48,7 @@ class IndexController extends Controller
 
           return inertia('Index/Test',
           [
-            'services' => $services,
-            'bio' => $userbio,
-            'bio2' => $userbio2
+            'requests'=> $requests
         ]);
     }
 
