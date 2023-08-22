@@ -1,6 +1,6 @@
 <template>
  <span v-for="(requests) in requests">
-                         &nbsp {{ requests.request }}, 
+                         &nbsp {{ requests.request }}, {{ consultee }} 
  </span>
 
 
@@ -57,7 +57,8 @@ import { Link } from '@inertiajs/vue3'
 
 
   const props = defineProps({ 
-    requests:Object})
+    requests:Object,
+    consultee:Object})
 
   import AppointmentRequestsModal from '@/Pages/Index/AppointmentRequestsModal.vue'
   

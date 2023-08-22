@@ -2,6 +2,7 @@
 
 namespace App\Http\Controllers;
 
+use App\Models\User;
 use App\Http\Controllers\Controller;
 use App\Models\AppointmentRequest;
 use App\Models\Professional;
@@ -39,16 +40,26 @@ class IndexController extends Controller
        $services =  ProfessionalServices::all()->whereIn('by_professional_id', $professional->id);
 
         $requests = AppointmentRequest::all()->whereIn('by_professional_id', $user->id);
+        foreach ($requests as $request)
+        {
+            $userRequests = User::all()->whereIn('id', $request->by_user_id);
 
+            foreach ($userRequests as $userRequest)
+            {
+                $consultee = $userRequest->first_name;
+            }
+        }
+
+     
        
-
 
      //  $MotivationAnswers = App\Models\ProfessionalServices::whereIn('by_professional_id', $professional->id);
 
 
           return inertia('Index/Test',
           [
-            'requests'=> $requests
+            'requests'=> $requests, 
+            'consultee' => $consultee
         ]);
     }
 
