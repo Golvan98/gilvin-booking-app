@@ -221,3 +221,8 @@ August 19
 
 August 22
 - reflected requests in test page, will try to loop it in a modal
+- built a db query for appointment requests that reflects the request and consultee info
+- added note to controller for more queries to test out next shift
+
+August 23
+- built a loop and if arguement inside an inertiajs.vue page to reflect each appointment request's consultee

@@ -1,7 +1,12 @@
 <template>
  <span v-for="(requests) in requests">
-                         &nbsp {{ requests.request }}, {{ consultee }} 
+                         &nbsp {{ requests.request }} by
+
+        <span v-for="(consultees) in consultees">
+                <span v-if="consultees.id == requests.by_user_id"> {{ consultees.first_name }} ,</span>
+        </span>
  </span>
+ 
 
 
 <div class="ml-4 mt-2 h-1/6 text-white">  <button data-modal-target="popup-modal" data-modal-toggle="popup-modal"  class="bg-red-700 px-2 py-1 rounded-sm">  Delete Account </button>  </div>
@@ -58,7 +63,7 @@ import { Link } from '@inertiajs/vue3'
 
   const props = defineProps({ 
     requests:Object,
-    consultee:Object})
+    consultees:Object})
 
   import AppointmentRequestsModal from '@/Pages/Index/AppointmentRequestsModal.vue'
   

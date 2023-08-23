@@ -41,11 +41,13 @@ class IndexController extends Controller
 
         $requests = AppointmentRequest::all()->whereIn('by_professional_id', $user->id);
 
-        // for each user here, connect this thread by thread
+        $consulteeids = AppointmentRequest::all()->pluck('by_user_id');
 
+        $consultees = User::all()->whereIn('id', $consulteeids);
 
+      
 
-
+        // for each user, get all requests here and then make more queries to get the first name, connect this thread by thread
 
      /*   foreach ($requests as $request)
         {
@@ -67,6 +69,8 @@ class IndexController extends Controller
           return inertia('Index/Test',
           [
             'requests'=> $requests, 
+            'consultees' => $consultees
+
             
         ]);
     }
