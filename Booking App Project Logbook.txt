@@ -226,3 +226,4 @@ August 22
 
 August 23
 - built a loop and if arguement inside an inertiajs.vue page to reflect each appointment request's consultee
+- 

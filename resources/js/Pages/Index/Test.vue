@@ -23,13 +23,30 @@
             </button>
             <div class="p-6 text-center max-h-[400px]">
                
-                <h3 class="mb-5 text-lg font-normal text-gray-500 dark:text-gray-400"> Appointment Requests
+                <h3 class="mb-5 text-lg text-white font-bold bg-blue-500 py-2"> Appointment Requests</h3>
 
-                   
-                 
-                  <AppointmentRequestsModal> </AppointmentRequestsModal>
+                    <div v-for="(requests) in requests" id="modalcontent" class="bg-white flex-nowrap justify-center items-center rounded-xl border border-gray-300 mb-2">
+
+                    <div class="mt-4 flex justify-start ml-2 font-bold"> {{ requests.created_at}}</div>
+
+                    <div class="w-full h-auto flex-nowrap"> 
+                            <div v-for="(consultees) in consultees" class="flex justify-start border-b border-gray-100">  <span class="ml-2" v-if="consultees.id == requests.by_user_id"> {{ consultees.first_name }} {{ consultees.last_name }}</span> </div>
+
+                            <div class="h-auto bg-white flex-nowrap justify-start items-start mt-2 mb-4 text-left">
+                                <div class="mx-2"> {{ requests.request }} </div> 
+                            </div> 
+                    </div>
+
+                    <div class="flex justify-between font-bold mb-2">
+                            <div class="ml-1 text-sm text-red-500"> Cancel Request </div>
+                            <div class="text-sm text-blue-500"> Reschedule Request </div>
+                            <div class="text-sm mr-1 text-green-500"> Confirm Request </div>        
+                    </div>
+
+                    </div>
                 
-                </h3>
+                    
+                
                 <Link href="/deleteUser" method="delete" as="button"><button data-modal-hide="popup-modal" type="button" class="text-white bg-red-600 hover:bg-red-800 focus:ring-4 focus:outline-none focus:ring-red-300 dark:focus:ring-red-800 font-medium rounded-lg text-sm inline-flex items-center px-5 py-2.5 text-center mr-2">
                     Yes, I'm sure
                     

@@ -20,6 +20,7 @@ class AppointmentRequestFactory extends Factory
             'request' => fake()->sentence(),
             'request_schedule' => fake()->dateTimeThisMonth(),
             'request_status' => fake()->randomElement(['approved' , 'rejected']),
+            'by_user_id' => fake()->randomElement(['1', '2', '3',])
             
         ];
     }

@@ -42,9 +42,8 @@ class DatabaseSeeder extends Seeder
             'by_professional_id' => 1
         ]);
 
-        \App\Models\AppointmentRequest::factory(2)->create([ 
+        \App\Models\AppointmentRequest::factory(8)->create([ 
             'by_professional_id' => 1,
-            'by_user_id' => 1,
         ]);
 
         $CivilEngineers = \App\Models\Professional::where('profession', 'Civil Engineer');
