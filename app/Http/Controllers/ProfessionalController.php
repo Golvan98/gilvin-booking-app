@@ -89,7 +89,7 @@ class ProfessionalController extends Controller
 
         
 
-        $well = ProfessionalServices::create(['service' => $request->service, 'by_professional_id' => $user->id]);
+        $test = ProfessionalServices::create(['service' => $request->service, 'by_professional_id' => $user->id]);
         
         return redirect()->back()->with('success', 'Service Created');
     }

@@ -182,7 +182,7 @@
                             </div>
 
                             <div class="flex justify-between font-bold mb-2">
-                              <Link href="/rejectRequest">  <div class="ml-1 text-sm text-red-500">  Reject Request </div> </Link>
+                              <a :href="`rejectRequest/${requests.id}`"> <div class="ml-1 text-sm text-red-500">  Reject Request </div> </a>
                                     <div class="text-sm text-blue-500"> Reschedule Request </div>
                                     <div class="text-sm mr-1 text-green-500"> Confirm Request </div>        
                             </div>

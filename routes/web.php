@@ -12,6 +12,7 @@ use Illuminate\Support\Facades\Auth;
 use App\Http\Middleware\Authenticate;
 use App\Models\Professional;
 use App\Models\User;
+use App\Models\AppointmentRequest;
 use Illuminate\Http\Request;
 use Random\Randomizer;
 
@@ -70,7 +71,7 @@ Route::get('/test/{professional}', [IndexController::class, 'test'])->name('test
 Route::post('/bioEdit', [ProfessionalController::class, 'bioEdit'])->name('bioEdit');
 
 
-Route::post('/rejectRequest', [AppointmentRequestController::class, 'rejectRequest'])->name('reject.request');
+Route::get('/rejectRequest/{{appointmentrequest}}', [AppointmentRequestController::class, 'rejectRequest'])->name('reject.request');
 
 
 
