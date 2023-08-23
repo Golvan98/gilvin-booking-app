@@ -5,6 +5,7 @@ namespace App\Http\Controllers;
 use App\Http\Controllers\Controller;
 use Illuminate\Http\Request;
 use App\Models\User;
+use App\Models\AppointmentRequest;
 use App\Models\Professional;
 use Illuminate\Support\Facades\Auth;
 use Illuminate\Validation\ValidationException;
@@ -31,11 +32,17 @@ class ProfessionalController extends Controller
     $services =  ProfessionalServices::all()->whereIn('by_professional_id', $user->id);
     $bio = $user->bio;
 
+    $requests = AppointmentRequest::all()->whereIn('by_professional_id', $user->id);
+    $consulteeids = AppointmentRequest::all()->pluck('by_user_id');
+    $consultees = User::all()->whereIn('id', $consulteeids);
+
    
         return inertia('Index/ProfessionalProfile',
         [
             'services' => $services,
-            'bio' => $bio
+            'bio' => $bio,
+            'requests'=> $requests, 
+            'consultees' => $consultees
         ]);
     }
 

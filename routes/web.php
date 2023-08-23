@@ -2,6 +2,7 @@
 
 use App\Http\Controllers\AuthController;
 use Illuminate\Support\Facades\Route;
+use App\Http\Cotroller\AppointmentRequestController;
 use App\Http\Controllers\ProfessionalController;
 use App\Http\Controllers\IndexController;
 use App\Http\Controllers\UserController;
@@ -67,6 +68,9 @@ Route::post('/addservice', [ProfessionalController::class, 'addService'])->name(
 Route::get('/test/{professional}', [IndexController::class, 'test'])->name('test');
 
 Route::post('/bioEdit', [ProfessionalController::class, 'bioEdit'])->name('bioEdit');
+
+
+Route::post('/rejectRequest', [AppointmentRequestController::class, 'rejectRequest'])->name('reject.request');
 
 
 
