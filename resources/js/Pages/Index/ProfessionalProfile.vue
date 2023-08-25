@@ -169,20 +169,20 @@
                       
                         <h3 class="mb-5 text-lg text-white font-bold bg-blue-500 py-2"> Appointment Requests</h3>
 
-                            <div v-for="(requests) in requests" id="modalcontent" class="bg-white flex-nowrap justify-center items-center rounded-xl border border-gray-300 mb-2 shadow">
+                            <div v-for="(pendingRequests) in pendingRequests" id="modalcontent" class="bg-white flex-nowrap justify-center items-center rounded-xl border border-gray-300 mb-2 shadow">
 
                             <div class="mt-4 flex justify-start ml-2 font-bold"> {{ requests.created_at}}</div>
 
                             <div class="w-full h-auto flex-nowrap"> 
-                                    <div v-for="(consultees) in consultees" class="flex justify-start ">  <span class="ml-2" v-if="consultees.id == requests.by_user_id"> {{ consultees.first_name }} {{ consultees.last_name }}</span> </div>
+                                    <div v-for="(consultees) in consultees" class="flex justify-start ">  <span class="ml-2" v-if="consultees.id == pendingRequests.by_user_id"> {{ consultees.first_name }} {{ consultees.last_name }}</span> </div>
 
                                     <div class="h-auto bg-white flex-nowrap justify-start items-start mt-2 mb-4 text-left">
-                                        <div class="mx-2"> {{ requests.request }} </div> 
+                                        <div class="mx-2"> {{ pendingRequests.request }} </div> 
                                     </div> 
                             </div>
 
                             <div class="flex justify-between font-bold mb-2">
-                              <a :href="`rejectRequest/${requests.id}`"> <div class="ml-1 text-sm text-red-500">  Reject Request </div> </a>
+                              <a :href="`rejectRequest/${pendingRequests.id}`"> <div class="ml-1 text-sm text-red-500">  Reject Request </div> </a>
                                     <div class="text-sm text-blue-500"> Reschedule Request </div>
                                     <div class="text-sm mr-1 text-green-500"> Confirm Request </div>        
                             </div>
@@ -242,7 +242,9 @@
     services:Object, 
     errors:Object,
     requests:Object,
-    consultees:Object})
+    consultees:Object,
+    pendingRequests:Object,
+  })
 
     import { Link } from '@inertiajs/vue3'
   import { reactive } from 'vue'

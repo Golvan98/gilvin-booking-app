@@ -36,14 +36,21 @@ class ProfessionalController extends Controller
     $consulteeids = AppointmentRequest::all()->pluck('by_user_id');
     $consultees = User::all()->whereIn('id', $consulteeids);
 
+    $rejected = 'rejected';
+    $pending = 'pending';
+
+    $pendingRequests = DB::table('appointment_requests')->where('by_professional_id', $user->id)->where('request_status', $pending)->get();
 
  
+
+
         return inertia('Index/ProfessionalProfile',
         [
             'services' => $services,
             'bio' => $bio,
             'requests'=> $requests, 
-            'consultees' => $consultees
+            'consultees' => $consultees,
+            'pendingRequests' => $pendingRequests
         ]);
     }
 

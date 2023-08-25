@@ -14,9 +14,9 @@ class AppointmentRequestController extends Controller
     {
 
         
-        $delete = DB::table('appointment_requests')->where('by_user_id', $appointmentrequest->id)->update(['request_status' => 'rejected']);
+        $reject = DB::table('appointment_requests')->where('id', $appointmentrequest->id)->update(['request_status' => 'rejected']);
     
-        return redirect()->back()->with('request updated');
+        return redirect()->back()->with('success', 'request rejected');
      
 
     }
