@@ -17,7 +17,14 @@ class AppointmentRequestController extends Controller
         $reject = DB::table('appointment_requests')->where('id', $appointmentrequest->id)->update(['request_status' => 'rejected']);
     
         return redirect()->back()->with('success', 'request rejected');
-     
 
+
+    }
+
+    public function acceptRequest(AppointmentRequest $appointmentrequest)
+    {
+        $accept = DB::table('appointment_requests')->where('id', $appointmentrequest->id)->update(['request_status' => 'approved']);
+
+        return redirect()->back()->with('success', 'request approved');
     }
 }

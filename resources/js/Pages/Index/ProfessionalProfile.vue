@@ -184,7 +184,7 @@
                             <div class="flex justify-between font-bold mb-2">
                               <a :href="`rejectRequest/${pendingRequests.id}`"> <div class="ml-1 text-sm text-red-500">  Reject Request </div> </a>
                                     <div class="text-sm text-blue-500"> Reschedule Request </div>
-                                    <div class="text-sm mr-1 text-green-500"> Confirm Request </div>        
+                              <a :href="`approveRequest/${pendingRequests.id}`"> <div class="ml-1 text-sm text-green-500">  Approve Request </div> </a>       
                             </div>
 
                     </div>
