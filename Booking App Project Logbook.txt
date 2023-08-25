@@ -229,3 +229,8 @@ August 23
 - added appointment requests that appear as looped modals
 - finalized ui for appointment requests and migrated it to main professional page
 - added syntax for href interpolation for vue js done but route is not working, will test next shift
+
+
+August 24
+- added fixed route for reject request
+- fixed backend for reject request where it only updates requests with "1" id

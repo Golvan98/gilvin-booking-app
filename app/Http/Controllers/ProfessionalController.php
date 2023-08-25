@@ -36,7 +36,8 @@ class ProfessionalController extends Controller
     $consulteeids = AppointmentRequest::all()->pluck('by_user_id');
     $consultees = User::all()->whereIn('id', $consulteeids);
 
-   
+
+ 
         return inertia('Index/ProfessionalProfile',
         [
             'services' => $services,
