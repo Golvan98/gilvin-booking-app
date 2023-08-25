@@ -13,8 +13,10 @@ class AppointmentRequestController extends Controller
     public function rejectRequest(AppointmentRequest $appointmentrequest)
     {
 
-        dd('appointmentRequest');
-        $delete = DB::table('appointment_requests')->where('id', 1)->update(['request_status' => 'approved']);
+        
+        $delete = DB::table('appointment_requests')->where('id', 1)->update(['request_status' => 'rejected']);
+    
+        return redirect()->back()->with('request updated');
      
 
     }

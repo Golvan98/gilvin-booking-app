@@ -228,3 +228,4 @@ August 23
 - built a loop and if arguement inside an inertiajs.vue page to reflect each appointment request's consultee
 - added appointment requests that appear as looped modals
 - finalized ui for appointment requests and migrated it to main professional page
+- added syntax for href interpolation for vue js done but route is not working, will test next shift
