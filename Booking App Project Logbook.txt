@@ -234,3 +234,5 @@ August 23
 August 24
 - added fixed route for reject request
 - fixed backend for reject request where it only updates requests with "1" id
+- requests modal now only shows pending modals, also fixed appointmentrequests controller where it only updates requests with a certain user id
+- added a fully functional approve request feature

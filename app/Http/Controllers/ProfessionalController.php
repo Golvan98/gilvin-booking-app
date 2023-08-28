@@ -19,6 +19,7 @@ use Illuminate\Support\Facades\Validator;
 use Laravel\Sanctum\Guard;
 use Illuminate\Support\Facades\DB;
 use App\Models\ProfessionalServices;
+use Illuminate\Pagination\Paginator;
 
 
 class ProfessionalController extends Controller
@@ -39,18 +40,16 @@ class ProfessionalController extends Controller
     $rejected = 'rejected';
     $pending = 'pending';
 
-    $pendingRequests = DB::table('appointment_requests')->where('by_professional_id', $user->id)->where('request_status', $pending)->get();
+   // $pendingRequests = DB::table('appointment_requests')->where('by_professional_id', $user->id)->where('request_status', $pending)->get();
 
  
-
-
         return inertia('Index/ProfessionalProfile',
         [
             'services' => $services,
             'bio' => $bio,
             'requests'=> $requests, 
             'consultees' => $consultees,
-            'pendingRequests' => $pendingRequests
+            'pendingRequests' => DB::table('appointment_requests')->where('by_professional_id', $user->id)->where('request_status', $pending)->paginate(3)
         ]);
     }
 

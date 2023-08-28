@@ -1,9 +1,18 @@
-Currently Doing
-- appointment request CRUD (appointments requests and appointments are to be in modal format)
-- upload photo user profile
+Currently Doing :appointment request CRUD (appointments requests and appointments are to be in modal format)
+
+- data pagination for vuejs
+- reschedule feature (modal in  a modal)
+
+
+
+NOTE: for the delete part of appoint requests, only users who sent the request can delete em
+
+
+
 
 TO DOs
 - auto adjust when browser is shortened
+- upload photo user profile
 - appointment request CRUD
 - appointments CRUD
 - Route Model Binding in which a user can view other profiles not through HandleInertiaRequests (very important)

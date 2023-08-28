@@ -169,7 +169,7 @@
                       
                         <h3 class="mb-5 text-lg text-white font-bold bg-blue-500 py-2"> Appointment Requests</h3>
 
-                            <div v-for="(pendingRequests) in pendingRequests" id="modalcontent" class="bg-white flex-nowrap justify-center items-center rounded-xl border border-gray-300 mb-2 shadow">
+                            <div v-for="(pendingRequests) in pendingRequests.data" id="modalcontent" class="bg-white flex-nowrap justify-center items-center rounded-xl border border-gray-300 mb-2 shadow">
 
                             <div class="mt-4 flex justify-start ml-2 font-bold"> {{ requests.created_at}}</div>
 
@@ -184,7 +184,8 @@
                             <div class="flex justify-between font-bold mb-2">
                               <a :href="`rejectRequest/${pendingRequests.id}`"> <div class="ml-1 text-sm text-red-500">  Reject Request </div> </a>
                                     <div class="text-sm text-blue-500"> Reschedule Request </div>
-                              <a :href="`approveRequest/${pendingRequests.id}`"> <div class="ml-1 text-sm text-green-500">  Approve Request </div> </a>       
+                              <a :href="`approveRequest/${pendingRequests.id}`"> <div class="ml-1 text-sm text-green-500">  Approve Request </div> </a>      
+                               
                             </div>
 
                     </div>
