@@ -192,11 +192,11 @@
                         
                             
                         
-                        <Link href="/deleteUser" method="delete" as="button"><button data-modal-hide="requests-modal" type="button" class="mb-2 text-white bg-red-600 hover:bg-red-800 focus:ring-4 focus:outline-none focus:ring-red-300 dark:focus:ring-red-800 font-medium rounded-lg text-sm inline-flex items-center px-5 py-2.5 text-center mr-2">
-                            Yes, I'm sure
-                            
-                        </button> </Link>
-                        <button data-modal-hide="requests-modal" type="button" class="mb-2 text-gray-500 bg-white hover:bg-gray-100 focus:ring-4 focus:outline-none focus:ring-gray-200 rounded-lg border border-gray-200 text-sm font-medium px-5 py-2.5 hover:text-gray-900 focus:z-10 dark:bg-gray-700 dark:text-gray-300 dark:border-gray-500 dark:hover:text-white dark:hover:bg-gray-600 dark:focus:ring-gray-600">No, cancel</button>
+                  
+                        <div v-if="pendingRequests.data.length" class="w-full flex justify-center mt-8 mb-8">
+                          <Pagination :links="pendingRequests.links" />
+                        </div>
+
                     </div>
                 </div>
             </div>
@@ -256,7 +256,9 @@
   import ServiceModal from '@/Pages/Index/ServiceModal.vue'
   import DeleteModal from '@/Pages/Index/DeleteModal.vue'
   import Bio from '@/Pages/Index/Bio.vue'
+  import Pagination from '@/Pages/Index/Pagination.vue'
   
+
   import { ref } from 'vue'
   const page = usePage()
   
