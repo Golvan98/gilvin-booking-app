@@ -4,6 +4,15 @@ Currently Doing :appointment request CRUD (appointments requests and appointment
 - reschedule feature (modal in  a modal)
 
 
+  <div v-if="pendingRequests.data.length" class="w-full flex justify-center mt-8 mb-8">
+                      {{ pendingRequests.links  }} 
+                    <a :href="`/professionalProfile?page=${pendingRequests.links}`" preserve-state>
+                      Next Page
+                    </a>
+
+</div>
+
+
 
 NOTE: for the delete part of appoint requests, only users who sent the request can delete em
 

@@ -192,10 +192,19 @@
                         
                             
                         
-                  
-                        <div v-if="pendingRequests.data.length" class="w-full flex justify-center mt-8 mb-8">
+
+                        <div v-if="pendingRequests.data.length" class="w-full flex justify-center mt-8 mb-8" preserve-state>
                           <Pagination :links="pendingRequests.links" />
                         </div>
+
+                        <div v-if="pendingRequests.data.length" class="w-full flex justify-center mt-8 mb-8">
+                          {{ pendingRequests.links  }} 
+                          <inertia-link :href="`/professionalProfile?page=${pendingRequests.links}`" preserve-state>
+                          Next Page
+                          </inertia-link>
+
+</div>
+
 
                     </div>
                 </div>
