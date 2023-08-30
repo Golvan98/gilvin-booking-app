@@ -15,7 +15,14 @@
 <script setup>
 import { Link } from '@inertiajs/vue3'
 defineProps ({links: Array})
+import { router } from '@inertiajs/vue3'
 
+const goToPage = (url) => {
+  Inertia.visit(url, {
+    replace: true, // Preserve the browser history
+    preserveState: true, // Preserve component state
+  });
+};
 
 
 </script>

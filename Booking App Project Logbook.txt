@@ -236,3 +236,11 @@ August 24
 - fixed backend for reject request where it only updates requests with "1" id
 - requests modal now only shows pending modals, also fixed appointmentrequests controller where it only updates requests with a certain user id
 - added a fully functional approve request feature
+
+August 28
+- added pagination backend to professional controller 
+- added pagination frontend to requests, but it doesn't appear on as a modal on page 2
+- added code snippets to test for in trying to persist modal after clicking pagination links
+
+August 30
+- 
