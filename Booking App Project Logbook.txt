@@ -247,3 +247,4 @@ August 30
 
 August 31
 - added a testmodal that passes props from parent profile Jesos Krayst this modal persistence is fucking with me
+- successfully packed pagination link modal in a component
