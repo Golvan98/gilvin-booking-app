@@ -243,4 +243,7 @@ August 28
 - added code snippets to test for in trying to persist modal after clicking pagination links
 
 August 30
-- 
+- replaced import inertia with import router as it is the new syntax for it, all attempts to debug modal persistence failed.
+
+August 31
+- added a testmodal that passes props from parent profile Jesos Krayst this modal persistence is fucking with me

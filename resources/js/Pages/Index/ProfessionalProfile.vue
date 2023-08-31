@@ -34,6 +34,8 @@
           Add Service 
         </button>
 
+        <TestModal :parentProp="parentData"/>
+
         <!-- Main modal -->
 
         <ServiceModal>
@@ -154,8 +156,8 @@
                 12
             </span> <br>
             </div>
-            <div> <button data-modal-target="requests-modal" data-modal-toggle="requests-modal" class="mr-4 bg-inherit text-start text-xs"> Requests </button></div>
-            <div  id="requests-modal" tabindex="-1" class="justify-center bg-inherit fixed top-0 left-0 right-0 z-50 hidden p-4 h-3/4">
+            <div> <button data-modal-target="requests-modal" data-modal-toggle="requests-modal" class="mr-4 bg-inherit text-start text-xs" preserve-state> Requests </button></div>
+            <div  id="requests-modal" tabindex="-1" class="justify-center bg-inherit fixed top-0 left-0 right-0 z-50 hidden p-4 h-3/4" preserve-state >
             <div class="relative w-1/4 mx-auto bg-white overflow-y-auto md:inset-0 h-[calc(100%-3rem)]">
                 <div class="relative bg-white  dark:bg-gray-700">
                     <button type="button" class="absolute top-3 right-2.5 text-gray-400 bg-transparent hover:bg-gray-200 hover:text-gray-900 rounded-lg text-sm w-8 h-8 ml-auto inline-flex justify-center items-center dark:hover:bg-gray-600 dark:hover:text-white" data-modal-hide="requests-modal">
@@ -250,6 +252,7 @@
   })
 
     import { Link } from '@inertiajs/vue3'
+    
   import { reactive } from 'vue'
   import { usePage } from '@inertiajs/vue3'
   import { computed } from 'vue'
@@ -259,8 +262,7 @@
   import DeleteModal from '@/Pages/Index/DeleteModal.vue'
   import Bio from '@/Pages/Index/Bio.vue'
   import Pagination from '@/Pages/Index/Pagination.vue'
-  
-  
+  import TestModal from './TestModal.vue';
 
 
 const goToPage = (url) => {
@@ -270,11 +272,9 @@ const goToPage = (url) => {
   });
 };
 
-
   import { ref } from 'vue'
   const page = usePage()
-  
-   
+
   const awesome = ref(true)
   const flashSuccess = computed(() => page.props.flash.success, )
   const prof = computed (() => page.props.prof)
@@ -282,6 +282,8 @@ const goToPage = (url) => {
   const profEmail = computed ( () => page.props.prof.email)
   const profLastName = computed(() => page.props.prof.last_name)
   const bio = computed(() => page.props.prof.bio)
+
+  const parentData = 'Data from Professional Profile';
 
   
   const profProfession = computed(() => page.props.prof.profession)

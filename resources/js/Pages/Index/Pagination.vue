@@ -24,5 +24,4 @@ const goToPage = (url) => {
   });
 };
 
-
 </script>
