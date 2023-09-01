@@ -26,7 +26,7 @@
                             </div>
 
                             <div class="flex justify-between font-bold mb-2">
-                              <a :href="`deleteRequest/${pendingRequests.id}`" target="_blank"> <div class="ml-1 text-sm text-red-500" preserve-state>  Delete Request </div>  </a>
+                              <a :href="`deleteRequest/${pendingRequests.id}`" target="_blank"> <div class="ml-1 text-sm text-red-500" preserve-state>  Cancel Request </div>  </a>
                                     <div class="text-sm text-blue-500"> Reschedule Request </div>
                               <a :href="`approveRequest/${pendingRequests.id}`" target="_blank"> <div class="ml-1 text-sm text-green-500">  Approve Request </div> </a>      
                                

@@ -254,3 +254,6 @@ August 31
 Sept 1
 - added target="_blank" to reject and confirm request to persist modal to stay (this opens a new tab instead)
 - renamed testmodal component for request to profRequestsModal
+- added userRequest modal template for userProfile's side of appointment requests, controller updates included
+- added modal in user profile where it shows the request's name and profession
+- added Delete method for appointment requests (CRUD For requests now complete)
