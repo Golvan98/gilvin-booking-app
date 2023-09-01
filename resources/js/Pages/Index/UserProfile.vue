@@ -141,7 +141,7 @@
           </span> <br>
           </div>
           <div> <button data-modal-target="requests-modal" data-modal-toggle="requests-modal" class="mr-4 bg-inherit text-start text-xs" preserve-state>  Requests </button></div>
-          <userRequestsModal/>
+          <userRequestsModal  :pendingRequests="pendingRequests" :consultants="consultants" />
         
         
         </div>
@@ -196,6 +196,7 @@ const pops = defineProps (
   { 
     bio:String, 
     pendingRequests:Object,
+    consultants: Object
   
   })
 

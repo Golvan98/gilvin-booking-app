@@ -28,6 +28,13 @@ class AppointmentRequestController extends Controller
         return redirect()->back()->with('success', 'request approved');
     }
 
+    public function deleteRequest(AppointmentRequest $appointmentrequest)
+    {
+        $delete = DB::table('appointment_requests')->where('id', $appointmentrequest->id)->delete();
+
+        dd('test delete');
+    }
+
     
 
 }

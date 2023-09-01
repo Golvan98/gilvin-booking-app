@@ -215,7 +215,7 @@
   import DeleteModal from '@/Pages/Index/DeleteModal.vue'
   import Bio from '@/Pages/Index/Bio.vue'
   import Pagination from '@/Pages/Index/Pagination.vue'
-  import profRequestsModal from './profRequestsModal.vue';
+  import profRequestsModal from '@/Pages/Index/profRequestsModal.vue';
 
 
 

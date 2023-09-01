@@ -29,8 +29,8 @@ class UserController extends Controller
         $user = auth()->user();
         $bio = $user->bio;
         
-        $userRequests = AppointmentRequest::all()->whereIn('by_user_id', $user->id);
-        $consultantIds = AppointmentRequest::all()->pluck('by_professional_id');
+        $consultantids = AppointmentRequest::all()->pluck('by_professional_id');
+        $consultants = Professional::all()->whereIn('id', $consultantids);
         
         
        
@@ -40,9 +40,7 @@ class UserController extends Controller
     [
         'bio' => $user->bio,
         'pendingRequests' => DB::table('appointment_requests')->where('by_user_id', $user->id)->where('request_status', 'pending')->paginate(4),
-        'userRequests' => $userRequests,
-        'consultantIds' => $consultantIds,
-     
+        'consultants' => $consultants,
         
     ]);
     }
