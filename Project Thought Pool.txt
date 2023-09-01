@@ -1,5 +1,5 @@
 Currently Doing :appointment request CRUD (appointments requests and appointments are to be in modal format)
-- persist when clicking next page done, now u need to persist the modal when u accept/reject requests
+- Delete part of appointment Request
 
 
 
@@ -28,6 +28,7 @@ TO DOs
 - soft delete profiles/users
 - Messaging after rejecting requests and users POV when their requests are rejected
 - auto adjust when browser is shortened (final)
+ persist when clicking next page done, now u need to persist the modal when u accept/reject requests (hard one, this is left for the optimizing section)
 Done
 - Validation error message for wrong input in login forms
 - Use Separate multiple guard for User and Professionals (This was very fucking time consuming and hard for me)

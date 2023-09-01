@@ -140,7 +140,10 @@
               12
           </span> <br>
           </div>
-          <div class="mr-4 bg-inherit text-start text-xs"> Appointments</div>
+          <div> <button data-modal-target="requests-modal" data-modal-toggle="requests-modal" class="mr-4 bg-inherit text-start text-xs" preserve-state>  Requests </button></div>
+          <userRequestsModal/>
+        
+        
         </div>
   
         <div class="flex-nowrap">
@@ -180,6 +183,7 @@ import { useForm } from '@inertiajs/vue3'
 import { router } from '@inertiajs/vue3'
 import { ref } from 'vue'
 import DeleteUserModal from '@/Pages/Index/DeleteUserModal.vue'
+import userRequestsModal from '@/Pages/Index/userRequestsModal.vue'
 
 const awesome = ref(true)
 
@@ -188,7 +192,12 @@ const page = usePage()
 
 const flashSuccess = computed(() => page.props.flash.success, )
 
-const pops = defineProps ({ bio:String, })
+const pops = defineProps (
+  { 
+    bio:String, 
+    pendingRequests:Object,
+  
+  })
 
 const user = computed(() => page.props.user )
 // const user = computed(() => page.props.auth.user)

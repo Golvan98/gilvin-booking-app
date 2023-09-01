@@ -18,6 +18,7 @@ use Illuminate\Support\Facades\Validator;
 use Illuminate\Database\Eloquent\Model;
 use Laravel\Sanctum\Guard;
 use Illuminate\Support\Facades\DB;
+use App\Models\AppointmentRequest;
 
 class UserController extends Controller
 {
@@ -27,12 +28,21 @@ class UserController extends Controller
     {
         $user = auth()->user();
         $bio = $user->bio;
+        
+        $userRequests = AppointmentRequest::all()->whereIn('by_user_id', $user->id);
+        $consultantIds = AppointmentRequest::all()->pluck('by_professional_id');
+        
+        
        
         
     
         return inertia('Index/UserProfile',
     [
         'bio' => $user->bio,
+        'pendingRequests' => DB::table('appointment_requests')->where('by_user_id', $user->id)->where('request_status', 'pending')->paginate(4),
+        'userRequests' => $userRequests,
+        'consultantIds' => $consultantIds,
+     
         
     ]);
     }

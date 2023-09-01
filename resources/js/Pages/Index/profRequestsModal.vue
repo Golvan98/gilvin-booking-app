@@ -63,7 +63,6 @@
     import DeleteModal from '@/Pages/Index/DeleteModal.vue'
     import Bio from '@/Pages/Index/Bio.vue'
     import Pagination from '@/Pages/Index/Pagination.vue'
-    import TestModal from './TestModal.vue';
   
 
 

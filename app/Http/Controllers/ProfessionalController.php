@@ -37,6 +37,9 @@ class ProfessionalController extends Controller
     $consulteeids = AppointmentRequest::all()->pluck('by_user_id');
     $consultees = User::all()->whereIn('id', $consulteeids);
 
+
+
+
     $rejected = 'rejected';
     $pending = 'pending';
 

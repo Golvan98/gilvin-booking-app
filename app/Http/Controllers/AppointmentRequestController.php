@@ -27,4 +27,7 @@ class AppointmentRequestController extends Controller
 
         return redirect()->back()->with('success', 'request approved');
     }
+
+    
+
 }

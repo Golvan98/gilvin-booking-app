@@ -157,7 +157,7 @@
             </span> <br>
             </div>
             <div> <button data-modal-target="requests-modal" data-modal-toggle="requests-modal" class="mr-4 bg-inherit text-start text-xs" preserve-state> Requests </button></div>
-            <TestModal :pendingRequests="pendingRequests" :consultees="consultees" :requests="requests" preserve-state/>
+            <profRequestsModal :pendingRequests="pendingRequests" :consultees="consultees" :requests="requests" preserve-state/>
         
           </div>
 
@@ -215,7 +215,7 @@
   import DeleteModal from '@/Pages/Index/DeleteModal.vue'
   import Bio from '@/Pages/Index/Bio.vue'
   import Pagination from '@/Pages/Index/Pagination.vue'
-  import TestModal from './TestModal.vue';
+  import profRequestsModal from './profRequestsModal.vue';
 
 
 

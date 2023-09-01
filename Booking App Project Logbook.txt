@@ -253,3 +253,4 @@ August 31
 
 Sept 1
 - added target="_blank" to reject and confirm request to persist modal to stay (this opens a new tab instead)
+- renamed testmodal component for request to profRequestsModal
