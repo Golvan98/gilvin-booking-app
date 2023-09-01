@@ -27,9 +27,9 @@
                             </div>
 
                             <div class="flex justify-between font-bold mb-2">
-                              <a :href="`rejectRequest/${pendingRequests.id}`"> <div class="ml-1 text-sm text-red-500">  Reject Request </div> </a>
+                              <a :href="`rejectRequest/${pendingRequests.id}`" target="_blank"> <div class="ml-1 text-sm text-red-500" preserve-state>  Reject Request </div>  </a>
                                     <div class="text-sm text-blue-500"> Reschedule Request </div>
-                              <a :href="`approveRequest/${pendingRequests.id}`"> <div class="ml-1 text-sm text-green-500">  Approve Request </div> </a>      
+                              <a :href="`approveRequest/${pendingRequests.id}`" target="_blank"> <div class="ml-1 text-sm text-green-500">  Approve Request </div> </a>      
                                
                             </div>
 

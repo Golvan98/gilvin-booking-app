@@ -248,3 +248,8 @@ August 30
 August 31
 - added a testmodal that passes props from parent profile Jesos Krayst this modal persistence is fucking with me
 - successfully packed pagination link modal in a component
+- finally preserved modal state when clicking the pagination links, turns out I only had to add "preserve-state" on the end of the pagination component
+
+
+Sept 1
+- added target="_blank" to reject and confirm request to persist modal to stay (this opens a new tab instead)

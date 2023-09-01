@@ -1,7 +1,7 @@
 Currently Doing :appointment request CRUD (appointments requests and appointments are to be in modal format)
+- persist when clicking next page done, now u need to persist the modal when u accept/reject requests
 
-- data pagination for vuejs
-- reschedule feature (modal in  a modal)
+
 
 
   <div v-if="pendingRequests.data.length" class="w-full flex justify-center mt-8 mb-8">
@@ -20,13 +20,14 @@ NOTE: for the delete part of appoint requests, only users who sent the request c
 
 
 TO DOs
-- auto adjust when browser is shortened
 - upload photo user profile
 - appointment request CRUD
 - appointments CRUD
 - Route Model Binding in which a user can view other profiles not through HandleInertiaRequests (very important)
 - UI Improvements (FINAL) - :value instead of :place holder on bio form (might need a non SFC vue import on this)
 - soft delete profiles/users
+- Messaging after rejecting requests and users POV when their requests are rejected
+- auto adjust when browser is shortened (final)
 Done
 - Validation error message for wrong input in login forms
 - Use Separate multiple guard for User and Professionals (This was very fucking time consuming and hard for me)
@@ -45,6 +46,7 @@ Done
 - feature in which a professional gets to add his list of services too (professional->services CRUD)
 - bio edit presented the same way in Northspyre wherein u just click its texts and u can edit em, can also add a close button on the right side of bio
 - user profile CRUD (just an imitation of professional profile)
+- data pagination for vuejs
 
 
 
