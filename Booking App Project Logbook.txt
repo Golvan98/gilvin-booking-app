@@ -257,3 +257,6 @@ Sept 1
 - added userRequest modal template for userProfile's side of appointment requests, controller updates included
 - added modal in user profile where it shows the request's name and profession
 - added Delete method for appointment requests (CRUD For requests now complete)
+
+Sept 4
+- added pagination links for user's side of requests

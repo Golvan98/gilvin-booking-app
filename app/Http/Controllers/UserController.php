@@ -39,7 +39,7 @@ class UserController extends Controller
         return inertia('Index/UserProfile',
     [
         'bio' => $user->bio,
-        'pendingRequests' => DB::table('appointment_requests')->where('by_user_id', $user->id)->where('request_status', 'pending')->paginate(4),
+        'pendingRequests' => DB::table('appointment_requests')->where('by_user_id', $user->id)->where('request_status', 'pending')->paginate(2),
         'consultants' => $consultants,
         
     ]);

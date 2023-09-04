@@ -26,13 +26,21 @@
                             </div>
 
                             <div class="flex justify-between font-bold mb-2">
-                              <a :href="`deleteRequest/${pendingRequests.id}`" target="_blank"> <div class="ml-1 text-sm text-red-500" preserve-state>  Cancel Request </div>  </a>
+                              <a :href="`rejectRequest/${pendingRequests.id}`" target="_blank"> <div class="ml-1 text-sm text-red-500" preserve-state>  Reject Request </div>  </a>
                                     <div class="text-sm text-blue-500"> Reschedule Request </div>
                               <a :href="`approveRequest/${pendingRequests.id}`" target="_blank"> <div class="ml-1 text-sm text-green-500">  Approve Request </div> </a>      
                                
                             </div>
 
-                    </div>
+                     </div>
+                        
+                            
+                        
+
+                        <div v-if="pendingRequests.data.length" class="w-full flex justify-center mt-8 mb-8" preserve-state>
+                          <Pagination :links="pendingRequests.links" />
+                        </div>
+
                         
                             
 
@@ -56,6 +64,11 @@ import { usePage } from '@inertiajs/vue3'
 import { computed } from 'vue'
 import { useForm } from '@inertiajs/vue3'
 import { router } from '@inertiajs/vue3'
+import Pagination from '@/Pages/Index/Pagination.vue'
+
+
+
+
 
 
 

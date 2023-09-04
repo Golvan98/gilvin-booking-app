@@ -184,6 +184,7 @@ import { router } from '@inertiajs/vue3'
 import { ref } from 'vue'
 import DeleteUserModal from '@/Pages/Index/DeleteUserModal.vue'
 import userRequestsModal from '@/Pages/Index/userRequestsModal.vue'
+import Pagination from '@/Pages/Index/Pagination.vue'
 
 const awesome = ref(true)
 
