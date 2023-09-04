@@ -12,18 +12,18 @@
         </button>
                                                         <div class="px-6 py-6 lg:px-8">
                                                             <h3 class="mb-4 text-xl font-medium text-gray-900 dark:text-white"> Edit Request </h3>
-                                                            <form class="space-y-6" action="#">
+                                                            <form @submit.prevent="editModal" class="space-y-6" action="#">
                                                                 <div>
                                                                     <label for="request" class="block mb-2 text-sm font-medium text-gray-900 dark:text-white"> Request Context </label>
-                                                                    <input type="text" name="request" id="request" class="bg-gray-50 border border-gray-300 text-gray-900 text-sm rounded-lg focus:ring-blue-500 focus:border-blue-500 block w-full p-2.5 dark:bg-gray-600 dark:border-gray-500 dark:placeholder-gray-400 dark:text-white" required>
+                                                                    <input type="text" v-model="editForm.request"  name="request" id="request" class="bg-gray-50 border border-gray-300 text-gray-900 text-sm rounded-lg focus:ring-blue-500 focus:border-blue-500 block w-full p-2.5 dark:bg-gray-600 dark:border-gray-500 dark:placeholder-gray-400 dark:text-white" required>
                                                                 </div>
                                                                 <div>
                                                                     <label for="request_schedule_start" class="block mb-2 text-sm font-medium text-gray-900 dark:text-white"> Appoint Start Time </label>
-                                                                    <input type="datetime-local" name="request_schedule" id="request_schedule"  class="bg-gray-50 border border-gray-300 text-gray-900 text-sm rounded-lg focus:ring-blue-500 focus:border-blue-500 block w-full p-2.5 dark:bg-gray-600 dark:border-gray-500 dark:placeholder-gray-400 dark:text-white" required>
+                                                                    <input type="datetime-local" v-model="editForm.request_schedule_start" name="request_schedule_start" id="request_schedule_start"  class="bg-gray-50 border border-gray-300 text-gray-900 text-sm rounded-lg focus:ring-blue-500 focus:border-blue-500 block w-full p-2.5 dark:bg-gray-600 dark:border-gray-500 dark:placeholder-gray-400 dark:text-white" required>
                                                                 </div>
                                                                 <div>
-                                                                    <label for="request_schedule" class="block mb-2 text-sm font-medium text-gray-900 dark:text-white"> Appoint End Time </label>
-                                                                    <input type="datetime-local" name="request_schedule_end" id="request_schedule"  class="bg-gray-50 border border-gray-300 text-gray-900 text-sm rounded-lg focus:ring-blue-500 focus:border-blue-500 block w-full p-2.5 dark:bg-gray-600 dark:border-gray-500 dark:placeholder-gray-400 dark:text-white" required>
+                                                                    <label for="request_schedule" class="block mb-2 text-sm font-medium text-gray-900 dark:text-white"> Appoint End Time  </label>
+                                                                    <input type="datetime-local" v-model="editForm.request_schedule_end" name="request_schedule_end" id="request_schedule_end"  class="bg-gray-50 border border-gray-300 text-gray-900 text-sm rounded-lg focus:ring-blue-500 focus:border-blue-500 block w-full p-2.5 dark:bg-gray-600 dark:border-gray-500 dark:placeholder-gray-400 dark:text-white" required>
                                                                 </div>
                                                                
                                                                 <button type="submit" class="w-full text-white bg-blue-700 hover:bg-blue-800 focus:ring-4 focus:outline-none focus:ring-blue-300 font-medium rounded-lg text-sm px-5 py-2.5 text-center dark:bg-blue-600 dark:hover:bg-blue-700 dark:focus:ring-blue-800"> Confirm </button>
@@ -49,13 +49,28 @@ import editRequestModal from '@/Pages/Index/editRequestModal.vue'
 
 
 
-const pops = defineProps (
+const props = defineProps (
   { 
     pendingRequests:Object,
     consultants: Object
   
   })
 
+  const editForm = useForm(
+    {
+        request:null,
+        request_schedule_start:null,
+        request_schedule_end:null
+    }
+  )
+  function editModal() {
+  console.log('Form submitted:', editForm.value);
 
+  // Construct the dynamic URL with the appointment request ID
+  const dynamicUrl = `editRequest/${props.pendingRequests.id}`;
+
+  // Make the POST request using the dynamic URL
+  router.post(dynamicUrl, editForm);
+}
 
 </script>

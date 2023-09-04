@@ -262,3 +262,5 @@ Sept 4
 - added pagination links for user's side of requests
 - added route for editing requests
 - added modal in a modal for editing request's frontend
+- transferred modal as a component with proper props
+- placed backend and frontend route for updating request, but it's buggy, will reconfigure query tomorrow

@@ -74,7 +74,7 @@ Route::post('/bioEdit', [ProfessionalController::class, 'bioEdit'])->name('bioEd
 Route::get('/rejectRequest/{appointmentrequest}', [AppointmentRequestController::class, 'rejectRequest'])->name('reject.request');
 Route::get('/approveRequest/{appointmentrequest}', [AppointmentRequestController::class, 'acceptRequest'])->name('approve.request');
 Route::get('/deleteRequest/{appointmentrequest}', [AppointmentRequestController::class, 'deleteRequest'])->name('delete.request');
-Route::get('/editRequest/{appointmentrquest}', [AppointmentRequestController::class, 'editRequest'])->name('edit.request');
+Route::post('/editRequest/{appointmentrequest}', [AppointmentRequestController::class, 'editRequest'])->name('edit.request');
 
 
 
