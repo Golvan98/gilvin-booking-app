@@ -36,7 +36,11 @@ class AppointmentRequestController extends Controller
 
         return redirect()->back()->with('success', 'request deleted');
 
-       
+    }
+
+    public function editRequest(AppointmentRequest $appointmentrequest)
+    {
+        dd('edit route here');
     }
 
     

@@ -256,7 +256,9 @@ Sept 1
 - renamed testmodal component for request to profRequestsModal
 - added userRequest modal template for userProfile's side of appointment requests, controller updates included
 - added modal in user profile where it shows the request's name and profession
-- added Delete method for appointment requests (CRUD For requests now complete)
+- added Delete method for appointment requests (CRUD For requests now only needs update to complete full CRUD)
 
 Sept 4
 - added pagination links for user's side of requests
+- added route for editing requests
+- added modal in a modal for editing request's frontend
