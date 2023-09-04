@@ -18,7 +18,8 @@ class AppointmentRequestFactory extends Factory
     {
         return [
             'request' => fake()->sentence(),
-            'request_schedule' => fake()->dateTimeThisMonth(),
+            'request_schedule_start' => fake()->dateTimeThisMonth(),
+            'request_schedule_end' => fake()->dateTimeThisMonth(),
             'request_status' => fake()->randomElement(['pending']),
             'by_user_id' => fake()->randomElement(['1', '2', '3',])
             

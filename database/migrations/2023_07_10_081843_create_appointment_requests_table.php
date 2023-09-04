@@ -14,7 +14,8 @@ return new class extends Migration
         Schema::create('appointment_requests', function (Blueprint $table) {
             $table->id();
             $table->longText('request');
-            $table->date('request_schedule');
+            $table->dateTime('request_schedule_start');
+            $table->dateTime('request_schedule_end');
             $table->tinyText('request_status');
             $table->timestamps();
            
