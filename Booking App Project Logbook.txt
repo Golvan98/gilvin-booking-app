@@ -264,3 +264,7 @@ Sept 4
 - added modal in a modal for editing request's frontend
 - transferred modal as a component with proper props
 - placed backend and frontend route for updating request, but it's buggy, will reconfigure query tomorrow
+
+Sept 5
+- fixed the query bug in edit request, used vuejs @button click and ref function suggested by chatGPT, but now the button doesnt close after clicking
+- fixed issue where confirm button doesnt close after clicking it, and placeholder has now the value of the current request.
