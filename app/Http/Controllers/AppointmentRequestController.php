@@ -64,7 +64,7 @@ class AppointmentRequestController extends Controller
        
         $updaterequest = DB::table('appointment_requests')->where('id' , $appointmentrequest->id)->update($data);
 
-        return redirect('/userProfile')->with('success', 'update successful');
+        return redirect()->back()->with('success', 'update successful');
 
         
         

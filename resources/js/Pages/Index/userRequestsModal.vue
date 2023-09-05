@@ -21,7 +21,7 @@
                                     <div v-for="(consultants) in consultants" class="flex justify-start ">  <span class="ml-2" v-if="consultants.id == pendingRequests.by_professional_id"> {{ consultants.first_name }} {{ consultants.last_name }} , {{ consultants.profession }}</span> </div>
 
                                     <div class="h-auto bg-white flex-nowrap justify-start items-start mt-2 mb-4 text-left">
-                                        <div class="mx-2"> {{ pendingRequests.request }} </div> 
+                                        <div class="mx-2"> {{ pendingRequests.request }}  {{ pendingRequests.id }}</div> 
                                     </div> 
                             </div>
 
@@ -29,10 +29,10 @@
                               <a :href="`deleteRequest/${pendingRequests.id}`" target="_blank"> <div class="ml-1 mr-2 text-sm text-red-500" preserve-state>  Reject Request </div>  </a>    
                                              
                                 <!-- Modal toggle -->
-                                <button data-modal-target="edit-modal" data-modal-toggle="edit-modal" class="mr-4 block text-white bg-blue-700 hover:bg-blue-800 focus:ring-4 focus:outline-none focus:ring-blue-300 font-medium rounded-lg text-sm px-5 py-1 text-center dark:bg-blue-600 dark:hover:bg-blue-700 dark:focus:ring-blue-800" type="button">
+                                <button @click="openEditModal(pendingRequests)"  data-modal-target="edit-modal" data-modal-toggle="edit-modal" class="mr-4 block text-white bg-blue-700 hover:bg-blue-800 focus:ring-4 focus:outline-none focus:ring-blue-300 font-medium rounded-lg text-sm px-5 py-1 text-center dark:bg-blue-600 dark:hover:bg-blue-700 dark:focus:ring-blue-800" type="button">
                                 Edit Request
                                 </button>
-                                <editRequestModal :pendingRequests="pendingRequests" :consultants="consultants"/>
+                                <editRequestModal :request="selectedRequest" :consultants="consultants" />
 
                                            
 
@@ -62,7 +62,7 @@
 
 
 <script setup>
-
+import { ref } from 'vue'
 import { defineProps } from 'vue';
 import { Link } from '@inertiajs/vue3'
 import { reactive } from 'vue'
@@ -75,8 +75,12 @@ import editRequestModal from '@/Pages/Index/editRequestModal.vue'
 
 
 
+const selectedRequest = ref(null);
 
+function openEditModal(request) {
 
+  selectedRequest.value = request;
+}
 
 
 const pops = defineProps (

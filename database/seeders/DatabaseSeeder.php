@@ -42,7 +42,7 @@ class DatabaseSeeder extends Seeder
             'by_professional_id' => 1
         ]);
 
-        \App\Models\AppointmentRequest::factory(8)->create([ 
+        \App\Models\AppointmentRequest::factory(12)->create([ 
             'by_professional_id' => 1,
         ]);
 
