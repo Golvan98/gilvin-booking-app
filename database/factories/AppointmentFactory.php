@@ -17,7 +17,8 @@ class AppointmentFactory extends Factory
     public function definition(): array
     {
         return [
-            'appointment_schedule' => fake()->dateTimeThisMonth(),
+            'appointment_schedule_start' => fake()->dateTimeThisMonth(),
+            'appointment_schedule_end' => fake()->dateTimeThisMonth(),
             'appointment_Status' => fake()->randomElement(['upcoming', 'done']),
             'request' => fake()->sentence()
         ];

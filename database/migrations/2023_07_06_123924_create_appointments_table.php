@@ -15,7 +15,6 @@ return new class extends Migration
     {
         Schema::create('appointments', function (Blueprint $table) {
             $table->id();
-            $table->date('appointment_schedule');
             $table->tinytext('appointment_status');
             $table->timestamps();
 

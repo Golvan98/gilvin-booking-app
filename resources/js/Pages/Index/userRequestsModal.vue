@@ -78,7 +78,7 @@ import editRequestModal from '@/Pages/Index/editRequestModal.vue'
 const selectedRequest = ref(null);
 
 function openEditModal(request) {
-
+  console.log('openEditModal function called with request:', request);
   selectedRequest.value = request;
 }
 

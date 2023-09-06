@@ -267,4 +267,7 @@ Sept 4
 
 Sept 5
 - fixed the query bug in edit request, used vuejs @button click and ref function suggested by chatGPT, but now the button doesnt close after clicking
-- fixed issue where confirm button doesnt close after clicking it, and placeholder has now the value of the current request.
+- fixed issue where confirm button doesnt close after clicking it
+
+September 6
+- forgot to note, added columns request_schedule_start and request_schedule_end to the appointment_requests table

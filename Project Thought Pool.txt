@@ -1,22 +1,14 @@
 Currently Doing : 
-- pagination for requests (should be easy)
-
-appointmentsCRUD (appointments requests and appointments are to be in modal format)
-
+- placeholder for form to be request data
+- appointments CRUD
 
 NOTE: for the delete part of appoint requests, only users who sent the request can delete em
 
-
-
-
 TO DOs
 - upload photo user profile
-- appointments CRUD
 - Route Model Binding in which a user can view other profiles not through HandleInertiaRequests (very important)
 - soft delete profiles/users
-- Messaging after rejecting requests and users POV when their requests are rejected
-
-
+- messaging 
 
 UI Improvements (FINAL) - :value instead of :place holder on bio form (might need a non SFC vue import on this)
 - auto adjust when browser is shortened (final)
@@ -41,6 +33,7 @@ Done
 - user profile CRUD (just an imitation of professional profile)
 - data pagination for vuejs
 - added Delete method for appointment requests (CRUD For requests now complete)
+- appointment requests CRUD
 
 
 
