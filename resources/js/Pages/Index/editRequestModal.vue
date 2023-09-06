@@ -10,13 +10,18 @@
             </svg>
             <span class="sr-only">Close modal</span>
         </button>
-
+       
           <div class="px-6 py-6 lg:px-8">
-          <h3 class="mb-4 text-xl font-bold text-white"> Edit Request </h3>
+          <h3 class="mb-4 text-xl font-bold text-white" v-if="request"> Edit Request {{ request.id }} </h3>
           <form @submit.prevent="editModal" class="space-y-6" action="#">
               <div>
-              <label for="request" class="block mb-2 text-sm font-medium text-black"> Request Context  </label>
-              <input type="text" v-model="editForm.request" name="request" id="request" class="bg-gray-50 border border-gray-300 text-gray-900 text-sm rounded-lg focus:ring-blue-500 focus:border-blue-500 block w-full p-2.5 dark:bg-gray-600 dark:border-gray-500 dark:placeholder-gray-400 dark:text-white" required>
+              <label for="request" class="block mb-2 text-sm font-medium text-black" v-if="request"> Request Context   </label>
+              <input type="text" 
+              v-model="editForm.request" 
+              name="request" 
+              id="request"  
+              v-if="request" :placeholder ="request.request"
+              class="bg-gray-50 border border-gray-300 text-gray-900 text-sm rounded-lg focus:ring-blue-500 focus:border-blue-500 block w-full p-2.5 dark:bg-gray-600 dark:border-gray-500 dark:placeholder-gray-400 dark:text-white" required>
               </div>
 
                 <div>
@@ -55,7 +60,7 @@ import editRequestModal from '@/Pages/Index/editRequestModal.vue'
 const props = defineProps (
   { 
     request:Object,
-    consultants: Object
+    
   
   })
 
