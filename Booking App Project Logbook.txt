@@ -271,3 +271,5 @@ Sept 5
 
 September 6
 - forgot to note, added columns request_schedule_start and request_schedule_end to the appointment_requests table
+- added appointment_schedule_start and appointment_schedule_end , and deleted  appointment_schedule column in the appointments table
+- added request context as placeholder in editrequest modal

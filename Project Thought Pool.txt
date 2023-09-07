@@ -1,6 +1,9 @@
 Currently Doing : 
-- placeholder for form to be request data
-- appointments CRUD
+
+- appointments CRUD (user side)
+
+- for that value placeholder thingy, try that if edit modal is being executed
+
 
 NOTE: for the delete part of appoint requests, only users who sent the request can delete em
 
@@ -13,6 +16,9 @@ TO DOs
 UI Improvements (FINAL) - :value instead of :place holder on bio form (might need a non SFC vue import on this)
 - auto adjust when browser is shortened (final)
 - persist when clicking next page done, now u need to persist the modal when u accept/reject requests (hard one, this is left for the optimizing section)
+- confirm button needs to be redone, required input doesnt work while closing modal
+- check if it's possible to approve request and refresh paginated modal page at the same time
+- placeholder for form to be :value request data
 Done
 - Validation error message for wrong input in login forms
 - Use Separate multiple guard for User and Professionals (This was very fucking time consuming and hard for me)
@@ -35,22 +41,3 @@ Done
 - added Delete method for appointment requests (CRUD For requests now complete)
 - appointment requests CRUD
 
-
-
-CHAT GPT RESPONSE FOR SCROLLABLE MODAL HERE 
-
-
-To make the modal scrollable, you need to set a maximum height for the modal container and allow it to overflow-y when the content exceeds that height. You're already using the max-h-full class to set the maximum height to the full viewport height. To make it scrollable, you can add the overflow-y-auto class to the modal container. Here's how you can modify your existing code:
-
-html
-Copy code
-<div id="popup-modal" tabindex="-1" class="fixed top-0 left-0 right-0 z-50 hidden p-4 overflow-x-hidden overflow-y-auto md:inset-0 h-[calc(100%-1rem)] max-h-full">
-    <div class="relative w-full max-w-md max-h-full overflow-y-auto"> <!-- Add overflow-y-auto here -->
-        <div class="relative bg-white rounded-lg shadow dark:bg-gray-700">
-            <!-- Rest of your modal content -->
-        </div>
-    </div>
-</div>
-By adding the overflow-y-auto class to the inner container of your modal, the content will become scrollable when it exceeds the maximum height of the container.
-
-Additionally, make sure that the content inside the modal doesn't have any fixed heights that could prevent scrolling, as this could interfere with the scroll behavior. The content within your modal should adapt to the available space and allow scrolling when necessary.

@@ -20,9 +20,9 @@
               v-model="editForm.request" 
               name="request" 
               id="request"  
-              v-if="request" :placeholder ="request.request"
               class="bg-gray-50 border border-gray-300 text-gray-900 text-sm rounded-lg focus:ring-blue-500 focus:border-blue-500 block w-full p-2.5 dark:bg-gray-600 dark:border-gray-500 dark:placeholder-gray-400 dark:text-white" required>
-              </div>
+              
+            </div>
 
                 <div>
                 <label for="request_schedule_start" class="block mb-2 text-sm font-medium text-black"> Appoint Start Time </label>
@@ -45,6 +45,8 @@
 </template>
 
 <script setup>
+import { onMounted } from 'vue'
+import { ref } from 'vue'
 import { defineProps } from 'vue';
 import { Link } from '@inertiajs/vue3'
 import { reactive } from 'vue'
@@ -55,24 +57,27 @@ import { router } from '@inertiajs/vue3'
 import Pagination from '@/Pages/Index/Pagination.vue'
 import editRequestModal from '@/Pages/Index/editRequestModal.vue'
 
+const { request } = defineProps(['request']);
 
-
-const props = defineProps (
-  { 
-    request:Object,
-    
-  
-  })
-
+// Set the initial value of editForm.request after component is mounted
+onMounted(() => {
+  if (request) {
+    editForm.request = request.request;
+  }
+});
   const editForm = useForm(
     {
-        request:null,
+        request:'',
         request_schedule_start:null,
         request_schedule_end:null
     }
   )
+  const value = ref('')
+
+
   function editModal() {
   console.log('Form submitted:', editForm.value);
+  
 
   // Construct the dynamic URL with the appointment request ID
   const dynamicUrl = `editRequest/${props.request.id}`;

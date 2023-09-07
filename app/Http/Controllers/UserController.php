@@ -3,6 +3,7 @@
 namespace App\Http\Controllers;
 
 use App\Http\Controllers\Controller;
+use App\Models\Appointment;
 use Illuminate\Http\Request;
 use App\Models\User;
 use App\Models\Professional;
@@ -19,6 +20,7 @@ use Illuminate\Database\Eloquent\Model;
 use Laravel\Sanctum\Guard;
 use Illuminate\Support\Facades\DB;
 use App\Models\AppointmentRequest;
+use Illuminate\Pagination\Paginator;
 
 class UserController extends Controller
 {
@@ -31,16 +33,15 @@ class UserController extends Controller
         
         $consultantids = AppointmentRequest::all()->pluck('by_professional_id');
         $consultants = Professional::all()->whereIn('id', $consultantids);
-        
-        
+
        
-        
     
         return inertia('Index/UserProfile',
     [
         'bio' => $user->bio,
         'pendingRequests' => DB::table('appointment_requests')->where('by_user_id', $user->id)->where('request_status', 'pending')->paginate(2),
         'consultants' => $consultants,
+        'appointments' => DB::table('appointments')->where('by_user_id', $user->id)->paginate(1)
         
     ]);
     }

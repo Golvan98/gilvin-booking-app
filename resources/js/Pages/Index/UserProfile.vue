@@ -140,7 +140,7 @@
               12
           </span> <br>
           </div>
-          <div> <button data-modal-target="requests-modal" data-modal-toggle="requests-modal" class="mr-4 bg-inherit text-start text-xs" preserve-state>  Requests </button></div>
+          <div> <button data-modal-target="requests-modal" data-modal-toggle="requests-modal" class="mr-4 bg-inherit text-start text-xs">  Requests </button></div>
           <userRequestsModal  :pendingRequests="pendingRequests" :consultants="consultants" />
         
         
@@ -152,7 +152,9 @@
               12
           </span> <br>
           </div>
-          <div class="bg-inherit text-start text-xs">&nbsp &nbspRequests</div>
+          <div> <button data-modal-target="appointments-modal" data-modal-toggle="appointments-modal" class="bg-inherit text-start text-xs"> Appointments </button></div>
+          <userAppointmentsModal :appointments="appointments" :consultants="consultants"/>
+        
         </div>
   
         <div class="ml-4 flex-nowrap">
@@ -184,6 +186,7 @@ import { router } from '@inertiajs/vue3'
 import { ref } from 'vue'
 import DeleteUserModal from '@/Pages/Index/DeleteUserModal.vue'
 import userRequestsModal from '@/Pages/Index/userRequestsModal.vue'
+import userAppointmentsModal from '@/Pages/Index/userAppointmentsModal.vue'
 
 const awesome = ref(true)
 
@@ -196,7 +199,8 @@ const pops = defineProps (
   { 
     bio:String, 
     pendingRequests:Object,
-    consultants: Object
+    consultants: Object,
+    appointments:Object
   
   })
 
