@@ -10,11 +10,13 @@ use App\Http\Controllers\Controller;
 use Illuminate\Support\Facades\Storage;
 use Illuminate\Support\Facades\Auth;
 use App\Http\Middleware\Authenticate;
+use App\Models\Appointment;
 use App\Models\Professional;
 use App\Models\User;
 use App\Models\AppointmentRequest;
 use Illuminate\Http\Request;
 use Random\Randomizer;
+use App\Http\Controllers\AppointmentController;
 
 /*
 |--------------------------------------------------------------------------
@@ -76,6 +78,7 @@ Route::get('/approveRequest/{appointmentrequest}', [AppointmentRequestController
 Route::get('/deleteRequest/{appointmentrequest}', [AppointmentRequestController::class, 'deleteRequest'])->name('delete.request');
 Route::post('/editRequest/{appointmentrequest}', [AppointmentRequestController::class, 'editRequest'])->name('edit.request');
 
+Route::get('/cancelAppointment/{appointment}', [AppointmentController::class, 'cancelAppointment'])->name('cancel.appointment');
 
 
 

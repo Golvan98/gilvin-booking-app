@@ -20,14 +20,14 @@
 
                             <div class="w-full h-auto flex-nowrap"> 
                                     <div class="flex justify-start ">  <span class="ml-2"> {{appointment.request}}</span> </div>
-
+                                    
                                     <div v-for="(consultant) in consultants" class="h-auto bg-white flex-nowrap justify-start items-start mt-2 mb-4 text-left">
                                         <div v-if="consultant.id == appointment.by_professional_id" class="mx-2">Consultant: {{consultant.first_name}} , {{ consultant.profession }}</div> 
                                     </div> 
                             </div>
 
                             <div class="flex justify-between font-bold mb-2">
-                              <a href="#"> <div class="ml-2 mr-2 text-sm text-red-500" preserve-state>  Cancel Appointment  </div>  </a>    
+                                <a :href="`cancelAppointment/${appointment.id}`"> <div class="ml-2 mr-2 text-sm text-red-500" preserve-state>  Cancel Appointment  </div>  </a>    
                                              
                                 <!-- Modal toggle -->
                                 <button data-modal-target="appointments-modal" data-modal-toggle="appointments-modal" class="mr-4 block text-white bg-blue-700 hover:bg-blue-800 focus:ring-4 focus:outline-none focus:ring-blue-300 font-medium rounded-lg text-sm px-5 py-1 text-center dark:bg-blue-600 dark:hover:bg-blue-700 dark:focus:ring-blue-800" type="button">
