@@ -16,10 +16,15 @@
 
                             <div v-for="(appointment) in appointments.data" id="modalcontent" class="bg-white flex-nowrap justify-center items-center rounded-xl border border-gray-300 mb-2 shadow">
 
-                            <div class="mt-4 flex justify-start ml-2 font-bold"> Created at {{appointment.created_at}}  </div>
+                            <div class="mt-4 flex justify-start ml-2 font-bold"> Created at {{appointment.created_at}}, Status: {{ appointment.appointment_status }} </div>
 
                             <div class="w-full h-auto flex-nowrap"> 
-                                    <div class="flex justify-start ">  <span class="ml-2"> {{appointment.request}}</span> </div>
+                                    <div class="flex justify-start ">   
+                                        <span class="ml-2" v-if="showFullText || appointment.request.length <= 50">{{ appointment.request }}</span>
+                                        <span class="ml-2" v-else> {{ showFullText ? appointment.request : appointment.request.substring(0, 50) + '...' }}</span>
+
+                                    
+                                    </div>
                                     
                                     <div v-for="(consultant) in consultants" class="h-auto bg-white flex-nowrap justify-start items-start mt-2 mb-4 text-left">
                                         <div v-if="consultant.id == appointment.by_professional_id" class="mx-2">Consultant: {{consultant.first_name}} , {{ consultant.profession }}</div> 
@@ -30,9 +35,10 @@
                                 <a :href="`cancelAppointment/${appointment.id}`"> <div class="ml-2 mr-2 text-sm text-red-500" preserve-state>  Cancel Appointment  </div>  </a>    
                                              
                                 <!-- Modal toggle -->
-                                <button data-modal-target="appointments-modal" data-modal-toggle="appointments-modal" class="mr-4 block text-white bg-blue-700 hover:bg-blue-800 focus:ring-4 focus:outline-none focus:ring-blue-300 font-medium rounded-lg text-sm px-5 py-1 text-center dark:bg-blue-600 dark:hover:bg-blue-700 dark:focus:ring-blue-800" type="button">
-                                    View Appointment Details
+                                <button @click="showFullText = !showFullText" v-if="appointment.request.length > 50" class="mr-4 block text-white bg-blue-700 hover:bg-blue-800 focus:ring-4 focus:outline-none focus:ring-blue-300 font-medium rounded-lg text-sm px-5 py-1 text-center dark:bg-blue-600 dark:hover:bg-blue-700 dark:focus:ring-blue-800" type="button">
+                                    {{ showFullText ? 'Read Less' : 'Read More' }}
                                 </button>
+
                                 
 
                                            
@@ -63,6 +69,9 @@
 
 
 <script setup>
+
+const showFullText = ref(false); // Initialize it to false to hide the full text initially.
+
 import { ref } from 'vue'
 import { defineProps } from 'vue';
 import { Link } from '@inertiajs/vue3'
@@ -79,5 +88,7 @@ const pops = defineProps (
     consultants: Object
   
   })
+
+ 
 
 </script>

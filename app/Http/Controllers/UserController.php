@@ -41,7 +41,7 @@ class UserController extends Controller
         'bio' => $user->bio,
         'pendingRequests' => DB::table('appointment_requests')->where('by_user_id', $user->id)->where('request_status', 'pending')->paginate(2),
         'consultants' => $consultants,
-        'appointments' => DB::table('appointments')->where('by_user_id', $user->id)->where('appointment_status', 'pending')->orWhere('appointment_status', 'done')->paginate(1)
+        'appointments' => DB::table('appointments')->where('by_user_id', $user->id)->where('appointment_status', 'pending')->orWhere('appointment_status', 'done')->paginate(3)
         
     ]);
     }
