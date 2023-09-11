@@ -12,7 +12,7 @@
                         
                         <div class="p-6 text-center max-h-[400px]">
                           
-                            <h3 class="mb-5 text-lg text-white font-bold bg-blue-500 py-2"> Appointments  </h3>
+                            <h3 class="mb-5 text-lg text-white font-bold bg-blue-500 py-2"> Appointments </h3>
     
                                 <div v-for="(appointment) in appointments.data" id="modalcontent" class="bg-white flex-nowrap justify-center items-center rounded-xl border border-gray-300 mb-2 shadow">
     
@@ -33,8 +33,8 @@
     
                                 <div class="flex justify-between font-bold mb-2">
                                  <!--    <a :href="`cancelAppointment/${appointment.id}`"> -->
-                                <button class="ml-2 mr-2 text-sm text-red-500" data-modal-target="cancel-modal" data-modal-toggle="cancel-modal" preserve-state>  Cancel Appointment  </button>    
-                                               <AppointmentCancelModal appointments="appointments"/>
+                                <button @click="openCancelModal(appointment)" class="ml-2 mr-2 text-sm text-red-500" data-modal-target="cancel-modal" data-modal-toggle="cancel-modal" preserve-state>  Cancel Appointment  </button>    
+                                               <AppointmentCancelModal :appointment="appointment" :selectedRequest="selectedRequest"/>
                                     <!-- Modal toggle -->
                                     <button @click="showFullText = !showFullText" v-if="appointment.request.length > 50" class="mr-4 block text-white bg-blue-700 hover:bg-blue-800 focus:ring-4 focus:outline-none focus:ring-blue-300 font-medium rounded-lg text-sm px-5 py-1 text-center dark:bg-blue-600 dark:hover:bg-blue-700 dark:focus:ring-blue-800" type="button">
                                         {{ showFullText ? 'Read Less' : 'Read More' }}
@@ -89,6 +89,13 @@
         consultants: Object
       
       })
+
+      
+const selectedRequest = ref(null);
+function openCancelModal(request) {
+  console.log('openEditModal function called with request:', request);
+  selectedRequest.value = request;
+}
     
      
     
