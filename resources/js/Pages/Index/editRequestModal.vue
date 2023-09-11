@@ -61,11 +61,7 @@ import editRequestModal from '@/Pages/Index/editRequestModal.vue'
 const props = defineProps(['request']);
 
 // Set the initial value of editForm.request after component is mounted
-onMounted(() => {
-  if (request) {
-    editForm.request = request.request;
-  }
-});
+
   const editForm = useForm(
     {
         request:null,

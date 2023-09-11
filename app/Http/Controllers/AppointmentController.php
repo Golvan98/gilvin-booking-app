@@ -15,6 +15,6 @@ class AppointmentController extends Controller
             
         $cancelappointment = DB::table('appointments')->where('id', $id)->update(['appointment_status' => 'cancelled']);
         
-        return redirect('/home')->with('success', 'cancel test!');
+       
     }
 }

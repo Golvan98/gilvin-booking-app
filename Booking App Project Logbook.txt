@@ -279,3 +279,10 @@ September 7
 
 September 8
 - fixed error in code where edit confirm button doesnt work
+- added working route and query for cancelling request
+- added query settings for appointments, only shows appointments that are not cancelled or pending/done
+- added readmore/readless button for appointment details, also only renders if texts are less than 50 or more
+- appoint request suddenly stopped working the actual fuck
+
+September 11
+- fixed "appointments not appearing" bug, the query was wrong. replaced orWheres with whereNot clause in Appointment Controller

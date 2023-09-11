@@ -1,6 +1,7 @@
-Currently Doing : 
+Currently Doing : appointments CRUD (user side)
 
-- appointments CRUD (user side)
+- done on updating appointment, delete side is to be left to the timer command you'll create
+after an appointment is cancelled soon
 
 - for that value placeholder thingy, try that if edit modal is being executed
 
@@ -8,6 +9,7 @@ Currently Doing :
 NOTE: for the delete part of appoint requests, only users who sent the request can delete em
 
 TO DOs
+- cleanup ur modals (group em)
 - upload photo user profile
 - Route Model Binding in which a user can view other profiles not through HandleInertiaRequests (very important)
 - soft delete profiles/users
