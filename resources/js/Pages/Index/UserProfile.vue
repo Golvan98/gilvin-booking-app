@@ -184,9 +184,9 @@ import { computed } from 'vue'
 import { useForm } from '@inertiajs/vue3'
 import { router } from '@inertiajs/vue3'
 import { ref } from 'vue'
-import DeleteUserModal from '@/Pages/Index/DeleteUserModal.vue'
-import userRequestsModal from '@/Pages/Index/userRequestsModal.vue'
-import userAppointmentsModal from '@/Pages/Index/userAppointmentsModal.vue'
+import DeleteUserModal from '@/Pages/Index/Modals/DeleteUserModal.vue'
+import userRequestsModal from '@/Pages/Index/Modals/userRequestsModal.vue'
+import userAppointmentsModal from '@/Pages/Index/Modals/userAppointmentsModal.vue'
 
 const awesome = ref(true)
 

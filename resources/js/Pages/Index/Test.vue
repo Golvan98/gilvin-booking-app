@@ -82,8 +82,5 @@ import { Link } from '@inertiajs/vue3'
     requests:Object,
     consultees:Object})
 
-  import AppointmentRequestsModal from '@/Pages/Index/AppointmentRequestsModal.vue'
-  
-
 
 </script>

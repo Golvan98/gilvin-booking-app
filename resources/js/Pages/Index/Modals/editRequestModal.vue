@@ -56,7 +56,6 @@ import { computed } from 'vue'
 import { useForm } from '@inertiajs/vue3'
 import { router } from '@inertiajs/vue3'
 import Pagination from '@/Pages/Index/Pagination.vue'
-import editRequestModal from '@/Pages/Index/editRequestModal.vue'
 
 const props = defineProps(['request']);
 

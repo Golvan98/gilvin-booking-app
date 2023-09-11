@@ -40,13 +40,12 @@
     
     <script setup>
     
-    import { Link } from '@inertiajs/vue3'
+import { Link } from '@inertiajs/vue3'
   import { reactive } from 'vue'
   import { usePage } from '@inertiajs/vue3'
   import { computed } from 'vue'
   import { useForm } from '@inertiajs/vue3'
   import { router } from '@inertiajs/vue3'
-  import ServiceModal from '@/Pages/Index/ServiceModal.vue'
   const page = usePage()
   
 

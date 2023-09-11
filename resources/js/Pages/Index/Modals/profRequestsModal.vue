@@ -59,8 +59,6 @@
     import { computed } from 'vue'
     import { useForm } from '@inertiajs/vue3'
     import { router } from '@inertiajs/vue3'
-    import ServiceModal from '@/Pages/Index/ServiceModal.vue'
-    import DeleteModal from '@/Pages/Index/DeleteModal.vue'
     import Bio from '@/Pages/Index/Bio.vue'
     import Pagination from '@/Pages/Index/Pagination.vue'
   

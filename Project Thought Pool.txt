@@ -2,18 +2,17 @@ Currently Doing : appointments CRUD (user side)
 
 - done on updating appointment, delete side is to be left to the timer command you'll create
 after an appointment is cancelled soon
+- appointments on professional side
 
 - for that value placeholder thingy, try that if edit modal is being executed
 
 
-NOTE: for the delete part of appoint requests, only users who sent the request can delete em
-
 TO DOs
-- cleanup ur modals (group em)
 - upload photo user profile
 - Route Model Binding in which a user can view other profiles not through HandleInertiaRequests (very important)
 - soft delete profiles/users
 - messaging 
+- number to reflect how many request/appointments/messages
 
 UI Improvements (FINAL) - :value instead of :place holder on bio form (might need a non SFC vue import on this)
 - auto adjust when browser is shortened (final)
@@ -42,4 +41,4 @@ Done
 - data pagination for vuejs
 - added Delete method for appointment requests (CRUD For requests now complete)
 - appointment requests CRUD
-
+- cleanup ur modals (group em)

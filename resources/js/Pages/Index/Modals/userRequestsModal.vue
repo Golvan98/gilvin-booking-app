@@ -26,7 +26,7 @@
                             </div>
 
                             <div class="flex justify-between font-bold mb-2">
-                              <a :href="`deleteRequest/${pendingRequests.id}`" target="_blank"> <div class="ml-1 mr-2 text-sm text-red-500" preserve-state>  Reject Request </div>  </a>    
+                              <a :href="`deleteRequest/${pendingRequests.id}`" target="_blank"> <div class="ml-1 mr-2 text-sm text-red-500" preserve-state>  Delete Request </div>  </a>    
                                              
                                 <!-- Modal toggle -->
                                 <button @click="openEditModal(pendingRequests)"  data-modal-target="edit-modal" data-modal-toggle="edit-modal" class="mr-4 block text-white bg-blue-700 hover:bg-blue-800 focus:ring-4 focus:outline-none focus:ring-blue-300 font-medium rounded-lg text-sm px-5 py-1 text-center dark:bg-blue-600 dark:hover:bg-blue-700 dark:focus:ring-blue-800" type="button">
@@ -71,7 +71,7 @@ import { computed } from 'vue'
 import { useForm } from '@inertiajs/vue3'
 import { router } from '@inertiajs/vue3'
 import Pagination from '@/Pages/Index/Pagination.vue'
-import editRequestModal from '@/Pages/Index/editRequestModal.vue'
+import editRequestModal from '@/Pages/Index/Modals/editRequestModal.vue'
 
 
 
