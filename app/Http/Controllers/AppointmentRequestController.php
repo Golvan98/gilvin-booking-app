@@ -3,6 +3,7 @@
 namespace App\Http\Controllers;
 
 use App\Http\Controllers\Controller;
+use App\Models\Appointment;
 use App\Models\AppointmentRequest;
 use Illuminate\Http\Request;
 use App\Models\User;
@@ -40,7 +41,20 @@ class AppointmentRequestController extends Controller
     {
         $accept = DB::table('appointment_requests')->where('id', $appointmentrequest->id)->update(['request_status' => 'approved']);
 
-        return redirect()->back()->with('success', 'request approved');
+        
+        $testcreate =  Appointment::create(
+            [
+                'appointment_status' => 'pending',
+                'by_professional_id' => $appointmentrequest->by_professional_id,
+                'by_user_id' => $appointmentrequest->by_user_id,
+                'appointment_schedule_start' => $appointmentrequest->request_schedule_start,
+                'appointment_schedule_end ' => $appointmentrequest->request_schedule_end,
+                'request' => $appointmentrequest->request,
+            ]);
+
+        DB::table('appointment_requests')->where('id', $appointmentrequest->id)->delete();
+
+        return redirect('/professionalProfile')->with('success', 'request approved and appointment created');
     }
 
     public function deleteRequest(AppointmentRequest $appointmentrequest)

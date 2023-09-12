@@ -13,7 +13,7 @@ class Appointment extends Model
 {
     use HasFactory;
 
-    
+    protected $fillable = ['appointment_status', 'by_professional_id', 'by_user_id', 'appointment_schedule_start', 'appointment_schedule_end',  'request'];
   
     public function consultant(): BelongsTo
     {

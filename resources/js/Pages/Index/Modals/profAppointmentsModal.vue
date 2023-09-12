@@ -27,7 +27,7 @@
                                         </div>
                                         
                                         <div v-for="(consultees) in consultees" class="h-auto bg-white flex-nowrap justify-start items-start mt-2 mb-4 text-left">
-                                            <div v-if="consultees.id == appointment.by_professional_id" class="mx-2">Consultee: {{consultees.first_name}} {{ appointment.appointment_schedule_start }} - {{ appointment.appointment_schedule_end }}</div> 
+                                            <div v-if="consultees.id == appointment.by_user_id" class="mx-2">Consultee: {{consultees.first_name}} {{ appointment.appointment_schedule_start }} - {{ appointment.appointment_schedule_end }}</div> 
                                         </div> 
                                 </div>
     
@@ -85,7 +85,7 @@
         consultees: Object
       
       })
-      
+
 
       const showFullText = ref(false); // Initialize it to false to hide the full text initially.
     

@@ -12,8 +12,8 @@ return new class extends Migration
     public function up(): void
     {
         Schema::table('appointments', function (Blueprint $table) {
-            $table->dateTime('appointment_schedule_start');
-            $table->dateTime('appointment_schedule_end');
+            $table->dateTime('appointment_schedule_start')->nullable();
+            $table->dateTime('appointment_schedule_end')->nullable();
         });
     }
 

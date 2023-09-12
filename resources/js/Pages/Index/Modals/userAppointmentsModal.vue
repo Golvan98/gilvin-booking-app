@@ -83,11 +83,11 @@
     import { router } from '@inertiajs/vue3'
     import Pagination from '@/Pages/Index/Pagination.vue'
     import AppointmentCancelModal from '@/Pages/Index/Modals/AppointmentCancelModal.vue'
+
     const props = defineProps (
       { 
         appointments:Object,
         consultants: Object
-      
       })
 
       

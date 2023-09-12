@@ -14,6 +14,7 @@ TO DOs
 - soft delete profiles/users
 - messaging 
 - number to reflect how many request/appointments/messages
+- Deployment and UI improvements to run side by side
 
 UI Improvements (FINAL) - :value instead of :place holder on bio form (might need a non SFC vue import on this)
 - auto adjust when browser is shortened (final)
