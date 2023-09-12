@@ -153,7 +153,7 @@
           <div class="flex-nowrap">
             <div class="mr-4 flex items-center justify-center h-16 w-16 rounded-full bg-gray-400">
             <span class="text-white text-2xl font-bold">
-                12
+                {{ requestsCount }}
             </span> <br>
             </div>
             <div> <button data-modal-target="requests-modal" data-modal-toggle="requests-modal" class="mr-4 bg-inherit text-start text-xs" preserve-state> Requests </button></div>
@@ -166,7 +166,7 @@
           <div class="flex-nowrap">
             <div class="mr-4 flex items-center justify-center h-16 w-16 rounded-full bg-gray-400">
             <span class="text-white text-2xl font-bold">
-                12
+                {{ appointmentsCount }}
             </span> <br>
             </div>
             <div> <button data-modal-target="appointments-modal" data-modal-toggle="appointments-modal" class="bg-inherit text-start text-xs"> Appointments </button></div>
@@ -204,7 +204,9 @@
     requests:Object,
     consultees:Object,
     pendingRequests:Object,
-    appointments:Object
+    appointments:Object,
+    appointmentsCount:Object,
+    requestsCount:Object
   })
 
   import { Link } from '@inertiajs/vue3'

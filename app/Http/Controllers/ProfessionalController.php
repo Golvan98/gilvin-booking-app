@@ -37,9 +37,7 @@ class ProfessionalController extends Controller
     $consulteeids = AppointmentRequest::all()->pluck('by_user_id');
     $consultees = User::all()->whereIn('id', $consulteeids);
 
-
-
-
+   
     $rejected = 'rejected';
     $pending = 'pending';
 
@@ -53,8 +51,10 @@ class ProfessionalController extends Controller
             'requests'=> $requests, 
             'consultees' => $consultees,
             'pendingRequests' => DB::table('appointment_requests')->where('by_professional_id', $user->id)->where('request_status', $pending)->paginate(4),
-            'appointments' => DB::table('appointments')->where('by_professional_id', $user->id)->whereNot('appointment_status', 'cancelled')->paginate(3)
-        
+            'appointments' => DB::table('appointments')->where('by_professional_id', $user->id)->whereNot('appointment_status', 'cancelled')->paginate(3),
+            'appointmentsCount' => DB::table('appointments')->where('by_professional_id', $user->id)->whereNot('appointment_status', 'cancelled')->count(),
+            'requestsCount' => DB::table('appointment_requests')->where('by_professional_id', $user->id)->where('request_status', $pending)->count(),
+           
         ]);
     }
 

@@ -291,3 +291,6 @@ September 11
 
 September 12
 - appointments on professional side
+- fixed appoint request from professional side not showing the correct user and added backend where if you accept
+a request, it converts it into an existing appointment
+- number to reflect on UI based on how many request/appointments there currently are for the current user
