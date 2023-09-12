@@ -72,7 +72,11 @@
             </div>
     
     
-            <div class="mr-4 mt-2 h-1/6 text-white"> <button class="px-2 py-1 bg-indigo-700 rounded-sm">  Upload New Image</button> </div>
+            <form action="#" class="mr-4 mt-2 h-1/6 text-white"> 
+              <input type="file" id="myFile" name="filename">
+              <input type="submit"> 
+            </form>
+            
         </div>
             
       </div>

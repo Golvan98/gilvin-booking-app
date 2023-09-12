@@ -13,6 +13,7 @@ return new class extends Migration
     {
         Schema::table('users', function (Blueprint $table) {
            $table->char('bio');
+           $table->string('profilepic')->nullable();
         });
     }
 
@@ -23,7 +24,7 @@ return new class extends Migration
     {
             Schema::dropColumns('users', 
             [
-                'bio'
+                'bio', 'profilepic'
             ]
             );
     }

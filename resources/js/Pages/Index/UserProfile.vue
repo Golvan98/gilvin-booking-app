@@ -126,11 +126,8 @@
         </div>
   
       </form>
-  
       
-  
-      
-  
+
       <div class="h-4/5 w-2/5 mr-12 bg-white border flex items-center justify-center">
       
     

@@ -89,4 +89,10 @@ class UserController extends Controller
         return redirect('/home')->with('success', 'Deleted UserProfile ');
 
     }
+
+    public function uploadProfile(Request $request, User $user)
+        {
+            
+        }
+    
 }
