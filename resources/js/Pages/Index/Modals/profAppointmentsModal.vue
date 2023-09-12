@@ -1,6 +1,6 @@
 <template>
 
-    <div  id="appointments-modal" tabindex="-1" class="justify-center bg-inherit fixed top-0 left-0 right-0 z-50 hidden p-4 h-3/4" preserve-state >
+<div  id="appointments-modal" tabindex="-1" class="justify-center bg-inherit fixed top-0 left-0 right-0 z-50 hidden p-4 h-3/4" preserve-state >
                 <div class="relative w-1/4 mx-auto bg-white overflow-y-auto md:inset-0 h-[calc(100%-3rem)]">
                     <div class="relative bg-white  dark:bg-gray-700">
                         <button type="button" class="absolute top-3 right-2.5 text-gray-400 bg-transparent hover:bg-gray-200 hover:text-gray-900 rounded-lg text-sm w-8 h-8 ml-auto inline-flex justify-center items-center dark:hover:bg-gray-600 dark:hover:text-white" data-modal-hide="appointments-modal">
@@ -26,8 +26,8 @@
                                         
                                         </div>
                                         
-                                        <div v-for="(consultant) in consultants" class="h-auto bg-white flex-nowrap justify-start items-start mt-2 mb-4 text-left">
-                                            <div v-if="consultant.id == appointment.by_professional_id" class="mx-2">Consultant: {{consultant.first_name}} , {{ consultant.profession }}</div> 
+                                        <div v-for="(consultees) in consultees" class="h-auto bg-white flex-nowrap justify-start items-start mt-2 mb-4 text-left">
+                                            <div v-if="consultees.id == appointment.by_professional_id" class="mx-2">Consultee: {{consultees.first_name}} {{ appointment.appointment_schedule_start }} - {{ appointment.appointment_schedule_end }}</div> 
                                         </div> 
                                 </div>
     
@@ -65,15 +65,11 @@
             </div>
     
     
-    </template>
-    
-    
-    
-    <script setup>
-    
-    const showFullText = ref(false); // Initialize it to false to hide the full text initially.
-    
-    import { ref } from 'vue'
+
+</template>
+
+<script setup>
+ import { ref } from 'vue'
     import { defineProps } from 'vue';
     import { Link } from '@inertiajs/vue3'
     import { reactive } from 'vue'
@@ -86,17 +82,18 @@
     const props = defineProps (
       { 
         appointments:Object,
-        consultants: Object
+        consultees: Object
       
       })
+      
 
+      const showFullText = ref(false); // Initialize it to false to hide the full text initially.
+    
       
 const selectedRequest = ref(null);
 function openCancelModal(appointment) {  //(appointment could be anything, as long as you do also do selectedRequest.value=anything and openCancelModal(anything))
   console.log('openEditModal function called with request:', appointment);
   selectedRequest.value = appointment;
 }
-    
-     
-    
-    </script>
+
+</script>

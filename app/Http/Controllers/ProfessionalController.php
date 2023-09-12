@@ -52,7 +52,9 @@ class ProfessionalController extends Controller
             'bio' => $bio,
             'requests'=> $requests, 
             'consultees' => $consultees,
-            'pendingRequests' => DB::table('appointment_requests')->where('by_professional_id', $user->id)->where('request_status', $pending)->paginate(4)
+            'pendingRequests' => DB::table('appointment_requests')->where('by_professional_id', $user->id)->where('request_status', $pending)->paginate(4),
+            'appointments' => DB::table('appointments')->where('by_user_id', $user->id)->whereNot('appointment_status', 'cancelled')->paginate(3)
+        
         ]);
     }
 

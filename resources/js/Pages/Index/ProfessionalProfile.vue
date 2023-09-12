@@ -169,7 +169,9 @@
                 12
             </span> <br>
             </div>
-            <div> <button class="bg-inherit text-start text-xs"> Appointments </button></div>
+            <div> <button data-modal-target="appointments-modal" data-modal-toggle="appointments-modal" class="bg-inherit text-start text-xs"> Appointments </button></div>
+            <profAppointmentsModal :appointments="appointments" :consultees="consultees"/>
+        
           </div>
     
           <div class="ml-4 flex-nowrap">
@@ -202,10 +204,10 @@
     requests:Object,
     consultees:Object,
     pendingRequests:Object,
+    appointments:Object
   })
 
-    import { Link } from '@inertiajs/vue3'
-    
+  import { Link } from '@inertiajs/vue3'
   import { reactive } from 'vue'
   import { usePage } from '@inertiajs/vue3'
   import { computed } from 'vue'
@@ -215,7 +217,8 @@
   import DeleteModal from '@/Pages/Index/Modals/DeleteModal.vue'
   import Bio from '@/Pages/Index/Bio.vue'
   import Pagination from '@/Pages/Index/Pagination.vue'
-  import profRequestsModal from '@/Pages/Index/Modals/profRequestsModal.vue';
+  import profRequestsModal from '@/Pages/Index/Modals/profRequestsModal.vue'
+  import profAppointmentsModal from '@/Pages/Index/Modals/profAppointmentsModal.vue'
 
 
 

@@ -1,14 +1,15 @@
-Currently Doing : appointments CRUD (user side)
+CURRENTLY DOING : 
 
-- done on updating appointment, delete side is to be left to the timer command you'll create
+- delete appointment side  to be left to the timer command you'll create
 after an appointment is cancelled soon
-- appointments on professional side
+
 
 - for that value placeholder thingy, try that if edit modal is being executed
 
 
 TO DOs
 - upload photo user profile
+- request to appointment mutator when approved
 - Route Model Binding in which a user can view other profiles not through HandleInertiaRequests (very important)
 - soft delete profiles/users
 - messaging 
@@ -20,7 +21,8 @@ UI Improvements (FINAL) - :value instead of :place holder on bio form (might nee
 - confirm button needs to be redone, required input doesnt work while closing modal
 - check if it's possible to approve request and refresh paginated modal page at the same time
 - placeholder for form to be :value request data
-Done
+
+DONE
 - Validation error message for wrong input in login forms
 - Use Separate multiple guard for User and Professionals (This was very fucking time consuming and hard for me)
 - Log out feature for User and Professionals 
@@ -42,3 +44,4 @@ Done
 - added Delete method for appointment requests (CRUD For requests now complete)
 - appointment requests CRUD
 - cleanup ur modals (group em)
+- appointments on professional side

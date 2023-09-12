@@ -48,7 +48,6 @@ const props = defineProps (
     selectedRequest:Object
   })
 
-  const value = ref('')
 
   
   
