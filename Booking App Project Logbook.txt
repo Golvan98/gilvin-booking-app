@@ -298,4 +298,6 @@ a request, it converts it into an existing appointment
 
 September 13
 - configured working route in preparation for file upload, route is '/uploadProfilePic/{datahere}
-- backend for uploading profile pic of a user done
+- added working backend part for uploading profile pic of a user 
+- changed filesystem in .env to 'public', fixed the images not displaying issue, now the picture changes accordingly for every upload
+- upload picture

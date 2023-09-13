@@ -72,7 +72,7 @@
 
 class="w-40 h-40 rounded-full 
                     inline-flex items-center justify-center 
-                    bg-gray-400 text-gray-700 text-xl font-bold">
+                    bg-gray-400 text-gray-700 text-xl font-bold shadow-sm">
             
                     
                  
@@ -84,10 +84,22 @@ class="w-40 h-40 rounded-full
             enctype="multipart/form-data"
             method="post" 
             :action="`uploadProfilePic/${professional.id}`" 
-            class="mr-4 mt-2 h-1/6 text-white" > 
+            class="mr-4 mt-2 h-1/6 text-white"> 
                
-              @csrf <input type="file" id="profilepic" name="profilepic" accept="image/*">
-            <button class="bg-red-300" type="submit">Upload</button> <!-- Changed input type to button -->
+              <input  type="file"
+              id="profilepic"
+              name="profilepic"
+              accept="image/*"
+              style="display: none;"
+              @change="uploadProfilePic(professional)"/> 
+              <label
+      for="profilepic"
+      class="bg-red-300 px-2 py-1 rounded-sm cursor-pointer"
+    >
+      Upload </label>
+      <div v-if="successMessage" class="alert alert-success bg-red-500">
+    {{ successMessage }}
+  </div>
             </form>
             
         </div>
@@ -280,11 +292,45 @@ class="w-40 h-40 rounded-full
       console.log('Form 2 submitted:', form2.value);
     router.post('/bioEdit', form2)
     }     
-   
-    
+
+
+    const successMessage = ref(''); // Initialize success message as an empty string
+
+
+
+
 
    
-  
+    function uploadProfilePic(professional) {
+  // Rest of the function remains the same
+  const selectedFile = event.target.files[0];
+  const formData = new FormData();
+  formData.append('profilepic', selectedFile);
+
+  fetch(`uploadProfilePic/${professional.id}`, {
+    method: 'POST',
+    body: formData,
+    headers: {
+      'X-CSRF-TOKEN': csrf, // Include your CSRF token here if needed
+    },
+  })
+  .then((response) => {
+      if (response.ok) {
+        // Reload the page
+        location.reload();
+
+        // Optionally, set a flag to indicate success and display the message
+        successMessage.value = 'Profile Pic Updated successfully';
+      } else {
+        console.error('Error uploading file:', response.statusText);
+      }
+    })
+    .catch((error) => {
+      console.error('Error uploading file:', error);
+    });
+    }
+   
+const csrf = "{{ csrf_token() }}";
       
       
   
