@@ -298,3 +298,4 @@ a request, it converts it into an existing appointment
 
 September 13
 - configured working route in preparation for file upload, route is '/uploadProfilePic/{datahere}
+- backend for uploading profile pic of a user done

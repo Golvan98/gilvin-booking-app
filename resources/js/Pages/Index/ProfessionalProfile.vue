@@ -72,9 +72,13 @@
             </div>
     
            
-            <form method="post" :action="`uploadProfilePic/${user.id}`" class="mr-4 mt-2 h-1/6 text-white" > 
+            <form 
+            enctype="multipart/form-data"
+            method="post" 
+            :action="`uploadProfilePic/${user.id}`" 
+            class="mr-4 mt-2 h-1/6 text-white" > 
                
-              @csrf <input type="file" id="profilepic" accept="image/*">
+              @csrf <input type="file" id="profilepic" name="profilepic" accept="image/*">
             <button class="bg-red-300" type="submit">Upload</button> <!-- Changed input type to button -->
             </form>
             

@@ -123,12 +123,19 @@ class ProfessionalController extends Controller
 
     public function uploadProfilePic(Request $request, Professional $professional)
         {
-           dd('hello');
+            
             if ($request->hasFile('profilepic')) {
                 $file = $request->file('profilepic');
-                $file->store('C:\Users\ASUS\gilvin-booking-app\storage\app');
-                 $professional->update(['profile_pic' => 'C:\Users\ASUS\gilvin-booking-app\storage\app']);
+                $path = $file->store('images', 'public');
+                
+                DB::table('professionals')->where('id', $professional->id)->update(['profilepic' => $path]);
+
+            //    $file->store('C:\Users\ASUS\gilvin-booking-app\storage\app');
+              //   $professional->update(['profile_pic' => 'C:\Users\ASUS\gilvin-booking-app\storage\app']);
             }
+
+            return redirect()->back()->with('success', ' kek idk what happened');
         }
+        
 
 }
