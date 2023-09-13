@@ -67,14 +67,15 @@
                 class="w-40 h-40 rounded-full 
                     inline-flex items-center justify-center 
                     bg-gray-400 text-gray-700 text-xl font-bold">
-                Photo Here
+                Photo Here 
                 
             </div>
     
-    
-            <form action="#" class="mr-4 mt-2 h-1/6 text-white"> 
-              <input type="file" id="myFile" name="filename">
-              <input type="submit"> 
+           
+            <form method="post" :action="`uploadProfilePic/${user.id}`" class="mr-4 mt-2 h-1/6 text-white" > 
+               
+              @csrf <input type="file" id="profilepic" accept="image/*">
+            <button class="bg-red-300" type="submit">Upload</button> <!-- Changed input type to button -->
             </form>
             
         </div>
@@ -202,6 +203,7 @@
     <script setup>
     
   const props = defineProps({ 
+    user:Object,
     bio:String,
     services:Object, 
     errors:Object,

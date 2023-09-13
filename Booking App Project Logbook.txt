@@ -294,4 +294,7 @@ September 12
 - fixed appoint request from professional side not showing the correct user and added backend where if you accept
 a request, it converts it into an existing appointment
 - number to reflect on UI based on how many request/appointments there currently are for the current user
-- added profile pic string as data file name in db migrations for user and profile
+- added 'profilepic' string as data file name in db migrations for user and profile. will do file uploads tomorrow
+
+September 13
+- configured working route in preparation for file upload, route is '/uploadProfilePic/{datahere}
