@@ -19,7 +19,8 @@ class Professional extends Authenticatable
     
     protected $guard = 'professional';
 
-    protected $fillable = ['first_name', 'last_name', 'email', 'profession', 'password',  ];
+    protected $fillable = ['first_name', 'last_name', 'email', 'profession', 'password', 'profilepic',  ];
+    protected $appends = ['src'];
 
     /**
      * The attributes that should be hidden for serialization.
@@ -52,5 +53,10 @@ class Professional extends Authenticatable
     public function requests(): HasMany
     {
         return $this->hasMany(\App\Models\AppointmentRequest::class, 'by_professional_id');
+    }
+
+    public function getSrcAttribute()
+    {
+        return asset("storage/{$this->profilepic}");
     }
 }

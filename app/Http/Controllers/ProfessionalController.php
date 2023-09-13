@@ -54,7 +54,7 @@ class ProfessionalController extends Controller
             'appointments' => DB::table('appointments')->where('by_professional_id', $user->id)->whereNot('appointment_status', 'cancelled')->paginate(3),
             'appointmentsCount' => DB::table('appointments')->where('by_professional_id', $user->id)->whereNot('appointment_status', 'cancelled')->count(),
             'requestsCount' => DB::table('appointment_requests')->where('by_professional_id', $user->id)->where('request_status', $pending)->count(),
-            'user' => $user,
+            'professional' => $user,
         ]);
     }
 
@@ -123,13 +123,14 @@ class ProfessionalController extends Controller
 
     public function uploadProfilePic(Request $request, Professional $professional)
         {
-            
+         
             if ($request->hasFile('profilepic')) {
                 $file = $request->file('profilepic');
-                $path = $file->store('images', 'public');
+                $path = $file->store('public');
+
+             
                 
                 DB::table('professionals')->where('id', $professional->id)->update(['profilepic' => $path]);
-
             //    $file->store('C:\Users\ASUS\gilvin-booking-app\storage\app');
               //   $professional->update(['profile_pic' => 'C:\Users\ASUS\gilvin-booking-app\storage\app']);
             }

@@ -64,18 +64,26 @@
             <div class="ml-4 mt-2 h-1/6 text-white">  <button data-modal-target="popup-modal" data-modal-toggle="popup-modal"  class="bg-red-700 px-2 py-1 rounded-sm">  Delete Account </button>  </div>
             <DeleteModal> </DeleteModal>
             <div
-                class="w-40 h-40 rounded-full 
+            :style="{ 
+                'background-image': 'url(' + 'storage/' + professional.profilepic + ')', 
+                'background-repeat': 'no-repeat', 
+                'background-size': 'cover' 
+            }"
+
+class="w-40 h-40 rounded-full 
                     inline-flex items-center justify-center 
                     bg-gray-400 text-gray-700 text-xl font-bold">
-                Photo Here 
-                
+            
+                    
+                 
             </div>
+     
     
            
             <form 
             enctype="multipart/form-data"
             method="post" 
-            :action="`uploadProfilePic/${user.id}`" 
+            :action="`uploadProfilePic/${professional.id}`" 
             class="mr-4 mt-2 h-1/6 text-white" > 
                
               @csrf <input type="file" id="profilepic" name="profilepic" accept="image/*">
@@ -207,7 +215,7 @@
     <script setup>
     
   const props = defineProps({ 
-    user:Object,
+    professional:Object,
     bio:String,
     services:Object, 
     errors:Object,
