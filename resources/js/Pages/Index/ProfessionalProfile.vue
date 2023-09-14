@@ -97,7 +97,7 @@ class="w-40 h-40 rounded-full
       class="bg-red-300 px-2 py-1 rounded-sm cursor-pointer"
     >
       Upload </label>
-      <div v-if="successMessage" class="alert alert-success bg-red-500">
+      <div v-if="successMessage" class="alert fixed bg-green-500 text-white py-2 px-4 rounded-xl bottom-3 right-3 text-sm">
     {{ successMessage }}
   </div>
             </form>
@@ -296,10 +296,16 @@ class="w-40 h-40 rounded-full
 
     const successMessage = ref(''); // Initialize success message as an empty string
 
+    const showSuccessMessage = ref(false);
+    function showSuccess(message) {
+  successMessage = message;
+  showSuccessMessage.value = true;
 
-
-
-
+  setTimeout(() => {
+    showSuccessMessage.value = false;
+    successMessage = ''; // Clear the message after hiding
+  }, 1000); // 1000 milliseconds (1 second)
+}
    
     function uploadProfilePic(professional) {
   // Rest of the function remains the same
@@ -336,3 +342,14 @@ const csrf = "{{ csrf_token() }}";
   
   
     </script>
+
+<style scoped>
+/* CSS for the fade effect */
+.fade-enter-active, .fade-leave-active {
+  transition: opacity 1s;
+}
+
+.fade-enter, .fade-leave-to /* .fade-leave-active in <2.1.8 */ {
+  opacity: 0;
+}
+</style>
