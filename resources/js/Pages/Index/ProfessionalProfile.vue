@@ -295,17 +295,8 @@ class="w-40 h-40 rounded-full
 
 
     const successMessage = ref(''); // Initialize success message as an empty string
-
-    const showSuccessMessage = ref(false);
-    function showSuccess(message) {
-  successMessage = message;
-  showSuccessMessage.value = true;
-
-  setTimeout(() => {
-    showSuccessMessage.value = false;
-    successMessage = ''; // Clear the message after hiding
-  }, 1000); // 1000 milliseconds (1 second)
-}
+   
+    let photoUploadExecuted = false;
    
     function uploadProfilePic(professional) {
   // Rest of the function remains the same
@@ -323,10 +314,11 @@ class="w-40 h-40 rounded-full
   .then((response) => {
       if (response.ok) {
         // Reload the page
+        photoUploadExecuted = true;
         location.reload();
-
+        
         // Optionally, set a flag to indicate success and display the message
-        successMessage.value = 'Profile Pic Updated successfully';
+        
       } else {
         console.error('Error uploading file:', response.statusText);
       }
@@ -337,19 +329,23 @@ class="w-40 h-40 rounded-full
     }
    
 const csrf = "{{ csrf_token() }}";
-      
-      
+
+
+window.addEventListener('load', () => {
+  // Retrieve the success message from the server (e.g., in Laravel: session('successMessage'))
+  const successMessageFromServer = 'update test successful';
+  
+  if (photoUploadExecuted=true) {
+    // Display the success message to the user
+    successMessage.value = successMessageFromServer;
+
+    // Set a timer to hide the message after a certain duration (e.g., 3000 milliseconds for 3 seconds)
+    setTimeout(() => {
+      successMessage.value = ''; // Clear the message
+    }, 1500); // 3000 milliseconds (3 seconds)
+  }
+});
+
   
   
     </script>
-
-<style scoped>
-/* CSS for the fade effect */
-.fade-enter-active, .fade-leave-active {
-  transition: opacity 1s;
-}
-
-.fade-enter, .fade-leave-to /* .fade-leave-active in <2.1.8 */ {
-  opacity: 0;
-}
-</style>

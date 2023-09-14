@@ -301,3 +301,8 @@ September 13
 - added working backend part for uploading profile pic of a user 
 - changed filesystem in .env to 'public', fixed the images not displaying issue, now the picture changes accordingly for every upload
 - upload picture done, but needs polishing to reload the page with flash message after replacing a profile pic
+
+September 14
+- added front-end function to fade flash message after 1 sec, still yet to test, tried to polish flash message but failed
+- might needs a revamp, error logic is busted as well, shows success even when uploading non image files
+- added if(photouploadexecuted) to front end flash message, will test more of this tomorrow
