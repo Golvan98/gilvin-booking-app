@@ -51,12 +51,45 @@
             <DeleteUserModal> </DeleteUserModal>
 
 
-          <div class="w-40 h-40 rounded-full inline-flex items-center justify-center  bg-gray-400 text-gray-700 text-xl font-bold">
-              Photo Here
-          </div>
+            <div
+            :style="{ 
+                'background-image': `url('storage/${currentUser.profilepic}?${Math.random()}')`, 
+                'background-repeat': 'no-repeat', 
+                'background-size': 'cover' 
+            }"
+
+            class="w-40 h-40 rounded-full 
+                    inline-flex items-center justify-center 
+                    bg-gray-400 text-gray-700 text-xl font-bold shadow-sm">
+            
+                    
+                 
+            </div>
+
+            <form 
+            enctype="multipart/form-data"
+            method="post" 
+            :action="`uploadProfilePic/${currentUser.id}`" 
+            class="mr-4 mt-2 h-1/6 text-white"> 
+               
+              <input  type="file"
+              id="profilepic"
+              name="profilepic"
+              accept="image/*"
+              style="display: none;"
+              @change="uploadProfilePic(currentUser)"/> 
+              <label
+      for="profilepic"
+      class="px-2 py-1 bg-indigo-700 rounded-sm"
+    >
+      Upload New Image </label>
+      <div v-if="successMessage" class="alert fixed bg-green-500 text-white py-2 px-4 rounded-xl bottom-3 right-3 text-sm">
+    {{ successMessage }}
+  </div>
+            </form>
   
   
-          <div class="mr-4 mt-2 h-1/6 text-white"> <button class="px-2 py-1 bg-indigo-700 rounded-sm">  Upload New Image</button> </div>
+        
       </div>
           
     </div>
@@ -194,6 +227,7 @@ const flashSuccess = computed(() => page.props.flash.success, )
 
 const pops = defineProps (
   { 
+    currentUser:Object,
     bio:String, 
     pendingRequests:Object,
     consultants: Object,

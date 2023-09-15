@@ -70,7 +70,7 @@
                 'background-size': 'cover' 
             }"
 
-class="w-40 h-40 rounded-full 
+            class="w-40 h-40 rounded-full 
                     inline-flex items-center justify-center 
                     bg-gray-400 text-gray-700 text-xl font-bold shadow-sm">
             

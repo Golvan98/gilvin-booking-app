@@ -307,3 +307,8 @@ September 14
 - might needs a revamp, error logic is busted as well, shows success even when uploading non image files
 - added if(photouploadexecuted) to front end flash message, will test more of this tomorrow
 - to test router as well, will read documentation
+
+September 15
+- flash message upon picture upload now only appears after
+- added todos and added routes for viewing userprofile and professional profile
+- added template  for user profile profile pic upload
