@@ -65,7 +65,7 @@
             <DeleteModal> </DeleteModal>
             <div
             :style="{ 
-                'background-image': 'url(' + 'storage/' + professional.profilepic + ')', 
+                'background-image': `url('storage/${professional.profilepic}?${Math.random()}')`, 
                 'background-repeat': 'no-repeat', 
                 'background-size': 'cover' 
             }"
@@ -296,56 +296,48 @@ class="w-40 h-40 rounded-full
 
     const successMessage = ref(''); // Initialize success message as an empty string
    
-    let photoUploadExecuted = false;
    
-    function uploadProfilePic(professional) {
-  // Rest of the function remains the same
-  const selectedFile = event.target.files[0];
-  const formData = new FormData();
-  formData.append('profilepic', selectedFile);
+    async function uploadProfilePic(professional) {
+    const selectedFile = event.target.files[0];
+    const formData = new FormData();
+    formData.append('profilepic', selectedFile);
 
-  fetch(`uploadProfilePic/${professional.id}`, {
-    method: 'POST',
-    body: formData,
-    headers: {
-      'X-CSRF-TOKEN': csrf, // Include your CSRF token here if needed
-    },
-  })
-  .then((response) => {
+    try {
+      const response = await fetch(`uploadProfilePic/${professional.id}`, {
+        method: 'POST',
+        body: formData,
+        headers: {
+          'X-CSRF-TOKEN': csrf, // Include your CSRF token here if needed
+        },
+      });
+
       if (response.ok) {
-        // Reload the page
-        photoUploadExecuted = true;
+        // Read the flash message from the server response (if present)
+        const responseData = await response.json();
+        const flashMessage = responseData.message;
+
+        if (flashMessage) {
+          // Display the flash message (you can use a Vue toast library or a custom component)
+          // For example, if you're using a Vue toast library:
+          showToast(flashMessage);
+        }
+
+        // Refresh the page after a successful upload
         location.reload();
-        
-        // Optionally, set a flag to indicate success and display the message
-        
       } else {
         console.error('Error uploading file:', response.statusText);
       }
-    })
-    .catch((error) => {
+    } catch (error) {
       console.error('Error uploading file:', error);
-    });
     }
-   
-const csrf = "{{ csrf_token() }}";
-
-
-window.addEventListener('load', () => {
-  // Retrieve the success message from the server (e.g., in Laravel: session('successMessage'))
-  const successMessageFromServer = 'update test successful';
-  
-  if (photoUploadExecuted=true) {
-    // Display the success message to the user
-    successMessage.value = successMessageFromServer;
-
-    // Set a timer to hide the message after a certain duration (e.g., 3000 milliseconds for 3 seconds)
-    setTimeout(() => {
-      successMessage.value = ''; // Clear the message
-    }, 1500); // 3000 milliseconds (3 seconds)
   }
-});
 
-  
-  
-    </script>
+  const csrf = "{{ csrf_token() }}";
+
+  function showToast(message) {
+    // Implement code to display a toast message with the given message
+    // You can use a Vue toast library or create your own component for this purpose
+    // Example: alert(message);
+  }
+
+</script>

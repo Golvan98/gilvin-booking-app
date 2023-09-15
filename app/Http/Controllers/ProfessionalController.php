@@ -133,7 +133,10 @@ class ProfessionalController extends Controller
                 DB::table('professionals')->where('id', $professional->id)->update(['profilepic' => $path]);
             //    $file->store('C:\Users\ASUS\gilvin-booking-app\storage\app');
               //   $professional->update(['profile_pic' => 'C:\Users\ASUS\gilvin-booking-app\storage\app']);
-              return redirect()->back()->with('success', 'Profile Pic Updated successfully');
+              session()->flash('success', 'Profile Picture uploaded successfully');
+
+              return response()->json(['message' => 'Profile Picture uploaded successfully'], 200);
+      
             }
 
             
