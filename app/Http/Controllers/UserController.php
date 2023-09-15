@@ -90,6 +90,12 @@ class UserController extends Controller
 
     }
 
+    public function viewUserProfile(Request $request, User $user)
+    {
+       
+        return inertia('Index/viewUserProfile');
+    }
+
     public function uploadProfile(Request $request, User $user)
         {
             

@@ -141,6 +141,11 @@ class ProfessionalController extends Controller
 
             
         }
+
+        public function viewProfessionalProfile(Request $request, Professional $professional)
+        {
+            return inertia('Index/viewProfessionalProfile');
+        }
         
 
 }

@@ -58,12 +58,14 @@ Route::delete('logout', [AuthController::class, 'destroy'])
 ->name('logout');
 
 Route::get('/userProfile', [UserController::class, 'userProfile'])->name('user.profile')->middleware('auth');
+Route::get('/viewUserProfile', [UserController::class, 'viewUserProfile'])->name('view.user.profile');
 Route::post('/editProfile', [UserController::class, 'editProfile'])->name('edit.user');
 Route::delete('/deleteUser', [UserController::class, 'deleteUser'])->name('delete.user');
 Route::post('/editUserBio', [UserController::class, 'editUserBio'])->name('edit.user.bio');
 
 
 Route::get('/professionalProfile', [ProfessionalController::class, 'professionalProfile'])->name('professional.profile');
+Route::get('/viewProfessionalProfile', [ ProfessionalController::class, 'viewProfessionalProfile'])->name('view.professional.profile');
 Route::post('/editProfessional', [ProfessionalController::class, 'editProfessional'])->name('edit.professional');
 Route::delete('/deleteProfessional', [ProfessionalController::class, 'deleteProfessional'])->name('deleteProfessional');
 Route::post('/addservice', [ProfessionalController::class, 'addService'])->name('add.service');

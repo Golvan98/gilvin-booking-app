@@ -6,7 +6,9 @@ after an appointment is cancelled soon
 
 
 TO DOs
-- upload photo user profile
+- upload profile for user side (professional done)
+- Route Model Binding in which a user can view other profiles not through HandleInertiaRequests (very important)
+- send rquest for application (user to prof function only)
 - Route Model Binding in which a user can view other profiles not through HandleInertiaRequests (very important)
 - soft delete profiles/users
 - messaging 
@@ -45,3 +47,4 @@ DONE
 - appointments on professional side
 - converts request to appointment mutator when approved
 - number to reflect how many request/appointments there currently are for the current user
+- upload photo profile professional side
