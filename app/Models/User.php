@@ -33,8 +33,9 @@ class User extends Authenticatable
         'last_name',
         'email',
         'password',
+        'profilepic'
     ];
-
+    protected $appends = ['src'];
     /**
      * The attributes that should be hidden for serialization.
      *
@@ -73,4 +74,8 @@ class User extends Authenticatable
         return $this->hasMany(\App\Models\AppointmentRequest::class, 'by_user_id');
     }
 
+    public function getSrcAttribute()
+    {
+        return asset("storage/{$this->profilepic}");
+    }
 }

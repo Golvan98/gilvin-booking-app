@@ -60,24 +60,21 @@
 
             class="w-40 h-40 rounded-full 
                     inline-flex items-center justify-center 
-                    bg-gray-400 text-gray-700 text-xl font-bold shadow-sm">
-            
-                    
-                 
+                    bg-gray-400 text-gray-700 text-xl font-bold shadow-sm">                   
             </div>
 
             <form 
             enctype="multipart/form-data"
             method="post" 
-            :action="`uploadProfilePic/${currentUser.id}`" 
+            :action="`uploadUserProfilePic/${currentUser.id}`" 
             class="mr-4 mt-2 h-1/6 text-white"> 
-               
+            @csrf   
               <input  type="file"
               id="profilepic"
               name="profilepic"
               accept="image/*"
               style="display: none;"
-              @change="uploadProfilePic(currentUser)"/> 
+              @change="uploadUserProfilePic(currentUser)"/> 
               <label
       for="profilepic"
       class="px-2 py-1 bg-indigo-700 rounded-sm"
@@ -218,14 +215,16 @@ import DeleteUserModal from '@/Pages/Index/Modals/DeleteUserModal.vue'
 import userRequestsModal from '@/Pages/Index/Modals/userRequestsModal.vue'
 import userAppointmentsModal from '@/Pages/Index/Modals/userAppointmentsModal.vue'
 
+
+
 const awesome = ref(true)
-
 const page = usePage()
-
-
 const flashSuccess = computed(() => page.props.flash.success, )
 
-const pops = defineProps (
+const successMessage = ref(''); // Initialize success message as an empty string
+   
+
+const props = defineProps (
   { 
     currentUser:Object,
     bio:String, 
@@ -278,8 +277,49 @@ const form2 = useForm({
     router.post('/editUserBio', form2)
     }     
     
+    async function uploadUserProfilePic(currentUser) {
+    const selectedFile = event.target.files[0];
+    const formData = new FormData();
+    formData.append('profilepic', selectedFile);
+
+    try {
+      const response = await fetch(`uploadUserProfilePic/${currentUser.id}`, {
+        method: 'POST',
+        body: formData,
+        headers: {
+          'X-CSRF-TOKEN': csrf, // Include your CSRF token here if needed
+        },
+      });
+
+      if (response.ok) {
+        // Read the flash message from the server response (if present)
+        const responseData = await response.json();
+        const flashMessage = responseData.message;
+
+        if (flashMessage) {
+          // Display the flash message (you can use a Vue toast library or a custom component)
+          // For example, if you're using a Vue toast library:
+          showToast(flashMessage);
+        }
+
+        // Refresh the page after a successful upload
+        location.reload();
+      } else {
+        console.error('Error uploading file test:', response.statusText);
+      }
+    } catch (error) {
+      console.error('Error uploading file test:', error);
+    }
+  }
+
+  const csrf = "{{ csrf_token() }}";
     
     
+  function showToast(message) {
+    // Implement code to display a toast message with the given message
+    // You can use a Vue toast library or create your own component for this purpose
+    // Example: alert(message);
+  }
 
 
   </script>

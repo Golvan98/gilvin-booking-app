@@ -62,6 +62,9 @@ Route::get('/viewUserProfile', [UserController::class, 'viewUserProfile'])->name
 Route::post('/editProfile', [UserController::class, 'editProfile'])->name('edit.user');
 Route::delete('/deleteUser', [UserController::class, 'deleteUser'])->name('delete.user');
 Route::post('/editUserBio', [UserController::class, 'editUserBio'])->name('edit.user.bio');
+//Route::post('/uploadUserProfilePic/{currentUser}', [UserController::class, 'uploadUserProfilePic'])->name('upload.user.profile');
+Route::post('/uploadUserProfilePic/{currentUser}', [UserController::class, 'uploadUserProfilePic'])->name('upload.user.profile');
+
 
 
 Route::get('/professionalProfile', [ProfessionalController::class, 'professionalProfile'])->name('professional.profile');

@@ -1,15 +1,14 @@
 CURRENTLY DOING : 
 
-- delete appointment side  to be left to the timer command you'll create
-after an appointment is cancelled soon
-
+- delete appointment side  to be left to the timer command you'll createafter an appointment is cancelled soon enough
+- upload side for user
+- Route Model Binding in which a user can view other profiles not through HandleInertiaRequests (very important)
 
 
 TO DOs
 - upload profile for user side (professional done)
 - Route Model Binding in which a user can view other profiles not through HandleInertiaRequests (very important)
 - send rquest for application (user to prof function only)
-- Route Model Binding in which a user can view other profiles not through HandleInertiaRequests (very important)
 - soft delete profiles/users
 - messaging 
 - Deployment and UI improvements to run side by side

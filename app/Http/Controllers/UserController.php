@@ -22,6 +22,8 @@ use Illuminate\Support\Facades\DB;
 use App\Models\AppointmentRequest;
 use Illuminate\Pagination\Paginator;
 
+
+
 class UserController extends Controller
 {
     //
@@ -97,9 +99,25 @@ class UserController extends Controller
         return inertia('Index/viewUserProfile');
     }
 
-    public function uploadProfile(Request $request, User $user)
+    public function uploadUserProfilePic(Request $request, User $currentUser)
         {
+
+
+
+            if ($request->hasFile('profilepic')) {
+                $file = $request->file('profilepic');
+                $path = $file->store('public');
+
             
+            DB::table('users')->where('id', $currentUser->id)->update(['profilepic' => $path]);
+            //    $file->store('C:\Users\ASUS\gilvin-booking-app\storage\app');
+              //   $professional->update(['profile_pic' => 'C:\Users\ASUS\gilvin-booking-app\storage\app']);
+              session()->flash('success', 'Profile Picture uploaded successfully');
+
+              return response()->json(['message' => 'Profile Picture uploaded successfully'], 200);
+      
+            }
+
         }
     
 }

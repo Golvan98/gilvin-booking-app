@@ -311,4 +311,7 @@ September 14
 September 15
 - flash message upon picture upload now only appears after
 - added todos and added routes for viewing userprofile and professional profile
-- added template  for user profile profile pic upload
+- added frontend part for user profile's profile pic upload function
+
+September 16
+-
