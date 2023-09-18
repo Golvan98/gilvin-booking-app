@@ -53,7 +53,7 @@
 
             <div
             :style="{ 
-                'background-image': `url('storage/${currentUser.profilepic}?${Math.random()}')`, 
+                'background-image': `url('storage/${currentUser.profilepic}')`, 
                 'background-repeat': 'no-repeat', 
                 'background-size': 'cover' 
             }"

@@ -313,5 +313,6 @@ September 15
 - added todos and added routes for viewing userprofile and professional profile
 - added frontend part for user profile's profile pic upload function
 
-September 16
--
+September 18
+- added backend for user part of uploading profile pic
+- added template for viewing user profile, using grids this time
