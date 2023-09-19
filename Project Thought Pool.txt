@@ -1,6 +1,10 @@
 CURRENTLY DOING : 
 
 - UI for User/Professional profile
+- Third column for profile grid should be info of how many appointments she has (just add a template on this fuck it you're doing too much)
+- profile's too wide, narrow it down after all this maybe
+
+IMPORTANT!: when you're done with viewUSER, remove settings from the admin part of User/Prof, put it onto the home or something
 
 TO DOs
 - Route Model Binding in which a user can view other profiles not through HandleInertiaRequests (very important)

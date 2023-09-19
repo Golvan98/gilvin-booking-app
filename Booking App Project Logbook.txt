@@ -318,4 +318,6 @@ September 18
 - added template for viewing user profile, using grids this time
 
 September 19
-- left side of profile template done
+- left side of user profile template done
+- added name and contact information part to view user profile template
+- lessened 2nd column span of viewuserprofile template, to tweak more tomorrow
