@@ -316,3 +316,6 @@ September 15
 September 18
 - added backend for user part of uploading profile pic
 - added template for viewing user profile, using grids this time
+
+September 19
+- left side of profile template done

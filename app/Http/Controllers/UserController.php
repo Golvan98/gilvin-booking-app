@@ -96,7 +96,12 @@ class UserController extends Controller
     public function viewUserProfile(Request $request, User $user)
     {
        
-        return inertia('Index/viewUserProfile');
+        
+        return inertia('Index/viewUserProfile',
+        [
+            'user' => auth()->user(),
+
+        ]);
     }
 
     public function uploadUserProfilePic(Request $request, User $currentUser)
