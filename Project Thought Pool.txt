@@ -15,7 +15,7 @@ TO DOs
 - soft delete(optional)
 - Deployment and UI improvements to run side by side
 
-UI Improvements (FINAL) 
+UI Improvements (FINAL). There really is a problem with ur UI when zoomed in or zoomed out, it's a whole project on top of another...
 - auto adjust when browser is shortened (final)
 - persist when clicking next page done, now u need to persist the modal when u accept/reject requests (hard one, this is left for the optimizing section)
 - confirm button needs to be redone, required input error message doesnt work while closing modal
