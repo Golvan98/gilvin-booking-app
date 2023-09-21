@@ -93,13 +93,13 @@ class UserController extends Controller
 
     }
 
-    public function viewUserProfile(Request $request, User $user)
+    public function viewUserProfile(Request $request, User $viewUser)
     {
        
         
         return inertia('Index/viewUserProfile',
         [
-            'user' => auth()->user(),
+            'viewUser' => $viewUser
 
         ]);
     }

@@ -19,22 +19,22 @@
 
           <div id="avatar"
             :style="{ 
-                'background-image': `url('storage/${user.profilepic}')`, 
+                'background-image': `url('storage/${viewUser.profilepic}')`, 
                 'background-repeat': 'no-repeat', 
                 'background-size': 'cover' 
             }"
 
-            class="w-32 h-32 rounded-full 
+            class="w-40 h-40 rounded-full 
                     inline-flex items-center justify-center 
-                    bg-gray-400 text-gray-700 text-xl font-bold shadow-sm border border-red-500">                   
+                     text-gray-700 text-xl font-bold shadow-sm border border-red-500">                   
             </div>
         
         </div>
 
         <div id="2ndrow1stcol" class="bg-inherit row-span-2 flex-nowrap justify-center"> 
             <div class="mx-4 text-white font-bold"> ABOUT ME </div>
-            <div class="mx-4 text-white"> {{ user.bio }}</div>
-            <div class="mx-4 border-b border-gray-300 mt-12"/>
+            <div class="mx-4 text-white"> {{ viewUser.bio }}</div>
+            <div class="mx-4 border-b border-gray-300 mt-12"> </div>
         </div>
         
         <div id="3rdrow1stcol" class="row-span-2 flex-nowrap text-white mx-4 h-12 "> 
@@ -56,8 +56,8 @@
       <div class="row-span-1 bg-inherit flex justify-between border-b border-black mx-4">
 
           <div class="flex-nowrap "> 
-            <div class="mt-4 text-4xl font-bold"> {{ user.first_name}} </div>
-            <div class="text-4xl font-bold"> {{  user.last_name }} </div>
+            <div class="mt-4 text-4xl font-bold"> {{ viewUser.first_name}} </div>
+            <div class="text-4xl font-bold"> {{  viewUser.last_name }} </div>
             <div class="text-1xl font-bold"> Profession </div>
           
           </div>
@@ -66,7 +66,7 @@
           <div> 
             <div class="mt-4 row-span-1 text-sm"> 1234 Main Street, New York, NY 10001</div>
                 <div class="row-span-1 text-sm"> + 0906 350 8750</div>
-                <div class="row-span-1 text-sm"> {{ user.email }}</div>
+                <div class="row-span-1 text-sm"> {{ viewUser.email }}</div>
                 <div class="row-span-1 text-sm"> github.com/Ricko.Blanco98</div>
                 
           </div>
@@ -229,7 +229,8 @@
 <script setup>
 const props = defineProps (
   {
-    user:Object
+    viewUser:Object,
+    
   }
 )
     

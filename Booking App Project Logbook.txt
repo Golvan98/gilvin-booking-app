@@ -330,3 +330,4 @@ September 21
 - added 2nd row for 2nd column of user profile 
 - added 3rd row for 2nd column of user profile (frontend)
 - centered view user profile, add it on the list of UI to improve lol
+- found an image bug, committing this before I undo all
