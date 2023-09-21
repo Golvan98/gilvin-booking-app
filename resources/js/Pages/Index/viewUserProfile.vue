@@ -10,7 +10,7 @@
  <title>Document</title>
  </head>
  <body>
-<div id="maingrid" class="grid grid-cols-6 bg-gray-600 h-screen m-auto">
+<div id="maingrid" class="grid grid-cols-6 bg-white h-screen m-auto">
 
     <div id="main1stcol" class="grid grid-rows-6 col-span-1 bg-gray-600">
 
@@ -73,27 +73,27 @@
 
       <div id="card1" class="row-span-5 bg-gray-300 grid grid-rows-5 border border-red-500">
 
-        <div class="row-span-3 grid grid-cols-5 grid-rows-5 border border-yellow-100">
+        <div class="row-span-3 grid grid-cols-5 grid-rows-5 border-b border-blue-300">
 
-          <div id="left side of 1stcol" class="grid grid-rows 5 row-span-3 flex-nowrap col-span-2 bg-white border-r border-indigo-300">
+          <div id="left side of 1stcol" class="grid row-span-3 flex-nowrap col-span-2 bg-white border-r border-indigo-300">
 
             <div class="row-span-1 grid grid-rows-5 ">
                <div class="row-span-2 ml-4 mt-4">WORK EXPERIENCE</div>
-               <div class="row-span-1 ml-4 text-xs font-bold"> Alsons </div>
-               <div class="row-span-1 ml-4 text-xs"> Cadet Engineer </div>
-               <div class="row-span-1 ml-4 text-xs"> 2015-2017 </div>               
+               <div class="row-span-1 ml-4 text-xs font-bold"> Holcim </div>
+               <div class="row-span-1 ml-4 text-xs"> Intern </div>
+               <div class="row-span-1 ml-4 text-xs"> 2019-2020 </div>               
             </div>
 
             <div class="row-span-2 grid grid-rows-3"> 
               <div class="row-span-1 ml-4 text-xs font-bold"> Holcim </div>
-               <div class="row-span-1 ml-4 text-xs"> Supervisor Engineer </div>
-               <div class="row-span-1 ml-4 text-xs"> 2017-2019 </div>
+               <div class="row-span-1 ml-4 text-xs"> Cadet Engineer </div>
+               <div class="row-span-1 ml-4 text-xs"> 2019-2021 </div>
             </div>
 
-             <div class="row-span-2 grid grid-rows-3"> 
+            <div class="row-span-2 grid grid-rows-3"> 
               <div class="row-span-1 ml-4 text-xs font-bold"> Holcim </div>
-               <div class="row-span-1 ml-4 text-xs"> Maintenance Manager </div>
-               <div class="row-span-1 ml-4 text-xs"> 2019-2023 </div>
+               <div class="row-span-1 ml-4 text-xs"> Junior Engineer </div>
+               <div class="row-span-1 ml-4 text-xs"> 2021-2023 </div>
             </div>
 
           </div>
@@ -114,7 +114,7 @@
           </div>
           
           <div class="grid grid-rows 5 col-span-3 bg-white mx-4">
-            <div class="row-span-1 border border-white font-white text-xs">
+            <div class="row-span-1 font-white text-xs">
               &nbsp
             </div>
             <div class="row-span-1 placeholder:border border-white font-bold text-xs">
@@ -127,7 +127,7 @@
 
           <div class="grid grid-rows 5 col-span-3 bg-white mx-4">
 
-            <div class="row-span-1 border border-white font-white text-xs">
+            <div class="row-span-1font-white text-xs">
               &nbsp
             </div>
             <div class="row-span-1 placeholder:border border-white font-bold text-xs">
@@ -139,16 +139,61 @@
 
           </div>
 
-          <div class="row-span-1 grid grid-rows-5 ">
-               <div class="row-span-2 ml-4 mt-4"> EDUCATION </div>
-               <div class="row-span-2 ml-4 text-xs font-bold"> Alsons </div>
-               <div class="row-span-2 ml-4 text-xs"> Cadet Engineer </div>
-                     
+          <div class="row-span-2 grid grid-rows-6 col-span-2 ">
+            <div class="row-span-1 ml-4 text-xs font-bold"> Holcim </div>
+            <div class="row-span-1 ml-4 text-xs"> Supervisor Engineer </div>
+            <div class="row-span-1 ml-4 text-xs"> 2023-2024 </div>
+          </div>
+
+          <div class="grid grid-rows 5 col-span-3 mx-4">
+
+            <div class="row-span-1 font-white text-xs">
+              &nbsp
             </div>
+            <div class="row-span-1font-bold text-xs">
+              Job Role
+            </div>
+            <div class="row-span-1 font-bold text-xs">
+              Job description lores epsum lores epsum dolores doctor accountant softeng engineer lawyer yada yada
+            </div>
+          </div>
+
+          
+
+          
 
         </div>
 
-        <div class="row-span-2 bg-red-300">
+        <div class="bg-inherit grid grid-rows-5 row-span-2 grid-cols-5 mx-4">
+
+          <div class="row-span-1 col-span-2 flex items-center font-bold text-lg"> 
+            EDUCATION 
+          </div>
+
+          <div class="row-span-2 col-start-1 col-span-2 border-r border-black my-4 flex-nowrap"> 
+            <div class="font-bold"> Integrated Developmental School</div>
+            <div> Iligan </div>
+            <div> 2010-2014</div>
+          </div>
+          
+          <div class="row-span-2 col-start-3 col-span-3 border-r my-4 flex-nowrap ml-4"> 
+            <div class="font-bold"> High School </div>
+            <div> Lores Epsum Dolores Dolores Epsum LoresLores Epsum Dolores Dolores Epsum Lores  Lores Epsum Dolores Dolores Epsum Lores Lores Epsum Dolores Dolores Epsum Lores  Iligan </div>
+          </div>
+         
+
+          <div class="row-span-2 col-start-1 col-span-2 border-r border-black my-4 flex-nowrap"> 
+            <div class="font-bold"> MSU-IIT</div>
+            <div> Iligan </div>
+            <div> 2014-2020</div>
+          </div>
+
+          <div class="row-span-2 col-start-3 col-span-3 border-r my-4 flex-nowrap ml-4"> 
+            <div class="font-bold"> Bachelor of Science in Mechanical Engineering </div>
+            <div> Lores Epsum Dolores Dolores Epsum LoresLores Epsum Dolores Dolores Epsum Lores  Lores Epsum Dolores Dolores Epsum Lores Lores Epsum Dolores Dolores Epsum Lores  Iligan </div>
+          </div>
+
+          
 
         </div>
         
