@@ -71,9 +71,9 @@
 
       </div>
 
-      <div class="row-span-5 bg-green-300 grid grid-rows-5">
+      <div id="card1" class="row-span-5 bg-gray-300 grid grid-rows-5 border border-red-500">
 
-        <div class="row-span-3 grid grid-cols-5 grid-rows-5">
+        <div class="row-span-3 grid grid-cols-5 grid-rows-5 border border-yellow-100">
 
           <div id="left side of 1stcol" class="grid grid-rows 5 row-span-3 flex-nowrap col-span-2 bg-white border-r border-indigo-300">
 
@@ -81,8 +81,7 @@
                <div class="row-span-2 ml-4 mt-4">WORK EXPERIENCE</div>
                <div class="row-span-1 ml-4 text-xs font-bold"> Alsons </div>
                <div class="row-span-1 ml-4 text-xs"> Cadet Engineer </div>
-               <div class="row-span-1 ml-4 text-xs"> 2015-2017 </div>
-               
+               <div class="row-span-1 ml-4 text-xs"> 2015-2017 </div>               
             </div>
 
             <div class="row-span-2 grid grid-rows-3"> 
@@ -99,14 +98,65 @@
 
           </div>
 
-       
-          <div id="right side of 2ndcol" class="flex-nowrap col-span-3 row-span-3 bg-white border-r border-indigo-300">
-                hehhe
+          <div class="grid grid-rows 5 col-span-3 bg-white mx-4">
+            <div class="row-span-2 border border-white"> 
+              &nbsp
+            </div>
+            <div class="row-span-1 border border-white font-white text-xs">
+              &nbsp
+            </div>
+            <div class="row-span-1 placeholder:border border-white font-bold text-xs">
+              Job Role
+            </div>
+            <div class="row-span-1 border border-white font-bold text-xs">
+              Job description lores epsum lores epsum dolores doctor accountant softeng engineer lawyer yada yada
+            </div>
           </div>
+          
+          <div class="grid grid-rows 5 col-span-3 bg-white mx-4">
+            <div class="row-span-1 border border-white font-white text-xs">
+              &nbsp
+            </div>
+            <div class="row-span-1 placeholder:border border-white font-bold text-xs">
+              Job Role
+            </div>
+            <div class="row-span-1 border border-white font-bold text-xs">
+              Job description lores epsum lores epsum dolores doctor accountant softeng engineer lawyer yada yada
+            </div>
+          </div>
+
+          <div class="grid grid-rows 5 col-span-3 bg-white mx-4">
+
+            <div class="row-span-1 border border-white font-white text-xs">
+              &nbsp
+            </div>
+            <div class="row-span-1 placeholder:border border-white font-bold text-xs">
+              Job Role
+            </div>
+            <div class="row-span-1 border border-white font-bold text-xs">
+              Job description lores epsum lores epsum dolores doctor accountant softeng engineer lawyer yada yada
+            </div>
+
+          </div>
+
+          <div class="row-span-1 grid grid-rows-5 ">
+               <div class="row-span-2 ml-4 mt-4"> EDUCATION </div>
+               <div class="row-span-2 ml-4 text-xs font-bold"> Alsons </div>
+               <div class="row-span-2 ml-4 text-xs"> Cadet Engineer </div>
+                     
+            </div>
 
         </div>
 
+        <div class="row-span-2 bg-red-300">
+
+        </div>
+        
+        
+
       </div>
+
+      
       
     </div>
      

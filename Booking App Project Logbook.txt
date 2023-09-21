@@ -324,3 +324,4 @@ September 19
 
 September 20
 - revised top portion of 2ndcolumn user profile
+- improved viewUserProfile's left portion of 2nd column
