@@ -325,3 +325,8 @@ September 19
 September 20
 - revised top portion of 2ndcolumn user profile
 - improved viewUserProfile's left portion of 2nd column
+
+September 21
+- added 2nd row for 2nd column of user profile 
+- added 3rd row for 2nd column of user profile (frontend)
+- centered view user profile, add it on the list of UI to improve lol

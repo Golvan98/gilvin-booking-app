@@ -10,9 +10,9 @@
  <title>Document</title>
  </head>
  <body>
-<div id="maingrid" class="grid grid-cols-6 bg-white h-screen m-auto">
+<div id="maingrid" class="grid grid-cols-6 bg-white h-screen items-center mx-52">
 
-    <div id="main1stcol" class="grid grid-rows-6 col-span-1 bg-gray-600">
+    <div id="main1stcol" class="grid grid-rows-6 col-span-1 bg-gray-600 w-full h-full">
 
 
         <div id="1strow1stcol" class="row-span-2 bg-inherit flex justify-center items-center"> 
@@ -51,33 +51,35 @@
 
     </div>
 
-    <div id="2ndcolmain" class="col-span-3 grid grid-rows-6 bg-gray-300 ml-4 ">
+    <div id="2ndcolmain" class="col-span-5 grid grid-rows-6 bg-inherit border border-gray-300 w-full h-full ">
       
-      <div class="row-span-1 bg-gray-300 flex justify-between">
+      <div class="row-span-1 bg-inherit flex justify-between border-b border-black mx-4">
 
           <div class="flex-nowrap "> 
-            <div class="ml-12 mt-4 text-4xl font-bold"> {{ user.first_name}} </div>
-            <div class="ml-12 text-4xl font-bold"> {{  user.last_name }} </div>
-            <div class="ml-12 text-1xl font-bold"> Profession </div>
+            <div class="mt-4 text-4xl font-bold"> {{ user.first_name}} </div>
+            <div class="text-4xl font-bold"> {{  user.last_name }} </div>
+            <div class="text-1xl font-bold"> Profession </div>
+          
           </div>
           
 
           <div> 
-            <div class="mt-4 row-span-1 text-sm mr-12"> 1234 Main Street, New York, NY 10001</div>
+            <div class="mt-4 row-span-1 text-sm"> 1234 Main Street, New York, NY 10001</div>
                 <div class="row-span-1 text-sm"> + 0906 350 8750</div>
                 <div class="row-span-1 text-sm"> {{ user.email }}</div>
                 <div class="row-span-1 text-sm"> github.com/Ricko.Blanco98</div>
+                
           </div>
 
       </div>
 
-      <div id="card1" class="row-span-5 bg-gray-300 grid grid-rows-5 border border-red-500">
+      <div id="card1" class="row-span-5 bg-inherit grid grid-rows-5 mt-4">
 
         <div class="row-span-3 grid grid-cols-5 grid-rows-5 border-b border-blue-300">
 
-          <div id="left side of 1stcol" class="grid row-span-3 flex-nowrap col-span-2 bg-white border-r border-indigo-300">
+          <div id="left side of 1stcol" class="grid row-span-3 flex-nowrap col-span-2 bg-white border-r border-black">
 
-            <div class="row-span-1 grid grid-rows-5 ">
+            <div class="row-span-1 grid grid-rows-5">
                <div class="row-span-2 ml-4 mt-4">WORK EXPERIENCE</div>
                <div class="row-span-1 ml-4 text-xs font-bold"> Holcim </div>
                <div class="row-span-1 ml-4 text-xs"> Intern </div>
@@ -139,22 +141,22 @@
 
           </div>
 
-          <div class="row-span-2 grid grid-rows-6 col-span-2 ">
+          <div class="row-span-2 grid grid-rows-6 col-span-2 border-r border-black mb-20">
             <div class="row-span-1 ml-4 text-xs font-bold"> Holcim </div>
             <div class="row-span-1 ml-4 text-xs"> Supervisor Engineer </div>
             <div class="row-span-1 ml-4 text-xs"> 2023-2024 </div>
           </div>
 
-          <div class="grid grid-rows 5 col-span-3 mx-4">
+          <div class="grid grid-rows-5 col-span-3 mx-4">
 
             <div class="row-span-1 font-white text-xs">
               &nbsp
             </div>
-            <div class="row-span-1font-bold text-xs">
+            <div class="row-span-1 font-bold text-xs">
               Job Role
             </div>
             <div class="row-span-1 font-bold text-xs">
-              Job description lores epsum lores epsum dolores doctor accountant softeng engineer lawyer yada yada
+              Job description lores epsum lores epsum dolores doctor accountant softeng engineer lawyer yada yadaz
             </div>
           </div>
 
