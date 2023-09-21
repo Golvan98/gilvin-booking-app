@@ -99,7 +99,7 @@ class UserController extends Controller
         
         return inertia('Index/viewUserProfile',
         [
-            'viewUser' => $viewUser
+            'viewUser' => $viewUser,
 
         ]);
     }

@@ -68,7 +68,7 @@ Route::post('/uploadUserProfilePic/{currentUser}', [UserController::class, 'uplo
 
 
 Route::get('/professionalProfile', [ProfessionalController::class, 'professionalProfile'])->name('professional.profile');
-Route::get('/viewProfessionalProfile', [ ProfessionalController::class, 'viewProfessionalProfile'])->name('view.professional.profile');
+Route::get('/viewProfessionalProfile/{viewProfessional}', [ ProfessionalController::class, 'viewProfessionalProfile'])->name('view.professional.profile');
 Route::post('/editProfessional', [ProfessionalController::class, 'editProfessional'])->name('edit.professional');
 Route::delete('/deleteProfessional', [ProfessionalController::class, 'deleteProfessional'])->name('deleteProfessional');
 Route::post('/addservice', [ProfessionalController::class, 'addService'])->name('add.service');
