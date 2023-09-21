@@ -19,11 +19,11 @@
   
             <div id="avatar"
               :style="{ 
-                  'background-image': `url('storage/${viewProfessional.profilepic}')`, 
+                  'background-image': `url('http://127.0.0.1:8000/storage/${viewProfessional.profilepic}')`,
                   'background-repeat': 'no-repeat', 
                   'background-size': 'cover' 
               }"
-  
+ 
               class="w-40 h-40 rounded-full 
                       inline-flex items-center justify-center 
                        text-gray-700 text-xl font-bold shadow-sm border border-red-500">                   
@@ -178,7 +178,7 @@
               <div> 2010-2014</div>
             </div>
             
-            <div class="row-span-2 col-start-3 col-span-3 border-r my-4 flex-nowrap ml-4"> 
+            <div class="row-span-2 col-start-3 col-span-3 my-4 flex-nowrap ml-4"> 
               <div class="font-bold"> High School </div>
               <div> Lores Epsum Dolores Dolores Epsum LoresLores Epsum Dolores Dolores Epsum Lores  Lores Epsum Dolores Dolores Epsum Lores Lores Epsum Dolores Dolores Epsum Lores  Iligan </div>
             </div>
@@ -190,7 +190,7 @@
               <div> 2014-2020</div>
             </div>
   
-            <div class="row-span-2 col-start-3 col-span-3 border-r my-4 flex-nowrap ml-4"> 
+            <div class="row-span-2 col-start-3 col-span-3  my-4 flex-nowrap ml-4"> 
               <div class="font-bold"> Bachelor of Science in Mechanical Engineering </div>
               <div> Lores Epsum Dolores Dolores Epsum LoresLores Epsum Dolores Dolores Epsum Lores  Lores Epsum Dolores Dolores Epsum Lores Lores Epsum Dolores Dolores Epsum Lores  Iligan </div>
             </div>
@@ -233,5 +233,5 @@
       
     }
   )
-      
+  console.log(props.viewProfessional.profilepic);
   </script>

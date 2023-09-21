@@ -19,7 +19,7 @@
   
             <div id="avatar"
               :style="{ 
-                  'background-image': `url('storage/${viewUser.profilepic}')`, 
+                  'background-image': `url('http://127.0.0.1:8000/storage/${viewUser.profilepic}')`,
                   'background-repeat': 'no-repeat', 
                   'background-size': 'cover' 
               }"
@@ -190,7 +190,7 @@
               <div> 2014-2020</div>
             </div>
   
-            <div class="row-span-2 col-start-3 col-span-3 border-r my-4 flex-nowrap ml-4"> 
+            <div class="row-span-2 col-start-3 col-span-3 my-4 flex-nowrap ml-4"> 
               <div class="font-bold"> Bachelor of Science in Mechanical Engineering </div>
               <div> Lores Epsum Dolores Dolores Epsum LoresLores Epsum Dolores Dolores Epsum Lores  Lores Epsum Dolores Dolores Epsum Lores Lores Epsum Dolores Dolores Epsum Lores  Iligan </div>
             </div>
@@ -233,5 +233,6 @@
       
     }
   )
-      
+  
+  
   </script>
