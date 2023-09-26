@@ -73,6 +73,7 @@ Route::post('/editProfessional', [ProfessionalController::class, 'editProfession
 Route::delete('/deleteProfessional', [ProfessionalController::class, 'deleteProfessional'])->name('deleteProfessional');
 Route::post('/addservice', [ProfessionalController::class, 'addService'])->name('add.service');
 Route::post('/uploadProfilePic/{professional}', [ProfessionalController::class, 'uploadProfilePic'])->name('upload.profile');
+Route::get('/Professionals', [ProfessionalController::class, 'showProfessionals'])->name('show.professionals');
 
 Route::get('/test/{professional}', [IndexController::class, 'test'])->name('test');
 

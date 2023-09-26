@@ -331,3 +331,8 @@ September 21
 - added 3rd row for 2nd column of user profile (frontend)
 - centered view user profile, add it on the list of UI to improve lol
 - found an image bug, committing this before I undo all
+- added viewprofessional profile with dynamic contents (almost), image bug is still persisiting on both profiles
+- added a temporary fix for profile image not showing in view profiles for both user and professional
+
+September 26
+- removed Settings from profile/user admin page      <div class="mr-4 mt-4  h-1/6 text-white"> <button class="bg-indigo-700 px-2 py-1 rounded-sm">  Settings</button> </div>

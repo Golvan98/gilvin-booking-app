@@ -32,7 +32,6 @@
   
         <div class="w-full h-4/5 flex justify-between bg-white">
           <div class="ml-4 mt-4  h-1/6 text-lg font-bold"> Your Account </div>
-          <div class="mr-4 mt-4  h-1/6 text-white"> <button class="bg-indigo-700 px-2 py-1 rounded-sm">  Settings</button> </div>
         </div>
   
         <div class="w-full ">

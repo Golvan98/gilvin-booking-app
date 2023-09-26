@@ -151,6 +151,15 @@ class ProfessionalController extends Controller
     
             ]);
         }
+
+        public function showProfessionals()
+        {
+            return inertia('Index/Professionals',
+            [
+                'Professionals' => DB::table('professionals')->paginate(6)
+            ]
+             );
+        }
         
 
 }
