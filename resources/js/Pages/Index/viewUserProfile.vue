@@ -14,8 +14,28 @@
   
       <div id="main1stcol" class="grid grid-rows-6 col-span-1 bg-gray-600 w-full h-full">
   
+
+       
+        <div v-if="authUser.id == viewUser.id"  id="1strow1stcol" class="row-span-2 bg-inherit flex flex-col justify-start items-center">
+
+            <div style="align-self: flex-start;" class="ml-4 mt-4 bg-green-300 text-white font-bold rounded-sm p-1"> 
+              <a href="/userProfile"> Settings  </a>
+            </div>
+
+            <div id="avatar-container" class="w-40 h-40 inline-flex items-center justify-center rounded-full text-gray-700 text-xl font-bold shadow-sm border border-red-500 bg-green-300">
   
-          <div id="1strow1stcol" class="row-span-2 bg-inherit flex justify-center items-center"> 
+                <div id="avatar" :style="{ 
+                    'background-image': `url('http://127.0.0.1:8000/storage/${viewUser.profilepic}')`,
+                    'background-repeat': 'no-repeat', 
+                    'background-size': 'cover' 
+                }" class="w-full h-full rounded-full inline-flex items-center justify-center">                   
+                </div>
+
+            </div>
+
+        </div>
+
+        <div v-else id="1strow1stcol" class="row-span-2 bg-inherit flex justify-center items-center"> 
   
             <div id="avatar"
               :style="{ 
@@ -23,14 +43,15 @@
                   'background-repeat': 'no-repeat', 
                   'background-size': 'cover' 
               }"
-  
+ 
               class="w-40 h-40 rounded-full 
                       inline-flex items-center justify-center 
-                       text-gray-700 text-xl font-bold shadow-sm border border-red-500">                   
-              </div>
+                       text-gray-700 text-xl font-bold shadow-sm border border-red-500">              
+            </div>
           
           </div>
-  
+
+
           <div id="2ndrow1stcol" class="bg-inherit row-span-2 flex-nowrap justify-center"> 
               <div class="mx-4 text-white font-bold"> ABOUT ME </div>
               <div class="mx-4 text-white"> {{ viewUser.bio }}</div>
@@ -230,6 +251,7 @@
   const props = defineProps (
     {
       viewUser:Object,
+      authUser:Object
       
     }
   )

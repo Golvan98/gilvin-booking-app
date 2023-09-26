@@ -14,7 +14,7 @@
   
       <div id="main1stcol" class="grid grid-rows-6 col-span-1 bg-gray-600 w-full h-full">
   
-  
+         
           <div id="1strow1stcol" class="row-span-2 bg-inherit flex justify-center items-center"> 
   
             <div id="avatar"

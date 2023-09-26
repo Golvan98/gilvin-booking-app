@@ -100,6 +100,7 @@ class UserController extends Controller
         return inertia('Index/viewUserProfile',
         [
             'viewUser' => $viewUser,
+            'authUser' => auth()->user()
 
         ]);
     }
