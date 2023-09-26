@@ -49,7 +49,16 @@
         <div class="h-full w-3/5 ml-24 mr-12 bg-white flex-nowrap">
     
           <div class="w-full h-4/5 flex justify-between bg-white">
-            <div class="ml-4 mt-4  h-1/6 text-lg font-bold"> Your Account </div>
+            <div class="ml-4 mt-4  h-1/6 text-lg font-bold"> 
+              Your Account 
+            </div>
+
+            <div class="mr-4 mt-4  h-1/6 text-white">
+              <a :href="`/viewProfessionalProfile/${professional.id}`"> 
+                <button class="bg-indigo-700 px-2 py-1 rounded-sm">  View as User </button>
+              </a> 
+            </div>
+            
           </div>
     
           <div class="w-full ">

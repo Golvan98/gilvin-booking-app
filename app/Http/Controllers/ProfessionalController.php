@@ -148,6 +148,7 @@ class ProfessionalController extends Controller
             return inertia('Index/viewProfessionalProfile',
             [
                 'viewProfessional' => $viewProfessional,
+                'authProfessional' => Auth::guard('professional')->user()
     
             ]);
         }

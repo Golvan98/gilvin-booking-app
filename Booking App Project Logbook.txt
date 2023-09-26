@@ -336,3 +336,5 @@ September 21
 
 September 26
 - removed Settings from profile/user admin page      <div class="mr-4 mt-4  h-1/6 text-white"> <button class="bg-indigo-700 px-2 py-1 rounded-sm">  Settings</button> </div>
+- added working route and template page for professionals list
+- added conditional buttons to open as admin/view as user on userProfiles

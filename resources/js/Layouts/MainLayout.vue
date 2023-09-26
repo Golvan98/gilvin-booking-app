@@ -22,12 +22,12 @@
             
           <div v-if="user" class="flex justify-end ml-20">
              <div> <Link href="/userProfile"> <button class="py-1 px-4 bg-inherit text-white font-bold text-lg"> {{ user.first_name}}</button> </Link> </div>
-             <div> <Link href='logout' method="delete" as="button" class="ml-2 py-1 px-4 bg-white text-black rounded-xl"> Logout </Link> </div>
+             <div> <Link href='/logout' method="delete" as="button" class="ml-2 py-1 px-4 bg-white text-black rounded-xl"> Logout </Link> </div>
           </div>
 
           <div v-else-if="prof" class="flex justify-end ml-20">
              <div> <Link href="/professionalProfile"> <button class="py-1 px-4 bg-inherit text-white font-bold text-lg"> {{ prof.first_name}}</button> </Link> </div>
-             <div> <Link href='logout' method="delete" as="button" class="ml-2 py-1 px-4 bg-white text-black rounded-xl"> Logout </Link> </div>
+             <div> <Link href='/logout' method="delete" as="button" class="ml-2 py-1 px-4 bg-white text-black rounded-xl"> Logout </Link> </div>
           </div>
 
           <div v-else class="flex justify-end ml-20">
