@@ -28,7 +28,7 @@
                     </div>
 
                     <div class=" w-full pt-4 font-bold text-3xl flex-nowrap">
-                      <button class="shadow-2xl bg-white text-2xl font-bold rounded-xl h-16 w-96"> Available Professionals now  </button>
+                      <Link href="/Professionals"> <button class="shadow-2xl bg-white text-2xl font-bold rounded-xl h-16 w-96"> Available Professionals now  </button> </Link>
                     </div>
 
                 </div>

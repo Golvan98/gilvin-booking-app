@@ -13,9 +13,8 @@
   <div id="maingrid" class="grid grid-cols-6 bg-white h-screen items-center mx-52">
   
       <div id="main1stcol" class="grid grid-rows-6 col-span-1 bg-gray-600 w-full h-full">
-  
 
-       
+
         <div v-if="authUser.id == viewUser.id"  id="1strow1stcol" class="row-span-2 bg-inherit flex flex-col justify-start items-center">
 
             <div style="align-self: flex-start;" class="ml-4 mt-4 bg-green-300 text-white font-bold rounded-sm p-1"> 
@@ -49,7 +48,8 @@
                        text-gray-700 text-xl font-bold shadow-sm border border-red-500">              
             </div>
           
-          </div>
+        </div>
+
 
 
           <div id="2ndrow1stcol" class="bg-inherit row-span-2 flex-nowrap justify-center"> 

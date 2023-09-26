@@ -1,13 +1,10 @@
 CURRENTLY DOING : 
 
-- List of professionals UI
-
-IMPORTANT!: when you're done with viewUSER, remove settings from the admin part of User/Prof, put it onto the home or something
+- List of professionals UI, image reference for it sent
 
 TO DOs
 
-- send rquest for application (user to prof function only)
-- List of professionals UI
+- send request for application (user to prof function only)
 - filtering for list of professionals
 - messaging 
 - soft delete(optional)
@@ -49,3 +46,4 @@ DONE
 - upload photo profile professional side
 - UI for User/Professional profile 
 - Route Model Binding in which a user can view other profiles not through HandleInertiaRequests (very important)
+- when you're done with viewUSER, remove settings from the admin part of User/Prof, put it onto the home or something

@@ -62,3 +62,6 @@ Bug 10: Modals not working unless u refresh page
 Bug 11: Flash message only appearing once unless page is refreshed (THIS BUG IS NOT THAT BREAKING, WILL LOOK INTO IT ONCE ALL IMPORTANT SHIT IS DONE)
 
 ====================================================================================
+
+Bug 12: Blank page on viewing profiles if not logged in (might need to auth this)
+
