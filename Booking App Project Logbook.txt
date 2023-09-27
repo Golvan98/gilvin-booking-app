@@ -339,4 +339,7 @@ September 26
 - added working route and template page for professionals list
 - added conditional buttons to open as admin/view as user on userProfiles
 - added conditional buttons to open as admin/view as user on ProfessionalProfiles
-- added template for Professionals list
+- updated template for Professionals list
+
+Septemger 27
+- updated template for professional list
