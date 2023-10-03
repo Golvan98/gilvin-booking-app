@@ -1,10 +1,12 @@
 CURRENTLY DOING : 
 
 - List of professionals UI, image reference for it sent
+- send request for application (user to prof function only)
+^FOR THIS request thingy, a modal would be nice
 
 TO DOs
 
-- send request for application (user to prof function only)
+
 - filtering for list of professionals
 - messaging 
 - soft delete(optional)

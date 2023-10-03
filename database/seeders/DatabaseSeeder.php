@@ -28,7 +28,7 @@ class DatabaseSeeder extends Seeder
              'email' => 'professionaltest@example.com',
         ]);
 
-        \App\Models\Professional::factory(4)->create();
+        \App\Models\Professional::factory(13)->create();
         \App\Models\User::factory(2)->create([
             'password' => 'password'
         ]);
