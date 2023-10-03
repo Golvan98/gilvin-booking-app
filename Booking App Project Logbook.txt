@@ -341,5 +341,10 @@ September 26
 - added conditional buttons to open as admin/view as user on ProfessionalProfiles
 - updated template for Professionals list
 
-Septemger 27
-- updated template for professional list
+September 27
+- added search bar and sort button for Professional List (Front-end only)
+- updated profile section for professional list, to loop it in paginated data next session
+
+October 3
+- removed current UI for professional list, will try for grid container and auto adjust based on screen size
+- added interpolation for Professionals in ui

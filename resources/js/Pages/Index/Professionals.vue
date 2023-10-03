@@ -2,9 +2,10 @@
 
 <div class="grid grid-cols-6 grid-rows-6 bg-gray-200 items-center justify-center h-screen w-full">
 
-    <div class="bg-white row-start-2 row-end-6 col-start-2 col-end-6 grid grid-cols-6 grid-rows-6 items-center justify-center h-full w-full rounded-xl">
+  <div class="bg-white row-start-2 row-end-6 col-start-2 col-end-6 grid grid-cols-6 grid-rows-6 items-center justify-center h-full w-full rounded-xl">
       
-        <div class="row-span-1 bg-inherit col-start-2 col-end-6 flex-nowrap mt-12"> 
+      <div class="row-span-1 bg-inherit col-start-2 col-end-6 flex-nowrap mt-12"> 
+
            <div class="w-full bg-white h-full py-4 font-bold text-2xl">   𝐔𝐬𝐞𝐫𝐬 </div> 
 
            <div class="w-full bg-white h-full flex justify-between items-center"> 
@@ -24,7 +25,7 @@
                   <option value="Information Technology"> IT Services and Consulting </option>
                 </select>
               </div>
-          </div> 
+            </div> 
 
         </div> 
 
@@ -32,23 +33,23 @@
             
           
           
-          <div id="firstrowofProfessionals" class="row-start-1 row-end-4 col-span-6 grid grid-cols-6 rounded-xl"> 
+            <div id="firstrowofProfessionals" class="row-start-1 row-end-4 col-span-6 grid grid-cols-6 rounded-xl"> 
 
 
-            <div class="col-span-2 bg-indigo-200 rounded-xl py-1 flex justify-between"> 
+              <div v-for="(Professionals) in Professionals"   class="col-span-2 bg-indigo-200 rounded-xl py-1 flex justify-between border border-green-300"> 
 
                 <div
-              :style="{ 
-                  'background-image': `url('storage/}')`, 
-                  'background-repeat': 'no-repeat', 
-                  'background-size': 'cover' 
-              }"
-              class="w-24 h-24 rounded-full 
-                      inline-flex items-center justify-center 
-                      bg-gray-400 text-gray-700 text-xl font-bold shadow-sm ml-2 mt-4 border border-red-300">                   
+                  :style="{ 
+                      'background-image': `url('storage/}')`, 
+                      'background-repeat': 'no-repeat', 
+                      'background-size': 'cover' 
+                  }"
+                  class="w-24 h-24 rounded-full 
+                          inline-flex items-center justify-center 
+                          bg-gray-400 text-gray-700 text-xl font-bold shadow-sm ml-2 mt-4 border border-red-300">                   
                 </div>
 
-                <div class="mt-4 flex-nowrap">
+                <div  class="mt-4 flex-nowrap">
 
                     <div class="mt-2 text-xs font-bold">  John Doe</div>
                     <div class="mt-2 text-xs font-bold">  Profession</div>
@@ -63,24 +64,18 @@
               
               <div> 
 
-              </div>
             </div>
+        </div>
 
-            <div class="col-span-2 bg-indigo-400 rounded-xl py-1 mx-2"> hehe</div>
-            <div class="col-span-2 bg-indigo-600 rounded-xl py-1 "> hehe</div>
-          </div>
+        
+      </div>
 
-          <div class="row-start-4 row-end-7 col-span-6 grid grid-cols-6 rounded-xl"> 
-            <div class="col-span-2 bg-green-200 rounded-xl py-1 mt-1"> hehe</div>
-            <div class="col-span-2 bg-green-400 rounded-xl py-1 mx-2 mt-1"> hehe</div>
-            <div class="col-span-2 bg-green-600 rounded-xl py-1 mt-1"> hehe</div>
-          </div>
 
-        </div> 
+    </div> 
 
       
      
-    </div>
+  </div>
 
   
 </div>
