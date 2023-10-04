@@ -15,7 +15,7 @@
       <div id="main1stcol" class="grid grid-rows-6 col-span-1 bg-gray-600 w-full h-full">
   
          
-          <div v-if="authProfessional.id == viewProfessional.id"  id="1strow1stcol" class="row-span-2 bg-inherit flex flex-col justify-start items-center">
+          <div v-if="authProfessional && authProfessional.id === viewProfessional.id"  id="1strow1stcol" class="row-span-2 bg-inherit flex flex-col justify-start items-center">
 
             <div style="align-self: flex-start;" class="ml-4 mt-4 bg-green-300 text-white font-bold rounded-sm p-1"> 
               <a href="/professionalProfile"> Settings  </a>

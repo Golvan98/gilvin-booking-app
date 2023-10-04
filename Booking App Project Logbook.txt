@@ -350,3 +350,8 @@ October 3
 - added interpolation for Professionals in Professional List page
 - added 7 more professionals in db:seeder to test for pagination in professionals list
 - added interpolation values for each professional listing
+
+October 4
+- added links to prof pic for each user 
+- set up margin on name/profession from the profile picture
+- to make a modal hidden, add "hidden" in class clause and to make it stand out, add z-50 to class clause
