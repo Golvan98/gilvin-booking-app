@@ -1,14 +1,11 @@
 CURRENTLY DOING : 
 
-- List of professionals UI, image reference for it sent
 - send request for application (user to prof function only)
 ^FOR THIS request thingy, a modal would be nice
 
 TO DOs
-
-
 - filtering for list of professionals
-- messaging 
+- messaging (optional)
 - soft delete(optional)
 - Deployment and UI improvements to run side by side
 
@@ -49,3 +46,4 @@ DONE
 - UI for User/Professional profile 
 - Route Model Binding in which a user can view other profiles not through HandleInertiaRequests (very important)
 - when you're done with viewUSER, remove settings from the admin part of User/Prof, put it onto the home or something
+- List of professionals UI, image reference for it sent

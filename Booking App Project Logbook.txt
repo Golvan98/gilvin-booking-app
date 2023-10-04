@@ -354,4 +354,8 @@ October 3
 October 4
 - added links to prof pic for each user 
 - set up margin on name/profession from the profile picture
-- to make a modal hidden, add "hidden" in class clause and to make it stand out, add z-50 to class clause
+- fixed a bug where it doesnt show professional public profile if a user is logged in (just needed an and clause in v-if)
+- NOTE: In making a modal, in class clause
+"hidden" makes the modal hidden, 
+z-50 makes the modal layered on top of the page when opened, and 
+inset-0 sets the modal to cover entire screen
