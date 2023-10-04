@@ -36,11 +36,11 @@
             <div id="firstrowofProfessionals" class="row-start-1 row-end-4 col-span-6 grid grid-cols-6 rounded-xl"> 
 
 
-              <div v-for="Professionals in Professionals.data"   class="col-span-2 bg-indigo-200 rounded-xl py-1 flex justify-between border border-green-300"> 
+              <div v-for="Professionals in Professionals.data"   class="col-span-2 bg-indigo-200 rounded-xl py-1 flex justify-between border border-green-300 m-2"> 
 
                 <div
                   :style="{ 
-                      'background-image': `url('storage/}')`, 
+                      'background-image': `url('http://127.0.0.1:8000/storage/${Professionals.profilepic}')`,
                       'background-repeat': 'no-repeat', 
                       'background-size': 'cover' 
                   }"
@@ -49,14 +49,14 @@
                           bg-gray-400 text-gray-700 text-xl font-bold shadow-sm ml-2 mt-4 border border-green-300">                   
                 </div>
 
-                <div  class="mt-4 flex-nowrap">
+                <div  class="mt-4 flex-nowrap ml-2">
 
                     <div class="mt-2 text-xs font-bold">  {{ Professionals.first_name }}</div>
                     <div class="mt-2 text-xs font-bold">  {{ Professionals.profession }}</div>
 
                     <div class="flex justify-between">
-                      <button class="mt-8 mr-2 text-xs text-black font-bold rounded-lg border p-1"> Send Request </button>
-                      <a :href="`/viewProfessionalProfile/${Professionals.id}`"> <button class="mt-8 text-xs text-black font-bold rounded-lg border"> View Profile </button> </a>
+                      <button class="mt-8 mr-2 text-xs text-black font-bold rounded-lg border p-0.5"> Send Request </button>
+                      <a :href="`/viewProfessionalProfile/${Professionals.id}`"> <button class="mt-8 text-xs text-black font-bold rounded-lg border p-0.5"> View Profile </button> </a>
                     </div>
 
                 </div>

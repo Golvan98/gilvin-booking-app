@@ -348,4 +348,5 @@ September 27
 October 3
 - removed current UI for professional list, will try for grid container and auto adjust based on screen size
 - added interpolation for Professionals in Professional List page
-- added 7 more professionals to test for pagination in professionals list
+- added 7 more professionals in db:seeder to test for pagination in professionals list
+- added interpolation values for each professional listing
