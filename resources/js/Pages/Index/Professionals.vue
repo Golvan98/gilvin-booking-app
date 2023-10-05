@@ -55,10 +55,11 @@
                     <div class="mt-2 text-xs font-bold">  {{ Professionals.profession }}</div>
 
                     <div class="flex justify-between">
-                      <button data-modal-target="request-modal" data-modal-toggle="request-modal" class="mt-8 mr-2 text-xs text-black font-bold rounded-lg border p-0.5"> Send Request </button>
-                      <SendRequestModal :Professionals="Professionals"/>
+
+                      <button @click="createRequestModal(Professionals)" data-modal-target="request-modal" data-modal-toggle="request-modal" class="mt-8 mr-2 text-xs text-black font-bold rounded-lg border p-0.5"> Send Request </button>
+                      <SendRequestModal :Professionals="Professionals" :Professional="selectedProfessional"/>
                       <a :href="`/viewProfessionalProfile/${Professionals.id}`" target="_blank"> <button class="mt-8 text-xs text-black font-bold rounded-lg border p-0.5"> View Profile </button> </a>
-                     
+                   
                     </div>
 
                 </div>
@@ -97,6 +98,15 @@
 <script setup>
 import Pagination from '@/Pages/Index/Pagination.vue'
 import SendRequestModal from '@/Pages/Index/Modals/SendRequestModal.vue'
+import { ref } from 'vue'
+
+
+const selectedProfessional = ref(null);
+
+function createRequestModal(Professional)
+{
+  selectedProfessional.value = Professional
+}
 
 const props = defineProps ({
     Professionals:Object

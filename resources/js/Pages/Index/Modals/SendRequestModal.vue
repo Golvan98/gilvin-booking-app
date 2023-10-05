@@ -6,7 +6,7 @@
 
         <div class="h-1/3 w-full bg-inherit flex-nowrap rounded-t-lg pt-6 bg-white">
                         
-            <div class="flex items-center justify-center mb-4"> Send Request to {{ Professionals.first_name }} </div>
+            <div class="flex items-center justify-center mb-4"> Send Request to {{ Professional}} </div>
             <div class="flex items-center justify-center"> 
                             <input type="text" 
                             placeholder="context here" 
@@ -66,12 +66,10 @@
 import { router } from '@inertiajs/vue3';
 import { useForm } from '@inertiajs/vue3'
 import { defineProps } from 'vue';
-
-const props = defineProps({
-    Professionals:Object
-});
+import { ref } from 'vue'
 
 
+const props = defineProps(['Professional']);
 
 const createRequest = useForm(
     {
