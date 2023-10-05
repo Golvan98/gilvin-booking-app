@@ -56,8 +56,8 @@
 
                     <div class="flex justify-between">
                       <button data-modal-target="request-modal" data-modal-toggle="request-modal" class="mt-8 mr-2 text-xs text-black font-bold rounded-lg border p-0.5"> Send Request </button>
-                      <SendRequestModal/>
-                      <a :href="`/viewProfessionalProfile/${Professionals.id}`"> <button class="mt-8 text-xs text-black font-bold rounded-lg border p-0.5"> View Profile </button> </a>
+                      <SendRequestModal :Professionals="Professionals"/>
+                      <a :href="`/viewProfessionalProfile/${Professionals.id}`" target="_blank"> <button class="mt-8 text-xs text-black font-bold rounded-lg border p-0.5"> View Profile </button> </a>
                      
                     </div>
 
