@@ -354,8 +354,12 @@ October 3
 October 4
 - added links to prof pic for each user 
 - set up margin on name/profession from the profile picture
-- fixed a bug where it doesnt show professional public profile if a user is logged in (just needed an and clause in v-if)
+- fixed a bug where it doesnt show professional public profile if a user is logged in (just needed an and clause in v-if="authprofessional && authprofessional.id=professional.id)
 - NOTE: In making a modal, in class clause
 "hidden" makes the modal hidden, 
 z-50 makes the modal layered on top of the page when opened, and 
 inset-0 sets the modal to cover entire screen
+- added own vite code for modal for the front-end part of requesting appointment
+
+October 5
+- added backend for sending request

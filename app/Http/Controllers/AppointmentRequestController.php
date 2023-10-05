@@ -85,6 +85,18 @@ class AppointmentRequestController extends Controller
         
     }
 
+    public function createRequest(AppointmentRequest $appointmentrequest, Request $request)
+    {
+
+        $data = $request->validate([
+            'request' => 'required|min:8|max:250',
+            'request_schedule_start' => 'required',
+            'request_schedule_end' => 'required'
+        ]);
+
+        dd($data);
+    }
+
     
 
 }

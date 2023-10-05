@@ -84,6 +84,7 @@ Route::get('/rejectRequest/{appointmentrequest}', [AppointmentRequestController:
 Route::get('/approveRequest/{appointmentrequest}', [AppointmentRequestController::class, 'acceptRequest'])->name('approve.request');
 Route::get('/deleteRequest/{appointmentrequest}', [AppointmentRequestController::class, 'deleteRequest'])->name('delete.request');
 Route::post('/editRequest/{appointmentrequest}', [AppointmentRequestController::class, 'editRequest'])->name('edit.request');
+Route::post('/createRequest', [AppointmentRequestController::class, 'createRequest'])->name('create.request');
 
 Route::get('/cancelAppointment/{appointment}', [AppointmentController::class, 'cancelAppointment'])->name('cancel.appointment');
 
