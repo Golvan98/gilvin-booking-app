@@ -85,16 +85,28 @@ class AppointmentRequestController extends Controller
         
     }
 
-    public function createRequest(AppointmentRequest $appointmentrequest, Request $request)
+    public function createRequest(Professional $Professional,Request $request)
     {
-
+        
+        $user = auth()->user();
+        
         $data = $request->validate([
             'request' => 'required|min:8|max:250',
             'request_schedule_start' => 'required',
-            'request_schedule_end' => 'required'
+            'request_schedule_end' => 'required',
         ]);
 
-        dd($data);
+        
+
+        $createRequest = AppointmentRequest::create($data);
+
+        dd($createRequest->id);
+        $createRequest->update([
+            'by_professional_id' => $Professional->id,
+            'by_user_id' => $user->id,
+        ]);
+
+        return redirect()->back()->with('success', 'Request Created');
     }
 
     

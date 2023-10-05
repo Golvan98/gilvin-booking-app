@@ -6,7 +6,7 @@
 
         <div class="h-1/3 w-full bg-inherit flex-nowrap rounded-t-lg pt-6 bg-white">
                         
-            <div class="flex items-center justify-center mb-4"> Send Request to {{ Professional}} </div>
+            <div v-if="Professional" class="flex items-center justify-center mb-4"> Send Request to {{ Professional.first_name}} </div>
             <div class="flex items-center justify-center"> 
                             <input type="text" 
                             placeholder="context here" 
@@ -75,13 +75,13 @@ const createRequest = useForm(
     {
         request:null,
         request_schedule_start:null,
-        request_schedule_end:null
+        request_schedule_end:null,
     }
   )
-  const dynamicUrl = `createRequest`
+  
 
 function sendRequest()
-{
+{const dynamicUrl = `createRequest/${props.Professional.id}`
     router.post(dynamicUrl, createRequest);
 }
 

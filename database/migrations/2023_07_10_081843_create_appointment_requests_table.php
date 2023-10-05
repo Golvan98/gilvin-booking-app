@@ -16,11 +16,11 @@ return new class extends Migration
             $table->longText('request');
             $table->dateTime('request_schedule_start');
             $table->dateTime('request_schedule_end');
-            $table->tinyText('request_status');
+            $table->tinyText('request_status')->default('pending');
             $table->timestamps();
            
-            $table->foreignIdFor(\App\Models\Professional::class, 'by_professional_id')->constrained('professionals')->nullable()->onDelete('cascade');
-            $table->foreignIdFor(\App\Models\User::class, 'by_user_id')->constrained('users')->nullable()->onDelete('cascade');
+            $table->foreignIdFor(\App\Models\Professional::class, 'by_professional_id')->constrained('professionals')->onDelete('cascade')->nullable();
+            $table->foreignIdFor(\App\Models\User::class, 'by_user_id')->constrained('users')->onDelete('cascade')->nullable();
         });
     }
 

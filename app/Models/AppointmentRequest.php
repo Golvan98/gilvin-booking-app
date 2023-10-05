@@ -10,6 +10,11 @@ class AppointmentRequest extends Model
 {
     use HasFactory;
 
+
+    
+    protected $fillable = ['request', 'request_schedule_start', 'request_schedule_end', 'by_user_id', 'by_professional_id' ];
+
+
     public function consultant() : BelongsTo
     {
         return $this->belongsTo(\App\Models\Professional::class, 'by_professional_id');
