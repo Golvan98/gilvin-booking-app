@@ -362,4 +362,10 @@ inset-0 sets the modal to cover entire screen
 - added own vite code for modal for the front-end part of requesting appointment
 
 October 5
-- added backend for sending request
+- added controller and front-end form for sending appointment request
+- added route for creating new request and viewing professional profile now prompts a new tab
+- added a function where sendrequestModal now captures current professional selected
+- added backend controller part for creating appointmentrequest, has a few bugs will fix tomorrow
+
+October 6
+- completed backend for creating appointment request, feature is now fully working (just needed to put input in request)

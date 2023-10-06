@@ -51,7 +51,7 @@
 
         <div class="w-full h-12 flex items-center justify-between">
              <button data-modal-hide="request-modal" class="bg-blue-600 text-white py-1 px-2 rounded-sm"> Cancel </button>
-            <a href="#"><button class="bg-blue-600 text-white py-1 px-2 rounded-sm"> Confirm </button> </a> 
+           <button data-modal-hide="request-modal" type="submit" class="bg-blue-600 text-white py-1 px-2 rounded-sm"> Confirm </button> 
         </div>
 
 

@@ -1,17 +1,18 @@
 CURRENTLY DOING : 
 
-- send request for application (user to prof function only)
-^FOR THIS request thingy, a modal would be nice
 
 TO DOs
 - filtering for list of professionals
+- lapsed status if appointment has passed by
+- Deployment and UI improvements to run side by side (FINAL)
+
+Optional Features
 - messaging (optional)
-- soft delete(optional)
-- Deployment and UI improvements to run side by side
+- soft delete users(optional)
 
 UI Improvements (FINAL). There really is a problem with ur UI when zoomed in or zoomed out, it's a whole project on top of another...
 - auto adjust when browser is shortened (final)
-- persist when clicking next page done, now u need to persist the modal when u accept/reject requests (hard one, this is left for the optimizing section)
+- persist the modal when u accept/reject requests (hard one, this is left for the optimizing section)
 - confirm button needs to be redone, required input error message doesnt work while closing modal
 - check if it's possible to approve request and refresh paginated modal page at the same time
 - placeholder for form to be :value request data
@@ -47,3 +48,4 @@ DONE
 - Route Model Binding in which a user can view other profiles not through HandleInertiaRequests (very important)
 - when you're done with viewUSER, remove settings from the admin part of User/Prof, put it onto the home or something
 - List of professionals UI, image reference for it sent
+- send request for application (user to prof function only, and a a modal would be nice)
