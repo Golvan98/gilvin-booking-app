@@ -373,4 +373,5 @@ October 6
 - identified some other TODOS in the project logbook, after filtering,  what's left is pretty much polishing. GL
 
 October 10
-- added trigger using php artisan command wherein everyday it checks for rejected appointment requests to be deleted 
+- added trigger using php artisan command wherein everyday it checks for rejected appointment requests to be deleted
+- updated project logbook, will do notifications instead of messages 

@@ -1,7 +1,9 @@
 CURRENTLY DOING : 
 - filtering for list of professionals
 
+
 TO DOs
+- notification
 - Deployment and UI improvements to run side by side (FINAL)
 
 Optional Features

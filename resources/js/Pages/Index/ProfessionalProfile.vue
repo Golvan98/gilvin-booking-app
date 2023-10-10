@@ -217,7 +217,7 @@
                 12
             </span> <br>
             </div>
-            <div> <button class="bg-inherit text-start text-xs"> &nbsp Messages </button></div>
+            <div> <button class="bg-inherit text-start text-xs"> &nbsp Notifications </button></div>
           </div>
     
         </div>
