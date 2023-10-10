@@ -369,3 +369,8 @@ October 5
 
 October 6
 - completed backend for creating appointment request, feature is now fully working (just needed to put input in request)
+- added auto adjustment for user appointment requests (links now have a horizontal
+- identified some other TODOS in the project logbook, after filtering,  what's left is pretty much polishing. GL
+
+October 10
+- added trigger using php artisan command wherein everyday it checks for rejected appointment requests to be deleted 

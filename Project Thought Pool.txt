@@ -2,8 +2,6 @@ CURRENTLY DOING :
 - filtering for list of professionals
 
 TO DOs
-
-- lapsed status db trigger if appointment has passed by
 - Deployment and UI improvements to run side by side (FINAL)
 
 Optional Features
@@ -51,3 +49,4 @@ DONE
 - when you're done with viewUSER, remove settings from the admin part of User/Prof, put it onto the home or something
 - List of professionals UI, image reference for it sent
 - send request for application (user to prof function only, and a a modal would be nice)
+- lapsed status db trigger if appointment has passed by
