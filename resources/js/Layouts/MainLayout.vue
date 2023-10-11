@@ -21,6 +21,13 @@
         <div class="w-1/3 flex justify-center gap-4 mt-6">
             
           <div v-if="user" class="flex justify-end ml-20">
+            
+             <div class="text-gray-500 relative pr-2 py-2 text-lg">
+                🔔
+                <div class="absolute right-0 top-0 w-5 h-5 bg-red-700 dark:bg-red-400 text-white font-medium border border-white dark:border-gray-900 rounded-full text-xs text-center">
+                  {{ user.notificationCount }} 
+              </div>
+              </div>
              <div> <Link href="/userProfile"> <button class="py-1 px-4 bg-inherit text-white font-bold text-lg"> {{ user.first_name}}</button> </Link> </div>
              <div> <Link href='/logout' method="delete" as="button" class="ml-2 py-1 px-4 bg-white text-black rounded-xl"> Logout </Link> </div>
           </div>
@@ -131,6 +138,10 @@ const user = computed(() => page.props.user )
 
 
 const prof = computed (() => page.props.prof)
+
+const notificationCount = computed(
+  () => Math.min(page.props.user.notificationCount, 9),
+)
 
 //const professional = computed(() => page.props.professional )
 
