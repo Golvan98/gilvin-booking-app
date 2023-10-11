@@ -374,4 +374,4 @@ October 6
 
 October 10
 - added trigger using php artisan command wherein everyday it checks for rejected appointment requests to be deleted
-- updated project logbook, will do notifications instead of messages 
+- replaced Messages with Notifications in UI and updated project logbook, will do notifications instead of messages 
