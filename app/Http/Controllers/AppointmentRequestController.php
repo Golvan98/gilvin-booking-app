@@ -20,6 +20,7 @@ use Illuminate\Support\Facades\Validator;
 use Laravel\Sanctum\Guard;
 use Illuminate\Support\Facades\DB;
 use App\Models\ProfessionalServices;
+use App\Notifications\RequestAccepted;
 use Illuminate\Pagination\Paginator;
 
 
@@ -39,7 +40,7 @@ class AppointmentRequestController extends Controller
 
     public function acceptRequest(AppointmentRequest $appointmentrequest)
     {
-        $accept = DB::table('appointment_requests')->where('id', $appointmentrequest->id)->update(['request_status' => 'approved']);
+        $accept = DB::table('appointment_requests')->where('id', $appointmentrequest->id)->update(['request_status' => 'accepted']);
 
         
         $testcreate =  Appointment::create(
@@ -52,7 +53,11 @@ class AppointmentRequestController extends Controller
                 'request' => $appointmentrequest->request,
             ]);
 
-        DB::table('appointment_requests')->where('id', $appointmentrequest->id)->delete();
+        $appointmentrequest->consultee->notify(
+            new RequestAccepted($appointmentrequest)
+        );
+
+       // I used to delete this but apparently I need it saved for a while to query for notifications DB::table('appointment_requests')->where('id', $appointmentrequest->id)->delete();
 
         return redirect('/professionalProfile')->with('success', 'request approved and appointment created');
     }
