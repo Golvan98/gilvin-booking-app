@@ -3,6 +3,7 @@
 use App\Http\Controllers\AuthController;
 use Illuminate\Support\Facades\Route;
 use App\Http\Controllers\AppointmentRequestController;
+use App\Http\Controllers\NotificationController;
 use App\Http\Controllers\ProfessionalController;
 use App\Http\Controllers\IndexController;
 use App\Http\Controllers\UserController;
@@ -33,6 +34,8 @@ use App\Http\Controllers\AppointmentController;
     return view('app');
 });
 */
+
+Route::get('/notifications', [NotificationController::class, 'notification']);
 
 Route::get('/home', [IndexController::class, 'index'])->name('home');
 

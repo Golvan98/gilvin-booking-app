@@ -375,3 +375,11 @@ October 6
 October 10
 - added trigger using php artisan command wherein everyday it checks for rejected appointment requests to be deleted
 - replaced Messages with Notifications in UI and updated project logbook, will do notifications instead of messages 
+
+October 11
+- added and migrated notifications table for notifications feature
+- configured backend for notification to notify the intended User 
+- added notification bell on the mainlayout that reflects the # of notifications for the logged in user
+
+October 12
+- added route and page for notifications
