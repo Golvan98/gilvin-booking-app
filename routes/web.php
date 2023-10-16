@@ -36,7 +36,7 @@ use App\Http\Controllers\NotificationSeenController;
 });
 */
 
-Route::put('/notification/{notification}/seen', NotificationSeenController::class)->middleware('auth');
+Route::put('/notification/{notification}/seen', NotificationSeenController::class)->middleware('auth')->name('notification.seen');
 
 Route::get('/notifications', [NotificationController::class, 'notification']);
 

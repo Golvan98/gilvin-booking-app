@@ -10,12 +10,12 @@
         </span>
 
         </div>
-
+        
       </div>
       <div>
-        <button v-if="!notification.read_at" class="btn-outline text-xs font-medium uppercase">
+        <Link as="button" method="put" :href="`/notification/${notification.id}/seen`" v-if="!notification.read_at" class="btn-outline text-xs font-medium uppercase">
           Mark as read
-        </button>
+        </Link>
       </div>
     </div>
 
