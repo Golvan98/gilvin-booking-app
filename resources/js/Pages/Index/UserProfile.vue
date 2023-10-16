@@ -189,10 +189,10 @@
         <div class="ml-4 flex-nowrap">
           <div class="flex items-center justify-center h-16 w-16 rounded-full bg-gray-400">
           <span class="text-white text-2xl font-bold">
-              12
+              {{ notificationCount }}
           </span> <br>
           </div>
-          <div class="bg-inherit text-start text-xs">&nbsp Notifications </div>
+          <a href="/notifications"> <div class="bg-inherit text-start text-xs">&nbsp Notifications </div> </a>
         </div>
   
       </div>
@@ -234,7 +234,8 @@ const props = defineProps (
     consultants: Object,
     appointments:Object,
     requestsCount:Object,
-    appointmentsCount:Object
+    appointmentsCount:Object,
+    notificationCount:Object
   
   })
 

@@ -46,6 +46,7 @@ class UserController extends Controller
         'appointments' => DB::table('appointments')->where('by_user_id', $user->id)->whereNot('appointment_status', 'cancelled')->paginate(4),
         'requestsCount' => DB::table('appointment_requests')->where('by_user_id', $user->id)->where('request_status', 'pending')->count(),
         'appointmentsCount' => DB::table('appointments')->where('by_user_id', $user->id)->whereNot('appointment_status', 'cancelled')->count(),
+        'notificationCount' => $request->user()->notifications()->count(),
         'currentUser' => $user
     ]);
     }
