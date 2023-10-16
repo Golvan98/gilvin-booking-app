@@ -18,6 +18,7 @@ use App\Models\AppointmentRequest;
 use Illuminate\Http\Request;
 use Random\Randomizer;
 use App\Http\Controllers\AppointmentController;
+use App\Http\Controllers\NotificationSeenController;
 
 /*
 |--------------------------------------------------------------------------
@@ -34,6 +35,8 @@ use App\Http\Controllers\AppointmentController;
     return view('app');
 });
 */
+
+Route::put('/notification/{notification}/seen', NotificationSeenController::class)->middleware('auth');
 
 Route::get('/notifications', [NotificationController::class, 'notification']);
 

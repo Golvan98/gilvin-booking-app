@@ -383,4 +383,4 @@ October 11
 
 October 12
 - added route and page for notifications
-- added working backend and frontend for notifications, it now notifies a user if a request was accepted
+- added feature where it notifies a user if a request was accepted

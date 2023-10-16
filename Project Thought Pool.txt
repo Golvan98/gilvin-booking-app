@@ -1,9 +1,14 @@
 CURRENTLY DOING : 
+- notifications
 - filtering for list of professionals
 
+When watching Piotr Udemy's mark as read feature, there might be some code that u needed there
+where the page refreshes after you click "mark as read"
 
 TO DOs
-- notification
+- Notification for the Professional side? Like when a user sends a req, the professional is notified.
+- mark as read UI improvement ( do this quick)
+
 - Deployment and UI improvements to run side by side (FINAL)
 
 Optional Features
