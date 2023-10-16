@@ -3,7 +3,8 @@ CURRENTLY DOING :
 - filtering for list of professionals
 
 When watching Piotr Udemy's mark as read feature, there might be some code that u needed there
-where the page refreshes after you click "mark as read"
+where the page refreshes after you click "mark as read" (nope, just a redirect and v-if condition that made it disappear)
+
 
 TO DOs
 - Notification for the Professional side? Like when a user sends a req, the professional is notified.
