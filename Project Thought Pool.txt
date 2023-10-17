@@ -1,15 +1,12 @@
 CURRENTLY DOING : 
-- notifications
+- Notification for when request is rejected and sent (Sent is for Professionals)
+- Notification for the Professional side? Like when a user sends a req, the professional is notified
+- Add an href link to the newly made appointment on the RequestAccepted notification
+- mark as read Notifications for Professionals
 - filtering for list of professionals
-
-When watching Piotr Udemy's mark as read feature, there might be some code that u needed there
-where the page refreshes after you click "mark as read" (nope, just a redirect and v-if condition that made it disappear)
 
 
 TO DOs
-- Notification for the Professional side? Like when a user sends a req, the professional is notified.
-- mark as read UI improvement ( do this quick)
-
 - Deployment and UI improvements to run side by side (FINAL)
 
 Optional Features
@@ -58,3 +55,6 @@ DONE
 - List of professionals UI, image reference for it sent
 - send request for application (user to prof function only, and a a modal would be nice)
 - lapsed status db trigger if appointment has passed by
+- notifications (When watching Piotr Udemy's mark as read feature, there might be some code that u needed there
+where the page refreshes after you click "mark as read" (nope, just a redirect and v-if condition that made it disappear)
+- mark as read Notifications for Users

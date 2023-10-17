@@ -384,3 +384,9 @@ October 11
 October 12
 - added route and page for notifications
 - added feature where it notifies a user if a request was accepted
+
+October 16
+- added backend for marking notifications as read along with Policy to disable unauthorized users
+- added frontend part for marking notifications as read
+- modified frontend part for marking notifications as read
+- added href link to notifications in User Profile, also reflects the current # of unread/read notifications 
