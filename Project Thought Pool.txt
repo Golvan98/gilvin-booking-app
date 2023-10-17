@@ -1,6 +1,5 @@
 CURRENTLY DOING : 
-- Notification for when request is rejected and sent (Sent is for Professionals)
-- Notification for the Professional side? Like when a user sends a req, the professional is notified
+- Notification for the Professional side? Like when a user sends a req, the professional is notified (bug found atm)
 - Add an href link to the newly made appointment on the RequestAccepted notification
 - mark as read Notifications for Professionals
 - filtering for list of professionals
@@ -58,3 +57,6 @@ DONE
 - notifications (When watching Piotr Udemy's mark as read feature, there might be some code that u needed there
 where the page refreshes after you click "mark as read" (nope, just a redirect and v-if condition that made it disappear)
 - mark as read Notifications for Users
+- Notification for when request is rejected and sent 
+
+

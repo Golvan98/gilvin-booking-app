@@ -11,11 +11,16 @@ use Illuminate\Database\Eloquent\Relations\BelongsTo;
 use Illuminate\Database\Eloquent\Relations\HasMany;
 use Illuminate\Foundation\Auth\User as Authenticatable;
 use Illuminate\Foundation\Auth\AuthenticatesUsers;
+use Laravel\Sanctum\HasApiTokens;
+use Illuminate\Notifications\Notifiable;
+
 class Professional extends Authenticatable
 
-{
-    use HasFactory;
 
+
+{
+    
+    use HasApiTokens, HasFactory, Notifiable;
     
     protected $guard = 'professional';
 
