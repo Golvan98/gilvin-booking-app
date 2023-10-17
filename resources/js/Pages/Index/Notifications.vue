@@ -14,6 +14,17 @@
         
       </div>
 
+      <div v-if="notification.type === 'App\\Notifications\\RequestRejected'">
+
+        <div v-for="professional in professionals" class="ml-24">
+         <span v-if="professional.id==notification.data.by_professional_id">
+            Request to <strong> {{ professional.first_name }} </strong> was Rejected :(
+        </span>
+
+        </div>
+        
+      </div>
+
       <div  v-if="!notification.read_at" class="mr-24 border border-black p-2 bg-indigo-700 text-white font-bold">
         <Link as="button" method="put" :href="`/notification/${notification.id}/seen`" class="btn-outline text-xs font-medium uppercase">
           Mark as read

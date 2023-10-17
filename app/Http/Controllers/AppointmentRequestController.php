@@ -21,6 +21,7 @@ use Laravel\Sanctum\Guard;
 use Illuminate\Support\Facades\DB;
 use App\Models\ProfessionalServices;
 use App\Notifications\RequestAccepted;
+use App\Notifications\RequestRejected;
 use Illuminate\Pagination\Paginator;
 
 
@@ -33,6 +34,9 @@ class AppointmentRequestController extends Controller
         
         $reject = DB::table('appointment_requests')->where('id', $appointmentrequest->id)->update(['request_status' => 'rejected']);
     
+        $appointmentrequest->consultee->notify(
+            new RequestRejected($appointmentrequest)
+        );
         return redirect()->back()->with('success', 'request rejected');
 
 
