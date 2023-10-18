@@ -22,6 +22,7 @@ use Illuminate\Support\Facades\DB;
 use App\Models\ProfessionalServices;
 use App\Notifications\RequestAccepted;
 use App\Notifications\RequestRejected;
+use App\Notifications\RequestSent;
 use Illuminate\Pagination\Paginator;
 
 
@@ -115,7 +116,11 @@ class AppointmentRequestController extends Controller
         ]);
 
 
-        $createRequest = AppointmentRequest::create($finaldata);     
+        $appointmentrequest = AppointmentRequest::create($finaldata);   
+        
+        $appointmentrequest->consultant->notify(
+            new RequestRejected($appointmentrequest)
+        );
 
         return redirect()->back()->with('success', 'Appointment Request Created');
     }

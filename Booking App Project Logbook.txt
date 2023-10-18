@@ -390,3 +390,11 @@ October 16
 - added frontend part for marking notifications as read
 - modified frontend part for marking notifications as read
 - added href link to notifications in User Profile, also reflects the current # of unread/read notifications 
+
+October 17
+- added RequestSent and RequestRejected notification (not working yet)
+- added front-end features for Request Rejected notifications, users are now notified when their requests are rejected
+- added separate function for Professionals in Notification Controller, (has a bug atm)
+
+October 18
+- added notify feature in backend controller for when a user sends a request

@@ -6,6 +6,7 @@ use Illuminate\Bus\Queueable;
 use Illuminate\Contracts\Queue\ShouldQueue;
 use Illuminate\Notifications\Messages\MailMessage;
 use Illuminate\Notifications\Notification;
+use App\Models\AppointmentRequest;
 
 class RequestSent extends Notification
 {
@@ -14,9 +15,11 @@ class RequestSent extends Notification
     /**
      * Create a new notification instance.
      */
-    public function __construct()
+    public function __construct(
+        private AppointmentRequest $appointmentrequest 
+    )
     {
-        //
+       
     }
 
     /**
@@ -48,7 +51,10 @@ class RequestSent extends Notification
     public function toArray(object $notifiable): array
     {
         return [
-            //
+            'appointment_request_id' => $this->appointmentrequest->id,
+            'by_user_id' => $this->appointmentrequest->by_user_id,
+            'request_status' => $this->appointmentrequest->request_status,
+            'by_professional_id' => $this->appointmentrequest->by_professional_id
         ];
     }
 }

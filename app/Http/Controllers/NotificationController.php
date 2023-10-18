@@ -8,15 +8,16 @@ use App\Models\Professional;
 use Illuminate\Support\Facades\Auth;
 use Illuminate\Notifications\Notifiable;
 use Laravel\Sanctum\Guard;
-
+use Illuminate\Pagination\Paginator;
 
 
 class NotificationController extends Controller
 {
     public function notification(Request $request)
     {
-        $prof = Auth::guard('professional')->user();
-
+    
+        $professionalUser = auth('professional')->user()->notifications()->paginate(10);
+       dd($professionalUser);
         return inertia(
             'Index/Notifications',
             [
