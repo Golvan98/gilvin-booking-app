@@ -397,4 +397,4 @@ October 17
 - added separate function for Professionals in Notification Controller, (has a bug atm)
 
 October 18
-- added notify feature in backend controller for when a user sends a request
+- added notify feature in backend controller for when a user sends a request (notifications are made through this, the list of data is set from the notification config)

@@ -4,6 +4,7 @@ namespace App\Http\Controllers;
 
 use App\Http\Controllers\Controller;
 use Illuminate\Http\Request;
+use App\Models\User;
 use App\Models\Professional;
 use Illuminate\Support\Facades\Auth;
 use Illuminate\Notifications\Notifiable;
@@ -16,8 +17,8 @@ class NotificationController extends Controller
     public function notification(Request $request)
     {
     
-        $professionalUser = auth('professional')->user()->notifications()->paginate(10);
-       dd($professionalUser);
+     //   $professionalUser = auth('professional')->user()->notifications()->paginate(10);
+     //  dd($professionalUser);
         return inertia(
             'Index/Notifications',
             [
@@ -27,15 +28,15 @@ class NotificationController extends Controller
         );
     }
 
-    public function professionalNotificatons(Professional $professional, Request $request)
-    {
-        $prof = Auth::guard('professional')->user();
+    public function professionalNotifications(Professional $professional, Request $request)
+    {   
 
+     
         return inertia(
-                'Index/professionalNotificatons',
+                'Index/professionalNotifications',
             [
-                'notifications'  => $prof->notifications()->paginate(10),
-                'professionals' => Professional::all() 
+                'notifications'  => auth('professional')->user()->notifications()->paginate(10),
+                'users' => User::all() 
             ]
             );
     }

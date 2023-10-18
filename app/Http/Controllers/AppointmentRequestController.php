@@ -119,7 +119,7 @@ class AppointmentRequestController extends Controller
         $appointmentrequest = AppointmentRequest::create($finaldata);   
         
         $appointmentrequest->consultant->notify(
-            new RequestRejected($appointmentrequest)
+            new RequestSent($appointmentrequest)
         );
 
         return redirect()->back()->with('success', 'Appointment Request Created');

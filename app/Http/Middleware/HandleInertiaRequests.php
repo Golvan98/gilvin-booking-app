@@ -56,7 +56,8 @@ class HandleInertiaRequests extends Middleware
             'last_name' => Auth::guard('professional')->user()->last_name,
             'email' =>  Auth::guard('professional')->user()->email,
             'bio' => Auth::guard('professional')->user()->bio,
-            'profession' => Auth::guard('professional')->user()->profession
+            'profession' => Auth::guard('professional')->user()->profession,
+            'notificationCount' => Auth::guard('professional')->user()->unreadNotifications()->count()
             ] : null ,
 
             

@@ -40,6 +40,8 @@ Route::put('/notification/{notification}/seen', NotificationSeenController::clas
 
 Route::get('/notifications', [NotificationController::class, 'notification']);
 
+Route::get('/professionalNotifications', [NotificationController::class, 'professionalNotifications']);
+
 Route::get('/home', [IndexController::class, 'index'])->name('home');
 
 //Route::get('/show', [IndexController::class, 'yawa']);
