@@ -7,7 +7,7 @@
     
             <div v-for="user in users" class="ml-24">
              <span v-if="user.id==notification.data.by_professional_id">
-                You have a new request from <strong> {{ user.first_name }} </strong> 
+                You have a new request from <a :href="`/viewUserProfile/${user.id}`"> <strong> {{ user.first_name }} </strong> </a>
             </span>
     
             </div>
