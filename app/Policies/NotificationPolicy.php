@@ -13,8 +13,18 @@ class NotificationPolicy
      */
    
     public function update(User $user, DatabaseNotification $databaseNotification)
-    {
-        return $user->id === $databaseNotification->notifiable_id;
+    { 
+        $professional = auth('professional')->user();
+        
+        if (auth('professional')->check()) {
+          return $professional->id === $databaseNotification->notifiable_id;
+        }
+
+        else {
+            return $user->id === $databaseNotification->notifiable_id;
+        }
+       
+       
     }
 
     

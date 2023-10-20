@@ -15,7 +15,7 @@
           </div>
     
           <div  v-if="!notification.read_at" class="mr-24 border border-black p-2 bg-indigo-700 text-white font-bold">
-            <Link as="button" method="put" :href="`/notification/${notification.id}/seen`" class="bptn-outline text-xs font-medium uppercase">
+            <Link as="button" method="put" :href="`/professionalNotification/${notification.id}/seen`" class="bptn-outline text-xs font-medium uppercase">
               Mark as read
             </Link>
           </div>

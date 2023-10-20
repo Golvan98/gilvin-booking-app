@@ -10,7 +10,7 @@ use Illuminate\Support\Facades\Auth;
 use Illuminate\Notifications\Notifiable;
 use Laravel\Sanctum\Guard;
 use Illuminate\Pagination\Paginator;
-
+use Illuminate\Contracts\Auth\Guard as AuthGuard;
 
 class NotificationController extends Controller
 {

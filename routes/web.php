@@ -19,6 +19,7 @@ use Illuminate\Http\Request;
 use Random\Randomizer;
 use App\Http\Controllers\AppointmentController;
 use App\Http\Controllers\NotificationSeenController;
+use App\Http\Controllers\ProfessionalNotificationSeenController;
 
 /*
 |--------------------------------------------------------------------------
@@ -36,10 +37,12 @@ use App\Http\Controllers\NotificationSeenController;
 });
 */
 
-Route::put('/notification/{notification}/seen', NotificationSeenController::class)->middleware('auth')->name('notification.seen');
+Route::put('/professionalNotification/{notification}/seen', NotificationSeenController::class)->middleware('checkProfessionalGuard');
+
+Route::put('/notification/{notification}/seen', NotificationSeenController::class)->middleware('auth');
 
 
-Route::put('/professionalNotifications/{notification}/seen', NotificationSeenController::class)->middleware('auth')->name('professional.notification.seen');
+//Route::put('/professionalNotifications/{notification}/seen', ProfessionalNotificationSeenController::class)->name('professional.notification.seen');
 
 
 Route::get('/notifications', [NotificationController::class, 'notification']);
