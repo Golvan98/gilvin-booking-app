@@ -398,3 +398,5 @@ October 17
 
 October 18
 - added notify feature in backend controller for when a user sends a request (notifications are made through this, the list of data is set from the notification config)
+- added frontend and page for Professional notifications
+- fixed a bug where professionals cant view user public profiles and can now view/click them by clicking the User's name in RequestSent notification

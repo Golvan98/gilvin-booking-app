@@ -6,7 +6,7 @@
           <div v-if="notification.type === 'App\\Notifications\\RequestSent'">
     
             <div v-for="user in users" class="ml-24">
-             <span v-if="user.id==notification.data.by_professional_id">
+             <span v-if="user.id==notification.data.by_user_id">
                 You have a new request from <a :href="`/viewUserProfile/${user.id}`"> <strong> {{ user.first_name }} </strong> </a>
             </span>
     
@@ -15,7 +15,7 @@
           </div>
     
           <div  v-if="!notification.read_at" class="mr-24 border border-black p-2 bg-indigo-700 text-white font-bold">
-            <Link as="button" method="put" :href="`/notification/${notification.id}/seen`" class="btn-outline text-xs font-medium uppercase">
+            <Link as="button" method="put" :href="`/notification/${notification.id}/seen`" class="bptn-outline text-xs font-medium uppercase">
               Mark as read
             </Link>
           </div>
