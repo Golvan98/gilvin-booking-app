@@ -1,5 +1,4 @@
 CURRENTLY DOING : 
-- mark as read Notifications for Professionals(route already created for this, it needs another single action controller like the one used for User
 - Add an href link to the newly made appointment on the RequestAccepted notification (u need to view this somehow)
 - filtering for list of professionals
 
@@ -59,5 +58,8 @@ where the page refreshes after you click "mark as read" (nope, just a redirect a
 - Notification for when request is rejected and sent 
 - Notification for the Professional side? Like when a user sends a req, the professional is notified 
 - in the Professional's notification, add an href link to user 
+- mark as read Notifications for Professionals(route already created for this, it needs another single action controller like the one used for User
+- notification when appointment is cancelled 
+
 
 

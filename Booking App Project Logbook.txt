@@ -400,3 +400,11 @@ October 18
 - added notify feature in backend controller for when a user sends a request (notifications are made through this, the list of data is set from the notification config)
 - added frontend and page for Professional notifications
 - fixed a bug where professionals cant view user public profiles and can now view/click them by clicking the User's name in RequestSent notification
+
+October 20
+- fixed an v-if typo where users.id = prof_id in professional notifications
+- added single action controller to mark professional notifications as read
+- added mark as read Notifications for Professionals, middleware auth for a 2nd guard/middleware is kinda buggy so I just wrote an alternative to check if the logged professional is the owner of the clicked notification, the user middleware uses the convenient $this authorize of laravel, and the 2nd policy/controller is not used due to this
+
+October 25
+- 
