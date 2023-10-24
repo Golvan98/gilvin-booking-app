@@ -7,7 +7,7 @@
 
         <div v-for="professional in professionals" class="ml-24">
          <span v-if="professional.id==notification.data.by_professional_id">
-            Request to <strong> {{ professional.first_name }} </strong> was <span class="text-green-500 font-bold"> Accepted </span>
+            Request to <a :href="`viewProfessionalProfile/${professional.id}`"> <strong> {{ professional.first_name }}  </strong> </a> was <span class="text-green-500 font-bold"> Accepted </span>
         </span>
 
         </div>
@@ -18,7 +18,7 @@
 
         <div v-for="professional in professionals" class="ml-24">
          <span v-if="professional.id==notification.data.by_professional_id">
-            Request to <strong> {{ professional.first_name }} </strong> was <span class="text-red-500 font-bold"> Rejected </span> 
+            Request to <a :href="`viewProfessionalProfile/${professional.id}`"> <strong> {{ professional.first_name }}  </strong> </a> was <span class="text-red-500 font-bold"> Rejected </span> 
         </span>
 
         </div>
@@ -29,7 +29,7 @@
 
         <div v-for="professional in professionals" class="ml-24">
          <span v-if="professional.id==notification.data.by_professional_id">
-            Appointment to <strong> {{ professional.first_name }} </strong> <span class="text-red-500 font-bold"> Cancelled </span> 
+            Appointment to <a :href="`viewProfessionalProfile/${professional.id}`"> <strong> {{ professional.first_name }}  </strong> </a> <span class="text-red-500 font-bold"> Cancelled </span> 
         </span>
 
         </div>
