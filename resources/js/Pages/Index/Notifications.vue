@@ -38,11 +38,24 @@
 
       
 
-      <div  v-if="!notification.read_at" class="mr-24 border border-black p-2 bg-indigo-700 text-white font-bold">
-        <Link as="button" method="put" :href="`/notification/${notification.id}/seen`" class="btn-outline text-xs font-medium uppercase">
-          Mark as read
+      <div class="mr-24 p-2 text-white font-bold flex justify-between">
+        <Link v-if="!notification.read_at" as="button" method="put" :href="`/notification/${notification.id}/seen`" class=" bg-indigo-700 p-2 btn-outline font-medium">
+          Mark as Read
         </Link>
+
+        <div v-for="Appointment in Appointments"> 
+          <button v-if="Appointment.id == notification.data.appointment_id"  
+          data-modal-target="viewAppointment" data-modal-toggle="viewAppointment" 
+          class="bg-indigo-700 text-white p-2 ml-4 font-medium">  
+          View Appointment Details 
+          </button>
+          <viewAppointmentModal :Appointment="Appointment" :professionals="professionals"/> 
+          
+        </div>
+
+
       </div>
+      
       
     </div>
 
@@ -59,8 +72,12 @@
 <script setup>
 import Pagination from '@/Pages/Index/Pagination.vue'
 import { Link } from '@inertiajs/vue3'
+import viewAppointmentModal from '@/Pages/Index/Modals/viewAppointmentModal.vue'
+
 defineProps({
   notifications: Object,
-  professionals:Object
+  professionals:Object,
+  Appointments:Object
 })
+
 </script>

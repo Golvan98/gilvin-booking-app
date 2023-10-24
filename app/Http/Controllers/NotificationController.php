@@ -12,18 +12,21 @@ use Laravel\Sanctum\Guard;
 use Illuminate\Pagination\Paginator;
 use Illuminate\Contracts\Auth\Guard as AuthGuard;
 
+use Illuminate\Support\Facades\DB;
+
 class NotificationController extends Controller
 {
     public function notification(Request $request)
     {
-    
+        $userid = auth()->user()->id;
      //   $professionalUser = auth('professional')->user()->notifications()->paginate(10);
      //  dd($professionalUser);
         return inertia(
             'Index/Notifications',
             [
                 'notifications' => $request->user()->notifications()->paginate(10),
-                'professionals' => Professional::all()
+                'professionals' => Professional::all(),
+                'Appointments'  =>  $yawa  = DB::table('appointments')->where('by_user_id', $userid)->get()
             ]
         );
     }

@@ -1,10 +1,16 @@
 CURRENTLY DOING : 
-- Add an href link to the newly made appointment on the RequestAccepted notification (u need to view this somehow)
-- filtering for list of professionals
+- Add an href link to the newly made appointment on the Appointment Cancelled notification
+- Add an href link to the newly made appointment on the Request Accepted notification (v-for appoinntment 
+in appointments notifications, v-for appointmentrequests for appointmentrequests notification)
+- Add an href link to the newly made appointment on the Request Rejected notification
+
+
 
 
 TO DOs
+- filtering for list of professionals
 - Deployment and UI improvements to run side by side (FINAL)
+
 
 Optional Features
 - messaging (optional)
