@@ -1,7 +1,6 @@
 CURRENTLY DOING : 
+- pagination for notifications (should be easy)
 - filtering for list of professionals
-
-
 
 TO DOs
 

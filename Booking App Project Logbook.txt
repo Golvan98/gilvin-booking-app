@@ -413,3 +413,5 @@ October 25
 
 October 26
 - added href links in notifications page to view which appointment was cancelled
+- added href links to view which request was accepted/rejected
+- made a few UI tweaks on notifications page, pagination for notifications page next, then list for professionals
