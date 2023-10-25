@@ -26,7 +26,8 @@ class NotificationController extends Controller
             [
                 'notifications' => $request->user()->notifications()->paginate(10),
                 'professionals' => Professional::all(),
-                'Appointments'  =>  $yawa  = DB::table('appointments')->where('by_user_id', $userid)->get()
+                'Appointments'  =>  DB::table('appointments')->where('by_user_id', $userid)->get(),
+                'AppointmentRequests' => DB::table('appointment_requests')->where('by_user_id', $userid)->get()
             ]
         );
     }

@@ -409,4 +409,7 @@ October 20
 October 25
 - added AppointmentCancelled notification where a user is notified if an appointment was cancelled, also improved UI to easier see if the notification is accepted/cancelled
 - added href on notifications to view user/professional profile
-- made adjustments in notifications page wherein view detail buttons render regardless if notification is read or not read, AND added view appointmentmodal
+- made adjustments in notifications page wherein view detail buttons render regardless if notification is read or not read, AND added view appointmentmodal, (needs the @button click value)
+
+October 26
+- added href links in notifications page to view which appointment was cancelled

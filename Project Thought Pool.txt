@@ -1,14 +1,10 @@
 CURRENTLY DOING : 
-- Add an href link to the newly made appointment on the Appointment Cancelled notification
-- Add an href link to the newly made appointment on the Request Accepted notification (v-for appoinntment 
-in appointments notifications, v-for appointmentrequests for appointmentrequests notification)
-- Add an href link to the newly made appointment on the Request Rejected notification
-
+- filtering for list of professionals
 
 
 
 TO DOs
-- filtering for list of professionals
+
 - Deployment and UI improvements to run side by side (FINAL)
 
 
@@ -66,6 +62,10 @@ where the page refreshes after you click "mark as read" (nope, just a redirect a
 - in the Professional's notification, add an href link to user 
 - mark as read Notifications for Professionals(route already created for this, it needs another single action controller like the one used for User
 - notification when appointment is cancelled 
+- add a view appointment option for each appointment notification
+- Add an href link to the newly made appointment on the Request Accepted notification (v-for appoinntment 
+- Add an href link to the newly made appointment on the Request Rejected notification
+
 
 
 

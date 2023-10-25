@@ -40,16 +40,28 @@
 
       <div class="mr-24 p-2 text-white font-bold flex justify-between">
         <Link v-if="!notification.read_at" as="button" method="put" :href="`/notification/${notification.id}/seen`" class=" bg-indigo-700 p-2 btn-outline font-medium">
-          Mark as Read
+          Mark as Read 
         </Link>
 
         <div v-for="Appointment in Appointments"> 
-          <button v-if="Appointment.id == notification.data.appointment_id"  
+
+          <button @click="selectAppointment(Appointment)" v-if="Appointment.id == notification.data.appointment_id"  
           data-modal-target="viewAppointment" data-modal-toggle="viewAppointment" 
           class="bg-indigo-700 text-white p-2 ml-4 font-medium">  
           View Appointment Details 
           </button>
-          <viewAppointmentModal :Appointment="Appointment" :professionals="professionals"/> 
+          <viewAppointmentModal :Appointment="selectedAppointment" :professionals="professionals"/> 
+
+        </div>
+
+        <div v-for="AppointmentRequest in AppointmentRequests"> 
+          
+          <button @click="selectAppointmentRequest(AppointmentRequest)" v-if="AppointmentRequest.id == notification.data.appointment_request_id"  
+          data-modal-target="viewAppointmentRequestModal" data-modal-toggle="viewAppointmentRequestModal" 
+          class="bg-indigo-700 text-white p-2 ml-4 font-medium">  
+          View Request Details 
+          </button>
+          <viewAppointmentRequestModal :AppointmentRequest="selectedAppointmentRequest" :professionals="professionals"/>
           
         </div>
 
@@ -73,11 +85,28 @@
 import Pagination from '@/Pages/Index/Pagination.vue'
 import { Link } from '@inertiajs/vue3'
 import viewAppointmentModal from '@/Pages/Index/Modals/viewAppointmentModal.vue'
+import viewAppointmentRequestModal from '@/Pages/Index/Modals/viewAppointmentRequestModal.vue'
+import { ref } from 'vue'
+
+const selectedAppointment = ref(null);
+
+function selectAppointment(Appointment)
+{
+  selectedAppointment.value = Appointment
+}
+
+const selectedAppointmentRequest = ref(null);
+
+function selectAppointmentRequest(AppointmentRequest)
+{
+  selectedAppointmentRequest.value = AppointmentRequest
+}
 
 defineProps({
   notifications: Object,
   professionals:Object,
-  Appointments:Object
+  Appointments:Object,
+  AppointmentRequests:Object
 })
 
 </script>
