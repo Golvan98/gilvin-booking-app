@@ -1,5 +1,4 @@
 CURRENTLY DOING : 
-- modal to view request from notifications page
 - filtering for list of professionals
 
 TO DOs
@@ -65,6 +64,7 @@ where the page refreshes after you click "mark as read" (nope, just a redirect a
 - Add an href link to the newly made appointment on the Request Accepted notification (v-for appoinntment 
 - Add an href link to the newly made appointment on the Request Rejected notification
 - pagination for notifications (should be easy)
+- modal to view request from notifications page
 
 
 

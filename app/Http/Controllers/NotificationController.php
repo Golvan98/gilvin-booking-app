@@ -43,7 +43,8 @@ class NotificationController extends Controller
             [
                 'notifications'  => auth('professional')->user()->notifications()->paginate(6),
                 'users' => User::all() ,
-                'AppointmentRequests' => DB::table('appointment_requests')->where('by_professional_id', $professionalId)->get()
+                'AppointmentRequests' => DB::table('appointment_requests')->where('by_professional_id', $professionalId)->get(),
+                'professionals' => Professional::all(),
             ]
             );
     }
