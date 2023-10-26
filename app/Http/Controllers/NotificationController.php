@@ -11,6 +11,7 @@ use Illuminate\Notifications\Notifiable;
 use Laravel\Sanctum\Guard;
 use Illuminate\Pagination\Paginator;
 use Illuminate\Contracts\Auth\Guard as AuthGuard;
+use App\models\AppointmentRequest;
 
 use Illuminate\Support\Facades\DB;
 
@@ -35,12 +36,14 @@ class NotificationController extends Controller
     public function professionalNotifications(Professional $professional, Request $request)
     {   
 
+        $professionalId = auth('professional')->user()->id;
      
         return inertia(
                 'Index/professionalNotifications',
             [
-                'notifications'  => auth('professional')->user()->notifications()->paginate(10),
-                'users' => User::all() 
+                'notifications'  => auth('professional')->user()->notifications()->paginate(6),
+                'users' => User::all() ,
+                'AppointmentRequests' => DB::table('appointment_requests')->where('by_professional_id', $professionalId)->get()
             ]
             );
     }

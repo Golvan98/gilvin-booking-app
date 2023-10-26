@@ -1,4 +1,5 @@
 CURRENTLY DOING : 
+- modal to view request from notifications page
 - filtering for list of professionals
 
 TO DOs

@@ -418,3 +418,5 @@ October 25
 
 October 26
 - added pagination link for notifications for users
+- added paginatinon link for notifications for professionals
+- added view request button (Front-end) for each professional's new request notification
