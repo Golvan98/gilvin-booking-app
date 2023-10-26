@@ -406,12 +406,15 @@ October 20
 - added single action controller to mark professional notifications as read
 - added mark as read Notifications for Professionals, middleware auth for a 2nd guard/middleware is kinda buggy so I just wrote an alternative to check if the logged professional is the owner of the clicked notification, the user middleware uses the convenient $this authorize of laravel, and the 2nd policy/controller is not used due to this
 
-October 25
+October 24
 - added AppointmentCancelled notification where a user is notified if an appointment was cancelled, also improved UI to easier see if the notification is accepted/cancelled
 - added href on notifications to view user/professional profile
 - made adjustments in notifications page wherein view detail buttons render regardless if notification is read or not read, AND added view appointmentmodal, (needs the @button click value)
 
-October 26
+October 25
 - added href links in notifications page to view which appointment was cancelled
 - added href links to view which request was accepted/rejected
 - made a few UI tweaks on notifications page, pagination for notifications page next, then list for professionals
+
+October 26
+- added pagination link for notifications for users

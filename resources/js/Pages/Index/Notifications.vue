@@ -71,6 +71,10 @@
       
     </div>
 
+    <div v-if="notifications.data.length" class="w-full flex justify-center mt-8 mb-8" preserve-state>
+      <Pagination :links="notifications.links" />
+    </div>
+
     
   </section>
 
