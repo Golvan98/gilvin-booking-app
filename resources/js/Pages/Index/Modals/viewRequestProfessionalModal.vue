@@ -21,12 +21,13 @@
             <div v-if="AppointmentRequest && AppointmentRequest.by_user_id == user.id" class="h-1/2 flex items-center justify-center"> Consultee: {{ user.first_name }}</div>
           </div> 
 
-          <div v-if="AppointmentRequest" class="h-1/6 z-1 mt-4 flex items-center justify-between">
+          <div class="h-1/6 z-1 mt-4 flex items-center justify-between">
               <button data-modal-hide="viewRequestProfessionalModal" class="bg-indigo-700 text-white px-2 py-1 rounded-sm ml-2"> Close </button>
-              <a :href="`rejectRequest/${AppointmentRequest.id}`"> <button  class="mr-2 px-2 py-1 bg-red-700 text-white rounded-sm"> Reject Request </button> </a>
-              <a :href="`approveRequest/${AppointmentRequest.id}`"> <button class="mr-2 px-2 py-1 bg-blue-700 text-white rounded-sm"> Accept Request </button> </a>
-        
-            </div>
+              <a v-if="AppointmentRequest" :href="`rejectRequest/${AppointmentRequest.id}`"> <button  class="mr-2 px-2 py-1 bg-red-700 text-white rounded-sm"> Reject Request </button> </a>
+              <a v-if="AppointmentRequest" :href="`approveRequest/${AppointmentRequest.id}`"> <button class="mr-2 px-2 py-1 bg-blue-700 text-white rounded-sm"> Accept Request </button> </a>
+          </div>
+
+
       </div>
   
   </div>
@@ -38,10 +39,11 @@
  import { router } from '@inertiajs/vue3';
     import { ref } from 'vue'
     import { defineProps } from 'vue';
-    
-    defineProps({
+
+
+    const props = defineProps (
+      { 
         AppointmentRequest: Object,
         users:Object,
-     
-    })
+      })
 </script>
