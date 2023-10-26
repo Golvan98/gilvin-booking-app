@@ -23,7 +23,7 @@
             </div> 
     
             <div class="h-1/6 z-1 mt-4 flex items-center justify-center">
-                <button data-modal-hide="viewAppointment" class="bg-red-700 text-white px-4 rounded-sm"> Close </button>
+                <button data-modal-hide="viewAppointmentRequestModal" class="bg-red-700 text-white px-4 rounded-sm"> Close </button>
             </div>
         </div>
     

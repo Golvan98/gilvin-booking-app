@@ -21,11 +21,13 @@
             </Link>
 
             <div v-for="AppointmentRequest in AppointmentRequests">
+
              <button v-if="AppointmentRequest.id == notification.data.appointment_request_id" @click="selectAppointmentRequest(AppointmentRequest)" 
              data-modal-target="viewRequestProfessionalModal" data-modal-toggle="viewRequestProfessionalModal" class="bg-indigo-700 font-bold text-xs p-2 mr-12">
              View Request
              </button>
              <viewRequestProfessionalModal :AppointmentRequest="selectedAppointmentRequest" :users="users"/>
+             
             </div>
             
           
