@@ -4,20 +4,22 @@
 
   <div class="bg-white row-start-2 row-end-6 col-start-2 col-end-6 grid grid-cols-6 grid-rows-6 items-center justify-center h-full w-full rounded-xl">
       
-      <form class="row-span-1 bg-inherit col-start-2 col-end-6 flex-nowrap mt-12"> 
+      <form @submit.prevent="filter" class="row-span-1 bg-inherit col-start-2 col-end-6 flex-nowrap mt-12"> 
 
            <div class="w-full bg-white h-full py-4 font-bold text-2xl">   𝐔𝐬𝐞𝐫𝐬 </div> 
 
            <div class="w-full bg-white h-full flex justify-between items-center"> 
-              <div class="w-2/6"> <input type="text" placeholder="Search bar here">  </div>
+              <div class="w-2/6"> 
+              <input v-model="filterForm.first_name" name="first_name" id="first_name" type="text"  placeholder="Search bar here">  </div>
               <div class="w-auto bg-red-300">  </div>
-              <div class="w-auto bg-red-300"> </div>
+              <div class="w-auto bg-red-300"> </div>  
               <div class="w-auto bg-red-300"> </div>
               <div class="w-auto bg-red-300"> </div>
 
               <div class="w-auto bg-white flex items-center">
                 <label for="Profession" class="mr-2"> Sort by: </label>
-                <select name="Profession" id="Profession">
+                <select 
+                v-model="filterForm.profession" name="profession" id="profession">
                   <option value="Legal"> None </option>
                   <option value="Legal"> Lawyer </option>
                   <option value="Medicine"> Doctor </option>
@@ -31,7 +33,7 @@
 
               <div class="bg-white">
                 <button class="bg-white text-black hover:bg-gray-500 hover:text-white font-medium p-2 rounded-md"> Submit </button>
-                <button type="reset" class="bg-white text-black hover:bg-gray-500 hover:text-white font-medium p-2 rounded-md" >Clear</button>
+                <button type="reset" @click="clear" class="bg-white text-black hover:bg-gray-500 hover:text-white font-medium p-2 rounded-md" >Clear</button>
               </div>
             </div> 
 
@@ -107,7 +109,8 @@
 import Pagination from '@/Pages/Index/Pagination.vue'
 import SendRequestModal from '@/Pages/Index/Modals/SendRequestModal.vue'
 import { ref } from 'vue'
-
+import { useForm } from '@inertiajs/vue3'
+import { router } from '@inertiajs/vue3'
 
 const selectedProfessional = ref(null);
 
@@ -115,10 +118,32 @@ function createRequestModal(Professional)
 {
   selectedProfessional.value = Professional
 }
-
-const props = defineProps ({
-    Professionals:Object
+const filterForm = useForm({
+  first_name:  null,
+  profession:  null
 })
+const props = defineProps ({
+ 
+    Professionals:Object,
+    
+})
+
+const filter = () => {
+  filterForm.get(
+    router('show.professionals'),
+    {
+      preserveState: true,
+      preserveScroll: true,
+    },
+  )
+}
+
+const clear = () => {
+  filterForm.first_name = null
+  filterForm.profession = null
+
+  filter()
+}
 
 </script>
 

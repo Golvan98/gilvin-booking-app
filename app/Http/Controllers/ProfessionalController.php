@@ -153,13 +153,28 @@ class ProfessionalController extends Controller
             ]);
         }
 
-        public function showProfessionals()
+        public function showProfessionals(Request $request)
         {
+
+
+            $filters = $request->only([
+                'first_name', 'profession'
+            ]);
+            $query = Professional::orderByDesc('created_at');
+
+            if ($filters['first_name'] ?? false) {
+                $query->where('first_name', 'LIKE', $filters['first_name'] . '%');
+            }
+
             return inertia('Index/Professionals',
             [
-                'Professionals' => DB::table('professionals')->paginate(6)
+                'filters' => $filters,
+                'Professionals' => $query->paginate(10)
+                ->withQueryString()
             ]
              );
+
+             
         }
         
 
