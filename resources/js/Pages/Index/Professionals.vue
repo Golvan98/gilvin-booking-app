@@ -4,7 +4,7 @@
 
   <div class="bg-white row-start-2 row-end-6 col-start-2 col-end-6 grid grid-cols-6 grid-rows-6 items-center justify-center h-full w-full rounded-xl">
       
-      <div class="row-span-1 bg-inherit col-start-2 col-end-6 flex-nowrap mt-12"> 
+      <form class="row-span-1 bg-inherit col-start-2 col-end-6 flex-nowrap mt-12"> 
 
            <div class="w-full bg-white h-full py-4 font-bold text-2xl">   𝐔𝐬𝐞𝐫𝐬 </div> 
 
@@ -19,15 +19,23 @@
                 <label for="Profession" class="mr-2"> Sort by: </label>
                 <select name="Profession" id="Profession">
                   <option value="Legal"> None </option>
-                  <option value="Legal"> Legal Services </option>
-                  <option value="Medicine"> Medical </option>
-                  <option value="Engineering"> Engineering </option>
-                  <option value="Information Technology"> IT Services and Consulting </option>
+                  <option value="Legal"> Lawyer </option>
+                  <option value="Medicine"> Doctor </option>
+                  <option value="Engineering"> Engineer </option>
+                  <option value="Information Technology"> Accountant </option>
+                  <option value="Legal"> IT </option>
+                  <option value="Legal"> Tutor </option>
+                  <option value="Legal"> Professor </option>
                 </select>
+              </div>
+
+              <div class="bg-white">
+                <button class="bg-white text-black hover:bg-gray-500 hover:text-white font-medium p-2 rounded-md"> Submit </button>
+                <button type="reset" class="bg-white text-black hover:bg-gray-500 hover:text-white font-medium p-2 rounded-md" >Clear</button>
               </div>
             </div> 
 
-        </div> 
+        </form> 
 
         <div class="row-span-5 bg bg-white row-start-3 row-end-6 w-full col-start-2 col-end-6 h-full grid grid-cols-6 grid-rows-6rounded-xl">
             

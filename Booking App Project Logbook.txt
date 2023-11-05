@@ -420,3 +420,9 @@ October 26
 - added pagination link for notifications for users
 - added paginatinon link for notifications for professionals
 - added view request button (Front-end) for each professional's new request notification
+- added a backend and front-end for viewing requests from professional's notification page
+- professionals can now reject and accept requests from notifications page, close button doesnt work for the modal for some reason though
+- fixed close button not working, it seems v-if="AppointmentRequest" blocks the close button, it constantly checks if AppointmentRequest exists thus the modal persists
+
+November 5
+- 
