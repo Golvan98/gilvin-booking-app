@@ -4,40 +4,7 @@
 
   <div class="bg-white row-start-2 row-end-6 col-start-2 col-end-6 grid grid-cols-6 grid-rows-6 items-center justify-center h-full w-full rounded-xl">
       
-      <form @submit.prevent="filter" class="row-span-1 bg-inherit col-start-2 col-end-6 flex-nowrap mt-12"> 
-
-           <div class="w-full bg-white h-full py-4 font-bold text-2xl">   𝐔𝐬𝐞𝐫𝐬 </div> 
-
-           <div class="w-full bg-white h-full flex justify-between items-center"> 
-              <div class="w-2/6"> 
-              <input v-model="filterForm.first_name" name="first_name" id="first_name" type="text"  placeholder="Search bar here">  </div>
-              <div class="w-auto bg-red-300">  </div>
-              <div class="w-auto bg-red-300"> </div>  
-              <div class="w-auto bg-red-300"> </div>
-              <div class="w-auto bg-red-300"> </div>
-
-              <div class="w-auto bg-white flex items-center">
-                <label for="Profession" class="mr-2"> Sort by: </label>
-                <select 
-                v-model="filterForm.profession" name="profession" id="profession">
-                  <option value="Legal"> None </option>
-                  <option value="Legal"> Lawyer </option>
-                  <option value="Medicine"> Doctor </option>
-                  <option value="Engineering"> Engineer </option>
-                  <option value="Information Technology"> Accountant </option>
-                  <option value="Legal"> IT </option>
-                  <option value="Legal"> Tutor </option>
-                  <option value="Legal"> Professor </option>
-                </select>
-              </div>
-
-              <div class="bg-white">
-                <button class="bg-white text-black hover:bg-gray-500 hover:text-white font-medium p-2 rounded-md"> Submit </button>
-                <button type="reset" @click="clear" class="bg-white text-black hover:bg-gray-500 hover:text-white font-medium p-2 rounded-md" >Clear</button>
-              </div>
-            </div> 
-
-        </form> 
+      <Filters :filters="filters" :Professionals="Professionals"/>
 
         <div class="row-span-5 bg bg-white row-start-3 row-end-6 w-full col-start-2 col-end-6 h-full grid grid-cols-6 grid-rows-6rounded-xl">
             
@@ -111,7 +78,7 @@ import SendRequestModal from '@/Pages/Index/Modals/SendRequestModal.vue'
 import { ref } from 'vue'
 import { useForm } from '@inertiajs/vue3'
 import { router } from '@inertiajs/vue3'
-
+import Filters from '@/Pages/Index/Filters.vue'
 const selectedProfessional = ref(null);
 
 function createRequestModal(Professional)
@@ -123,27 +90,11 @@ const filterForm = useForm({
   profession:  null
 })
 const props = defineProps ({
- 
+  filters: Object,
     Professionals:Object,
     
 })
 
-const filter = () => {
-  filterForm.get(
-    router('show.professionals'),
-    {
-      preserveState: true,
-      preserveScroll: true,
-    },
-  )
-}
-
-const clear = () => {
-  filterForm.first_name = null
-  filterForm.profession = null
-
-  filter()
-}
 
 </script>
 

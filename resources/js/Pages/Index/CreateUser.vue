@@ -115,7 +115,7 @@
 {
         router.post('register.user', form)
 }
-    const register = () => form.post(route('register.user'))
+   // const register = () => form.post(route('register.user'))
     
     
     </script>

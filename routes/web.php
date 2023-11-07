@@ -90,6 +90,9 @@ Route::post('/addservice', [ProfessionalController::class, 'addService'])->name(
 Route::post('/uploadProfilePic/{professional}', [ProfessionalController::class, 'uploadProfilePic'])->name('upload.profile');
 Route::get('/Professionals', [ProfessionalController::class, 'showProfessionals'])->name('show.professionals');
 
+
+Route::get('/Professionals', [ProfessionalController::class, 'showProfessionals'])->name('filter.professionals');
+
 Route::get('/test/{professional}', [IndexController::class, 'test'])->name('test');
 
 Route::post('/bioEdit', [ProfessionalController::class, 'bioEdit'])->name('bioEdit');

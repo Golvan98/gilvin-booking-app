@@ -426,3 +426,4 @@ October 26
 
 November 5
 - made some changes to selection page and buttons on filtering page's front-end	
+- added filtering but has a routing syntax issue, will try to copy udemy's example word for word and see if syntax issue still persists
