@@ -1,8 +1,8 @@
 CURRENTLY DOING : 
-- filtering for list of professionals
+- Deployment and UI improvements to run side by side (FINAL)
 
 TO DOs
-- Deployment and UI improvements to run side by side (FINAL)
+
 
 
 Optional Features
@@ -64,6 +64,7 @@ where the page refreshes after you click "mark as read" (nope, just a redirect a
 - Add an href link to the newly made appointment on the Request Rejected notification
 - pagination for notifications (should be easy)
 - modal to view request from notifications page
+- filtering for list of professionals
 
 
 

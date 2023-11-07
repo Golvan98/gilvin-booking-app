@@ -13,9 +13,7 @@
         </div>
         
         <div class="text-xl mt-6 text-white dark:text-indigo-300 font-bold text-center flex justify-between">
-          <div>Services  ▼ </div>
-          <div class="ml-4"> Professionals ▼ </div>
-          <div class="ml-4"> Pricing </div>
+         <!-- This is the center part of the header, left it here just in case I'll need it some time in the future when doing UI improvements -->
         </div>
 
         <div class="w-1/3 flex justify-center gap-4 mt-6">
