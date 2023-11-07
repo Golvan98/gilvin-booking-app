@@ -17,13 +17,13 @@
      <label for="profession" class="mr-2"> Sort by: </label>
      <select 
      v-model="filterForm.profession" name="profession" id="profession">
-       <option value="Legal"> Lawyer </option>
-       <option value="Medicine"> Doctor </option>
-       <option value="Engineering"> Engineer </option>
-       <option value="Information Technology"> Accountant </option>
-       <option value="Legal"> IT </option>
-       <option value="Legal"> Tutor </option>
-       <option value="Legal">  Misc </option>
+       <option value="Legal"> Legal </option>
+       <option value="Doctor"> Doctor </option>
+       <option value="Engineer"> Engineer </option>
+       <option value="Accountant"> Accountant </option>
+       <option value="IT"> IT </option>
+       <option value="Tutor"> Tutor </option>
+       <option value="Misc">  Misc </option>
      </select>
    </div>
 
@@ -68,9 +68,11 @@ const filterForm = useForm({
 } */
 
 
-function filter()
-{
-        router.get('Professionals', filterForm)
+function filter() {
+  router.get('Professionals', filterForm, {
+    preserveState: true, // Add the preserveState option
+    preserveScroll: true, // Optionally, you can add the preserveScroll option as well
+  });
 }
 
 const clear = () => {
