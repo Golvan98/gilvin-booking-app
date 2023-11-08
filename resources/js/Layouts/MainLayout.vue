@@ -75,13 +75,13 @@
 
         <div class="w-1/2 h-full flex items-center justify-between">
           <div class="w-3/4 h-full flex justify-between ml-12">
-
+            
            <div class="w-1/3 mt-8 ml-12 text-white h-1/3">
-            <span>Discord </span>  
+            <a href="https://www.reddit.com/user/AstronomerStandard" target="blank"><span> Reddit </span> </a>
              <br> 
-             <span>Reddit </span>  
+             <a href="https://discord.com/users/Golvan#2381" target="blank"> <span>Discord </span> </a> 
              <br> 
-             <span>Steam </span>  
+            <a href="https://steamcommunity.com/profiles/76561198883444842" target="blank"><span>Steam </span> </a>
            </div>
 
            <div class="w-1/3 h-1/3 mt-8 ml-12 text-white"> 
@@ -89,7 +89,9 @@
            </div>
 
            <div class="w-1/3  h-1/3 mt-8 ml-12 text-white">
-            About Us <br> Github Profile <br> Linkedin
+             <a href="https://github.com/Golvan98" target="blank"> <span> Github </span> </a>
+             <br> 
+             <a href="https://www.linkedin.com/in/gilvin-zalsos-213692141/" target="blank"> <span> Linkedin </span> </a>
            </div>
 
           </div>
@@ -103,12 +105,10 @@
           <div class="mt-6 flex justify-between items-start"> 
             <div></div> 
             <div></div> 
-            <a href="#"> <div class="fa fa-facebook">   </div> </a>
-            <a href="#"> <div class="fa fa-twitter">    </div> </a>
-            <a href="#"> <div class="fa fa-linkedin">   </div> </a>
-            <a href="#"> <div class="fa fa-instagram">  </div> </a> 
-            <a href="#"> <div class="fa fa-youtube">    </div> </a>
-            <div></div>
+            <a href="https://www.facebook.com/gilvin.zalsos" target="blank"> <div class="fa fa-facebook">   </div> </a>
+            <a href="https://twitter.com/GelvenZolsos" target="blank"> <div class="fa fa-twitter">    </div> </a>
+            <a href="https://www.linkedin.com/in/gilvin-zalsos-213692141/" target="blank"> <div class="fa fa-linkedin">   </div> </a>
+            <a href="https://www.instagram.com/realgilvinz/" target="blank"> <div class="fa fa-instagram">  </div> </a> 
             <div></div>
             <div></div>
           </div>

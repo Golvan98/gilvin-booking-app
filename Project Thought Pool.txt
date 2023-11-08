@@ -1,9 +1,14 @@
 CURRENTLY DOING : 
-- Deployment and UI improvements to run side by side (FINAL)
+Current Phase: Deployment and UI improvements to run side by side (FINAL)
 
-TO DOs
-- it seems UI improvements are ur main focus for today.
+- welp, cant register to heroku for some reason, until u find a source for deployment, it's all UI imrpovements for today
 
+
+Current UI Task
+- when clicking law/engineering/medical, visit this professionals page with preloaded filters
+
+UI DONE
+- working href links, and trimmed homepage content
 
 
 Optional Features
