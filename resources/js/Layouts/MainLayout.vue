@@ -77,15 +77,19 @@
           <div class="w-3/4 h-full flex justify-between ml-12">
 
            <div class="w-1/3 mt-8 ml-12 text-white h-1/3">
-             Community <br> Discord <br> Reddit <br> Github <br> Guide  
+            <span>Discord </span>  
+             <br> 
+             <span>Reddit </span>  
+             <br> 
+             <span>Steam </span>  
            </div>
 
            <div class="w-1/3 h-1/3 mt-8 ml-12 text-white"> 
-            Trending Services <br> Software Development <br> Legal Services <br> Medicine <br> Graphic Design <br> Marketing 
+          Software Development <br> Legal Services <br> Medicine <br> Graphic Design <br> Marketing 
            </div>
 
            <div class="w-1/3  h-1/3 mt-8 ml-12 text-white">
-            About Us <br> Open Source <br> Github Profile <br> Contact Us <br>  
+            About Us <br> Github Profile <br> Linkedin
            </div>
 
           </div>
