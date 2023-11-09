@@ -55,9 +55,9 @@ class UserController extends Controller
     {
      //  dd($request->first_name);
         $data = $request->validate([
-            'first_name' => 'required|min:2|max:20',
-            'last_name' => 'required|min:2|max:20',
-            'email' => 'required|string|email|unique:users',
+            'first_name' => 'nullable|min:2|max:20',
+            'last_name' => 'nullable|min:2|max:20',
+            'email' => 'required|string|email|unique:users' . $user->id,
         ]);
        $user = auth()->user();
 

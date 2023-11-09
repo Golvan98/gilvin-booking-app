@@ -435,3 +435,5 @@ November 7
 
 November 8
 - registered to forge and digital ocean, needs card to deploy, tried Heroku but failed due to some issues, will try to register again tomorrow
+- trimmed homepage content
+- working href links, and trimmed homepage content

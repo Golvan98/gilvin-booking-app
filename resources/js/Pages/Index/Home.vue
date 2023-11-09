@@ -28,7 +28,7 @@
                     </div>
 
                     <div class=" w-full pt-4 font-bold text-3xl flex-nowrap">
-                      <Link href="/Professionals"> <button class="shadow-2xl bg-white text-2xl font-bold rounded-xl h-16 w-96"> Available Professionals now  </button> </Link>
+                      <Link href="/Professionals"> <button class="shadow-2xl bg-white text-2xl font-bold rounded-xl h-16 w-96 hover:bg-green-500 hover:text-white"> Available Professionals now  </button> </Link>
                     </div>
 
                 </div>
@@ -48,17 +48,17 @@
 
                 <div class="w-full h-3/5 bg-white flex items-center justify-between">
 
-                     <div class=" w-full h-full flex items-center justify-center"> 
-                        <img class="object-fill w-2/4 h-full " src="/storage/law.png"> 
-                     </div>
+                    <Link href="Professionals"  class=" w-full h-full flex items-center justify-center"> 
+                      <img class="object-fill w-2/4 h-full " src="/storage/law.png">
+                    </Link>
 
-                     <div class=" w-full h-full flex items-center justify-center"> 
+                    <Link href="Professionals"  class=" w-full h-full flex items-center justify-center"> 
                         <img class="object-fill w-2/4 h-full " src="/storage/engineering.png"> 
-                     </div>
+                    </Link>
                      
-                     <div class=" w-full h-full flex items-center justify-center"> 
+                    <Link href="Professionals"  class=" w-full h-full flex items-center justify-center"> 
                         <img class="object-fill w-2/4 h-full " src="/storage/medicine.png"> 
-                     </div>
+                    </Link>
 
                 </div>
         </div> 
