@@ -33,7 +33,7 @@
 
                     <div class="flex justify-between">
 
-                      <button @click="createRequestModal(Professionals)" data-modal-target="request-modal" data-modal-toggle="request-modal" class="mt-8 mr-2 text-xs text-black font-bold rounded-lg border p-0.5"> Send Request </button>
+                      <button @click="createRequestModal(Professionals); toggleModal()" data-modal-target="request-modal" data-modal-toggle="request-modal" class="mt-8 mr-2 text-xs text-black font-bold rounded-lg border p-0.5"> Send Request </button>
                       <SendRequestModal :Professionals="Professionals" :Professional="selectedProfessional"/>
                       <a :href="`/viewProfessionalProfile/${Professionals.id}`" target="_blank"> <button class="mt-8 text-xs text-black font-bold rounded-lg border p-0.5"> View Profile </button> </a>
                    
@@ -81,6 +81,8 @@ import { router } from '@inertiajs/vue3'
 import Filters from '@/Pages/Index/Filters.vue'
 const selectedProfessional = ref(null);
 
+
+
 function createRequestModal(Professional)
 {
   selectedProfessional.value = Professional
@@ -92,8 +94,16 @@ const filterForm = useForm({
 const props = defineProps ({
   filters: Object,
     Professionals:Object,
-    
 })
+
+const toggleModal = () => {
+  const modal = document.getElementById('request-modal');
+  if (modal) {
+    modal.classList.toggle('hidden');
+  }
+};
+
+
 
 
 </script>
@@ -108,5 +118,6 @@ const props = defineProps ({
     margin-left: 25%;
     margin-right: 25%;
   }
+  
 
   </style>

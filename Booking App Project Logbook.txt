@@ -437,3 +437,6 @@ November 8
 - registered to forge and digital ocean, needs card to deploy, tried Heroku but failed due to some issues, will try to register again tomorrow
 - trimmed homepage content
 - working href links, and trimmed homepage content
+
+November 9
+- added hover features for login/register/logout buttons
