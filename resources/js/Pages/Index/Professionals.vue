@@ -34,7 +34,7 @@
                     <div class="flex justify-between">
 
                       <button @click="createRequestModal(Professionals); toggleModal()" data-modal-target="request-modal" data-modal-toggle="request-modal" class="mt-8 mr-2 text-xs text-black font-bold rounded-lg border p-0.5"> Send Request </button>
-                      <SendRequestModal :Professionals="Professionals" :Professional="selectedProfessional"/>
+                      <SendRequestModal v-if="yawa" :Professionals="Professionals" :Professional="selectedProfessional"/>
                       <a :href="`/viewProfessionalProfile/${Professionals.id}`" target="_blank"> <button class="mt-8 text-xs text-black font-bold rounded-lg border p-0.5"> View Profile </button> </a>
                    
                     </div>
@@ -81,7 +81,7 @@ import { router } from '@inertiajs/vue3'
 import Filters from '@/Pages/Index/Filters.vue'
 const selectedProfessional = ref(null);
 
-
+const yawa = ref(null);
 
 function createRequestModal(Professional)
 {
@@ -98,6 +98,7 @@ const props = defineProps ({
 
 const toggleModal = () => {
   const modal = document.getElementById('request-modal');
+  yawa.value = true
   if (modal) {
     modal.classList.toggle('hidden');
   }
@@ -109,6 +110,15 @@ const toggleModal = () => {
 </script>
 
 <style>
+
+#request-modal {
+    /* Existing styles */
+    background-color: rgba(255, 255, 255, 0.1); /* Set background color to semi-transparent white */
+    display:flex;
+    align-items: center;
+    justify-content: center;
+  }
+
   .my-25-percent {
     margin-top: 25%;
     margin-bottom: 25%;

@@ -439,4 +439,8 @@ November 8
 - working href links, and trimmed homepage content
 
 November 9
-- added hover features for login/register/logout buttons
+- added hover features for login/register/logout buttons`
+- (UI Improvement) made modals appear on first try, but doesnt close and is placed wrongly when opened
+
+November 10
+- heroku failed to register again, will try iit email with cache reset next time
