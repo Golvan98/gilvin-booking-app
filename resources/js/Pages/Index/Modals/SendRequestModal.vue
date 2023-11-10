@@ -1,6 +1,6 @@
 <template>
 
-<div id="request-modal" class="hidden z-50 fixed inset-0 overflow-x-hidden overflow-y-auto rounded-lg">
+<div id="request-modal" class="hidden z-50 fixed inset-0 overflow-y-auto rounded-lg">
 
     <form @submit.prevent="sendRequest" class="flex-nowrap h-auto w-1/4 bg-white rounded-lg px-12 py-4 ">
 
@@ -67,8 +67,6 @@ import { router } from '@inertiajs/vue3';
 import { useForm } from '@inertiajs/vue3'
 import { defineProps } from 'vue';
 import { ref } from 'vue'
-
-
 
 
 const props = defineProps(['Professional']);

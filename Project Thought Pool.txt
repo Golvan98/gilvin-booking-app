@@ -6,6 +6,7 @@ Current Phase: Deployment and UI improvements to run side by side (FINAL)
 
 Current UI Task
 - when clicking law/engineering/medical, visit this professionals page with preloaded filters
+- modal issue reference for a fix that might work https://github.com/themesberg/flowbite/issues/160
 
 UI DONE
 - working href links, and trimmed homepage content
