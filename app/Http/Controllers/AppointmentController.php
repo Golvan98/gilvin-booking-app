@@ -20,4 +20,5 @@ class AppointmentController extends Controller
         
        return redirect()->back()->with('success', 'appointment cancelled');
     }
+    
 }

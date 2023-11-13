@@ -444,3 +444,9 @@ November 9
 
 November 10
 - heroku failed to register again, will try iit email with cache reset next time
+- modal is now centered when opened on first ry, but cancel button doesnt work, need more workarounds with vuejs
+- scrapped current modal fix, will try a thread next time.
+
+November 11
+- Heroku still failed, heroku sign in attempts will be frequent from now on
+- established routes for testpage, for further testing on auto UI size changing based on screen size

@@ -1,7 +1,6 @@
 <template>
 
-thisi s UI test page
-
+Hello testpage here
 
 </template>
 

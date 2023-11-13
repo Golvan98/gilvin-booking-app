@@ -24,5 +24,10 @@ class Controller extends BaseController
         return inertia('Index/Register');
     }
 
+
+    public function testpage()
+    {
+        return inertia('Index/UITestPage');
+    }
   
 }

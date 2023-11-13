@@ -54,6 +54,7 @@ Route::get('/home', [IndexController::class, 'index'])->name('home');
 //Route::get('/show', [IndexController::class, 'yawa']);
 
 Route::get('/login', [Controller::class, 'login'])->name('login');
+Route::get('/testpage', [Controller::class, 'testpage'])->name('test.page');
 
 Route::get('/createUser', [AuthController::class, 'createUser'])
 ->name('create-user');
