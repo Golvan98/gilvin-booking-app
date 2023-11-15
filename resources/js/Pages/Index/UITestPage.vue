@@ -37,10 +37,12 @@
   </div>
 
   <div id="profileContent" class="col-span-4 row-span-6 bg-red-300 grid grid-cols-2 grid-rows-6">
+<!-- u put md:size around here, flex centers wont matter I think -->
+      <div id="profilePic" class="bg-green-300 col-span-2 row-span-4 border border-red-300 items-center justify-center flex">
 
-      <div id="profilePic" class="bg-green-300 col-span-2 row-span-4">
-
-
+        <div class="w-1/3 h-3/5 bg-green-400">
+         hehe
+        </div>
       </div>
 
       <div id="shortDescription" class="col-span-1 row-span-1 bg-indigo-700">

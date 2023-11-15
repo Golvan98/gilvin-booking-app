@@ -451,3 +451,7 @@ November 11
 - Heroku still failed, heroku sign in attempts will be frequent from now on
 - established routes for testpage, for further testing on auto UI size changing based on screen size
 - navbar for test UI page done, will try to implement various screen sizes soon
+
+November 13
+- added layouts (profiile pic and shortdescription) for profile rework
+- centered pic layout for profile rework, added a few comments on code and project logbook
