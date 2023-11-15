@@ -36,6 +36,23 @@
 
   </div>
 
+  <div id="profileContent" class="col-span-4 row-span-6 bg-red-300 grid grid-cols-2 grid-rows-6">
+
+      <div id="profilePic" class="bg-green-300 col-span-2 row-span-4">
+
+
+      </div>
+
+      <div id="shortDescription" class="col-span-1 row-span-1 bg-indigo-700">
+
+      </div>
+
+      <div id="links" class="col-span-1 row-start-6 bg-green-300">
+
+      </div>
+
+  </div>
+
 </div>
 
 </template>
