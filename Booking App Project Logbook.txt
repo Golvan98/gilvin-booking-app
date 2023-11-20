@@ -455,3 +455,7 @@ November 11
 November 13
 - added layouts (profiile pic and shortdescription) for profile rework
 - centered pic layout for profile rework, added a few comments on code and project logbook
+
+November 20 (in Palawan while doing this)
+- profile content section done, will tweak with its sizes soon
+- created mx margins for navbar, will set its two sections next time to h-1/2s
