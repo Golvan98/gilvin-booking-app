@@ -1,95 +1,99 @@
 <template>
 
-<div id="maingrid" class="grid grid-rows-6 grid-cols-5 border border-purple-400 w-5/6 h-screen lg:mt-4 sm:mt-24 md:mt-8 mx-auto">
+<div id="wrapper" class="w-full h-screen with-background border flex items-center">
 
-  <div id="navbar" class="grid grid-rows-6 h-full grid-cols-6 col-span-1 row-span-6 bg-red-700 border border-gray-300 w-full ">
+  <div id="maingrid" class="grid grid-rows-6 grid-cols-5 border border-purple-400 w-5/6 h-5/6 mx-auto ">
+    
 
-    <div id="contacts" class="row-span-3 col-span-6">
+    <div id="navbar" class="grid grid-rows-6 h-full grid-cols-6 col-span-1 row-span-6 bg-red-700 border border-gray-300 w-full ">
 
-            <div class="flex-nowrap h-full">
+      <div id="contacts" class="row-span-3 col-span-6">
 
-                <div class="flex-nowrap items-end font-bold text-2xl mt-4 h-full sm:w-full lg:w-3/4 lg:text-xs"> 
+              <div class="flex-nowrap h-full">
 
-                  <div> Contact Details </div> 
-                  <div class="flex "> Email Address  </div>
-                  <div class="flex text-blue-700"> gilvinsz@gmail.com  </div>
-                  <div class="flex"> Linkedin </div>
-                  <div class="flex"> Instagram </div>
+                  <div class="flex-nowrap items-end font-bold text-2xl mt-4 h-full sm:w-full lg:w-3/4 lg:text-xs"> 
+
+                    <div> Contact Details </div> 
+                    <div class="flex "> Email Address  </div>
+                    <div class="flex text-blue-700"> gilvinsz@gmail.com  </div>
+                    <div class="flex"> Linkedin </div>
+                    <div class="flex"> Instagram </div>
 
 
-                </div> 
-                
-             
-            </div> 
+                  </div> 
+                  
+              
+              </div> 
+
+      </div>
+
+      <div id="services/description" class="row-span-3 col-span-6 bg-white">
+
+              <div class="flex-nowrap h-full ">
+
+                  <div class="flex items-end justify-center h-12 font-bold mt-4 text-2xl bg-white"> 
+                      Verified Services
+                  </div> 
+                  
+                  <div class="flex items-center w-full mx-25-percent"> Civil Engineering</div>
+                  <div class="flex items-center w-full mx-25-percent"> CAD </div>
+                  <div class="flex items-center w-full mx-25-percent"> Consultancy </div>
+
+              </div> 
+
+      </div>
 
     </div>
 
-    <div id="services/description" class="row-span-3 col-span-6 bg-white">
+    <div id="profileContent" class="col-span-4 row-span-6 grid grid-cols-2 grid-rows-6 h-full">
+  <!-- u put md:size around here, flex centers wont matter I think -->
+        <div id="profilePic" class="bg-white col-span-2 row-span-4 border border-red-300 items-center justify-center flex border-b-green-700">
 
-            <div class="flex-nowrap h-full ">
+          <div class="w-2/5 h-4/5 border border-red-300"
+            style="background-image: url('storage/aiGeneratedPic.png'); 
+              background-repeat: no-repeat; 
+              background-size: cover;
+              border-color: black;">
+          
+          </div>
+        </div>
 
-                <div class="flex items-end justify-center h-12 font-bold mt-4 text-2xl bg-white"> 
-                    Verified Services
-                </div> 
-                
-                <div class="flex items-center w-full mx-25-percent"> Civil Engineering</div>
-                <div class="flex items-center w-full mx-25-percent"> CAD </div>
-                <div class="flex items-center w-full mx-25-percent"> Consultancy </div>
+        <div id="shortDescription" class="col-span-2 row-span-1 bg-white flex-nowrap">
 
-            </div> 
+          <div class="bg-white flex w-full h-12 items-center justify-start font-bold text-4xl">
+          John Doe
+          </div>
+
+          <div class="bg-white flex w-full h-6 items-start justify-start">
+          Palao, Iligan City
+          </div>
+          <div class="bg-white flex w-full h-6 items-start justify-start text-sm">
+          I make shitty websites as a startup junior developer
+          </div>
+        
+
+        </div>
+
+        <div id="links" class="bg-white col-span-2 row-start-6">
+
+          <div class="flex w-full h-12 items-center justify-start font-bold text-4xl">
+          Links
+          </div>
+
+          <div class="bg-white flex text-blue-700 hover:text-blue-500 w-full h-6 items-start justify-start text-sm">
+            <a href="https://www.linkedin.com/in/gilvin-zalsos-213692141/" target="blank"> Linkedin </a>
+          </div>
+          <div class="bg-white flex text-blue-700 hover:text-blue-500 w-full h-6 items-start justify-start text-sm">
+            <a href="https://github.com/Golvan98" target="blank"> Github </a>
+          </div>
+
+        </div>
 
     </div>
-
-  </div>
-
-  <div id="profileContent" class="col-span-4 row-span-6 grid grid-cols-2 grid-rows-6 h-full">
-<!-- u put md:size around here, flex centers wont matter I think -->
-      <div id="profilePic" class="bg-white col-span-2 row-span-4 border border-red-300 items-center justify-center flex border-b-green-700">
-
-        <div class="w-1/3 h-3/5 border border-red-300"
-          style="background-image: url('storage/aiGeneratedPic.png'); 
-            background-repeat: no-repeat; 
-            background-size: cover;
-            border-color: black;">
-         
-        </div>
-      </div>
-
-      <div id="shortDescription" class="col-span-1 row-span-1 bg-white flex-nowrap">
-
-        <div class="flex w-full h-12 items-center justify-start font-bold text-4xl ml-2">
-        John Doe
-        </div>
-
-        <div class="flex w-full h-6 items-start justify-start ml-2">
-        Palao, Iligan City
-        </div>
-        <div class="flex w-full h-6 items-start justify-start ml-2 text-sm">
-        I make shitty websites as a startup junior developer
-        </div>
-       
-
-      </div>
-
-      <div id="links" class="col-span-1 row-start-6">
-
-        <div class="flex w-full h-12 items-center justify-start font-bold text-4xl ml-2">
-        Links
-        </div>
-
-        <div class="flex text-blue-700 hover:text-blue-500 w-full h-6 items-start justify-start ml-2 text-sm">
-          <a href="https://www.linkedin.com/in/gilvin-zalsos-213692141/" target="blank"> Linkedin </a>
-        </div>
-        <div class="flex text-blue-700 hover:text-blue-500 w-full h-6 items-start justify-start ml-2 text-sm">
-          <a href="https://github.com/Golvan98" target="blank"> Github </a>
-        </div>
-
-      </div>
 
   </div>
 
 </div>
-
 
 </template>
 
@@ -112,6 +116,12 @@
     margin-right: 25%;
   }
   
+  .with-background {
+    background-image: url('storage/greybg.png');
+    background-size: cover;
+    background-position: center;
+
+  }
 
   </style>
 
