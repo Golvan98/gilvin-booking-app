@@ -5,7 +5,7 @@
     <div class="w-full h-screen flex-nowrap justify-center">
 
         <div class="object-fill w-full h-4/5 flex items-center justify-center" 
-          style="background-image: url('storage/bg.png'); 
+          style="background-image: url('storage/homeBackground.png'); 
           background-repeat: no-repeat; 
         background-size: cover;">
 

@@ -1,16 +1,16 @@
 <template>
 
-<div id="maingrid" class="h-screen w-full grid grid-rows-6 grid-cols-5">
+<div id="maingrid" class="grid grid-rows-6 grid-cols-5 border border-purple-400 w-5/6 h-screen lg:mt-4 sm:mt-24 md:mt-8 mx-auto">
 
-  <div id="navbar" class="grid grid-rows-6 grid-cols-6 col-span-1 row-span-6 bg-white border border-gray-300">
+  <div id="navbar" class="grid grid-rows-6 h-full grid-cols-6 col-span-1 row-span-6 bg-red-700 border border-gray-300 w-full ">
 
-    <div id="contacts" class="row-span-3 col-span-6 bg-white">
+    <div id="contacts" class="row-span-3 col-span-6">
 
-            <div class="flex-nowrap h-full bg-red-300">
+            <div class="flex-nowrap h-full">
 
-                <div class="flex-nowrap items-end justify-center font-bold text-2xl mt-4 h-full bg-red-500"> 
-                   <div> Contact Details </div> 
-               
+                <div class="flex-nowrap items-end font-bold text-2xl mt-4 h-full sm:w-full lg:w-3/4 lg:text-xs"> 
+
+                  <div> Contact Details </div> 
                   <div class="flex "> Email Address  </div>
                   <div class="flex text-blue-700"> gilvinsz@gmail.com  </div>
                   <div class="flex"> Linkedin </div>
@@ -26,7 +26,7 @@
 
     <div id="services/description" class="row-span-3 col-span-6 bg-white">
 
-            <div class="flex-nowrap h-full">
+            <div class="flex-nowrap h-full ">
 
                 <div class="flex items-end justify-center h-12 font-bold mt-4 text-2xl bg-white"> 
                     Verified Services
@@ -35,13 +35,14 @@
                 <div class="flex items-center w-full mx-25-percent"> Civil Engineering</div>
                 <div class="flex items-center w-full mx-25-percent"> CAD </div>
                 <div class="flex items-center w-full mx-25-percent"> Consultancy </div>
+
             </div> 
 
     </div>
 
   </div>
 
-  <div id="profileContent" class="col-span-4 row-span-6 grid grid-cols-2 grid-rows-6">
+  <div id="profileContent" class="col-span-4 row-span-6 grid grid-cols-2 grid-rows-6 h-full">
 <!-- u put md:size around here, flex centers wont matter I think -->
       <div id="profilePic" class="bg-white col-span-2 row-span-4 border border-red-300 items-center justify-center flex border-b-green-700">
 

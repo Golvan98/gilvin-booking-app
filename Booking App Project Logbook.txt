@@ -459,3 +459,9 @@ November 13
 November 20 (in Palawan while doing this)
 - profile content section done, will tweak with its sizes soon
 - created mx margins for navbar, will set its two sections next time to h-1/2s
+
+November 28
+- registered to back4app, an alternative to heroku, will complete all features first before trying to deploy
+- improved home picture background
+- applied first sm and lg application, csstailwind isn't buggy, ur code is.
+- trimmed test profile page to md & lg sizes

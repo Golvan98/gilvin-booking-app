@@ -7,8 +7,9 @@ NOTE: Flex's class w- and h- might rely on its parent grid size, to test more to
 
 
 Current UI Task
+- navbar to auto adjust when shrinked
 - when clicking law/engineering/medical, visit this professionals page with preloaded filters
-- modal issue reference for a fix that might work https://github.com/themesberg/flowbite/issues/160
+- modal issue reference for a fix that might work https://github.com/themesberg/flowbite/issues/160 (also, using other plugins instead of vite might work for this)
 
 UI DONE
 - working href links, and trimmed homepage content
