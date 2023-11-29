@@ -1,7 +1,8 @@
 CURRENTLY DOING : 
 Current Phase: Deployment and UI improvements to run side by side (FINAL)
 
-NOTE: Flex's class w- and h- might rely on its parent grid size, to test more tomorrow
+NOTE: Flex's class w- and h- might rely on its parent grid size, to test more of this
+NOTE: to apply sm, md and lg, there must be specifications for each size
 
 - welp, cant register to heroku for some reason, until u find a source for deployment, it's all UI imrpovements for today
 

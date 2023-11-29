@@ -5,20 +5,22 @@
   <div id="maingrid" class="grid grid-rows-6 grid-cols-5 border border-purple-400 w-5/6 h-5/6 mx-auto ">
     
 
-    <div id="navbar" class="grid grid-rows-6 h-full grid-cols-6 col-span-1 row-span-6 bg-red-700 border border-gray-300 w-full ">
+    <div id="navbar" class="grid grid-rows-6 h-full grid-cols-6 col-span-1 row-span-6 bg-white w-full ">
 
-      <div id="contacts" class="row-span-3 col-span-6">
+      <div id="contacts" class="row-span-3 col-span-6 border border-gray-300">
 
               <div class="flex-nowrap h-full">
 
-                  <div class="flex-nowrap items-end font-bold text-2xl mt-4 h-full sm:w-full lg:w-3/4 lg:text-xs"> 
+                  <div class="grid grid-cols-2 grid-rows-5 items-center justify-center mx-auto w-full bg-white h-full font-bold mt-4"> 
 
-                    <div> Contact Details </div> 
-                    <div class="flex "> Email Address  </div>
-                    <div class="flex text-blue-700"> gilvinsz@gmail.com  </div>
-                    <div class="flex"> Linkedin </div>
-                    <div class="flex"> Instagram </div>
-
+                    <div class="row-span-1 sm:col-span-2 md:col-span-2 lg:col-span-2 sm:text-red-300 md:text-green-500 lg:text-blue-300 mx-auto"> Contact Details </div> 
+                    
+                    <div class="grid grid-cols-1 grid-rows-2 row-start-2 col-span-2 mx-auto"> 
+                     <div class="row-span-1 mx-auto"> Email Address  </div> 
+                     <div class="row-span-1 text-blue-300"> gilvinsz@gmail.com  </div> 
+                    </div>
+                    <div class="row-start-3 col-span-2 mx-auto"> Linkedin </div>
+                    <div class="row-start-4 col-span-2 mx-auto"> Instagram </div>
 
                   </div> 
                   
