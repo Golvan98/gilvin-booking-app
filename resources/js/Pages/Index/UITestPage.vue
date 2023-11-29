@@ -11,16 +11,25 @@
 
               <div class="flex-nowrap h-full">
 
-                  <div class="grid grid-cols-2 grid-rows-5 items-center justify-center mx-auto w-full bg-white h-full font-bold mt-4"> 
+                  <div class="grid grid-cols-2 sm:text-xs md:text-sm lg:text-2xl grid-rows-5 items-center justify-center mx-auto w-full bg-white h-full font-bold mt-4"> 
 
-                    <div class="row-span-1 sm:col-span-2 md:col-span-2 lg:col-span-2 sm:text-red-300 md:text-green-500 lg:text-blue-300 mx-auto"> Contact Details </div> 
+                    <div class="row-span-1 sm:col-span-2 md:col-span-2 lg:col-span-2 sm:text-xs md:text-sm lg:text-2xl lg:text-black mx-auto font-bold"> Contact Details </div> 
                     
                     <div class="grid grid-cols-1 grid-rows-2 row-start-2 col-span-2 mx-auto"> 
                      <div class="row-span-1 mx-auto"> Email Address  </div> 
-                     <div class="row-span-1 text-blue-300"> gilvinsz@gmail.com  </div> 
+                     <div class="row-span-1 text-blue-400"> gilvinsz@gmail.com  </div> 
                     </div>
-                    <div class="row-start-3 col-span-2 mx-auto"> Linkedin </div>
-                    <div class="row-start-4 col-span-2 mx-auto"> Instagram </div>
+                    
+                    <div class="grid grid-cols-1 grid-rows-2 row-start-3 col-span-2 mx-auto"> 
+                     <div class="row-span-1 mx-auto"> Linkedin  </div> 
+                     <div class="row-span-1 text-blue-400 text-xs"> www.linkedin.com/in/gilvin-zalsos-213692141/  </div> 
+                    </div>
+
+
+                    <div class="grid grid-cols-1 grid-rows-2 row-start-4 col-span-2 mx-auto"> 
+                     <div class="row-span-1 mx-auto"> Skype  </div> 
+                     <div class="row-span-1 text-blue-400 text-xs"> live:gilvinsz </div> 
+                    </div>
 
                   </div> 
                   
