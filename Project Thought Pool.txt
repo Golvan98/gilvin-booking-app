@@ -8,7 +8,6 @@ NOTE: to apply sm, md and lg, there must be specifications for each size
 
 
 Current UI Task
-- navbar to auto adjust when shrinked
 - when clicking law/engineering/medical, visit this professionals page with preloaded filters
 - modal issue reference for a fix that might work https://github.com/themesberg/flowbite/issues/160 (also, using other plugins instead of vite might work for this)
 
@@ -20,7 +19,7 @@ Optional Features
 - messaging (optional)
 - soft delete users(optional)
 
-UI Improvements (FINAL). There really is a problem with ur UI when zoomed in or zoomed out, it's a whole project on top of another...
+UI Improvements (FINAL). There really is a problem with ur UI when zoomed in or zoomed in/out... (ACTUALLY NOPE every website is shit when zoomed in/out, Just size appropriations needed)
 - persist the modal when u accept/reject requests (hard one, this is left for the optimizing section)
 - confirm button needs to be redone, required input error message doesnt work while closing modal
 - check if it's possible to approve request and refresh paginated modal page at the same time
@@ -76,6 +75,9 @@ where the page refreshes after you click "mark as read" (nope, just a redirect a
 - pagination for notifications (should be easy)
 - modal to view request from notifications page
 - filtering for list of professionals
+
+UI Tasks Done
+- navbar to auto adjust when shrinked
 
 
 

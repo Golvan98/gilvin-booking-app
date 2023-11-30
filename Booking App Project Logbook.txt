@@ -473,3 +473,4 @@ November 29
 
 November 30
 - polished navbar on test user page
+- polished profile content, will transfer this as the new profile page
