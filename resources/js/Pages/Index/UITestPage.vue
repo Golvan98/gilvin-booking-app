@@ -7,28 +7,28 @@
 
     <div id="navbar" class="grid grid-rows-6 h-full grid-cols-6 col-span-1 row-span-6 bg-white w-full ">
 
-      <div id="contacts" class="row-span-3 col-span-6 border border-gray-300">
+      <div id="contacts" class="row-span-3 col-span-6 h-full">
 
               <div class="flex-nowrap h-full">
 
-                  <div class="grid grid-cols-2 sm:text-xs md:text-sm lg:text-2xl grid-rows-5 items-center justify-center mx-auto w-full bg-white h-full font-bold mt-4"> 
+                  <div class="grid grid-cols-2 sm:text-xs md:text-sm lg:text-2xl grid-rows-4 items-center justify-center mx-auto w-full bg-white h-full font-bold mt-4"> 
 
-                    <div class="row-span-1 sm:col-span-2 md:col-span-2 lg:col-span-2 sm:text-xs md:text-sm lg:text-2xl lg:text-black mx-auto font-bold"> Contact Details </div> 
+                    <div class="row-start-1 sm:col-span-2 md:col-span-2 lg:col-span-2 sm:text-xs md:text-sm lg:text-2xl lg:text-black mx-auto font-bold"> Contact Details </div> 
                     
-                    <div class="grid grid-cols-1 grid-rows-2 row-start-2 col-span-2 mx-auto"> 
+                    <div class="grid grid-cols-1 grid-rows-2 row-start-2 col-span-2 mx-2 border-b border-gray-300"> 
                      <div class="row-span-1 mx-auto"> Email Address  </div> 
-                     <div class="row-span-1 text-blue-400"> gilvinsz@gmail.com  </div> 
+                     <div class="row-span-1 text-blue-400 mx-auto"> gilvinsz@gmail.com  </div> 
                     </div>
                     
-                    <div class="grid grid-cols-1 grid-rows-2 row-start-3 col-span-2 mx-auto"> 
+                    <div class="grid grid-cols-1 grid-rows-2 row-start-3 col-span-2 mx-2 border-b border-gray-300"> 
                      <div class="row-span-1 mx-auto"> Linkedin  </div> 
-                     <div class="row-span-1 text-blue-400 text-xs"> www.linkedin.com/in/gilvin-zalsos-213692141/  </div> 
+                     <div class="row-span-1 text-blue-400 text-xs mx-auto"> linkedin.com/in/gilvin-zalsos-213692141/  </div> 
                     </div>
 
 
-                    <div class="grid grid-cols-1 grid-rows-2 row-start-4 col-span-2 mx-auto"> 
+                    <div class="grid grid-cols-1 grid-rows-2 row-start-4 col-span-2 mx-2 border-b border-gray-300 mb-3"> 
                      <div class="row-span-1 mx-auto"> Skype  </div> 
-                     <div class="row-span-1 text-blue-400 text-xs"> live:gilvinsz </div> 
+                     <div class="row-span-1 text-blue-400 text-xs mx-auto"> live:gilvinsz </div> 
                     </div>
 
                   </div> 
@@ -42,13 +42,32 @@
 
               <div class="flex-nowrap h-full ">
 
-                  <div class="flex items-end justify-center h-12 font-bold mt-4 text-2xl bg-white"> 
-                      Verified Services
+                  <div class="grid grid-cols-2 sm:text-xs md:text-sm lg:text-2xl grid-rows-6 items-center justify-center mx-auto w-full bg-white h-full font-bold"> 
+
+                    <div class="row-span-1 sm:col-span-2 md:col-span-2 lg:col-span-2 sm:text-xs md:text-sm lg:text-2xl lg:text-black mx-auto font-bold"> Services </div> 
+                    
+                    <div class="grid grid-cols-1 grid-rows-1 row-span-1 col-span-2 mx-2 border-b border-gray-300"> 
+                     <div class="row-span-1 mx-auto"> Generic Service 1  </div> 
+                    </div>
+
+                    <div class="grid grid-cols-1 grid-rows-1 row-span-1 col-span-2 mx-2 border-b border-gray-300"> 
+                     <div class="row-span-1 mx-auto"> Generic Service 2  </div> 
+                    </div>
+
+                     <div class="grid grid-cols-1 grid-rows-1 row-span-1 col-span-2 mx-2 border-b border-gray-300"> 
+                     <div class="row-span-1 mx-auto"> Generic Service 3 </div> 
+                    </div>
+                     <div class="grid grid-cols-1 grid-rows-1 row-span-1 col-span-2 mx-2 border-b border-gray-300"> 
+                     <div class="row-span-1 mx-auto"> Generic Service 4  </div> 
+                    </div>
+                     <div class="grid grid-cols-1 grid-rows-1 row-span-1 col-span-2 mx-2 border-b border-gray-300"> 
+                     <div class="row-span-1 mx-auto"> Generic Service 5  </div> 
+                    </div>
+                    
+                    
+                   
+
                   </div> 
-                  
-                  <div class="flex items-center w-full mx-25-percent"> Civil Engineering</div>
-                  <div class="flex items-center w-full mx-25-percent"> CAD </div>
-                  <div class="flex items-center w-full mx-25-percent"> Consultancy </div>
 
               </div> 
 

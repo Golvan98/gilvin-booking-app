@@ -468,4 +468,8 @@ November 28
 - wrapped test profile page with background and added centered margins
 
 November 29
-- trimmed navbar and added grids
+- trimmed navbar and added grids for profile testpage
+- added varieties for screen size adjusting for contact details in navbar
+
+November 30
+- polished navbar on test user page
