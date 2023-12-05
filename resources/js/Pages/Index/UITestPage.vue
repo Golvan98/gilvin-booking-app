@@ -17,7 +17,7 @@
                     
                     <div class="grid grid-cols-1 grid-rows-2 row-start-2 col-span-2 mx-3 border-b border-gray-300"> 
                      <div class="row-span-1 mx-auto"> Email Address  </div> 
-                     <div class="row-span-1 text-blue-400 mx-auto"> gilvinsz@gmail.com  </div> 
+                     <div class="row-span-1 text-blue-400 mx-auto"> genericEmailHere@gmail.com  </div> 
                     </div>
                     
                     <div class="grid grid-cols-1 grid-rows-2 row-start-3 col-span-2 mx-3 border-b border-gray-300"> 
@@ -75,7 +75,7 @@
         <div id="profilePic" class="bg-white col-span-2 row-span-4 items-center justify-center flex ">
 
           <div class="sm:w-3/5 sm:h-4/5 md:w-3/5 md:h-5/6 h-full lg:w-2/5 lg:h-5/6"
-            style="background-image: url('storage/aiGeneratedPic.png'); 
+            style="background-image: url('http://127.0.0.1:8000/storage/aiGeneratedPic.png'); 
               background-repeat: no-repeat; 
               background-size: cover;
               border-color: black;">
@@ -86,7 +86,7 @@
         <div id="shortDescription" class="col-span-2 row-span-1 bg-white flex-nowrap border-t border-gray-300">
 
           <div class="bg-white flex w-full h-12 items-center justify-start font-bold sm:text-xl md:text-2xl lg:text-3xl">
-            <span class="ml-2"> John Doe </span>
+            <span class="ml-2"> {{authProfessional.first_name}} {{authProfessional.last_name}} </span>
           </div>
 
           <div class="bg-white flex w-full h-6 items-start justify-start">
@@ -125,6 +125,12 @@
 
 
 <script setup>
+  const props = defineProps (
+    {
+      viewProfessional:Object,
+      authProfessional:Object,
+    }
+  )
 
 
 
@@ -142,7 +148,7 @@
   }
   
   .with-background {
-    background-image: url('storage/greybg.png');
+    background-image: url('http://127.0.0.1:8000/storage/greybg.png');
     background-size: cover;
     background-position: center;
 

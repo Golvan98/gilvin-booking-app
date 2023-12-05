@@ -145,12 +145,14 @@ class ProfessionalController extends Controller
         public function viewProfessionalProfile(Request $request, Professional $viewProfessional)
         {
             
-            return inertia('Index/viewProfessionalProfile',
+            return inertia('Index/UITestPage',
             [
                 'viewProfessional' => $viewProfessional,
                 'authProfessional' => Auth::guard('professional')->user()
     
             ]);
+
+            
         }
 
         public function showProfessionals(Request $request)
