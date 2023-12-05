@@ -476,4 +476,5 @@ November 30
 - polished profile content, will transfer this as the new profile page
 
 December 5
-- moved test page as viewprofessionalprofile
+- integrated test view profile as the new view professional profile page
+- 

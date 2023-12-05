@@ -17,7 +17,7 @@
                     
                     <div class="grid grid-cols-1 grid-rows-2 row-start-2 col-span-2 mx-3 border-b border-gray-300"> 
                      <div class="row-span-1 mx-auto"> Email Address  </div> 
-                     <div class="row-span-1 text-blue-400 mx-auto"> genericEmailHere@gmail.com  </div> 
+                     <div class="row-span-1 text-blue-400 mx-auto"> {{viewProfessional.email}}  </div> 
                     </div>
                     
                     <div class="grid grid-cols-1 grid-rows-2 row-start-3 col-span-2 mx-3 border-b border-gray-300"> 
@@ -36,31 +36,18 @@
 
       </div>
 
-      <div id="services/description" class="row-span-3 col-span-6 bg-white">
+      <div id="services/description" class="row-span-3 col-span-6 bg-white" >
 
               <div class="flex-nowrap h-full ">
 
-                  <div class="grid grid-cols-2 sm:text-xs md:text-sm lg:text-xl grid-rows-6 items-center justify-center mx-auto w-full bg-white h-full font-bold"> 
+                  <div class="grid grid-cols-2 sm:text-xs md:text-sm lg:text-xl items-center justify-center mx-auto w-full bg-white h-full font-bold"> 
 
                     <div class="row-span-1 sm:col-span-2 md:col-span-2 lg:col-span-2 sm:text-xs md:text-sm lg:text-2xl lg:text-black mx-auto font-bold"> Services </div> 
                     
-                    <div class="grid grid-cols-1 grid-rows-1 row-span-1 col-span-2 mx-3 border-b border-gray-300"> 
-                     <div class="row-span-1 mx-auto"> Generic Service 1  </div> 
+                    <div v-for="professionalService in professionalServices" class="grid grid-cols-1 grid-rows-1 row-span-1 col-span-2 mx-3 border-b border-gray-300"> 
+                     <div class="mx-auto items-start"> {{ professionalService }} </div> 
                     </div>
 
-                    <div class="grid grid-cols-1 grid-rows-1 row-span-1 col-span-2 mx-3 border-b border-gray-300"> 
-                     <div class="row-span-1 mx-auto"> Generic Service 2  </div> 
-                    </div>
-
-                     <div class="grid grid-cols-1 grid-rows-1 row-span-1 col-span-2 mx-3 border-b border-gray-300"> 
-                     <div class="row-span-1 mx-auto"> Generic Service 3 </div> 
-                    </div>
-                     <div class="grid grid-cols-1 grid-rows-1 row-span-1 col-span-2 mx-3 border-b border-gray-300"> 
-                     <div class="row-span-1 mx-auto"> Generic Service 4  </div> 
-                    </div>
-                     <div class="grid grid-cols-1 grid-rows-1 row-span-1 col-span-2 mx-3 border-b border-gray-300"> 
-                     <div class="row-span-1 mx-auto"> Generic Service 5  </div> 
-                    </div>
                     
                   </div> 
 
@@ -86,14 +73,14 @@
         <div id="shortDescription" class="col-span-2 row-span-1 bg-white flex-nowrap border-t border-gray-300">
 
           <div class="bg-white flex w-full h-12 items-center justify-start font-bold sm:text-xl md:text-2xl lg:text-3xl">
-            <span class="ml-2"> {{authProfessional.first_name}} {{authProfessional.last_name}} </span>
+            <span class="ml-2"> {{viewProfessional.first_name}} {{viewProfessional.last_name}} </span>
           </div>
 
           <div class="bg-white flex w-full h-6 items-start justify-start">
-            <span class="ml-2"> Palao, Iligan City</span>
+            <span class="ml-2"> Genereic Block 8, Streetrandom 12., Madeupstate, Utopiacountry, UC 69420</span>
           </div>
           <div class="bg-white flex w-full h-6 items-start justify-start text-sm">
-            <span class="ml-2">  I make shitty websites as a startup junior developer</span>
+            <span class="ml-2"> {{viewProfessional.bio}}</span>
           </div>
         
 
@@ -129,6 +116,7 @@
     {
       viewProfessional:Object,
       authProfessional:Object,
+      professionalServices:Object
     }
   )
 
