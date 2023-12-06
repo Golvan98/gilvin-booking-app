@@ -13,7 +13,12 @@
 
                   <div class="grid grid-cols-2 sm:text-xs md:text-sm lg:text-xl grid-rows-4 items-center justify-center mx-auto w-full bg-white h-full font-bold mt-4"> 
 
-                    <div class="row-start-1 sm:text-red-700 md:text-yellow-300 lg:text-green-700 sm:col-span-2 md:col-span-2 lg:col-span-2 sm:text-xs md:text-sm lg:text-2xl mx-auto font-bold"> Contact Details </div> 
+                    <div class="w-full grid grid-rows-3 row-start-1 sm:text-red-700 md:text-yellow-300 lg:text-green-700 sm:col-span-2 md:col-span-2 lg:col-span-2 sm:text-xs md:text-sm lg:text-2xl mx-auto font-bold"> 
+                      <div v-if="authProfessional && authProfessional.id ==  viewProfessional.id" class="flex row-start-1 items-start justify-start mx-8"> 
+                         <a href="/professionalProfile"><button class="bg-green-700 rounded-sm text-white px-3 py-1"> Edit Profile</button>  </a> 
+                      </div>
+                      <div class="row-start-3 flex justify-center"> Contact Details </div>
+                    </div> 
                     
                     <div class="grid grid-cols-1 grid-rows-2 row-start-2 col-span-2 mx-3 border-b border-gray-300"> 
                      <div class="row-span-1 mx-auto"> Email Address  </div> 
@@ -78,7 +83,7 @@
 
           <div class="bg-white flex w-full h-6 items-start justify-start">
             <span class="ml-2"> Genereic Block 8, Streetrandom 12., Madeupstate, Utopiacountry, UC 69420</span>
-          </div>
+          </div>php a
           <div class="bg-white flex w-full h-6 items-start justify-start text-sm">
             <span class="ml-2"> {{viewProfessional.bio}}</span>
           </div>

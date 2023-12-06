@@ -13,8 +13,15 @@
   
                     <div class="grid grid-cols-2 sm:text-xs md:text-sm lg:text-xl grid-rows-4 items-center justify-center mx-auto w-full bg-white h-full font-bold mt-4"> 
   
-                      <div class="row-start-1 sm:text-red-700 md:text-yellow-300 lg:text-green-700 sm:col-span-2 md:col-span-2 lg:col-span-2 sm:text-xs md:text-sm lg:text-2xl mx-auto font-bold"> Contact Details </div> 
-                      
+                      <div class="w-full grid grid-rows-3 row-start-1 sm:text-red-700 md:text-yellow-300 lg:text-green-700 sm:col-span-2 md:col-span-2 lg:col-span-2 sm:text-xs md:text-sm lg:text-2xl mx-auto font-bold"> 
+                      <div v-if="authUser && authUser.id == viewUser.id" class="flex row-start-1 items-start justify-start mx-8"> 
+                         <a href="/userProfile"><button class="bg-green-700 rounded-sm text-white px-3 py-1"> Edit Profile</button>  </a> 
+                      </div>
+                      <div class="row-start-3 flex justify-center"> Contact Details </div>
+                    
+                      </div> 
+
+
                       <div class="grid grid-cols-1 grid-rows-2 row-start-2 col-span-2 mx-3 border-b border-gray-300"> 
                        <div class="row-span-1 mx-auto"> {{viewUser.email}} </div> 
                        <div class="row-span-1 text-blue-400 mx-auto"> </div> 
@@ -42,10 +49,15 @@
   
                     <div class="grid grid-cols-2 sm:text-xs md:text-sm lg:text-xl items-center justify-center mx-auto w-full bg-white h-full font-bold"> 
   
-                      <div class="row-span-1 sm:col-span-2 md:col-span-2 lg:col-span-2 sm:text-xs md:text-sm lg:text-2xl lg:text-black mx-auto font-bold"> Services </div> 
+                      <div class="row-span-1 sm:col-span-2 md:col-span-2 lg:col-span-2 sm:text-xs md:text-sm lg:text-2xl lg:text-black mx-auto font-bold">  
+                        <!-- This part is the space filler for services list but this page is for users so it's empty for now" -->
+                      </div> 
                       
-                      <div v-for="professionalService in professionalServices" class="grid grid-cols-1 grid-rows-1 row-span-1 col-span-2 mx-3 border-b border-gray-300"> 
-                       <div class="mx-auto items-start"> service? lol </div> 
+
+                      <div class="grid grid-cols-1 grid-rows-1 row-span-1 col-span-2 mx-3 border-b border-gray-300"> 
+                       <div class="mx-auto items-start">  
+                        <!-- This part is the space filler for services list but this page is for users so it's empty for now" --> 
+                       </div> 
                       </div>
   
                       

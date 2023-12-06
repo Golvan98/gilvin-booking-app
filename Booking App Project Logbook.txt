@@ -481,3 +481,4 @@ December 5
 
 December 6 
 - updated user profile with dynamic content
+- removed user profile's unnecessary contents
