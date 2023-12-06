@@ -98,7 +98,7 @@ class UserController extends Controller
     {
        
         
-        return inertia('Index/viewUserProfile',
+        return inertia('Index/UITestPage',
         [
             'viewUser' => $viewUser,
             'authUser' => auth()->user()

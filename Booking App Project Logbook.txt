@@ -477,4 +477,7 @@ November 30
 
 December 5
 - integrated test view profile as the new view professional profile page
-- 
+- view profile contents are now dynamic
+
+December 6 
+- updated user profile with dynamic content

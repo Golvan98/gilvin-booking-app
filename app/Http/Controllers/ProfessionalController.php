@@ -148,7 +148,7 @@ class ProfessionalController extends Controller
            
             $professionalServices = DB::table('professional_services')->where('by_professional_id', $viewProfessional->id)->pluck('service');
             
-            return inertia('Index/UITestPage',
+            return inertia('Index/viewProfessionalProfile',
             [
                 'viewProfessional' => $viewProfessional,
                 'authProfessional' => Auth::guard('professional')->user(),
