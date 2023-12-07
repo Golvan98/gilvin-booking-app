@@ -1,15 +1,13 @@
 CURRENTLY DOING : 
-Current Phase: Deployment and UI improvements to run side by side (FINAL)
+Current Phase: UI Improvements, to launch deployment first month of 2024
 
 NOTE: Flex's class w- and h- might rely on its parent grid size, to test more of this
 NOTE: to apply sm, md and lg, there must be specifications for each size
-
-- welp, cant register to heroku for some reason, until u find a source for deployment, it's all UI imrpovements for today
+NOTE: - modal issue reference for a fix that might work https://github.com/themesberg/flowbite/issues/160 (also, using other plugins instead of vite might work for this)
 
 
 Current UI Task
-- when clicking law/engineering/medical, visit this professionals page with preloaded filters
-- modal issue reference for a fix that might work https://github.com/themesberg/flowbite/issues/160 (also, using other plugins instead of vite might work for this)
+- format date time to readable (this can be done frontend or backend)
 
 UI DONE
 - working href links, and trimmed homepage content
@@ -22,12 +20,15 @@ Optional Features
 UI Improvements (FINAL). There really is a problem with ur UI when zoomed in or zoomed in/out... (ACTUALLY NOPE every website is shit when zoomed in/out, Just size appropriations needed)
 - persist the modal when u accept/reject requests (hard one, this is left for the optimizing section)
 - confirm button needs to be redone, required input error message doesnt work while closing modal
-- check if it's possible to approve request and refresh paginated modal page at the same time
 - placeholder for form to be :value request data
-- format date time to readable (this can be done frontend or backend)
+
 - flash messages and modals not appearing unless page is refreshed (THIS IS HUGE, FIX THIS BUG)
 - auto adjust when browser is shortened (final)
 - for that value placeholder thingy, try that if edit modal is being executed OR u can call its value from that @click="Selected.value" 
+
+POSSIBLY IMPOSSIBLE:
+- check if it's possible to approve request and refresh paginated modal page at the same time
+- when clicking law/engineering/medical, visit this professionals page with preloaded filters
 
 DONE
 - Validation error message for wrong input in login forms

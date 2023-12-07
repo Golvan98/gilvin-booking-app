@@ -4,7 +4,7 @@
       
       <div class="h-1/3 w-1/4 bg-green-300 text-white">
           <div v-if="AppointmentRequest" class="h-1/6 flex items-center justify-center text-white font-bold text-xl">
-               Appointment # {{ AppointmentRequest.id }}
+               Appointment ID: {{ AppointmentRequest.id }}
           </div>
   
           <div v-if="AppointmentRequest"  class="h-1/5 text-white flex-nowrap">  

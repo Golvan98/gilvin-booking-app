@@ -17,7 +17,7 @@
 
                             <div v-for="(pendingRequests) in pendingRequests.data" id="modalcontent" class="bg-white flex-nowrap justify-center items-center rounded-xl border border-gray-300 mb-2 shadow">
 
-                            <div class="mt-4 flex justify-start ml-2 font-bold"> {{ pendingRequests.created_at}}  </div>
+                            <div class="mt-4 flex justify-start ml-2 font-bold"> Date Created: {{ formatCreatedAt(pendingRequests.created_at)}}  </div>
 
                             <div class="w-full h-auto flex-nowrap"> 
                                     <div v-for="(consultants) in consultants" class="flex justify-start ">  <span class="ml-2" v-if="consultants.id == pendingRequests.by_professional_id"> {{ consultants.first_name }} {{ consultants.last_name }} , {{ consultants.profession }}</span> </div>
@@ -74,8 +74,8 @@ import { useForm } from '@inertiajs/vue3'
 import { router } from '@inertiajs/vue3'
 import Pagination from '@/Pages/Index/Pagination.vue'
 import editRequestModal from '@/Pages/Index/Modals/editRequestModal.vue'
-
-
+import moment from 'moment';
+import { format } from 'date-fns';
 
 const selectedRequest = ref(null);
 
@@ -83,7 +83,10 @@ function openEditModal(request) {
   console.log('openEditModal function called with request:', request);
   selectedRequest.value = request;
 }
-
+const formatCreatedAt = (dateString) => {
+  const date = new Date(dateString);
+  return format(date, 'MMMM dd, yyyy');
+};
 
 const pops = defineProps (
   { 

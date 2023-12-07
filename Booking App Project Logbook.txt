@@ -481,4 +481,7 @@ December 5
 
 December 6 
 - updated user profile with dynamic content
-- removed user profile's unnecessary contents
+- removed user profile's unnecessary contents, renamed all vuejs files and added conditional edit as owner button in both viewprofiles
+
+December 7
+- installed npm date-fns and moment.js to convert date number formats  into words
