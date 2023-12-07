@@ -25,13 +25,19 @@
               
             </div>
 
-                <div>
-                <label for="request_schedule_start" class="block mb-2 text-sm font-medium text-black"> Appoint Start Time </label>
-                <input type="datetime-local" v-model="editForm.request_schedule_start" name="request_schedule_start" id="request_schedule_start"  class="bg-gray-50 border border-gray-300 text-gray-900 text-sm rounded-lg focus:ring-blue-500 focus:border-blue-500 block w-full p-2.5 dark:bg-gray-600 dark:border-gray-500 dark:placeholder-gray-400 dark:text-white" required>
+                <div v-if="request">
+                <label for="request_schedule_start" class="block mb-2 text-sm font-medium text-black"> Appointment Start Time: {{ formatDate(request.request_schedule_start) }} </label>
+                <input 
+                type="datetime-local" 
+                v-model="editForm.request_schedule_start" 
+                name="request_schedule_start" 
+                id="request_schedule_start"  
+                v-if="request" :placeholder="request.request_schedule_start"
+                class="bg-gray-50 border border-gray-300 text-gray-900 text-sm rounded-lg focus:ring-blue-500 focus:border-blue-500 block w-full p-2.5 dark:bg-gray-600 dark:border-gray-500 dark:placeholder-gray-400 dark:text-white" required>
                 </div>
 
                 <div>
-                <label for="request_schedule" class="block mb-2 text-sm text-black font-bold"> Appoint End Time  </label>
+                <label for="request_schedule" class="block mb-2 text-sm text-black font-bold"> Appointment End Time  </label>
                 <input type="datetime-local" v-model="editForm.request_schedule_end" name="request_schedule_end" id="request_schedule_end"  class="bg-gray-50 border border-gray-300 text-gray-900 text-sm rounded-lg focus:ring-blue-500 focus:border-blue-500 block w-full p-2.5 dark:bg-gray-600 dark:border-gray-500 dark:placeholder-gray-400 dark:text-white" required>
                 </div>
                                                                
@@ -57,6 +63,10 @@ import { useForm } from '@inertiajs/vue3'
 import { router } from '@inertiajs/vue3'
 import Pagination from '@/Pages/Index/Pagination.vue'
 
+import moment from 'moment';
+import { format } from 'date-fns';
+
+
 const props = defineProps(['request']);
 
 // Set the initial value of editForm.request after component is mounted
@@ -69,6 +79,11 @@ const props = defineProps(['request']);
     }
   )
   const value = ref('')
+
+  const formatDate = (dateString) => {
+  const date = new Date(dateString);
+    return moment(date).format('MMMM DD, YYYY h:mmA')
+};
 
 
   function editModal() {

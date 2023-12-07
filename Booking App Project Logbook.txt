@@ -485,3 +485,4 @@ December 6
 
 December 7
 - installed npm date-fns and moment.js to convert date number formats  into words
+- used moment.js to convert date-number format into date-word format in UserRequests page

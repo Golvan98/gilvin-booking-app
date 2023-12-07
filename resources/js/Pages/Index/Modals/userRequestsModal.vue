@@ -83,9 +83,10 @@ function openEditModal(request) {
   console.log('openEditModal function called with request:', request);
   selectedRequest.value = request;
 }
+
 const formatCreatedAt = (dateString) => {
   const date = new Date(dateString);
-  return format(date, 'MMMM dd, yyyy');
+  return moment(date, 'MMMM dd, yyyy');
 };
 
 const pops = defineProps (
