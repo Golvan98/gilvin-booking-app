@@ -7,8 +7,8 @@ NOTE: - modal issue reference for a fix that might work https://github.com/theme
 
 
 Current UI Task
-- format date time to readable (this can be done frontend or backend)
-^ done on user part, now do so for the professional's side
+
+
 
 UI DONE
 - working href links, and trimmed homepage content
@@ -21,9 +21,8 @@ Optional Features
 UI Improvements (FINAL). There really is a problem with ur UI when zoomed in or zoomed in/out... (ACTUALLY NOPE every website is shit when zoomed in/out, Just size appropriations needed)
 - persist the modal when u accept/reject requests (hard one, this is left for the optimizing section)
 - confirm button needs to be redone, required input error message doesnt work while closing modal
-- placeholder for form to be :value request data
+- placeholder for form to be :value request data - for that value placeholder thingy, try that if edit modal is being executed OR u can call its value from that @click="Selected.value" 
 - flash messages and modals not appearing unless page is refreshed (THIS IS HUGE, FIX THIS BUG)
-- for that value placeholder thingy, try that if edit modal is being executed OR u can call its value from that @click="Selected.value" 
 - auto adjust when browser is shortened (final)
 
 POSSIBLY IMPOSSIBLE:
@@ -81,8 +80,10 @@ where the page refreshes after you click "mark as read" (nope, just a redirect a
 - modal to view request from notifications page
 - filtering for list of professionals
 
+
 UI Tasks Done
 - navbar to auto adjust when shrinked
+- format date time to readable (this can be done frontend or backend)
 
 
 

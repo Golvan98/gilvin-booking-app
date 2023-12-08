@@ -17,13 +17,14 @@
 
                             <div v-for="(pendingRequests) in pendingRequests.data" id="modalcontent" class="bg-white flex-nowrap justify-center items-center rounded-xl border border-gray-300 mb-2 shadow">
 
-                            <div class="mt-4 flex justify-start ml-2 font-bold"> {{ formatDate(pendingRequests.created_at)}}</div>
+                            <div class="mt-4 flex justify-start ml-2 font-bold"> {{ formatDate(pendingRequests.request_schedule_start)}} - {{ formatDate(pendingRequests.request_schedule_end)}}</div>
 
                             <div class="w-full h-auto flex-nowrap"> 
                                     <div v-for="(consultees) in consultees" class="flex justify-start ">  <span class="ml-2" v-if="consultees.id == pendingRequests.by_user_id"> {{ consultees.first_name }} {{ consultees.last_name }}</span> </div>
 
                                     <div class="h-auto bg-white flex-nowrap justify-start items-start mt-2 mb-4 text-left">
                                         <div class="mx-2"> {{ pendingRequests.request }} </div> 
+                                        <div class="mx-2">Date Requested: {{ formatDate(pendingRequests.created_at) }} </div> 
                                     </div> 
                             </div>
 
