@@ -17,7 +17,7 @@
 
                             <div v-for="(pendingRequests) in pendingRequests.data" id="modalcontent" class="bg-white flex-nowrap justify-center items-center rounded-xl border border-gray-300 mb-2 shadow">
 
-                            <div class="mt-4 flex justify-start ml-2 font-bold"> {{ requests.created_at}}</div>
+                            <div class="mt-4 flex justify-start ml-2 font-bold"> {{ formatDate(pendingRequests.created_at)}}</div>
 
                             <div class="w-full h-auto flex-nowrap"> 
                                     <div v-for="(consultees) in consultees" class="flex justify-start ">  <span class="ml-2" v-if="consultees.id == pendingRequests.by_user_id"> {{ consultees.first_name }} {{ consultees.last_name }}</span> </div>
@@ -58,9 +58,13 @@
     import { router } from '@inertiajs/vue3'
     import Bio from '@/Pages/Index/Bio.vue'
     import Pagination from '@/Pages/Index/Pagination.vue'
+    import moment from 'moment';
   
 
-
+  const formatDate = (dateString) => {
+  const date = new Date(dateString);
+    return moment(date).format('MMMM DD, h:mmA')
+};
 
    const props = defineProps({
     pendingRequests: Object,

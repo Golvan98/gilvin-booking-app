@@ -37,7 +37,7 @@
                 </div>
 
                 <div>
-                <label for="request_schedule" class="block mb-2 text-sm text-black font-bold"> Appointment End Time  </label>
+                <label v-if="request" for="request_schedule" class="block mb-2 text-sm text-black font-bold"> Appointment End Time: {{ formatDate(request.request_schedule_end) }} </label>
                 <input type="datetime-local" v-model="editForm.request_schedule_end" name="request_schedule_end" id="request_schedule_end"  class="bg-gray-50 border border-gray-300 text-gray-900 text-sm rounded-lg focus:ring-blue-500 focus:border-blue-500 block w-full p-2.5 dark:bg-gray-600 dark:border-gray-500 dark:placeholder-gray-400 dark:text-white" required>
                 </div>
                                                                
@@ -66,6 +66,11 @@ import Pagination from '@/Pages/Index/Pagination.vue'
 import moment from 'moment';
 import { format } from 'date-fns';
 
+const formatDate = (dateString) => {
+  const date = new Date(dateString);
+    return moment(date).format('MMMM DD, YYYY h:mmA')
+};
+
 
 const props = defineProps(['request']);
 
@@ -80,11 +85,7 @@ const props = defineProps(['request']);
   )
   const value = ref('')
 
-  const formatDate = (dateString) => {
-  const date = new Date(dateString);
-    return moment(date).format('MMMM DD, YYYY h:mmA')
-};
-
+  
 
   function editModal() {
   console.log('Form submitted:', editForm.value);

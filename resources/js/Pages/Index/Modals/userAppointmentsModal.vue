@@ -18,8 +18,8 @@
     
                                 <div v-for="(appointment) in appointments.data" id="modalcontent" class="bg-white flex-nowrap justify-center items-center rounded-xl border border-gray-300 mb-2 shadow">
     
-                                <div class="mt-4 flex justify-start ml-2 font-bold"> Created at {{appointment.created_at}}, Status: {{ appointment.appointment_status }} </div>
-    
+                                <div class="mt-4 flex justify-start ml-2 font-bold"> Schedule: {{ formatDate(appointment.appointment_schedule_start)}} - {{ formatDate(appointment.appointment_schedule_end)}} </div>
+                                <div class="font-bold"> Status: {{ appointment.appointment_status }} </div>
                                 <div class="w-full h-auto flex-nowrap"> 
                                         <div class="flex justify-start ">    
                                             <span class="ml-2" v-if="showFullText || appointment.request.length <= 50">{{ appointment.request }}</span>
@@ -31,6 +31,7 @@
                                         <div v-for="(consultant) in consultants" class="h-auto bg-white flex-nowrap justify-start items-start mt-2 mb-4 text-left">
                                             <div v-if="consultant.id == appointment.by_professional_id" class="mx-2">Consultant: {{consultant.first_name}} , {{ consultant.profession }}</div> 
                                         </div> 
+                                        
                                 </div>
     
                                 <div class="flex justify-between font-bold mb-2">
@@ -86,6 +87,15 @@
     import Pagination from '@/Pages/Index/Pagination.vue'
     import AppointmentCancelModal from '@/Pages/Index/Modals/AppointmentCancelModal.vue'
 
+
+    import { format } from 'date-fns';
+    import moment from 'moment';
+
+const formatDate = (dateString) => {
+  const date = new Date(dateString);
+    return moment(date).format('MMMM DD, h:mmA')
+};
+    
     const props = defineProps (
       { 
         appointments:Object,

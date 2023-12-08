@@ -16,7 +16,7 @@
     
                                 <div v-for="(appointment) in appointments.data" id="modalcontent" class="bg-white flex-nowrap justify-center items-center rounded-xl border border-gray-300 mb-2 shadow">
     
-                                <div class="mt-4 flex justify-start ml-2 font-bold"> Created at {{appointment.created_at}}, Status: {{ appointment.appointment_status }} </div>
+                                <div class="mt-4 flex justify-start ml-2 font-bold"> Created at {{formatDate(appointment.created_at)}}, Status: {{ appointment.appointment_status }} </div>
     
                                 <div class="w-full h-auto flex-nowrap"> 
                                         <div class="flex justify-start ">    
@@ -27,7 +27,7 @@
                                         </div>
                                         
                                         <div v-for="(consultees) in consultees" class="h-auto bg-white flex-nowrap justify-start items-start mt-2 mb-4 text-left">
-                                            <div v-if="consultees.id == appointment.by_user_id" class="mx-2">Consultee: {{consultees.first_name}} {{ appointment.appointment_schedule_start }} - {{ appointment.appointment_schedule_end }}</div> 
+                                            <div v-if="consultees.id == appointment.by_user_id" class="mx-2">Consultee: {{consultees.first_name}} {{ formatDate(appointment.appointment_schedule_start) }} - {{ formatDate(appointment.appointment_schedule_end) }}</div> 
                                         </div> 
                                 </div>
     
@@ -79,6 +79,12 @@
     import { router } from '@inertiajs/vue3'
     import Pagination from '@/Pages/Index/Pagination.vue'
     import AppointmentCancelModal from '@/Pages/Index/Modals/AppointmentCancelModal.vue'
+    import moment from 'moment';
+
+    const formatDate = (dateString) => {
+  const date = new Date(dateString);
+    return moment(date).format('MMMM DD, h:mmA')
+};
     const props = defineProps (
       { 
         appointments:Object,
