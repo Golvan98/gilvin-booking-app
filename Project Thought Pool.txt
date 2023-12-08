@@ -7,7 +7,7 @@ NOTE: - modal issue reference for a fix that might work https://github.com/theme
 
 
 Current UI Task
-
+- auto adjust for professional lists grid
 
 
 UI DONE
@@ -19,7 +19,6 @@ Optional Features
 - soft delete users(optional)
 
 UI Improvements (FINAL). There really is a problem with ur UI when zoomed in or zoomed in/out... (ACTUALLY NOPE every website is shit when zoomed in/out, Just size appropriations needed)
-- persist the modal when u accept/reject requests (hard one, this is left for the optimizing section)
 - confirm button needs to be redone, required input error message doesnt work while closing modal
 - placeholder for form to be :value request data - for that value placeholder thingy, try that if edit modal is being executed OR u can call its value from that @click="Selected.value" 
 - flash messages and modals not appearing unless page is refreshed (THIS IS HUGE, FIX THIS BUG)
@@ -28,6 +27,7 @@ UI Improvements (FINAL). There really is a problem with ur UI when zoomed in or 
 POSSIBLY IMPOSSIBLE:
 - check if it's possible to approve request and refresh paginated modal page at the same time
 - when clicking law/engineering/medical, visit this professionals page with preloaded filters
+- persist the modal when u accept/reject requests (hard one, this is left for the optimizing section)
 
 OTHER IMPROVEMENTS:
 - DB restrict appointments end schedule to be before start schedule

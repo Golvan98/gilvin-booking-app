@@ -17,7 +17,9 @@
 
                 <div
                   :style="{ 
-                      'background-image': `url('http://127.0.0.1:8000/storage/${Professionals.profilepic}')`,
+                         'background-image': Professionals.profilepic
+      ? `url('http://127.0.0.1:8000/storage/${Professionals.profilepic}')`
+      : 'url(\'http://127.0.0.1:8000/storage/default.png\')',
                       'background-repeat': 'no-repeat', 
                       'background-size': 'cover' 
                   }"

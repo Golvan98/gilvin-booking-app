@@ -27,12 +27,12 @@
                     
                     <div class="grid grid-cols-1 grid-rows-2 row-start-3 col-span-2 mx-3 border-b border-gray-300"> 
                      <div class="row-span-1 mx-auto"> Linkedin  </div> 
-                     <div class="row-span-1 text-blue-400 text-xs mx-auto"> linkedin.com/in/gilvin-zalsos-213692141/  </div> 
+                     <div class="row-span-1 text-blue-400 text-xs mx-auto"> linkedin.com/in/john-doe-42069/  </div> 
                     </div>
 
                     <div class="grid grid-cols-1 grid-rows-2 row-start-4 col-span-2 mx-3 border-b border-gray-300 mb-3"> 
                      <div class="row-span-1 mx-auto"> Skype  </div> 
-                     <div class="row-span-1 text-blue-400 text-xs mx-auto"> live:gilvinsz </div> 
+                     <div class="row-span-1 text-blue-400 text-xs mx-auto"> live:johnd </div> 
                     </div>
 
                   </div> 
@@ -83,7 +83,7 @@
 
           <div class="bg-white flex w-full h-6 items-start justify-start">
             <span class="ml-2"> Genereic Block 8, Streetrandom 12., Madeupstate, Utopiacountry, UC 69420</span>
-          </div>php a
+          </div>  
           <div class="bg-white flex w-full h-6 items-start justify-start text-sm">
             <span class="ml-2"> {{viewProfessional.bio}}</span>
           </div>

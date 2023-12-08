@@ -489,3 +489,4 @@ December 7
 
 December 8
 - converted date number format for professional appointments page
+- appoint requests from professional's page now displays appoint schedules in formatDate(moment)
