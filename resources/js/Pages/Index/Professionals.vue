@@ -6,14 +6,22 @@
       
       <Filters :filters="filters" :Professionals="Professionals"/>
 
-        <div class="row-start-3 row-end-7 w-full col-start-2 col-end-6 h-full grid grid-cols-6 grid-rows-6 rounded-xl">
+        <div class="overflow-auto row-start-3 row-end-7 w-full col-start-2 col-end-6 h-full grid grid-cols-6 grid-rows-6 rounded-xl">
             
           
           
-            <div id="firstrowofProfessionals" class="sm:col-span-2 md:col-span-6 lg:col-span-6 grid grid-cols-6  grid-rows-6 rounded-xl row-span-6 border border-red-300"> 
+            <div id="firstrowofProfessionals" class="sm:col-span-6 md:col-span-6  lg:col-span-6 grid 
+                lg:grid-cols-6  lg:grid-rows-6 rounded-xl row-span-6 border border-red-300
+                md:grid-cols-6 md:grid-rows-6
+                sm:grid-cols-6 sm:grid-rows-6 h-full">
 
-
-              <div v-for="Professionals in Professionals.data" class="row-span-3 col-span-2 grid grid-rows-3 grid-cols-3 sm:text-red-500 md:text-blue-500 lg:text-emerald-500 rounded-xl py-1 justify-between border bg-red-300 mx-auto w-full h-full "> 
+                  <div v-for="Professionals in Professionals.data" class="
+                  row-span-3 grid 
+                  lg:col-span-2 lg:grid-rows-3 lg:grid-cols-3
+                  md:col-span-3 md:row-span-2
+                  sm:col-span-6 
+                sm:text-red-500 md:text-blue-500 lg:text-emerald-500 rounded-xl py-1 
+                  justify-between border bg-white mx-auto w-full h-full "> 
 
                   <div
                     :style="{ 
@@ -23,19 +31,23 @@
                         'background-repeat': 'no-repeat', 
                         'background-size': 'cover' 
                     }"
-                    class="w-4/5 row-span-2 col-span-1 h-4/5 rounded-full ml-2 mt-4 border">                   
+                    class=
+                    "lg: w-4/5 lg:row-span-2 lg:col-span-1 lg:h-4/5 rounded-full ml-2 mt-4 border
+                    md:w-4/5 md:row-span-2 :md-col-span-2 md:h-3/5">                   
                   </div>
 
-                  <div class="row-span-3 col-span-2 bg-white">
+                  <div class="bg-white
+                  lg:row-span-3 lg:col-span-2
+                  md:row-span-3 md:col-span-2">
 
-                        <div class="flex w-full h-1/2 bg-blue-200 items-center"> 
+                        <div class="flex w-full h-1/2 items-center"> 
                           {{ Professionals.first_name }}, {{ Professionals.profession }}
                         </div>
 
                         <div class="flex items-end justify-between w-full h-1/2">
                           <button @click="createRequestModal(Professionals)" data-modal-target="request-modal" data-modal-toggle="request-modal" class="mr-2 text-xs text-black font-bold rounded-lg border p-0.5"> Send Request </button>
                           <SendRequestModal :Professionals="Professionals" :Professional="selectedProfessional"/>
-                          <a :href="`/viewProfessionalProfile/${Professionals.id}`" target="_blank"> <button class="mt-8 text-xs text-black font-bold rounded-lg border p-0.5"> View Profile </button> </a>
+                          <a :href="`/viewProfessionalProfile/${Professionals.id}`" target="_blank"> <button class="text-xs text-black font-bold rounded-lg border p-0.5"> View Profile </button> </a>
                         </div>
 
                   </div>
@@ -44,7 +56,9 @@
                 
 
               <div> 
-
+                <div v-if="Professionals.data.length" class="w-full flex justify-center mt-8 mb-8 col-span-6" preserve-state>
+                        <Pagination :links="Professionals.links" />
+                 </div>
                 
 
             </div>
@@ -52,9 +66,7 @@
             
         </div>
 
-        <div v-if="Professionals.data.length" class="w-full flex justify-center mt-8 mb-8 col-span-6" preserve-state>
-                        <Pagination :links="Professionals.links" />
-            </div>
+       
       </div>
 
 

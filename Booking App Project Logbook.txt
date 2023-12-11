@@ -494,3 +494,5 @@ December 8
 
 December 11
 - scrapped professional page for revamping, will also test if it auto adjusts its pagination limit
+- added professional col/row margins for large screen, medium and small to be added
+- scrappy attempt at md-sm for professionals page made, pagination is missing on lg-version. will improve tomorrow
