@@ -13,7 +13,7 @@
             <div id="firstrowofProfessionals" class="sm:col-span-2 md:col-span-6 lg:col-span-6 grid grid-cols-6  grid-rows-6 rounded-xl row-span-6 border border-red-300"> 
 
 
-              <div v-for="Professionals in Professionals.data" class="row-span-3 col-span-2 grid grid-rows-6 grid-cols-6 sm:text-red-500 md:text-blue-500 lg:text-emerald-500 rounded-xl py-1 justify-between border bg-red-300 m-2 w-full h-full "> 
+              <div v-for="Professionals in Professionals.data" class="row-span-3 col-span-2 grid grid-rows-3 grid-cols-3 sm:text-red-500 md:text-blue-500 lg:text-emerald-500 rounded-xl py-1 justify-between border bg-red-300 mx-auto w-full h-full "> 
 
                   <div
                     :style="{ 
@@ -23,9 +23,21 @@
                         'background-repeat': 'no-repeat', 
                         'background-size': 'cover' 
                     }"
-                    class="w-3/5 row-span-2 col-span-1 h-4/5 rounded-full 
-                            flex-nowrap
-                            bg-gray-400 text-gray-700 text-xl font-bold shadow-sm ml-2 mt-4 border border-green-300">                   
+                    class="w-4/5 row-span-2 col-span-1 h-4/5 rounded-full ml-2 mt-4 border">                   
+                  </div>
+
+                  <div class="row-span-3 col-span-2 bg-white">
+
+                        <div class="flex w-full h-1/2 bg-blue-200 items-center"> 
+                          {{ Professionals.first_name }}, {{ Professionals.profession }}
+                        </div>
+
+                        <div class="flex items-end justify-between w-full h-1/2">
+                          <button @click="createRequestModal(Professionals)" data-modal-target="request-modal" data-modal-toggle="request-modal" class="mr-2 text-xs text-black font-bold rounded-lg border p-0.5"> Send Request </button>
+                          <SendRequestModal :Professionals="Professionals" :Professional="selectedProfessional"/>
+                          <a :href="`/viewProfessionalProfile/${Professionals.id}`" target="_blank"> <button class="mt-8 text-xs text-black font-bold rounded-lg border p-0.5"> View Profile </button> </a>
+                        </div>
+
                   </div>
 
                 
