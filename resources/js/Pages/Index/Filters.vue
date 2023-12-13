@@ -8,7 +8,7 @@
 <div class="w-full bg-white h-full flex justify-between items-center"> 
    <div class="w-2/6"> 
    <input v-model="filterForm.first_name" name="first_name" id="first_name" type="text"  placeholder="Search bar here">  </div>
-   <div class="w-auto bg-red-300">  </div>
+   <div class="w-auto bg-red-300"> </div>
    <div class="w-auto bg-red-300"> </div>  
    <div class="w-auto bg-red-300"> </div>
    <div class="w-auto bg-red-300"> </div>

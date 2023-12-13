@@ -499,3 +499,7 @@ December 11
 
 December 12
 - added a test page for professional page, will experiment with it next session
+
+December 13
+- added laid out template for professional test page
+- 
