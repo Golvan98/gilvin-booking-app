@@ -10,13 +10,41 @@
 
       </div>
 
-      <div id="profilesMainContainer" class="h-3/5 bg-green-100 grid grid-cols-6 grid-rows-6">
+      <div id="profilesMainContainer" class="w-3/4 h-3/5 grid grid-cols-3 grid-rows-4 m-auto justify-center items-center">
+
+        <div class="profileBlock col-span-1 row-span-2 bg-red-300 m-auto border w-full h-full flex justify-center items-center">
+            <div> atay </div>
+        </div>
+     
+        <div class="profileBlock col-span-1 row-span-2 bg-red-300 m-auto border w-full h-full">
+            <div> atay </div>
+        </div>
+        
+        <div class="profileBlock col-span-1 row-span-2 bg-red-300 m-auto border w-full h-full">
+            <div> atay </div>
+        </div>
+        
+        <div class="profileBlock col-span-1 row-span-2 bg-red-300 m-auto border w-full h-full">
+            <div> atay </div>
+        </div>
+        
+        <div class="profileBlock col-span-1 row-span-2 bg-red-300 m-auto border w-full h-full">
+            <div> atay </div>
+        </div>
+        
+        <div class="profileBlock col-span-1 row-span-2 bg-red-300 m-auto border w-full h-full">
+            <div> atay </div>
+        </div>
+        
+
+        
 
 
       </div>
 
-      <div id="paginationContainer" class="h-1/5 bg-indigo-700">
+      <div id="paginationContainer" class="h-1/5 bg-indigo-700 flex items-center justify-center">
 
+          <div> pagination here! </div>
 
       </div>
 
