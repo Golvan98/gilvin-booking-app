@@ -502,4 +502,5 @@ December 12
 
 December 13
 - added laid out template for professional test page
-- 
+- added top part select type UI section for professional's test page
+- added fixed template for each profileBlock in professiona's test page
