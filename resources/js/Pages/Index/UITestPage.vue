@@ -10,21 +10,65 @@
 
       </div>
 
-      <div id="profilesMainContainer" class="w-3/4 h-3/5 grid grid-cols-3 grid-rows-4 m-auto justify-center items-center space-x-2">
+      <div id="profilesMainContainer" class="w-3/4 h-3/5 grid grid-cols-3 grid-rows-4 m-auto items-center space-x-2">
 
-        <div class="profileBlock col-span-1 row-span-2 rounded-xl bg-green-100 m-auto border w-full h-full flex justify-between">
+        <div id="profileBlock" class="mt-4 col-span-1 row-span-2 rounded-xl bg-green-100 border w-auto h-5/6 flex justify-between">
+
             <div :style="{ 
                            'background-image': 'url(\'http://127.0.0.1:8000/storage/default.png\')',
                         'background-repeat': 'no-repeat', 
                         'background-size': 'cover' 
                     }"
-                    class="w-1/3 h-1/2 rounded-full 
+                    class="w-1/3 h-1/2 rounded-full
                             inline-flex items-center justify-center 
-                            bg-gray-400 text-gray-700 text-xl font-bold shadow-sm ml-2 mt-4 border border-green-300">  
+                            bg-gray-400 text-gray-700 text-xl font-bold shadow-sm border border-green-300">  
             </div>
 
-            <div class="w-full bg-red-300"> </div>
+            <div class="w-3/4 bg-red-300"> 
+
+              <div class="flex-nowrap h-1/2 w-full mx-2"> First Name, Last Name</div>
+              <div class="flex h-1/2 w-full items-center justify-between text-xs"> 
+                <button class="mx-2 bg-indigo-100 px-2 py-1 rounded-lg"> Send Request  </button>
+                <button class="mx-2 bg-indigo-100 px-2 py-1 rounded-lg"> View Profile  </button>
+              </div>
+
+            </div>
+
         </div>
+
+        
+        
+
+        
+
+        
+
+        
+
+        
+
+        
+
+        
+        
+        
+
+        
+        
+
+        
+
+        
+        
+        
+
+        
+
+        
+
+        
+        
+        
 
         
      
