@@ -504,3 +504,7 @@ December 13
 - added laid out template for professional test page
 - added top part select type UI section for professional's test page
 - added fixed template for each profileBlock in professiona's test page
+
+December 14
+- added profile pic part for profileBlock with margins in professional's test page
+- fixed some margin issues for each block, will try interpolation loop for dynamic content tomorrow

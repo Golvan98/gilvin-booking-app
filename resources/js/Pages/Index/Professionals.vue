@@ -1,6 +1,6 @@
 <template>
 
-  <div class="grid grid-cols-6 grid-rows-6 bg-gray-200 items-center justify-center h-screen w-full">
+  <div class="grid grid-cols-6 grid-rows-6 bg-gray-200 items-center justify-center h-screen w-full overflow-auto">
   
     <div class="bg-white row-start-2 row-end-6 col-start-2 col-end-6 grid grid-cols-6 grid-rows-6 items-center justify-center h-full w-full rounded-xl">
         
