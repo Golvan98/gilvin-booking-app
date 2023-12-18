@@ -1,13 +1,15 @@
 CURRENTLY DOING : 
-Current Phase: UI Improvements, to launch deployment first month of 2024
+Current Phase: UI Improvements, to launch deployment first month of 2024.
+
 
 NOTE: Flex's class w- and h- might rely on its parent grid size, to test more of this
 NOTE: to apply sm, md and lg, there must be specifications for each size
 NOTE: - modal issue reference for a fix that might work https://github.com/themesberg/flowbite/issues/160 (also, using other plugins instead of vite might work for this)
 
-
-Current UI Task
+============ Current UI Task =================
 - auto adjust for professional lists grid
+- kinda stuck on this, make everything according to screen size proportions then?
+- also keep everything in proportion, that way it will always depend on the screen size, not absolute values like m-4, ml-24, etc.
 
 
 UI DONE

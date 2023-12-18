@@ -508,3 +508,7 @@ December 13
 December 14
 - added profile pic part for profileBlock with margins in professional's test page
 - fixed some margin issues for each block, will try interpolation loop for dynamic content tomorrow
+
+December 18
+- current testpage contents wouldnt do, erased most of the code, staring on a sub-clean slate for the UI again
+- created filter layout for professional test page's auto size adjustment

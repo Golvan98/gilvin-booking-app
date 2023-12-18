@@ -1,48 +1,24 @@
 <template>
 
 
-<form id="searchBarContent" class="w-3/4 flex items-center h-3/4">
+<form id="searchBarContent" class="w-3/4 flex items-center h-3/4 justify-center">
 
-    <div id="firstFlex" class="flex-nowrap w-full md:w-1/2 h-full bg-inherit mx-4">
+  <div id="searchBar" class="w-1/3 h-full flex justify-center items-center">
+      <div class="flex items-center justify-center w-full h-3/4"> 
+        <div class="w-1/2 h-3/4 items-center lg:font-medium md:text-sm sm:text-xs"> 
+         <input class="w-full h-full" type="text" placeholder="search user">
+         </div>
+      </div>
+  </div>
 
-      <div class="h-1/2 md:w-full flex items-center justify-start font-bold text-lg">𝐔𝐬𝐞𝐫𝐬</div>
-      <div class="h-1/2 md:w-full"> <input type="text" class="w-full" placeholder="Filter Search Bar there"> </div>
+  <div id="sortBy" class="w-1/3 h-full bg-red-300 flex justify-center items-center">
+      hello
+  </div>
 
-
-    </div>
-
-    <div id="2ndFlex" class="h-full md:flex-nowrap w-full md:w-1/2">
-
-        <div id="aboveSelectSectionFiller" class="h-1/2 w-full md:w-0">  </div>
-
-        <div id="selectSection" class="h-1/2 flex flex-wrap md:flex-nowrap">  
-
-            <div id="selectType" class="w-full md:w-1/2 flex-nowrap"> 
-
-                <Label for="profession" class="w-full md:w-1/4 md:text-base">  
-                        Sort by: 
-                </Label>
-
-                <Select class="w-full md:w-3/4">
-                        <option value="Legal"> Legal </option>
-                        <option value="Doctor"> Doctor </option>
-                        <option value="Engineer"> Engineer </option>
-                        <option value="Accountant"> Accountant </option>
-                        <option value="IT"> IT </option>
-                        <option value="Tutor"> Tutor </option>
-                        <option value="Misc">  Misc </option> 
-                </Select>
-
-            </div>
-
-            <div id="selectButtons" class="w-full md:w-1/2 flex justify-center font-bold"> 
-                <button class="w-1/2 md:w-1/3 ml-4"> Submit </button>
-                <button class="w-1/2 md:w-1/3"> Clear </button> 
-            </div>
-            
-        </div>
-
-    </div>
+  <div id="SubmitClearButtons" class="w-1/3 h-full bg-red-300 flex items-center">
+      submitMe
+  </div>
+    
 
 </form>
     
