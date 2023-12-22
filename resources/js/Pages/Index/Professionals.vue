@@ -34,7 +34,9 @@
           <div class="flex-nowrap w-2/3 h-full justify-between mr-0.5 lg:text-base md:text-sm sm:text-xs">
   
             <div class="flex w-full h-1/2 items-center justify-start ml-2 lg:text-base md:text-sm sm:text-xs"> 
-              <div> {{ Professionals.first_name }} {{ Professionals.last_name }}</div>
+              <div class="h-1/2 w-full"> {{ Professionals.first_name }} {{ Professionals.last_name }}, 
+                <span class="font-bold"> {{ Professionals.profession }} </span>
+              </div>
             </div>
 
             <div class="flex items-center w-full h-1/2 space-x-0.5"> 

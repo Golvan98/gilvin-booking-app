@@ -516,3 +516,6 @@ December 18
 December 21
 - created 3rd iteration of search navbar for professional list
 - created final 3rd iteration of professional list using flex, will experiment on grid method tomorrow
+
+December 22
+- replaced current flexbox for professionalProfile blocks with grid, now adjusts to 2 columns instead of 3 when screen is shortened.

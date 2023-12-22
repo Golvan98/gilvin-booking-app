@@ -7,15 +7,13 @@ screen appropriation, not zoom. You're good. The meta, not. Atleast you've done 
 NOTE: Flex's class w- and h- might rely on its parent grid size, to test more of this
 NOTE: to apply sm, md and lg, there must be specifications for each size
 NOTE: - modal issue reference for a fix that might work https://github.com/themesberg/flowbite/issues/160 (also, using other plugins instead of vite might work for this)
+NOTE: keep everything in proportion, that way it will always depend on the screen size, not absolute values like m-4, ml-24, etc.
+
+
 
 ============ Current UI Task =================
-- auto adjust for professional lists grid
-- kinda stuck on this, make everything according to screen size proportions then?
-- also keep everything in proportion, that way it will always depend on the screen size, not absolute values like m-4, ml-24, etc.
-
-
-UI DONE
-- working href links, and trimmed homepage content
+- flash messages and modals not appearing unless page is refreshed (THIS IS HUGE, FIX THIS BUG)
+NOTE: This link might be suitable to replace ur current modals https://flowbite-vue.com/components/modal
 
 
 Optional Features
@@ -26,7 +24,7 @@ UI Improvements (FINAL). There really is a problem with ur UI when zoomed in or 
 - confirm button needs to be redone, required input error message doesnt work while closing modal
 - placeholder for form to be :value request data - for that value placeholder thingy, try that if edit modal is being executed OR u can call its value from that @click="Selected.value" 
 - flash messages and modals not appearing unless page is refreshed (THIS IS HUGE, FIX THIS BUG)
-- auto adjust when browser is shortened (final)
+
 
 POSSIBLY IMPOSSIBLE:
 - check if it's possible to approve request and refresh paginated modal page at the same time
@@ -88,6 +86,9 @@ where the page refreshes after you click "mark as read" (nope, just a redirect a
 UI Tasks Done
 - navbar to auto adjust when shrinked
 - format date time to readable (this can be done frontend or backend)
+professional list adjusting according to screen size, zoom's meta viewport function is not working for some reason.
+- working href links, and trimmed homepage content
+- professional list adjusting according to screen size, zoom's meta viewport function is not working for some reason.
 
 
 
