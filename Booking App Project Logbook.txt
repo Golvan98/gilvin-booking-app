@@ -512,3 +512,7 @@ December 14
 December 18
 - current testpage contents wouldnt do, erased most of the code, staring on a sub-clean slate for the UI again
 - created filter layout for professional test page's auto size adjustment
+
+December 21
+- created 3rd iteration of search navbar for professional list
+- created final 3rd iteration of professional list using flex, will experiment on grid method tomorrow

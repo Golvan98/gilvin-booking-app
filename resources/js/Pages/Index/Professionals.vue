@@ -1,5 +1,7 @@
 <template>
-
+<head>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+</head>
   <div id="mainDiv" class="flex items-center justify-center h-screen w-full bg-gray-100">
   
     <div id="contentContainer" class="bg-white w-2/3 h-4/6 border border-red-700">
@@ -10,9 +12,9 @@
 
       </div>
 
-      <div id="profilesMainContainer" class="w-3/4 h-3/5 grid grid-cols-3 grid-rows-4 m-auto items-center space-x-2">
+      <div id="profilesMainContainer" class="w-3/4 h-3/5 grid lg:grid-cols-3  lg:grid-rows-4 md:grid-cols-3 md:grid-rows-4 sm:grid-cols-2 sm:grid-rows-6 m-auto items-center space-x-2">
 
-        <div v-for="Professionals in Professionals.data" id="profileBlock" class="mt-4 col-span-1 row-span-2 rounded-xl bg-green-100 border w-auto h-5/6 flex justify-between">
+        <div v-for="Professionals in Professionals.data" id="profileBlock" class="mt-4 lg:col-span-1 lg:row-span-2 md:col-span-1 md:row-span-2 sm:col-span-1 sm:row-span-2 rounded-xl bg-green-100 border w-auto h-5/6 flex justify-between">
 
           <div class="flex w-1/3 h-full items-start justify-center ">
             <div
@@ -40,6 +42,7 @@
               <SendRequestModal :Professionals="Professionals" :Professional="selectedProfessional"/>
               <a :href="`/viewProfessionalProfile/${Professionals.id}`" target="_blank" class="w-1/2 lg:h-1/2 md:h-1/2 sm:h-full bg-white flex items-center justify-center text-xs text-black font-bold rounded-lg"> <button class="text-xs"> View Profile </button> </a>
             </div>
+            
           </div>
 
         </div>
@@ -113,3 +116,5 @@
     
   
     </style>
+
+

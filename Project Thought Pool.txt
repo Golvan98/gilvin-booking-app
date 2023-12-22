@@ -1,6 +1,8 @@
 CURRENTLY DOING : 
 Current Phase: UI Improvements, to launch deployment first month of 2024.
 
+IMPORTANT NOTE!: regarding your UI ZOOM issues, it may be that it has something to do with meta viewport not working. it may be the only thing messing up ur divs when zoomed, u have done what is needed for 
+screen appropriation, not zoom. You're good. The meta, not. Atleast you've done what's important.
 
 NOTE: Flex's class w- and h- might rely on its parent grid size, to test more of this
 NOTE: to apply sm, md and lg, there must be specifications for each size
