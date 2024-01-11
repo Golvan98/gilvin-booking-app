@@ -7,7 +7,7 @@
         <div class="object-fill w-full h-4/5 flex items-center justify-center" 
           style="background-image: url('storage/homeBackground.png'); 
           background-repeat: no-repeat; 
-        background-size: cover;">
+          background-size: cover;">
 
       
           <div class="w-3/5 h-full">
@@ -23,12 +23,12 @@
 
                 <div class="h-3/5 flex-nowrap justify-center text-center mr-12 ">
 
-                    <div class="mr-12 shadow-9xl drop-shadow-lg w-full pt-4 font-bold text-white text-3xl flex-nowrap">
-                      <span class="mr-12">Book professionals lores epsum dolores doctor corles Book professionals lores epsum dolores doctor corles  </span>
+                    <div class="shadow-9xl drop-shadow-lg w-full font-bold text-white text-3xl flex-nowrap">
+                      <span class="">Book professionals lores epsum dolores doctor corles Book professionals lores epsum dolores doctor corles  </span>
                     </div>
 
-                    <div class=" w-full pt-4 font-bold text-3xl flex-nowrap">
-                      <Link href="/Professionals"> <button class="shadow-2xl bg-white text-2xl font-bold rounded-xl h-16 w-96 hover:bg-green-500 hover:text-white"> Available Professionals now  </button> </Link>
+                    <div class=" w-full font-bold text-3xl flex-nowrap">
+                      <Link href="/Professionals"> <button class="shadow-2xl bg-white text-2xl font-bold rounded-xl h-1/4 w-2/4 hover:bg-green-500 hover:text-white"> Available Professionals now  </button> </Link>
                     </div>
 
                 </div>

@@ -519,3 +519,4 @@ December 21
 
 December 22
 - replaced current flexbox for professionalProfile blocks with grid, now adjusts to 2 columns instead of 3 when screen is shortened.
+- added job title to professionalProfile blocks, updated project deliverables & cleared test page for modal testing

@@ -4,21 +4,16 @@ Current Phase: UI Improvements, to launch deployment first month of 2024.
 IMPORTANT NOTE!: regarding your UI ZOOM issues, it may be that it has something to do with meta viewport not working. it may be the only thing messing up ur divs when zoomed, u have done what is needed for 
 screen appropriation, not zoom. You're good. The meta, not. Atleast you've done what's important.
 
-NOTE: Flex's class w- and h- might rely on its parent grid size, to test more of this
+NOTE: Flex's class w- and h- might rely on its parent grid size, to test more of this (keep everything in proportion, that way it'll always depend on the screen size, not absolute values like m-4, ml-24, etc.)
 NOTE: to apply sm, md and lg, there must be specifications for each size
 NOTE: - modal issue reference for a fix that might work https://github.com/themesberg/flowbite/issues/160 (also, using other plugins instead of vite might work for this)
-NOTE: keep everything in proportion, that way it will always depend on the screen size, not absolute values like m-4, ml-24, etc.
-
 
 
 ============ Current UI Task =================
 - flash messages and modals not appearing unless page is refreshed (THIS IS HUGE, FIX THIS BUG)
 NOTE: This link might be suitable to replace ur current modals https://flowbite-vue.com/components/modal
+and this too https://www.digitalocean.com/community/tutorials/vuejs-vue-modal-component
 
-
-Optional Features
-- messaging (optional)
-- soft delete users(optional)
 
 UI Improvements (FINAL). There really is a problem with ur UI when zoomed in or zoomed in/out... (ACTUALLY NOPE every website is shit when zoomed in/out, Just size appropriations needed)
 - confirm button needs to be redone, required input error message doesnt work while closing modal
@@ -33,6 +28,11 @@ POSSIBLY IMPOSSIBLE:
 
 OTHER IMPROVEMENTS:
 - DB restrict appointments end schedule to be before start schedule
+
+Optional Features (Nah, not doing this)
+- messaging (optional)
+- soft delete users(optional)
+
 
 
 DONE
