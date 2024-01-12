@@ -7,6 +7,7 @@ import 'flowbite';
 window.Alpine = Alpine
 Alpine.start()
 
+
 createInertiaApp({
   resolve: async name => {
     const pages = import.meta.glob('./Pages/**/*.vue', { eager: true })

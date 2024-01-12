@@ -9,6 +9,10 @@ NOTE: to apply sm, md and lg, there must be specifications for each size
 NOTE: - modal issue reference for a fix that might work https://github.com/themesberg/flowbite/issues/160 (also, using other plugins instead of vite might work for this)
 
 
+============== PROJECT STATUS ================
+There's one problem on top of another, I must just deploy this, start another project focusing on UI to learn the solutions to the mistakes I've done in this project
+
+
 ============ Current UI Task =================
 - flash messages and modals not appearing unless page is refreshed (THIS IS HUGE, FIX THIS BUG)
 NOTE: This link might be suitable to replace ur current modals https://flowbite-vue.com/components/modal

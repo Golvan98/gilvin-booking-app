@@ -520,3 +520,6 @@ December 21
 December 22
 - replaced current flexbox for professionalProfile blocks with grid, now adjusts to 2 columns instead of 3 when screen is shortened.
 - added job title to professionalProfile blocks, updated project deliverables & cleared test page for modal testing
+
+January 11
+- tried trimming main lay out & homepage's fixed value contents, it seems the zoom metahead not working from the get go layout is the issue, not ur div structures
