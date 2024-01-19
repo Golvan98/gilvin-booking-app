@@ -523,3 +523,6 @@ December 22
 
 January 11
 - tried trimming main lay out & homepage's fixed value contents, it seems the zoom metahead not working from the get go layout is the issue, not ur div structures
+
+January 12
+- 2nd attempt on fixing zoom value - added a viewport in app.blade.php, but still not working.

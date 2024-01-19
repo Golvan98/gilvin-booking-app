@@ -10,7 +10,9 @@ NOTE: - modal issue reference for a fix that might work https://github.com/theme
 
 
 ============== PROJECT STATUS ================
+PROJECT IS ON HOLD FOR NOW, until I resolve this modal and zoom issue, I might just restart the stack after building a simple UI-oriented project app
 There's one problem on top of another, I must just deploy this, start another project focusing on UI to learn the solutions to the mistakes I've done in this project
+
 
 
 ============ Current UI Task =================
@@ -19,7 +21,8 @@ NOTE: This link might be suitable to replace ur current modals https://flowbite-
 and this too https://www.digitalocean.com/community/tutorials/vuejs-vue-modal-component
 
 
-UI Improvements (FINAL). There really is a problem with ur UI when zoomed in or zoomed in/out... (ACTUALLY NOPE every website is shit when zoomed in/out, Just size appropriations needed)
+UI Improvements (FINAL). There really is a problem with ur UI when zoomed in or zoomed in/out... (ACTUALLY NOPE, it's the zoom scaling meta not working, there must be a way to fix this, but for some reason
+the environment you setup is buggy as shit, even the modals are not working properly. sigh.)
 - confirm button needs to be redone, required input error message doesnt work while closing modal
 - placeholder for form to be :value request data - for that value placeholder thingy, try that if edit modal is being executed OR u can call its value from that @click="Selected.value" 
 - flash messages and modals not appearing unless page is refreshed (THIS IS HUGE, FIX THIS BUG)

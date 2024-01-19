@@ -1,5 +1,15 @@
 <template>
-  >
+  <!DOCTYPE html>
+<html lang="{{ str_replace('_', '-', app()->getLocale()) }}">
+
+<head>
+        <meta charset="utf-8">
+        <meta name="viewport" content="width=device-width,initial-scale=1,maximum-scale=1,user-scalable=no,viewport-fit=cover">
+
+        
+        <title>Laravel </title>
+        <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/nprogress/0.2.0/nprogress.js" />
+</head>
   
    <header class="dark:border-gray-700 bg-green-400 dark:bg-gray-800 w-full h-24">
     
@@ -120,7 +130,7 @@
   
   
   </main>
-  
+  </html>
   
   
   
@@ -156,4 +166,17 @@
   
   </script>
   
-  
+  <style>
+
+/* Normal styling for larger screens */
+body {
+    /* Your existing styles for larger screens */
+}
+
+/* Media query for screens with a maximum width of 400 pixels */
+@media screen and (max-width: 1920) {
+    body {
+        max-zoom: 1; /* Set the maximum zoom level to 1 */
+    }
+}
+</style>

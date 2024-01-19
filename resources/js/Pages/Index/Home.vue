@@ -42,8 +42,8 @@
 
         <div class="bg-white w-full h-1/5 ">
 
-                <div class="w-full h-2/5 bg-white flex items-center justify-center font-bold text-4xl "> 
-                    Consultation for Every Need
+                <div class="w-full h-2/5 bg-white flex items-center justify-center font-bold text-4xl text-red-500 "> 
+                   Note: This Project is on hold for now due to front-end issues
                 </div>
 
                 <div class="w-full h-3/5 bg-white flex items-center justify-between">
